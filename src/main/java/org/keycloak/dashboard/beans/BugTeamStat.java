@@ -29,16 +29,16 @@ public class BugTeamStat {
                 .issues(issues.clone().triage(true).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
 
         columns.add(BugStat.team("Blocker")
-                .issues(issues.clone().triage(false).priority("blocker").blockedExternal(false)));
+                .issues(issues.clone().triage(false).priority("blocker")));
 
         columns.add(BugStat.team("Blocker Overdue")
-                .issues(issues.clone().triage(false).priority("blocker").createdBefore(DateUtil.minusdays(Config.getInt("bugs.BlockerOverdue.days"))).blockedExternal(false)));
+                .issues(issues.clone().triage(false).priority("blocker").createdBefore(DateUtil.minusdays(Config.getInt("bugs.BlockerOverdue.days")))));
 
         columns.add(BugStat.team("Important")
-                .issues(issues.clone().triage(false).priority("important").blockedExternal(false)));
+                .issues(issues.clone().triage(false).priority("important")));
 
         columns.add(BugStat.team("Important Overdue")
-                .issues(issues.clone().triage(false).priority("important").createdBefore(DateUtil.minusdays(Config.getInt("bugs.ImportantOverdue.days"))).blockedExternal(false)));
+                .issues(issues.clone().triage(false).priority("important").createdBefore(DateUtil.minusdays(Config.getInt("bugs.ImportantOverdue.days")))));
 
         columns.add(BugStat.team("Blocked External")
                 .issues(issues.clone().triage(false).priority("blocker", "important").blockedExternal(true)));

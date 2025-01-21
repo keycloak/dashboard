@@ -72,13 +72,13 @@ public class Bugs {
         stats.add(BugStat.global("Weakness")
                 .issues(filteredIssues.clone().openBug().label("kind/weakness")));
         stats.add(BugStat.global("Blocker")
-                .issues(filteredIssues.clone().openBug().priority("blocker").blockedExternal(false)));
+                .issues(filteredIssues.clone().openBug().priority("blocker")));
         stats.add(BugStat.global("Blocker Overdue")
-                .issues(filteredIssues.clone().openBug().priority("blocker").createdBefore(DateUtil.minusdays(Config.getInt("bugs.BlockerOverdue.days"))).blockedExternal(false)));
+                .issues(filteredIssues.clone().openBug().priority("blocker").createdBefore(DateUtil.minusdays(Config.getInt("bugs.BlockerOverdue.days")))));
         stats.add(BugStat.global("Important")
-                .issues(filteredIssues.clone().openBug().priority("important").blockedExternal(false)));
+                .issues(filteredIssues.clone().openBug().priority("important")));
         stats.add(BugStat.global("Important Overdue")
-                .issues(filteredIssues.clone().openBug().priority("important").createdBefore(DateUtil.minusdays(Config.getInt("bugs.ImportantOverdue.days"))).blockedExternal(false)));
+                .issues(filteredIssues.clone().openBug().priority("important").createdBefore(DateUtil.minusdays(Config.getInt("bugs.ImportantOverdue.days")))));
         stats.add(BugStat.global("Blocked External")
                 .issues(filteredIssues.clone().openBug().priority("blocker", "important").blockedExternal(true)));
         stats.add(BugStat.global("Normal")

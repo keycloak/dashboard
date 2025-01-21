@@ -26,10 +26,10 @@ public class BugAreaStat {
                 .issues(issues.clone().triage(true)));
 
         columns.add(BugStat.area("Blocker")
-                .issues(issues.clone().triage(false).priority("blocker").blockedExternal(false)));
+                .issues(issues.clone().triage(false).priority("blocker")));
 
         columns.add(BugStat.area("Important")
-                .issues(issues.clone().triage(false).priority("important").blockedExternal(false)));
+                .issues(issues.clone().triage(false).priority("important")));
 
         columns.add(BugStat.area("Blocked External")
                 .issues(issues.clone().triage(false).priority("blocker", "important").blockedExternal(true)));
