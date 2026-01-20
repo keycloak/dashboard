@@ -53,7 +53,7 @@ public class FailedJobsLoader {
 
                     String workflow = r.getPath().substring(r.getPath().lastIndexOf('/') + 1);
 
-                    jobsOutput.println("# " + workflow + " " + r.getCreatedAt() + " " + r.getEvent() + " " + (r.getRunAttempt() - 1) + " " + r.getConclusion());
+                    jobsOutput.println("# " + workflow + " " + r.getCreatedAt() + " " + r.getEvent() + " " + r.getRunAttempt() + " " + r.getConclusion());
 
                     PagedIterable<GHWorkflowJob> ghWorkflowJobs = gh.getRepository("keycloak/keycloak").getWorkflowRun(r.getId()).listAllJobs();
 
