@@ -1,0 +1,1093 @@
+AzureDB IT	UNKNOWN STEP	﻿2026-01-24T04:15:40.5343370Z Current runner version: '2.331.0'
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5366518Z ##[group]Runner Image Provisioner
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5367518Z Hosted Compute Agent
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5368234Z Version: 20260115.477
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5368952Z Commit: 4b342d620503cbe250a3154040964899ea7c9b00
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5369720Z Build Date: 2026-01-15T22:32:41Z
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5370586Z Worker ID: ***a4cbbf02-8a5a-4575-9da5-8c068175a359***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5371422Z Azure Region: westus3
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5372091Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5373816Z ##[group]Operating System
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5374546Z Ubuntu
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5375152Z 24.04.3
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5375723Z LTS
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5376293Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5376902Z ##[group]Runner Image
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5377565Z Image: ubuntu-24.04
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5378206Z Version: 20260119.4.1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5379424Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260119.4/images/ubuntu/Ubuntu2404-Readme.md
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5381053Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260119.4
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5382000Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5383458Z ##[group]GITHUB_TOKEN Permissions
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5385514Z Actions: write
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5386167Z Contents: read
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5386795Z Metadata: read
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5387352Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5389476Z Secret source: Actions
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5390250Z Prepare workflow directory
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5815856Z Prepare all required actions
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.5855755Z Getting action download info
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:40.9400661Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.0580033Z Download action repository 'azure/login@a457da9ea143d694b1b9c7c869ebb04ebe844ef5' (SHA:a457da9ea143d694b1b9c7c869ebb04ebe844ef5)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.7670670Z Complete job name: AzureDB IT
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8433471Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8434586Z with:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8435081Z   repository: keycloak/keycloak
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8435838Z   token: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8436325Z   ssh-strict: true
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8436818Z   ssh-user: git
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8437322Z   persist-credentials: true
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8437873Z   clean: true
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8438367Z   sparse-checkout-cone-mode: true
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8438937Z   fetch-depth: 1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8439414Z   fetch-tags: false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8439900Z   show-progress: true
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8440399Z   lfs: false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8440877Z   submodules: false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8441382Z   set-safe-directory: true
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8442123Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8442766Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8443661Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8444367Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.8445051Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9438567Z Syncing repository: keycloak/keycloak
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9440392Z ##[group]Getting Git version info
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9441162Z Working directory is '/home/runner/work/keycloak/keycloak'
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9442293Z [command]/usr/bin/git version
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9489496Z git version 2.52.0
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9511535Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9524246Z Temporarily overriding HOME='/home/runner/work/_temp/8f37d4a2-d07c-4abb-b7ad-63de296722e1' before making global git config changes
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9525655Z Adding repository directory to the temporary git global config as a safe directory
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9536519Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9567919Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9570904Z ##[group]Initializing the repository
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9574815Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9666727Z hint: Using 'master' as the name for the initial branch. This default branch name
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9668743Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9670489Z hint: to use in all of your new repositories, which will suppress this warning,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9671572Z hint: call:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9672049Z hint:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9672624Z hint: 	git config --global init.defaultBranch <name>
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9673565Z hint:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9674215Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9675182Z hint: 'development'. The just-created branch can be renamed via this command:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9676386Z hint:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9676867Z hint: 	git branch -m <name>
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9677397Z hint:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9678098Z hint: Disable this message with "git config set advice.defaultBranchName false"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9679122Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9681790Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9712359Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9713400Z ##[group]Disabling automatic garbage collection
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9715760Z [command]/usr/bin/git config --local gc.auto 0
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9738230Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9739039Z ##[group]Setting up auth
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9744692Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:41.9768597Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:42.0042897Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:42.0065838Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:42.0228414Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:42.0263672Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:42.0264581Z ##[group]Fetching the repository
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:42.0271410Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d03bba598ce1b29a36260d24fd9d18fca860e697:refs/remotes/origin/main
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:43.6854245Z From https://github.com/keycloak/keycloak
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:43.6856594Z  * [new ref]         d03bba598ce1b29a36260d24fd9d18fca860e697 -> origin/main
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:43.6881593Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:43.6882956Z ##[group]Determining the checkout info
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:43.6884399Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:43.6887818Z [command]/usr/bin/git sparse-checkout disable
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:43.6921751Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:43.6944139Z ##[group]Checking out the ref
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:43.6946734Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.3160558Z Switched to a new branch 'main'
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.3161447Z branch 'main' set up to track 'origin/main'.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.3181273Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.3218229Z [command]/usr/bin/git log -1 --format=%H
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.3238567Z d03bba598ce1b29a36260d24fd9d18fca860e697
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.3479109Z Prepare all required actions
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.3479647Z Getting action download info
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.5064324Z Download action repository 'actions/cache@5a3ec84eff668545956fd18022155c47e93e2684' (SHA:5a3ec84eff668545956fd18022155c47e93e2684)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6379723Z ##[group]Run ./.github/actions/node-cache
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6380068Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6380464Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6381155Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6381487Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6381835Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6462268Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6463410Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6464349Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6489238Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6489651Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6489989Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6490414Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6490775Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6491141Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6689214Z ##[group]Run actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6689617Z with:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6690040Z   path: ~/.m2/repository/com/github/eirslett/node
+AzureDB IT	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+AzureDB IT	UNKNOWN STEP	
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6690581Z   key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6690948Z   enableCrossOsArchive: false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6691236Z   fail-on-cache-miss: false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6691527Z   lookup-only: false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6691780Z   save-always: false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6692017Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6692342Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6692736Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6693250Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:44.6693590Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:45.0166277Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:46.2721182Z Received 50331648 of 178075408 (28.3%), 48.0 MBs/sec
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.2277422Z Received 178075408 of 178075408 (100.0%), 86.8 MBs/sec
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.2278289Z Cache Size: ~170 MB (178075408 B)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.2315107Z [command]/usr/bin/tar -xf /home/runner/work/_temp/66b3abef-2b57-4ef5-8ecd-06fddd295a74/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.5704335Z Cache restored successfully
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.5981243Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6098590Z ##[group]Run AZURE_REGION=westeurope
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6098971Z [36;1mAZURE_REGION=westeurope[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6099348Z [36;1mecho "AZURE Region: $***AZURE_REGION***"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6099671Z [36;1m[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6100046Z [36;1mAZURE_CLUSTER_NAME="gh-action-$(git rev-parse --short HEAD)-21309034624-1"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6100607Z [36;1mecho "azure-cluster-name=$***AZURE_CLUSTER_NAME***" >> $GITHUB_OUTPUT[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6101103Z [36;1mecho "region=$***AZURE_REGION***" >> $GITHUB_OUTPUT[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6101447Z [36;1m[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6101690Z [36;1mPROPS=''[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6102029Z [36;1mecho "maven_properties=$***PROPS***" >> $GITHUB_OUTPUT[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6120828Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6121239Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6121597Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6122056Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6122407Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6122760Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6159362Z AZURE Region: westeurope
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6200141Z ##[group]Run SUBSCRIPTION=$(echo '***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6200609Z [36;1mSUBSCRIPTION=$(echo '***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6201022Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6201449Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6201914Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6202230Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6202655Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6203282Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6203650Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6204048Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6204381Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6204749Z [36;1m  ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6205017Z [36;1m***' | jq -r '.subscriptionId')[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6205422Z [36;1mif [[ -z "$SUBSCRIPTION" || "$SUBSCRIPTION" == "null" ]]; then[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6205917Z [36;1m  echo "ERROR: Failed to parse subscriptionId from AZURE_CREDENTIALS"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6206318Z [36;1m  exit 1[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6206549Z [36;1mfi[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6206892Z [36;1m# Mask BEFORE outputting to ensure it's redacted in logs[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6207289Z [36;1mecho "::add-mask::$SUBSCRIPTION"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6207672Z [36;1mecho "subscription=$SUBSCRIPTION" >> $GITHUB_OUTPUT[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6224181Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6224569Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6224908Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6225316Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6225676Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6226033Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6421139Z ##[group]Run azure/login@a457da9ea143d694b1b9c7c869ebb04ebe844ef5
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6421543Z with:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6424055Z   creds: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6424331Z   enable-AzPSSession: false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6424620Z   environment: azurecloud
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6424905Z   allow-no-subscriptions: false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6425228Z   audience: api://AzureADTokenExchange
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6425559Z   auth-type: SERVICE_PRINCIPAL
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6425836Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6426167Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6426572Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6426943Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6427291Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:15:47.6770708Z Running Azure CLI Login.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:02.7854999Z [command]/usr/bin/az cloud set -n azurecloud
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:02.9945165Z Done setting cloud: "azurecloud"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:02.9947399Z Note: Azure/login action also supports OIDC login mechanism. Refer https://github.com/azure/login#configure-a-service-principal-with-a-federated-credential-to-use-oidc-based-authentication for more details.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:02.9952341Z Attempting Azure CLI login by using service principal with secret...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1147683Z Subscription is set successfully.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1148368Z Azure CLI login succeeds by using service principal with secret.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1246300Z Prepare all required actions
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1316279Z ##[group]Run ./.github/actions/azure-create-database
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1316663Z with:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1316939Z   name: gh-action-d03bba5-21309034624-1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1317255Z   region: westeurope
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1317583Z   subscription: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1317832Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1318161Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1318564Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1318913Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1319293Z   AZURE_RG: gh-action-d03bba5-21309034624-1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1319619Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1335897Z ##[group]Run # Generate passwords using OpenSSL
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1336324Z [36;1m# Generate passwords using OpenSSL[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1336693Z [36;1mgenerate_password() ***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1337110Z [36;1m  openssl rand -base64 48 | tr -d '\n/' | head -c 32[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1337488Z [36;1m***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1337723Z [36;1m[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1338011Z [36;1m# Use provided passwords or generate random ones[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1338475Z [36;1mif [[ -n "" ]]; then[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1338767Z [36;1m  ADMIN_PASSWORD=""[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1339093Z [36;1m  echo "INFO: Using provided admin password"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1339432Z [36;1melse[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1339708Z [36;1m  ADMIN_PASSWORD=$(generate_password)[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1340079Z [36;1m  echo "INFO: Using generated admin password"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1340421Z [36;1mfi[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1340643Z [36;1m[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1340869Z [36;1mif [[ -n "" ]]; then[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1341142Z [36;1m  DB_PASSWORD=""[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1341444Z [36;1m  echo "INFO: Using provided DB password"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1341777Z [36;1melse[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1342040Z [36;1m  DB_PASSWORD=$(generate_password)[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1342397Z [36;1m  echo "INFO: Using generated DB password"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1342721Z [36;1mfi[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1342952Z [36;1m[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1343387Z [36;1m# Mask passwords[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1343696Z [36;1mecho "::add-mask::$ADMIN_PASSWORD"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1344030Z [36;1mecho "::add-mask::$DB_PASSWORD"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1344332Z [36;1m[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1344622Z [36;1m# Export to environment for subsequent steps[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1344970Z [36;1m***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1345256Z [36;1m  echo "AZURE_ADMIN_PASSWORD=$ADMIN_PASSWORD"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1345626Z [36;1m  echo "AZURE_DB_PASSWORD=$DB_PASSWORD"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1345977Z [36;1m*** >> $GITHUB_ENV[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1363754Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1364151Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1364501Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1364941Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1365320Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1365701Z   AZURE_RG: gh-action-d03bba5-21309034624-1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1366024Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1439703Z INFO: Using generated admin password
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1477023Z INFO: Using generated DB password
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1497480Z ##[group]Run sudo apt-get update
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1497815Z [36;1msudo apt-get update[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1498241Z [36;1msudo ACCEPT_EULA=Y apt-get install -y curl apt-transport-https gnupg[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1498853Z [36;1mcurl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1499572Z [36;1mcurl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1500136Z [36;1msudo apt-get update[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1500537Z [36;1msudo ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1501115Z [36;1mecho "/opt/mssql-tools/bin" >> $GITHUB_PATH[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1517837Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1518233Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1518625Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1519092Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1519458Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1519917Z   AZURE_ADMIN_PASSWORD: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1520259Z   AZURE_DB_PASSWORD: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1520585Z   AZURE_RG: gh-action-d03bba5-21309034624-1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.1520920Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.2066988Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.2390832Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.2409146Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.2455525Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.2514138Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.2605236Z Hit:6 https://packages.microsoft.com/repos/azure-cli noble InRelease
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.2685787Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3508859Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1699 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3649086Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [314 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3668336Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [175 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3692102Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [16.0 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3711590Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1519 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3785558Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [310 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3808260Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [386 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3846025Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [31.6 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3867244Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2498 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.3985131Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [573 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4466826Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4473669Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 c-n-f Metadata [512 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4481260Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [42.9 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4491058Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [8340 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4498704Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4507930Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 c-n-f Metadata [652 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4515104Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7308 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4523610Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [10.5 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4544243Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4550899Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4628000Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1409 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4709223Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [229 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4731143Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [21.5 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.4741556Z Get:31 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [9800 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5217148Z Get:32 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [924 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5269510Z Get:33 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [209 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5287153Z Get:34 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [74.3 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5299274Z Get:35 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [19.7 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5304874Z Get:36 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Components [208 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5311494Z Get:37 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [28.0 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5319883Z Get:38 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [6472 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5327302Z Get:39 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5350343Z Get:40 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [66.2 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5426540Z Get:41 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.3 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5478023Z Get:42 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [85.3 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:04.5538973Z Get:43 https://packages.microsoft.com/ubuntu/24.04/prod noble/main all Packages [650 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:12.1995750Z Fetched 11.1 MB in 1s (8644 kB/s)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:12.9829147Z Reading package lists...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.0137555Z Reading package lists...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.1844455Z Building dependency tree...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.1850103Z Reading state information...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.3691705Z curl is already the newest version (8.5.0-2ubuntu10.6).
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.3692493Z apt-transport-https is already the newest version (2.8.3).
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.3693327Z gnupg is already the newest version (2.4.4-2ubuntu17.4).
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.3694060Z 0 upgraded, 0 newly installed, 0 to remove and 67 not upgraded.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.3747801Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.3749013Z                                  Dload  Upload   Total   Spent    Left  Speed
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.3750237Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.4236407Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.4237338Z 100   975  100   975    0     0  19943      0 --:--:-- --:--:-- --:--:-- 20312
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.4763672Z Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.6711923Z OK
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.6823863Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.6825459Z                                  Dload  Upload   Total   Spent    Left  Speed
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.6825861Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.7473365Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.7474237Z 100    89  100    89    0     0   1368      0 --:--:-- --:--:-- --:--:--  1390
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.7474908Z deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/ubuntu/22.04/prod jammy main
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.8104324Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.8350660Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.8359905Z Hit:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.8368559Z Hit:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.8377095Z Hit:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.8445828Z Hit:6 https://packages.microsoft.com/repos/azure-cli noble InRelease
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.8578790Z Hit:7 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:13.8621031Z Get:8 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:14.1436406Z Get:9 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [118 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:14.1557157Z Get:10 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main all Packages [1379 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:14.1641980Z Get:11 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [23.9 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:14.1702612Z Get:12 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [298 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:14.2834284Z Fetched 445 kB in 0s (1143 kB/s)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.1245366Z Reading package lists...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.1569507Z Reading package lists...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.3176257Z Building dependency tree...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.3183981Z Reading state information...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.4807058Z The following additional packages will be installed:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.4812849Z   libodbccr2 libodbcinst2 msodbcsql17 odbcinst unixodbc unixodbc-common
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.5045924Z The following NEW packages will be installed:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.5053125Z   libodbccr2 libodbcinst2 msodbcsql17 mssql-tools odbcinst unixodbc
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.5053900Z   unixodbc-common unixodbc-dev
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.5246103Z 0 upgraded, 8 newly installed, 0 to remove and 67 not upgraded.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.5246883Z Need to get 1300 kB of archives.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.5247586Z After this operation, 2162 kB of additional disk space will be used.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.5248333Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.5691142Z Get:8 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 msodbcsql17 amd64 17.10.6.1-1 [746 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.5910489Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbccr2 amd64 2.3.12-1ubuntu0.24.04.1 [16.1 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.6066760Z Get:9 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 mssql-tools amd64 17.10.1.1-1 [211 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.6429627Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-common all 2.3.12-1ubuntu0.24.04.1 [8806 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.6936979Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbcinst2 amd64 2.3.12-1ubuntu0.24.04.1 [30.7 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.7454080Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 odbcinst amd64 2.3.12-1ubuntu0.24.04.1 [9672 B]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.7968363Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 unixodbc amd64 2.3.12-1ubuntu0.24.04.1 [27.5 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:15.8480599Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-dev amd64 2.3.12-1ubuntu0.24.04.1 [250 kB]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.0661210Z Preconfiguring packages ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1121340Z Fetched 1300 kB in 0s (3852 kB/s)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1322530Z Selecting previously unselected package libodbccr2:amd64.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1518144Z (Reading database ... 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1518634Z (Reading database ... 5%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1518948Z (Reading database ... 10%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1519240Z (Reading database ... 15%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1519528Z (Reading database ... 20%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1519795Z (Reading database ... 25%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1520197Z (Reading database ... 30%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1520626Z (Reading database ... 35%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1521038Z (Reading database ... 40%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1521321Z (Reading database ... 45%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1521594Z (Reading database ... 50%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.1595553Z (Reading database ... 55%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.3081947Z (Reading database ... 60%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.3986166Z (Reading database ... 65%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.4711962Z (Reading database ... 70%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.5605818Z (Reading database ... 75%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.7130362Z (Reading database ... 80%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:16.8610965Z (Reading database ... 85%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.0189477Z (Reading database ... 90%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.1646981Z (Reading database ... 95%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.1647400Z (Reading database ... 100%
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.1647916Z (Reading database ... 217173 files and directories currently installed.)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.1693657Z Preparing to unpack .../0-libodbccr2_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.1727800Z Unpacking libodbccr2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.1913137Z Selecting previously unselected package unixodbc-common.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2029891Z Preparing to unpack .../1-unixodbc-common_2.3.12-1ubuntu0.24.04.1_all.deb ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2042391Z Unpacking unixodbc-common (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2262129Z Selecting previously unselected package libodbcinst2:amd64.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2376161Z Preparing to unpack .../2-libodbcinst2_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2387709Z Unpacking libodbcinst2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2548442Z Selecting previously unselected package odbcinst.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2661376Z Preparing to unpack .../3-odbcinst_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2674941Z Unpacking odbcinst (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2835576Z Selecting previously unselected package unixodbc.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2947530Z Preparing to unpack .../4-unixodbc_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.2958674Z Unpacking unixodbc (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.3167472Z Selecting previously unselected package msodbcsql17.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.3279957Z Preparing to unpack .../5-msodbcsql17_17.10.6.1-1_amd64.deb ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.4083984Z Unpacking msodbcsql17 (17.10.6.1-1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.4754936Z Selecting previously unselected package mssql-tools.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.4869333Z Preparing to unpack .../6-mssql-tools_17.10.1.1-1_amd64.deb ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.4880185Z Unpacking mssql-tools (17.10.1.1-1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.5189351Z Selecting previously unselected package unixodbc-dev:amd64.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.5306856Z Preparing to unpack .../7-unixodbc-dev_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.5319000Z Unpacking unixodbc-dev:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.5704671Z Setting up unixodbc-common (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.5745939Z Setting up libodbccr2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.5767140Z Setting up libodbcinst2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.5790101Z Setting up odbcinst (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.5963914Z Setting up unixodbc (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.5985833Z Setting up msodbcsql17 (17.10.6.1-1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.6020920Z odbcinst: Driver installed. Usage count increased to 1. 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.6021547Z     Target directory is /etc
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.6033612Z Setting up unixodbc-dev:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.6060008Z Setting up mssql-tools (17.10.1.1-1) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.6840855Z Processing triggers for man-db (2.12.0-4build2) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.6867294Z Not building database; man-db/auto-update is not 'true'.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:17.6882101Z Processing triggers for libc-bin (2.39-0ubuntu8.6) ...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2678129Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2678854Z Running kernel seems to be up-to-date.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2679389Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2679630Z No services need to be restarted.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2680029Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2680272Z No containers need to be restarted.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2680685Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2680982Z No user sessions are running outdated binaries.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2681370Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:18.2681648Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0976408Z ##[group]Run ./azure_create_sql.sh
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0976785Z [36;1m./azure_create_sql.sh[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0997151Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0997565Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0997919Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0998354Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0998730Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0999171Z   AZURE_ADMIN_PASSWORD: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0999517Z   AZURE_DB_PASSWORD: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.0999816Z   AZURE_RG: gh-action-d03bba5-21309034624-1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.1000172Z   AZURE_NAME: gh-action-d03bba5-21309034624-1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.1000508Z   AZURE_REGION: westeurope
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.1000860Z   AZURE_SUBSCRIPTION: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.1001143Z   AZURE_ADMIN_USER: 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.1001401Z   AZURE_DB_USER: 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.1001648Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:19.1070538Z Creating resource group gh-action-d03bba5-21309034624-1 in westeurope
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7307302Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7308892Z   "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7310173Z   "location": "westeurope",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7310953Z   "managedBy": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7311727Z   "name": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7313206Z   "properties": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7313991Z     "provisioningState": "Succeeded"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7314873Z   ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7315493Z   "tags": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7316265Z   "type": "Microsoft.Resources/resourceGroups"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7317195Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:16:20.7911717Z Creating SQL server gh-action-d03bba5-21309034624-1-sqlsrv
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1214529Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1215286Z   "administratorLogin": "sqladmin",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1216247Z   "administratorLoginPassword": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1217184Z   "administrators": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1217958Z   "createMode": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1218734Z   "externalGovernanceStatus": "Disabled",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1219680Z   "federatedClientId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1252278Z   "fullyQualifiedDomainName": "gh-action-d03bba5-21309034624-1-sqlsrv.database.windows.net",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1254235Z   "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Sql/servers/gh-action-d03bba5-21309034624-1-sqlsrv",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1255323Z   "identity": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1255717Z   "isIPv6Enabled": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1256132Z   "keyId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1256482Z   "kind": "v12.0",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1256854Z   "location": "westeurope",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1257301Z   "minimalTlsVersion": "1.2",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1257798Z   "name": "gh-action-d03bba5-21309034624-1-sqlsrv",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1258347Z   "primaryUserAssignedIdentityId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1258879Z   "privateEndpointConnections": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1259377Z   "publicNetworkAccess": "Enabled",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1259919Z   "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1260530Z   "restrictOutboundNetworkAccess": "Disabled",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1261045Z   "retentionDays": -1,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1261419Z   "state": "Ready",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1261785Z   "tags": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1262176Z   "type": "Microsoft.Sql/servers",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1262595Z   "version": "12.0",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1263127Z   "workspaceFeature": null
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1263589Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:17:31.1940853Z Creating database keycloakdb
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1475754Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1476527Z   "autoPauseDelay": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1477381Z   "availabilityZone": "NoPreference",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1478496Z   "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1479591Z   "collation": "SQL_Latin1_General_CP1_CI_AS",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1480527Z   "createMode": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1481344Z   "creationDate": "2026-01-24T04:18:50.833000+00:00",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1482415Z   "currentBackupStorageRedundancy": "Geo",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1483629Z   "currentServiceObjectiveName": "Basic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1486439Z   "currentSku": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1487228Z     "capacity": 5,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1487916Z     "family": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1488602Z     "name": "Basic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1489319Z     "size": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1489996Z     "tier": "Basic"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1490718Z   ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1491481Z   "databaseId": "3dc81528-9457-437a-b80f-c1886b5fc35b",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1492597Z   "defaultSecondaryLocation": "northeurope",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1493729Z   "earliestRestoreDate": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1494543Z   "edition": "Basic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1495285Z   "elasticPoolId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1496074Z   "elasticPoolName": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1496887Z   "encryptionProtector": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1497815Z   "encryptionProtectorAutoRotation": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1498782Z   "failoverGroupId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1499575Z   "federatedClientId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1500458Z   "freeLimitExhaustionBehavior": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1501498Z   "highAvailabilityReplicaCount": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1504441Z   "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Sql/servers/gh-action-d03bba5-21309034624-1-sqlsrv/databases/keycloakdb",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1507012Z   "identity": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1507775Z   "isInfraEncryptionEnabled": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1508663Z   "keys": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1509329Z   "kind": "v12.0,user",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1510056Z   "ledgerOn": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1510762Z   "licenseType": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1511512Z   "location": "westeurope",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1512398Z   "longTermRetentionBackupResourceId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1514800Z   "maintenanceConfigurationId": "/subscriptions/***/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1515812Z   "managedBy": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1516225Z   "manualCutover": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1516635Z   "maxLogSizeBytes": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1517065Z   "maxSizeBytes": 2147483648,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1517474Z   "minCapacity": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1517861Z   "name": "keycloakdb",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1518263Z   "pausedDate": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1518657Z   "performCutover": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1519079Z   "preferredEnclaveType": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1519528Z   "readScale": "Disabled",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1519967Z   "recoverableDatabaseId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1520436Z   "recoveryServicesRecoveryPointId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1520982Z   "requestedBackupStorageRedundancy": "Geo",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1521534Z   "requestedServiceObjectiveName": "Basic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1522099Z   "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1522664Z   "restorableDroppedDatabaseId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1523324Z   "restorePointInTime": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1523752Z   "resumedDate": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1524127Z   "sampleName": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1524533Z   "secondaryType": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1524930Z   "sku": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1525259Z     "capacity": 5,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1525617Z     "family": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1525977Z     "name": "Basic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1526339Z     "size": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1526680Z     "tier": "Basic"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1527045Z   ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1527411Z   "sourceDatabaseDeletionDate": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1527864Z   "sourceDatabaseId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1528278Z   "sourceResourceId": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1528671Z   "status": "Online",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1529038Z   "tags": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1529425Z   "type": "Microsoft.Sql/servers/databases",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1529905Z   "useFreeLimit": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1530306Z   "zoneRedundant": false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.1530700Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:57.2248998Z Allowing Azure services and current IP (0.0.0.0) - use with caution
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:59.0738559Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:59.0739142Z   "endIpAddress": "0.0.0.0",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:59.0741402Z   "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Sql/servers/gh-action-d03bba5-21309034624-1-sqlsrv/firewallRules/AllowAll",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:59.0743293Z   "name": "AllowAll",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:59.0743900Z   "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:59.0744609Z   "startIpAddress": "0.0.0.0",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:59.0745225Z   "type": "Microsoft.Sql/servers/firewallRules"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:59.0745866Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:18:59.1487647Z Waiting for SQL server to be provisioned...
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:00.4589359Z Creating login keycloak in master via sqlcmd
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:02.3064082Z Creating user keycloak in database keycloakdb and adding db_owner
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2332711Z ##[group]Run AZURE_REGION=westeurope
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2333373Z [36;1mAZURE_REGION=westeurope[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2333758Z [36;1mAZ_VM_CLUSTER_NAME=gh-action-d03bba5-21309034624-1[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2334267Z [36;1mecho "az_vm_cluster=$***AZ_VM_CLUSTER_NAME***" >> $GITHUB_OUTPUT[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2334660Z [36;1m[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2335011Z [36;1mgit archive --format=zip --output /tmp/keycloak.zip $GITHUB_REF[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2335600Z [36;1mtar -C ~/ -czvf m2.tar.gz .m2 || true[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2335926Z [36;1m[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2336191Z [36;1mcd .github/scripts/ansible[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2336625Z [36;1m./azure_vm_manager.sh create $***AZURE_REGION*** $***AZ_VM_CLUSTER_NAME***[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2337049Z [36;1m[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2337483Z [36;1m./keycloak_remote_installer.sh $***AZURE_REGION*** $***AZ_VM_CLUSTER_NAME*** /tmp/keycloak.zip m2.tar.gz[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2338475Z [36;1m./mvn_remote_runner.sh $***AZURE_REGION*** $***AZ_VM_CLUSTER_NAME*** "clean install -B -DskipTests -Pdistribution -DskipProtoLock=true -Dmaven.build.cache.enabled=true"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2339752Z [36;1m./mvn_remote_runner.sh $***AZURE_REGION*** $***AZ_VM_CLUSTER_NAME*** "clean install -B -DskipTests -pl testsuite/integration-arquillian/servers/auth-server/quarkus -Pdb-mssql-azure -Dmaven.build.cache.enabled=true"[0m
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2358284Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2358697Z env:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2359059Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2359473Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2359846Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2360284Z   AZURE_ADMIN_PASSWORD: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2360623Z   AZURE_DB_PASSWORD: ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:04.2360906Z ##[endgroup]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.8317865Z .m2/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.8318242Z .m2/repository/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.8318641Z .m2/repository/com/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.8319029Z .m2/repository/com/github/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.8319460Z .m2/repository/com/github/eirslett/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.8319802Z .m2/repository/com/github/eirslett/pnpm/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.8320172Z .m2/repository/com/github/eirslett/pnpm/10.14.0/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.8320616Z .m2/repository/com/github/eirslett/pnpm/10.14.0/pnpm-10.14.0.tar.gz
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.9455509Z .m2/repository/com/github/eirslett/node/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.9456221Z .m2/repository/com/github/eirslett/node/22.18.0/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:06.9456798Z .m2/repository/com/github/eirslett/node/22.18.0/node-22.18.0-linux-x64.tar.gz
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:08.4613616Z .m2/repository/com/github/eirslett/node/22.18.0/node-22.18.0-win-x64.exe
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:11.9945873Z .m2/repository/com/github/eirslett/node/24.9.0/
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:11.9946740Z .m2/repository/com/github/eirslett/node/24.9.0/node-24.9.0-win-x64.exe
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:15.6315116Z .m2/repository/com/github/eirslett/node/24.9.0/node-24.9.0-linux-x64.tar.gz
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9703987Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9705116Z   "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9706002Z   "location": "westeurope",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9706572Z   "managedBy": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9707172Z   "name": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9707847Z   "properties": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9708390Z     "provisioningState": "Succeeded"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9708992Z   ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9709437Z   "tags": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9709969Z   "type": "Microsoft.Resources/resourceGroups"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:19.9710587Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4925985Z Generating public/private rsa key pair.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4927064Z Your identification has been saved in gh-action-d03bba5-21309034624-1_westeurope
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4928136Z Your public key has been saved in gh-action-d03bba5-21309034624-1_westeurope.pub
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4928651Z The key fingerprint is:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4929864Z SHA256:PJFXVyHH89wTZ1U3Vk7T9hH5O0uzdL2rz2WDTzXu7r4 runner@runnervmymu0l
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4930668Z The key's randomart image is:
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4931225Z +---[RSA 2048]----+
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4931670Z |            ..oO/|
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4932077Z |         . . .+OO|
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4932511Z |        o .    +@|
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4932952Z |       . o     .*|
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4933597Z |        S      .=|
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4934067Z |         .    o*=|
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4934519Z |             .o+X|
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4935228Z |              ==o|
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4935658Z |             .*Eo|
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:20.4936087Z +----[SHA256]-----+
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2089190Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2089973Z   "NewNSG": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2090723Z     "defaultSecurityRules": [
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2091548Z       ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2092194Z         "access": "Allow",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2093374Z         "description": "Allow inbound traffic from all VMs in VNET",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2094710Z         "destinationAddressPrefix": "VirtualNetwork",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2095819Z         "destinationAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2096783Z         "destinationPortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2097722Z         "destinationPortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2098603Z         "direction": "Inbound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2099531Z         "etag": "W/\"00dc5d31-ef03-45e9-861c-8b642739ebf6\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2103224Z         "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkSecurityGroups/gh-action-d03bba5-21309034624-1-nsg/defaultSecurityRules/AllowVnetInBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2106185Z         "name": "AllowVnetInBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2107057Z         "priority": 65000,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2107836Z         "protocol": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2108634Z         "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2109711Z         "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2110840Z         "sourceAddressPrefix": "VirtualNetwork",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2111872Z         "sourceAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2112776Z         "sourcePortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2113735Z         "sourcePortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2114908Z         "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2116188Z       ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2116825Z       ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2117451Z         "access": "Allow",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2118473Z         "description": "Allow inbound traffic from azure load balancer",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2119727Z         "destinationAddressPrefix": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2120679Z         "destinationAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2121751Z         "destinationPortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2122642Z         "destinationPortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2123650Z         "direction": "Inbound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2124612Z         "etag": "W/\"00dc5d31-ef03-45e9-861c-8b642739ebf6\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2128247Z         "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkSecurityGroups/gh-action-d03bba5-21309034624-1-nsg/defaultSecurityRules/AllowAzureLoadBalancerInBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2131422Z         "name": "AllowAzureLoadBalancerInBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2132420Z         "priority": 65001,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2133291Z         "protocol": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2134105Z         "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2135163Z         "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2136349Z         "sourceAddressPrefix": "AzureLoadBalancer",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2137376Z         "sourceAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2138262Z         "sourcePortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2139081Z         "sourcePortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2140236Z         "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2141495Z       ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2142121Z       ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2143217Z         "access": "Deny",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2144081Z         "description": "Deny all inbound traffic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2145099Z         "destinationAddressPrefix": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2146022Z         "destinationAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2147005Z         "destinationPortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2147909Z         "destinationPortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2148800Z         "direction": "Inbound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2149696Z         "etag": "W/\"00dc5d31-ef03-45e9-861c-8b642739ebf6\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2152342Z         "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkSecurityGroups/gh-action-d03bba5-21309034624-1-nsg/defaultSecurityRules/DenyAllInBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2153772Z         "name": "DenyAllInBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2154229Z         "priority": 65500,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2154648Z         "protocol": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2155066Z         "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2155628Z         "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2156245Z         "sourceAddressPrefix": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2156701Z         "sourceAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2157160Z         "sourcePortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2157593Z         "sourcePortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2158167Z         "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2158807Z       ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2159155Z       ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2159487Z         "access": "Allow",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2160063Z         "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2160748Z         "destinationAddressPrefix": "VirtualNetwork",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2161288Z         "destinationAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2161784Z         "destinationPortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2162227Z         "destinationPortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2162682Z         "direction": "Outbound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2163352Z         "etag": "W/\"00dc5d31-ef03-45e9-861c-8b642739ebf6\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2164969Z         "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkSecurityGroups/gh-action-d03bba5-21309034624-1-nsg/defaultSecurityRules/AllowVnetOutBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2166331Z         "name": "AllowVnetOutBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2166779Z         "priority": 65000,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2167179Z         "protocol": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2167630Z         "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2168180Z         "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2168771Z         "sourceAddressPrefix": "VirtualNetwork",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2169299Z         "sourceAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2169767Z         "sourcePortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2170218Z         "sourcePortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2170824Z         "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2171447Z       ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2171789Z       ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2172137Z         "access": "Allow",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2172661Z         "description": "Allow outbound traffic from all VMs to Internet",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2173446Z         "destinationAddressPrefix": "Internet",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2173963Z         "destinationAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2174450Z         "destinationPortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2174938Z         "destinationPortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2175375Z         "direction": "Outbound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2175864Z         "etag": "W/\"00dc5d31-ef03-45e9-861c-8b642739ebf6\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2177504Z         "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkSecurityGroups/gh-action-d03bba5-21309034624-1-nsg/defaultSecurityRules/AllowInternetOutBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2178874Z         "name": "AllowInternetOutBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2179549Z         "priority": 65001,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2179976Z         "protocol": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2180394Z         "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2180963Z         "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2181527Z         "sourceAddressPrefix": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2182021Z         "sourceAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2182491Z         "sourcePortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2182935Z         "sourcePortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2183868Z         "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2184502Z       ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2184842Z       ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2185173Z         "access": "Deny",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2185627Z         "description": "Deny all outbound traffic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2186178Z         "destinationAddressPrefix": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2186681Z         "destinationAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2187172Z         "destinationPortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2187649Z         "destinationPortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2188074Z         "direction": "Outbound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2188544Z         "etag": "W/\"00dc5d31-ef03-45e9-861c-8b642739ebf6\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2190164Z         "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkSecurityGroups/gh-action-d03bba5-21309034624-1-nsg/defaultSecurityRules/DenyAllOutBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2191529Z         "name": "DenyAllOutBound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2191970Z         "priority": 65500,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2192353Z         "protocol": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2192765Z         "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2193473Z         "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2194017Z         "sourceAddressPrefix": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2194473Z         "sourceAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2194922Z         "sourcePortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2195345Z         "sourcePortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2195947Z         "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2196585Z       ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2196908Z     ],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2197307Z     "etag": "W/\"00dc5d31-ef03-45e9-861c-8b642739ebf6\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2198652Z     "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkSecurityGroups/gh-action-d03bba5-21309034624-1-nsg",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2199773Z     "location": "westeurope",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2200241Z     "name": "gh-action-d03bba5-21309034624-1-nsg",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2200739Z     "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2201284Z     "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2201907Z     "resourceGuid": "6460cbdc-060f-4a72-bc49-969a9bf22b01",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2202415Z     "securityRules": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2202857Z     "type": "Microsoft.Network/networkSecurityGroups"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2203509Z   ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:24.2203832Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9710732Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9711993Z   "access": "Allow",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9713722Z   "destinationAddressPrefix": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9714657Z   "destinationAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9715561Z   "destinationPortRange": "22",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9716430Z   "destinationPortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9717270Z   "direction": "Inbound",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9718150Z   "etag": "W/\"d48fe287-770a-4e5f-be39-6bd36a02b6f1\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9721406Z   "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkSecurityGroups/gh-action-d03bba5-21309034624-1-nsg/securityRules/Allow-SSH",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9724191Z   "name": "Allow-SSH",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9724937Z   "priority": 1000,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9725662Z   "protocol": "Tcp",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9726426Z   "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9727754Z   "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9728818Z   "sourceAddressPrefix": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9729675Z   "sourceAddressPrefixes": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9730529Z   "sourcePortRange": "*",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9731317Z   "sourcePortRanges": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9732340Z   "type": "Microsoft.Network/networkSecurityGroups/securityRules"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:26.9733679Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:28.0815613Z WARNING: [Coming breaking change] In the coming release, the default behavior will be changed as follows when sku is Standard and zone is not provided: For zonal regions, you will get a zone-redundant IP indicated by zones:["1","2","3"]; For non-zonal regions, you will get a non zone-redundant IP indicated by zones:null.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4409907Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4410618Z   "publicIp": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4411316Z     "ddosSettings": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4412181Z       "protectionMode": "VirtualNetworkInherited"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4413366Z     ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4414138Z     "etag": "W/\"8bf56c1a-459f-4215-8ee7-1569ee2f2c92\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4416973Z     "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/publicIPAddresses/gh-action-d03bba5-21309034624-1-pip",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4419283Z     "idleTimeoutInMinutes": 4,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4420115Z     "ipAddress": "172.201.72.76",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4420947Z     "ipTags": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4421670Z     "location": "westeurope",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4422602Z     "name": "gh-action-d03bba5-21309034624-1-pip",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4423780Z     "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4424714Z     "publicIPAddressVersion": "IPv4",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4425692Z     "publicIPAllocationMethod": "Static",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4426756Z     "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4427960Z     "resourceGuid": "a44cb540-7a0d-450d-b145-16ef44dec6f5",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4429020Z     "sku": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4429689Z       "name": "Standard",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4430459Z       "tier": "Regional"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4431186Z     ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4431924Z     "type": "Microsoft.Network/publicIPAddresses"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4432931Z   ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:31.4433669Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9517664Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9518245Z   "newVNet": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9518812Z     "addressSpace": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9519370Z       "addressPrefixes": [
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9519934Z         "10.0.0.0/16"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9520438Z       ]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9520852Z     ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9521361Z     "enableDdosProtection": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9522029Z     "etag": "W/\"adc197ec-1af2-408b-b860-c75be8d99307\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9524066Z     "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/virtualNetworks/gh-action-d03bba5-21309034624-1-vnet",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9525595Z     "location": "westeurope",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9526319Z     "name": "gh-action-d03bba5-21309034624-1-vnet",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9527049Z     "privateEndpointVNetPolicies": "Disabled",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9527761Z     "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9528509Z     "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9529380Z     "resourceGuid": "921a0700-d9bd-4add-86a7-e3ffcfd42132",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9530068Z     "subnets": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9530553Z     "type": "Microsoft.Network/virtualNetworks",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9531182Z     "virtualNetworkPeerings": []
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9531700Z   ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:46.9532074Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2053231Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2053953Z   "addressPrefix": "10.0.0.0/24",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2054824Z   "delegations": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2055665Z   "etag": "W/\"17a3c471-9f76-4b2c-9007-2b534a166ae6\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2059333Z   "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/virtualNetworks/gh-action-d03bba5-21309034624-1-vnet/subnets/gh-action-d03bba5-21309034624-1-subnet",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2062316Z   "name": "gh-action-d03bba5-21309034624-1-subnet",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2063597Z   "privateEndpointNetworkPolicies": "Disabled",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2064760Z   "privateLinkServiceNetworkPolicies": "Enabled",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2065842Z   "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2066872Z   "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2068048Z   "type": "Microsoft.Network/virtualNetworks/subnets"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:50.2069319Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2810410Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2811121Z   "NewNIC": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2811831Z     "auxiliaryMode": "None",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2812653Z     "auxiliarySku": "None",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2813675Z     "disableTcpStateTracking": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2814595Z     "dnsSettings": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2815350Z       "appliedDnsServers": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2816169Z       "dnsServers": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2817503Z       "internalDomainNameSuffix": "aadrvev31houvbvh2p525vbbgc.ax.internal.cloudapp.net"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2819029Z     ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2819726Z     "enableAcceleratedNetworking": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2820669Z     "enableIPForwarding": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2821647Z     "etag": "W/\"936cc18b-cea7-48ce-a19e-344077606d46\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2822662Z     "hostedWorkloads": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2825489Z     "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkInterfaces/gh-action-d03bba5-21309034624-1-nic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2827811Z     "ipConfigurations": [
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2828553Z       ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2829317Z         "etag": "W/\"936cc18b-cea7-48ce-a19e-344077606d46\"",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2832517Z         "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkInterfaces/gh-action-d03bba5-21309034624-1-nic/ipConfigurations/ipconfig1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2835300Z         "name": "ipconfig1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2836081Z         "primary": true,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2836862Z         "privateIPAddress": "10.0.0.4",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2837806Z         "privateIPAddressVersion": "IPv4",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2838882Z         "privateIPAllocationMethod": "Dynamic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2839882Z         "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2840852Z         "publicIPAddress": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2843594Z           "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/publicIPAddresses/gh-action-d03bba5-21309034624-1-pip",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2846054Z           "resourceGroup": "gh-action-d03bba5-21309034624-1"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2847072Z         ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2847883Z         "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2848924Z         "subnet": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2852058Z           "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/virtualNetworks/gh-action-d03bba5-21309034624-1-vnet/subnets/gh-action-d03bba5-21309034624-1-subnet",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2855174Z           "resourceGroup": "gh-action-d03bba5-21309034624-1"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2856200Z         ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2857111Z         "type": "Microsoft.Network/networkInterfaces/ipConfigurations"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2858257Z       ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2858870Z     ],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2859513Z     "location": "westeurope",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2860390Z     "name": "gh-action-d03bba5-21309034624-1-nic",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2861406Z     "networkSecurityGroup": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2864234Z       "id": "/subscriptions/***/resourceGroups/gh-action-d03bba5-21309034624-1/providers/Microsoft.Network/networkSecurityGroups/gh-action-d03bba5-21309034624-1-nsg",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2866688Z       "resourceGroup": "gh-action-d03bba5-21309034624-1"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2867615Z     ***,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2868196Z     "nicType": "Standard",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2868924Z     "provisioningState": "Succeeded",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2871995Z     "resourceGroup": "gh-action-d03bba5-21309034624-1",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2872856Z     "resourceGuid": "f885801b-e2a4-4d5d-b7da-8423e51cc81a",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2873530Z     "tapConfigurations": [],
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2873997Z     "type": "Microsoft.Network/networkInterfaces",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2874543Z     "vnetEncryptionSupported": false
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2875011Z   ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:54.2875357Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:55.6279665Z WARNING: The default value of '--size' will be changed to 'Standard_D2s_v5' from 'Standard_DS1_v2' in a future release.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:56.3779859Z Selecting "uksouth" may reduce your costs. The region you've selected may cost more for the same services. You can disable this message in the future with the command "az config set core.display_region_identified=false". Learn more at https://go.microsoft.com/fwlink/?linkid=222571 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:19:56.3781406Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:37.2572898Z Connection to 172.201.72.76 22 port [tcp/ssh] succeeded!
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:37.2588368Z VM provisioned. Inventory: gh-action-d03bba5-21309034624-1_westeurope_inventory.yml
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9485969Z ansible-playbook [core 2.20.1]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9486721Z   config file = /home/runner/work/keycloak/keycloak/.github/scripts/ansible/ansible.cfg
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9487553Z   configured module search path = ['/home/runner/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9488422Z   ansible python module location = /opt/pipx/venvs/ansible-core/lib/python3.12/site-packages/ansible
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9489245Z   ansible collection location = /home/runner/.ansible/collections:/usr/share/ansible/collections
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9489885Z   executable location = /opt/pipx_bin/ansible-playbook
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9490539Z   python version = 3.12.3 (main, Jan  8 2026, 11:30:50) [GCC 13.3.0] (/opt/pipx/venvs/ansible-core/bin/python)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9491107Z   jinja version = 3.1.6
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9491505Z   pyyaml version = 6.0.3 (with libyaml v0.2.5)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9492110Z Using /home/runner/work/keycloak/keycloak/.github/scripts/ansible/ansible.cfg as config file
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9492700Z setting up inventory plugins
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9493278Z Loading collection ansible.builtin from 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9494303Z host_list declined parsing /home/runner/work/keycloak/keycloak/.github/scripts/ansible/gh-action-d03bba5-21309034624-1_westeurope_inventory.yml as it did not pass its verify_file() method
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9495831Z script declined parsing /home/runner/work/keycloak/keycloak/.github/scripts/ansible/gh-action-d03bba5-21309034624-1_westeurope_inventory.yml as it did not pass its verify_file() method
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9497217Z Parsed /home/runner/work/keycloak/keycloak/.github/scripts/ansible/gh-action-d03bba5-21309034624-1_westeurope_inventory.yml inventory source with yaml plugin
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9498505Z Loading callback plugin default of type stdout, v2.0 from /opt/pipx/venvs/ansible-core/lib/python3.12/site-packages/ansible/plugins/callback/default.py
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9499394Z Skipping callback 'minimal', as we already have a stdout callback.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9499965Z Skipping callback 'oneline', as we already have a stdout callback.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9500315Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9500551Z PLAYBOOK: keycloak.yml *********************************************************
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9500967Z Positional arguments: keycloak.yml
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9501271Z verbosity: 4
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9501514Z connection: ssh
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9501769Z become_method: sudo
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9502027Z tags: ('all',)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9502572Z inventory: ('/home/runner/work/keycloak/keycloak/.github/scripts/ansible/gh-action-d03bba5-21309034624-1_westeurope_inventory.yml',)
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9503356Z extra_vars: ('keycloak_src="/tmp/keycloak.zip"', 'maven_archive="m2.tar.gz"')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9503767Z forks: 50
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9504005Z 1 plays in keycloak.yml
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9504170Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9504590Z PLAY [keycloak] ****************************************************************
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9504867Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9505064Z TASK [Gathering Facts] *********************************************************
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:39.9505603Z task path: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/keycloak.yml:1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2096733Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2099432Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'echo ~azureuser && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2101942Z <172.201.72.76> (0, b'/home/azureuser\n', b"Warning: Permanently added '172.201.72.76' (ED25519) to the list of known hosts.\r\n")
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2102550Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2105705Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/azureuser/.ansible/tmp `"&& mkdir "` echo /home/azureuser/.ansible/tmp/ansible-tmp-1769228443.3460195-4013-219860022362049 `" && echo ansible-tmp-1769228443.3460195-4013-219860022362049="` echo /home/azureuser/.ansible/tmp/ansible-tmp-1769228443.3460195-4013-219860022362049 `" ) && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2109017Z <172.201.72.76> (0, b'ansible-tmp-1769228443.3460195-4013-219860022362049=/home/azureuser/.ansible/tmp/ansible-tmp-1769228443.3460195-4013-219860022362049\n', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2109748Z <keycloak> Attempting python interpreter discovery.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2110160Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2113701Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'echo FOUND; command -v '"'"'"'"'"'"'"'"'python3.14'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.13'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.12'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.11'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.10'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.9'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2117353Z <172.201.72.76> (0, b'FOUND\n/usr/bin/python3.12\n/usr/bin/python3\n/usr/bin/python3\nENDFOUND\n', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2118030Z Using module file /opt/pipx/venvs/ansible-core/lib/python3.12/site-packages/ansible/modules/setup.py
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2118985Z <172.201.72.76> PUT /home/runner/.ansible/tmp/ansible-local-400997r8wrsv/tmpgk4_j3s1 TO /home/azureuser/.ansible/tmp/ansible-tmp-1769228443.3460195-4013-219860022362049/AnsiballZ_setup.py
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2121433Z <172.201.72.76> SSH: EXEC sftp -b - -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 '[172.201.72.76]'
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2123981Z <172.201.72.76> (0, b'sftp> put /home/runner/.ansible/tmp/ansible-local-400997r8wrsv/tmpgk4_j3s1 /home/azureuser/.ansible/tmp/ansible-tmp-1769228443.3460195-4013-219860022362049/AnsiballZ_setup.py\n', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2124849Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2127502Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'chmod u+rwx /home/azureuser/.ansible/tmp/ansible-tmp-1769228443.3460195-4013-219860022362049/ /home/azureuser/.ansible/tmp/ansible-tmp-1769228443.3460195-4013-219860022362049/AnsiballZ_setup.py && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2129994Z <172.201.72.76> (0, b'', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2130342Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2132678Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 -tt 172.201.72.76 '/bin/sh -c '"'"'/usr/bin/python3.12 /home/azureuser/.ansible/tmp/ansible-tmp-1769228443.3460195-4013-219860022362049/AnsiballZ_setup.py && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.2209400Z <172.201.72.76> (0, b'\r\n***"ansible_facts": ***"ansible_apparmor": ***"status": "enabled"***, "ansible_user_id": "azureuser", "ansible_user_uid": 1000, "ansible_user_gid": 1000, "ansible_user_gecos": "Ubuntu", "ansible_user_dir": "/home/azureuser", "ansible_user_shell": "/bin/bash", "ansible_real_user_id": 1000, "ansible_effective_user_id": 1000, "ansible_real_group_id": 1000, "ansible_effective_group_id": 1000, "ansible_virtualization_role": "guest", "ansible_virtualization_type": "VirtualPC", "ansible_virtualization_tech_guest": ["VirtualPC"], "ansible_virtualization_tech_host": ["kvm"], "ansible_selinux_python_present": true, "ansible_selinux": ***"status": "disabled"***, "ansible_system_capabilities_enforced": "True", "ansible_system_capabilities": [""], "ansible_distribution": "Ubuntu", "ansible_distribution_release": "noble", "ansible_distribution_version": "24.04", "ansible_distribution_major_version": "24", "ansible_distribution_file_path": "/etc/os-release", "ansible_distribution_file_variety": "Debian", "ansible_distribution_file_parsed": true, "ansible_os_family": "Debian", "ansible_system": "Linux", "ansible_kernel": "6.14.0-1017-azure", "ansible_kernel_version": "#17~24.04.1-Ubuntu SMP Mon Dec  1 20:10:50 UTC 2025", "ansible_machine": "x86_64", "ansible_python_version": "3.12.3", "ansible_fqdn": "gh-action-d03bba5-21309034624-1-vm.internal.cloudapp.net", "ansible_hostname": "gh-action-d03bba5-21309034624-1-vm", "ansible_nodename": "gh-action-d03bba5-21309034624-1-vm", "ansible_domain": "internal.cloudapp.net", "ansible_userspace_bits": "64", "ansible_architecture": "x86_64", "ansible_userspace_architecture": "x86_64", "ansible_machine_id": "85f9cbfab828437581b0f73da76fd7b7", "ansible_cmdline": ***"BOOT_IMAGE": "/vmlinuz-6.14.0-1017-azure", "root": "PARTUUID=0f3807c6-3e18-4153-9eb7-2dee19b078c8", "ro": true, "console": "ttyS0", "earlyprintk": "ttyS0", "nvme_core.io_timeout": "240", "panic": "-1"***, "ansible_proc_cmdline": ***"BOOT_IMAGE": "/vmlinuz-6.14.0-1017-azure", "root": "PARTUUID=0f3807c6-3e18-4153-9eb7-2dee19b078c8", "ro": true, "console": ["tty1", "ttyS0"], "earlyprintk": "ttyS0", "nvme_core.io_timeout": "240", "panic": "-1"***, "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQC+x6Oiznqp+e48ZqfZIDflTKtKEUc5AzwV0hREVLfaCG/S3iL5tXPrMBGkmS1Vuz1MaNEG3bZyxs9dai6es2FB/4iNPKDIkGETTQTu8aR4+Wq15NTHO4XOwSXgteMRdcapXluv+7C8G2WTP5kz7LmeEJnxXuQdg2uUtPIcHg7WQOqx8Cchgw6b2eru48jq/98/ge1h8Fm+RXIf+eL3brRsteyUfA/DBRbnqxBh/G/ZPGaTDyrQ3E45RucQNQPZ55k7TB9DpYpu9xADnOo2cQdjkdnZdn931AeqgyvtBGXcdIq27nRufgSrzwKVgBvlcH+Vs334vg5/AMfcTsEBwOIJM6s7zmKtuvSEAqZsalW3YypHviUZyTqonZIY3/N7j6D8rErn46YhYAga+7VkZ+aqi6e7DqsFWchV21y1tXF49/HcUQfypWZk1MC+y4/ii8YNQJcDXwLXw9crBBrnI0BCSEtN81DRpnCo3yvHGSWrPj1e7kf6ee6EG1Xux70AojU=", "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa", "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJIM8bVI7lC8FocEfKR4nW/83UBMHeCfSBgRugnafGjwZL5gvColsptczpGcOENDG5M9yL401ADH8VcfdvYp4g0=", "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256", "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIOK3CwhCoUWVe9nkfDLdGpY1h7i5iqyLtv9uLXoytsTQ", "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519", "ansible_interfaces": ["enP37239s1", "lo", "eth0"], "ansible_lo": ***"device": "lo", "mtu": 65536, "active": true, "type": "loopback", "promisc": false, "ipv4": ***"address": "127.0.0.1", "broadcast": "", "netmask": "255.0.0.0", "network": "127.0.0.0", "prefix": "8"***, "ipv6": [***"address": "::1", "prefix": "128", "scope": "host"***], "features": ***"rx_checksumming": "on [fixed]", "tx_checksumming": "on", "tx_checksum_ipv4": "off [fixed]", "tx_checksum_ip_generic": "on [fixed]", "tx_checksum_ipv6": "off [fixed]", "tx_checksum_fcoe_crc": "off [fixed]", "tx_checksum_sctp": "on [fixed]", "scatter_gather": "on", "tx_scatter_gather": "on [fixed]", "tx_scatter_gather_fraglist": "on [fixed]", "tcp_segmentation_offload": "on", "tx_tcp_segmentation": "on", "tx_tcp_ecn_segmentation": "on", "tx_tcp_mangleid_segmentation": "on", "tx_tcp6_segmentation": "on", "generic_segmentation_offload": "on", "generic_receive_offload": "on", "large_receive_offload": "off [fixed]", "rx_vlan_offload": "off [fixed]", "tx_vlan_offload": "off [fixed]", "ntuple_filters": "off [fixed]", "receive_hashing": "off [fixed]", "highdma": "on [fixed]", "rx_vlan_filter": "off [fixed]", "vlan_challenged": "on [fixed]", "tx_gso_robust": "off [fixed]", "tx_fcoe_segmentation": "off [fixed]", "tx_gre_segmentation": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "tx_ipxip4_segmentation": "off [fixed]", "tx_ipxip6_segmentation": "off [fixed]", "tx_udp_tnl_segmentation": "off [fixed]", "tx_udp_tnl_csum_segmentation": "off [fixed]", "tx_gso_partial": "off [fixed]", "tx_tunnel_remcsum_segmentation": "off [fixed]", "tx_sctp_segmentation": "on", "tx_esp_segmentation": "off [fixed]", "tx_udp_segmentation": "on", "tx_gso_list": "on", "tx_nocache_copy": "off [fixed]", "loopback": "on [fixed]", "rx_fcs": "off [fixed]", "rx_all": "off [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "l2_fwd_offload": "off [fixed]", "hw_tc_offload": "off [fixed]", "esp_hw_offload": "off [fixed]", "esp_tx_csum_hw_offload": "off [fixed]", "rx_udp_tunnel_port_offload": "off [fixed]", "tls_hw_tx_offload": "off [fixed]", "tls_hw_rx_offload": "off [fixed]", "rx_gro_hw": "off [fixed]", "tls_hw_record": "off [fixed]", "rx_gro_list": "off", "macsec_hw_offload": "off [fixed]", "rx_udp_gro_forwarding": "off", "hsr_tag_ins_offload": "off [fixed]", "hsr_tag_rm_offload": "off [fixed]", "hsr_fwd_offload": "off [fixed]", "hsr_dup_offload": "off [fixed]"***, "timestamping": [], "hw_timestamp_filters": []***, "ansible_enP37239s1": ***"device": "enP37239s1", "macaddress": "7c:ed:8d:5b:b7:c8", "mtu": 1500, "active": true, "module": "mlx5_core", "type": "ether", "pciid": "9177:00:02.0", "speed": 100000, "promisc": false, "features": ***"rx_checksumming": "on", "tx_checksumming": "on", "tx_checksum_ipv4": "on [fixed]", "tx_checksum_ip_generic": "off", "tx_checksum_ipv6": "on [fixed]", "tx_checksum_fcoe_crc": "off [fixed]", "tx_checksum_sctp": "off [fixed]", "scatter_gather": "on", "tx_scatter_gather": "on", "tx_scatter_gather_fraglist": "off [fixed]", "tcp_segmentation_offload": "on", "tx_tcp_segmentation": "on", "tx_tcp_ecn_segmentation": "off [fixed]", "tx_tcp_mangleid_segmentation": "off", "tx_tcp6_segmentation": "on", "generic_segmentation_offload": "on", "generic_receive_offload": "on", "large_receive_offload": "on", "rx_vlan_offload": "on", "tx_vlan_offload": "on", "ntuple_filters": "off", "receive_hashing": "on", "highdma": "on [fixed]", "rx_vlan_filter": "off", "vlan_challenged": "off [fixed]", "tx_gso_robust": "off [fixed]", "tx_fcoe_segmentation": "off [fixed]", "tx_gre_segmentation": "off", "tx_gre_csum_segmentation": "off", "tx_ipxip4_segmentation": "off", "tx_ipxip6_segmentation": "off", "tx_udp_tnl_segmentation": "off [fixed]", "tx_udp_tnl_csum_segmentation": "off [fixed]", "tx_gso_partial": "off", "tx_tunnel_remcsum_segmentation": "off [fixed]", "tx_sctp_segmentation": "off [fixed]", "tx_esp_segmentation": "off [fixed]", "tx_udp_segmentation": "off", "tx_gso_list": "off [fixed]", "tx_nocache_copy": "off", "loopback": "off [fixed]", "rx_fcs": "off", "rx_all": "off [fixed]", "tx_vlan_stag_hw_insert": "off", "rx_vlan_stag_hw_parse": "off [fixed]", "rx_vlan_stag_filter": "on [fixed]", "l2_fwd_offload": "off [fixed]", "hw_tc_offload": "off", "esp_hw_offload": "off [fixed]", "esp_tx_csum_hw_offload": "off [fixed]", "rx_udp_tunnel_port_offload": "off [fixed]", "tls_hw_tx_offload": "off [fixed]", "tls_hw_rx_offload": "off [fixed]", "rx_gro_hw": "off [fixed]", "tls_hw_record": "off [fixed]", "rx_gro_list": "off", "macsec_hw_offload": "off", "rx_udp_gro_forwarding": "off", "hsr_tag_ins_offload": "off [fixed]", "hsr_tag_rm_offload": "off [fixed]", "hsr_fwd_offload": "off [fixed]", "hsr_dup_offload": "off [fixed]"***, "timestamping": [], "hw_timestamp_filters": [], "phc_index": 1***, "ansible_eth0": ***"device": "eth0", "macaddress": "7c:ed:8d:5b:b7:c8", "mtu": 1500, "active": true, "module": "hv_netvsc", "type": "ether", "pciid": "7ced8d5b-b7c8-7ced-8d5b-b7c87ced8d5b", "speed": 100000, "promisc": false, "ipv4": ***"address": "10.0.0.4", "broadcast": "", "netmask": "255.255.255.0", "network": "10.0.0.0", "prefix": "24"***, "ipv6": [***"address": "fe80::7eed:8dff:fe5b:b7c8", "prefix": "64", "scope": "link"***], "features": ***"rx_checksumming": "on", "tx_checksumming": "on", "tx_checksum_ipv4": "on", "tx_checksum_ip_generic": "off [fixed]", "tx_checksum_ipv6": "on", "tx_checksum_fcoe_crc": "off [fixed]", "tx_checksum_sctp": "off [fixed]", "scatter_gather": "on", "tx_scatter_gather": "on", "tx_scatter_gather_fraglist": "off [fixed]", "tcp_segmentation_offload": "on", "tx_tcp_segmentation": "on", "tx_tcp_ecn_segmentation": "off [fixed]", "tx_tcp_mangleid_segmentation": "off", "tx_tcp6_segmentation": "on", "generic_segmentation_offload": "on", "generic_receive_offload": "on", "large_receive_offload": "on", "rx_vlan_offload": "on [fixed]", "tx_vlan_offload": "on [fixed]", "ntuple_filters": "off [fixed]", "receive_hashing": "on", "highdma": "on [fixed]", "rx_vlan_filter": "off [fixed]", "vlan_challenged": "off [fixed]", "tx_gso_robust": "off [fixed]", "tx_fcoe_segmentation": "off [fixed]", "tx_gre_segmentation": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "tx_ipxip4_segmentation": "off [fixed]", "tx_ipxip6_segmentation": "off [fixed]", "tx_udp_tnl_segmentation": "off [fixed]", "tx_udp_tnl_csum_segmentation": "off [fixed]", "tx_gso_partial": "off [fixed]", "tx_tunnel_remcsum_segmentation": "off [fixed]", "tx_sctp_segmentation": "off [fixed]", "tx_esp_segmentation": "off [fixed]", "tx_udp_segmentation": "off [fixed]", "tx_gso_list": "off [fixed]", "tx_nocache_copy": "off", "loopback": "off [fixed]", "rx_fcs": "off [fixed]", "rx_all": "off [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "l2_fwd_offload": "off [fixed]", "hw_tc_offload": "off [fixed]", "esp_hw_offload": "off [fixed]", "esp_tx_csum_hw_offload": "off [fixed]", "rx_udp_tunnel_port_offload": "off [fixed]", "tls_hw_tx_offload": "off [fixed]", "tls_hw_rx_offload": "off [fixed]", "rx_gro_hw": "off [fixed]", "tls_hw_record": "off [fixed]", "rx_gro_list": "off", "macsec_hw_offload": "off [fixed]", "rx_udp_gro_forwarding": "off", "hsr_tag_ins_offload": "off [fixed]", "hsr_tag_rm_offload": "off [fixed]", "hsr_fwd_offload": "off [fixed]", "hsr_dup_offload": "off [fixed]"***, "timestamping": [], "hw_timestamp_filters": []***, "ansible_default_ipv4": ***"gateway": "10.0.0.1", "interface": "eth0", "address": "10.0.0.4", "broadcast": "", "netmask": "255.255.255.0", "network": "10.0.0.0", "prefix": "24", "macaddress": "7c:ed:8d:5b:b7:c8", "mtu": 1500, "type": "ether", "alias": "eth0"***, "ansible_default_ipv6": ***, "ansible_all_ipv4_addresses": ["10.0.0.4"], "ansible_all_ipv6_addresses": ["fe80::7eed:8dff:fe5b:b7c8"], "ansible_locally_reachable_ips": ***"ipv4": ["10.0.0.4", "127.0.0.0/8", "127.0.0.1"], "ipv6": ["::1", "fe80::7eed:8dff:fe5b:b7c8"]***, "ansible_processor": ["0", "GenuineIntel", "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz", "1", "GenuineIntel", "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz"], "ansible_flags": ["fpu", "vme", "de", "pse", "tsc", "msr", "pae", "mce", "cx8", "apic", "sep", "mtrr", "pge", "mca", "cmov", "pat", "pse36", "clflush", "mmx", "fxsr", "sse", "sse2", "ss", "ht", "syscall", "nx", "pdpe1gb", "rdtscp", "lm", "constant_tsc", "rep_good", "nopl", "xtopology", "tsc_reliable", "nonstop_tsc", "cpuid", "aperfmperf", "tsc_known_freq", "pni", "pclmulqdq", "vmx", "ssse3", "fma", "cx16", "pcid", "sse4_1", "sse4_2", "x2apic", "movbe", "popcnt", "tsc_deadline_timer", "aes", "xsave", "avx", "f16c", "rdrand", "hypervisor", "lahf_lm", "abm", "3dnowprefetch", "tpr_shadow", "ept", "vpid", "ept_ad", "fsgsbase", "tsc_adjust", "bmi1", "hle", "avx2", "smep", "bmi2", "erms", "invpcid", "rtm", "avx512f", "avx512dq", "rdseed", "adx", "smap", "avx512ifma", "clflushopt", "clwb", "avx512cd", "sha_ni", "avx512bw", "avx512vl", "xsaveopt", "xsavec", "xgetbv1", "xsaves", "vnmi", "avx512vbmi", "umip", "avx512_vbmi2", "gfni", "vaes", "vpclmulqdq", "avx512_vnni", "avx512_bitalg", "avx512_vpopcntdq", "la57", "rdpid", "fsrm", "arch_capabilities"], "ansible_processor_count": 1, "ansible_processor_cores": 1, "ansible_processor_threads_per_core": 2, "ansible_processor_vcpus": 2, "ansible_processor_nproc": 2, "ansible_memtotal_mb": 7892, "ansible_memfree_mb": 7203, "ansible_swaptotal_mb": 0, "ansible_swapfree_mb": 0, "ansible_memory_mb": ***"real": ***"total": 7892, "used": 689, "free": 7203***, "nocache": ***"free": 7566, "used": 326***, "swap": ***"total": 0, "free": 0, "used": 0, "cached": 0***, "ansible_bios_date": "08/23/2024", "ansible_bios_vendor": "Microsoft Corporation", "ansible_bios_version": "Hyper-V UEFI Release v4.1", "ansible_board_asset_tag": "None", "ansible_board_name": "Virtual Machine", "ansible_board_serial": "NA", "ansible_board_vendor": "Microsoft Corporation", "ansible_board_version": "Hyper-V UEFI Release v4.1", "ansible_chassis_asset_tag": "7783-7084-3265-9085-8269-3286-77", "ansible_chassis_serial": "NA", "ansible_chassis_vendor": "Microsoft Corporation", "ansible_chassis_version": "Hyper-V UEFI Release v4.1", "ansible_form_factor": "Desktop", "ansible_product_name": "Virtual Machine", "ansible_product_serial": "NA", "ansible_product_uuid": "d30c28a3-7666-4a68-923c-75a8c592a489", "ansible_product_version": "Hyper-V UEFI Release v4.1", "ansible_system_vendor": "Microsoft Corporation", "ansible_devices": ***"loop1": ***"virtual": 1, "links": ***"ids": [], "uuids": [], "labels": [], "masters": []***, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": ***, "rotational": "0", "scheduler_mode": "none", "sectorsize": "512", "sectors": 0, "size": "0.00 Bytes", "host": "", "holders": []***, "loop6": ***"virtual": 1, "links": ***"ids": [], "uuids": [], "labels": [], "masters": []***, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": ***, "rotational": "0", "scheduler_mode": "none", "sectorsize": "512", "sectors": 0, "size": "0.00 Bytes", "host": "", "holders": []***, "loop4": ***"virtual": 1, "links": ***"ids": [], "uuids": [], "labels": [], "masters": []***, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": ***, "rotational": "0", "scheduler_mode": "none", "sectorsize": "512", "sectors": 0, "size": "0.00 Bytes", "host": "", "holders": []***, "sr0": ***"virtual": 1, "links": ***"ids": ["scsi-14d534654202020207305e3437703544694957d7ced624a7d"], "uuids": [], "labels": [], "masters": []***, "vendor": "Msft", "model": "Virtual DVD-ROM", "sas_address": null, "sas_device_handle": null, "removable": "1", "support_discard": "0", "partitions": ***, "rotational": "0", "scheduler_mode": "none", "sectorsize": "2048", "sectors": 314, "size": "628.00 KB", "host": "", "holders": []***, "loop2": ***"virtual": 1, "links": ***"ids": [], "uuids": [], "labels": [], "masters": []***, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": ***, "rotational": "0", "scheduler_mode": "none", "sectorsize": "512", "sectors": 0, "size": "0.00 Bytes", "host": "", "holders": []***, "loop0": ***"virtual": 1, "links": ***"ids": [], "uuids": [], "labels": [], "masters": []***, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "4096", "partitions": ***, "rotational": "1", "scheduler_mode": "none", "sectorsize": "512", "sectors": 0, "size": "0.00 Bytes", "host": "", "holders": []***, "loop7": ***"virtual": 1, "links": ***"ids": [], "uuids": [], "labels": [], "masters": []***, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": ***, "rotational": "0", "scheduler_mode": "none", "sectorsize": "512", "sectors": 0, "size": "0.00 Bytes", "host": "", "holders": []***, "sda": ***"virtual": 1, "links": ***"ids": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4", "scsi-360022480f094d0dee0ebe4a17dcb99e4", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4"], "uuids": [], "labels": [], "masters": []***, "vendor": "Msft", "model": "Virtual Disk", "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "2097152", "wwn": "0x60022480f094d0dee0ebe4a17dcb99e4", "partitions": ***"sda16": ***"links": ***"ids": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4-part16", "scsi-360022480f094d0dee0ebe4a17dcb99e4-part16", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4-part16"], "uuids": ["ecc87e32-3849-45ce-a96d-24a319460729"], "labels": ["BOOT"], "masters": []***, "start": "227328", "sectorsize": 512, "sectors": 1869825, "size": "913.00 MB", "uuid": "ecc87e32-3849-45ce-a96d-24a319460729", "holders": []***, "sda14": ***"links": ***"ids": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4-part14", "scsi-360022480f094d0dee0ebe4a17dcb99e4-part14", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4-part14"], "uuids": [], "labels": [], "masters": []***, "start": "2048", "sectorsize": 512, "sectors": 8192, "size": "4.00 MB", "uuid": null, "holders": []***, "sda15": ***"links": ***"ids": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4-part15", "scsi-360022480f094d0dee0ebe4a17dcb99e4-part15", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4-part15"], "uuids": ["D53A-9383"], "labels": ["UEFI"], "masters": []***, "start": "10240", "sectorsize": 512, "sectors": 217088, "size": "106.00 MB", "uuid": "D53A-9383", "holders": []***, "sda1": ***"links": ***"ids": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4-part1", "scsi-360022480f094d0dee0ebe4a17dcb99e4-part1", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4-part1"], "uuids": ["3d6e1849-7c61-4f30-a75f-8594f8421eb1"], "labels": ["cloudimg-rootfs"], "masters": []***, "start": "2099200", "sectorsize": 512, "sectors": 60817375, "size": "29.00 GB", "uuid": "3d6e1849-7c61-4f30-a75f-8594f8421eb1", "holders": []***, "rotational": "1", "scheduler_mode": "none", "sectorsize": "512", "sectors": 62916608, "size": "30.00 GB", "host": "", "holders": []***, "loop5": ***"virtual": 1, "links": ***"ids": [], "uuids": [], "labels": [], "masters": []***, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": ***, "rotational": "0", "scheduler_mode": "none", "sectorsize": "512", "sectors": 0, "size": "0.00 Bytes", "host": "", "holders": []***, "loop3": ***"virtual": 1, "links": ***"ids": [], "uuids": [], "labels": [], "masters": []***, "vendor": null, "model": null, "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": ***, "rotational": "0", "scheduler_mode": "none", "sectorsize": "512", "sectors": 0, "size": "0.00 Bytes", "host": "", "holders": []***, "ansible_device_links": ***"ids": ***"sda1": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4-part1", "scsi-360022480f094d0dee0ebe4a17dcb99e4-part1", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4-part1"], "sda14": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4-part14", "scsi-360022480f094d0dee0ebe4a17dcb99e4-part14", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4-part14"], "sda16": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4-part16", "scsi-360022480f094d0dee0ebe4a17dcb99e4-part16", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4-part16"], "sda15": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4-part15", "scsi-360022480f094d0dee0ebe4a17dcb99e4-part15", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4-part15"], "sda": ["scsi-14d53465420202020f094d0dee0eb8f4f9430e4a17dcb99e4", "scsi-360022480f094d0dee0ebe4a17dcb99e4", "wwn-0x60022480f094d0dee0ebe4a17dcb99e4"], "sr0": ["scsi-14d534654202020207305e3437703544694957d7ced624a7d"]***, "uuids": ***"sda1": ["3d6e1849-7c61-4f30-a75f-8594f8421eb1"], "sda16": ["ecc87e32-3849-45ce-a96d-24a319460729"], "sda15": ["D53A-9383"]***, "labels": ***"sda1": ["cloudimg-rootfs"], "sda16": ["BOOT"], "sda15": ["UEFI"]***, "masters": ***, "ansible_uptime_seconds": 632, "ansible_lvm": "N/A", "ansible_mounts": [***"mount": "/", "device": "/dev/root", "fstype": "ext4", "options": "rw,relatime,discard,errors=remount-ro,commit=30", "dump": 0, "passno": 0, "size_total": 30084825088, "size_available": 28339380224, "block_size": 4096, "block_total": 7344928, "block_available": 6918794, "block_used": 426134, "inode_total": 3801088, "inode_available": 3722084, "inode_used": 79004, "uuid": "3d6e1849-7c61-4f30-a75f-8594f8421eb1"***, ***"mount": "/boot", "device": "/dev/sda16", "fstype": "ext4", "options": "rw,relatime,discard", "dump": 0, "passno": 0, "size_total": 923156480, "size_available": 793325568, "block_size": 4096, "block_total": 225380, "block_available": 193683, "block_used": 31697, "inode_total": 58496, "inode_available": 57896, "inode_used": 600, "uuid": "ecc87e32-3849-45ce-a96d-24a319460729"***, ***"mount": "/boot/efi", "device": "/dev/sda15", "fstype": "vfat", "options": "rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro", "dump": 0, "passno": 0, "size_total": 109395456, "size_available": 102995968, "block_size": 512, "block_total": 213663, "block_available": 201164, "block_used": 12499, "inode_total": 0, "inode_available": 0, "inode_used": 0, "uuid": "D53A-9383"***], "ansible_python": ***"version": ***"major": 3, "minor": 12, "micro": 3, "releaselevel": "final", "serial": 0***, "version_info": [3, 12, 3, "final", 0], "executable": "/usr/bin/python3.12", "has_sslcontext": true, "type": "cpython"***, "ansible_fips": false, "ansible_lsb": ***"id": "Ubuntu", "description": "Ubuntu 24.04.3 LTS", "release": "24.04", "codename": "noble", "major_release": "24"***, "ansible_service_mgr": "systemd", "ansible_systemd": ***"features": "+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified", "version": 255***, "ansible_date_time": ***"year": "2026", "month": "01", "weekday": "Saturday", "weekday_number": "6", "weeknumber": "03", "day": "24", "hour": "04", "minute": "20", "second": "47", "epoch": "1769228447", "epoch_int": "1769228447", "date": "2026-01-24", "time": "04:20:47", "iso8601_micro": "2026-01-24T04:20:47.998487Z", "iso8601": "2026-01-24T04:20:47Z", "iso8601_basic": "20260124T042047998487", "iso8601_basic_short": "20260124T042047", "tz": "UTC", "tz_dst": "UTC", "tz_offset": "+0000"***, "ansible_fibre_channel_wwn": [], "ansible_local": ***, "ansible_hostnqn": "nqn.2014-08.org.nvmexpress:uuid:19a89263-89d7-40ad-8654-8610e4194c90", "ansible_dns": ***"nameservers": ["127.0.0.53"], "options": ***"edns0": true, "trust-ad": true***, "search": ["aadrvev31houvbvh2p525vbbgc.ax.internal.cloudapp.net"]***, "ansible_loadavg": ***"1m": 0.12744140625, "5m": 0.03076171875, "15m": 0.00830078125***, "ansible_is_chroot": false, "ansible_pkg_mgr": "apt", "ansible_iscsi_iqn": "", "ansible_env": ***"USER": "azureuser", "SSH_CLIENT": "20.169.50.41 38959 22", "XDG_SESSION_TYPE": "tty", "SHLVL": "0", "HOME": "/home/azureuser", "SSH_TTY": "/dev/pts/0", "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus", "LOGNAME": "azureuser", "_": "/bin/sh", "XDG_SESSION_CLASS": "user", "XDG_SESSION_ID": "1", "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin", "XDG_RUNTIME_DIR": "/run/user/1000", "LANG": "C.UTF-8", "SSH_AUTH_SOCK": "/tmp/ssh-1Tv5f1838v/agent.1647", "SHELL": "/bin/bash", "PWD": "/home/azureuser", "SSH_CONNECTION": "20.169.50.41 38959 10.0.0.4 22"***, "gather_subset": ["all"], "module_setup": true***, "invocation": ***"module_args": ***"gather_subset": ["all"], "gather_timeout": 10, "filter": [], "fact_path": "/etc/ansible/facts.d"***\r\n', b'Shared connection to 172.201.72.76 closed.\r\n')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.4968111Z [WARNING]: Host 'keycloak' is using the discovered Python interpreter at '/usr/bin/python3.12', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.20/reference_appendices/interpreter_discovery.html for more information.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.5005083Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.5008090Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'rm -f -r /home/azureuser/.ansible/tmp/ansible-tmp-1769228443.3460195-4013-219860022362049/ > /dev/null 2>&1 && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.5010799Z <172.201.72.76> (0, b'', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.5011146Z ok: [keycloak]
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.5011319Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.5011612Z TASK [keycloak_remote_installer : include_tasks] *******************************
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.5012435Z task path: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/keycloak_remote_installer/tasks/main.yml:1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6661321Z included: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/keycloak_remote_installer/tasks/install.yml for keycloak
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6661992Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6662308Z TASK [keycloak_remote_installer : Update system packages on the remote hosts] ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6663424Z task path: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/keycloak_remote_installer/tasks/install.yml:1
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6788747Z skipping: [keycloak] => ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6789350Z     "changed": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6789748Z     "false_condition": "update_system_packages",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6790459Z     "skip_reason": "Conditional result was False"
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6790875Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6791027Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6791327Z TASK [keycloak_remote_installer : Update apt cache on Ubuntu/Debian] ***********
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:20:48.6792179Z task path: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/keycloak_remote_installer/tasks/install.yml:7
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2134690Z [WARNING]: Deprecation warnings can be disabled by setting `deprecation_warnings=False` in ansible.cfg.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2136601Z [DEPRECATION WARNING]: INJECT_FACTS_AS_VARS default to `True` is deprecated, top-level facts will not be auto injected after the change. This feature will be removed from ansible-core version 2.24.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2139523Z Origin: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/keycloak_remote_installer/tasks/install.yml:8:9
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2140169Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2140321Z 6
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2140697Z 7 - name: Update apt cache on Ubuntu/Debian
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2141282Z 8   when: ansible_os_family == 'Debian'
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2141783Z           ^ column 9
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2141961Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2142153Z Use `ansible_facts["fact_name"]` (no `ansible_` prefix) instead.
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2142453Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2203132Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2208030Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'echo ~azureuser && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2210338Z <172.201.72.76> (0, b'/home/azureuser\n', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2210741Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2213845Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/azureuser/.ansible/tmp `"&& mkdir "` echo /home/azureuser/.ansible/tmp/ansible-tmp-1769228448.9679534-4031-185378748534711 `" && echo ansible-tmp-1769228448.9679534-4031-185378748534711="` echo /home/azureuser/.ansible/tmp/ansible-tmp-1769228448.9679534-4031-185378748534711 `" ) && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2217056Z <172.201.72.76> (0, b'ansible-tmp-1769228448.9679534-4031-185378748534711=/home/azureuser/.ansible/tmp/ansible-tmp-1769228448.9679534-4031-185378748534711\n', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2217941Z Using module file /opt/pipx/venvs/ansible-core/lib/python3.12/site-packages/ansible/modules/apt.py
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2219128Z <172.201.72.76> PUT /home/runner/.ansible/tmp/ansible-local-400997r8wrsv/tmp7fzr3q1p TO /home/azureuser/.ansible/tmp/ansible-tmp-1769228448.9679534-4031-185378748534711/AnsiballZ_apt.py
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2221436Z <172.201.72.76> SSH: EXEC sftp -b - -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 '[172.201.72.76]'
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2223969Z <172.201.72.76> (0, b'sftp> put /home/runner/.ansible/tmp/ansible-local-400997r8wrsv/tmp7fzr3q1p /home/azureuser/.ansible/tmp/ansible-tmp-1769228448.9679534-4031-185378748534711/AnsiballZ_apt.py\n', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2224838Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2227394Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'chmod u+rwx /home/azureuser/.ansible/tmp/ansible-tmp-1769228448.9679534-4031-185378748534711/ /home/azureuser/.ansible/tmp/ansible-tmp-1769228448.9679534-4031-185378748534711/AnsiballZ_apt.py && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2229886Z <172.201.72.76> (0, b'', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2230241Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2232950Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 -tt 172.201.72.76 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-ujhzessgvwdihvnmdoxtpbnoioqnxqrz ; /usr/bin/python3.12 /home/azureuser/.ansible/tmp/ansible-tmp-1769228448.9679534-4031-185378748534711/AnsiballZ_apt.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2235738Z <172.201.72.76> Escalation succeeded
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2238227Z <172.201.72.76> (0, b'\r\n***"changed": true, "cache_updated": true, "cache_update_time": 1769228456, "invocation": ***"module_args": ***"update_cache": true, "state": "present", "update_cache_retries": 5, "update_cache_retry_max_delay": 12, "cache_valid_time": 0, "purge": false, "force": false, "upgrade": null, "dpkg_options": "force-confdef,force-confold", "autoremove": false, "autoclean": false, "fail_on_autoremove": false, "only_upgrade": false, "force_apt_get": false, "clean": false, "allow_unauthenticated": false, "allow_downgrade": false, "allow_change_held_packages": false, "lock_timeout": 60, "auto_install_module_deps": true, "package": null, "deb": null, "default_release": null, "install_recommends": null, "policy_rc_d": null***\r\n', b'Shared connection to 172.201.72.76 closed.\r\n')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2240658Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2243145Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'rm -f -r /home/azureuser/.ansible/tmp/ansible-tmp-1769228448.9679534-4031-185378748534711/ > /dev/null 2>&1 && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2245363Z <172.201.72.76> (0, b'', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2245674Z changed: [keycloak] => ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2245982Z     "cache_update_time": 1769228456,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2246310Z     "cache_updated": true,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2246598Z     "changed": true,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2246939Z     "invocation": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2247218Z         "module_args": ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2247530Z             "allow_change_held_packages": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2247879Z             "allow_downgrade": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2248218Z             "allow_unauthenticated": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2248583Z             "auto_install_module_deps": true,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2248909Z             "autoclean": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2249205Z             "autoremove": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2249517Z             "cache_valid_time": 0,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2249818Z             "clean": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2250090Z             "deb": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2250383Z             "default_release": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2250742Z             "dpkg_options": "force-confdef,force-confold",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2251111Z             "fail_on_autoremove": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2251469Z             "force": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2251769Z             "force_apt_get": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2252086Z             "install_recommends": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2252407Z             "lock_timeout": 60,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2252706Z             "only_upgrade": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2253112Z             "package": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2253463Z             "policy_rc_d": null,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2253752Z             "purge": false,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2254038Z             "state": "present",
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2254347Z             "update_cache": true,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2254662Z             "update_cache_retries": 5,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2255004Z             "update_cache_retry_max_delay": 12,
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2255349Z             "upgrade": null
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2255632Z         ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2255882Z     ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2256121Z ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2256247Z 
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2256500Z TASK [keycloak_remote_installer : Install Java 21 packages on Ubuntu/Debian] ***
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:03.2257224Z task path: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/keycloak_remote_installer/tasks/install.yml:13
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5193543Z Running ansible.legacy.apt
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5194374Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5198543Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'echo ~azureuser && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5202654Z <172.201.72.76> (0, b'/home/azureuser\n', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5203538Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5209031Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/azureuser/.ansible/tmp `"&& mkdir "` echo /home/azureuser/.ansible/tmp/ansible-tmp-1769228463.509329-4042-13621563211026 `" && echo ansible-tmp-1769228463.509329-4042-13621563211026="` echo /home/azureuser/.ansible/tmp/ansible-tmp-1769228463.509329-4042-13621563211026 `" ) && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5215040Z <172.201.72.76> (0, b'ansible-tmp-1769228463.509329-4042-13621563211026=/home/azureuser/.ansible/tmp/ansible-tmp-1769228463.509329-4042-13621563211026\n', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5216766Z Using module file /opt/pipx/venvs/ansible-core/lib/python3.12/site-packages/ansible/modules/apt.py
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5218307Z <172.201.72.76> PUT /home/runner/.ansible/tmp/ansible-local-400997r8wrsv/tmp4y8n6ag_ TO /home/azureuser/.ansible/tmp/ansible-tmp-1769228463.509329-4042-13621563211026/AnsiballZ_apt.py
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5221127Z <172.201.72.76> SSH: EXEC sftp -b - -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 '[172.201.72.76]'
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5223699Z <172.201.72.76> (0, b'sftp> put /home/runner/.ansible/tmp/ansible-local-400997r8wrsv/tmp4y8n6ag_ /home/azureuser/.ansible/tmp/ansible-tmp-1769228463.509329-4042-13621563211026/AnsiballZ_apt.py\n', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5224574Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5227132Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 172.201.72.76 '/bin/sh -c '"'"'chmod u+rwx /home/azureuser/.ansible/tmp/ansible-tmp-1769228463.509329-4042-13621563211026/ /home/azureuser/.ansible/tmp/ansible-tmp-1769228463.509329-4042-13621563211026/AnsiballZ_apt.py && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5229624Z <172.201.72.76> (0, b'', b'')
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5229978Z <172.201.72.76> ESTABLISH SSH CONNECTION FOR USER: azureuser
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5232691Z <172.201.72.76> SSH: EXEC ssh -o ControlMaster=auto -o ControlPersist=60s -o ForwardAgent=yes -o StrictHostKeyChecking=no -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o 'IdentityFile="gh-action-d03bba5-21309034624-1_westeurope"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="azureuser"' -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/b6ac872076"' -o NumberOfPasswordPrompts=1 -tt 172.201.72.76 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-jvdfpfgplpeobcsoqqmattbumcczzzfy ; /usr/bin/python3.12 /home/azureuser/.ansible/tmp/ansible-tmp-1769228463.509329-4042-13621563211026/AnsiballZ_apt.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+AzureDB IT	UNKNOWN STEP	2026-01-24T04:21:44.5235414Z <172.201.72.76> Escalation succeeded
