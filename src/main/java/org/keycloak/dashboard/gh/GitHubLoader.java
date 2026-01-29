@@ -140,7 +140,7 @@ public class GitHubLoader {
 
     private List<GitHubIssue> loadIssues() throws IOException {
         List<String> queries = new LinkedList<>();
-        queries.add("repo:keycloak/keycloak is:issue is:open label:kind/bug");
+        queries.add("repo:keycloak/keycloak is:issue is:open (label:kind/bug OR label:kind/cve)");
         for (String month : DateUtil.monthStrings(Config.MAX_HISTORY)) {
             queries.add("repo:keycloak/keycloak is:issue is:closed closed:" + month);
         }
@@ -149,7 +149,7 @@ public class GitHubLoader {
 
     private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
         List<GitHubIssue> updateIssues = issuesLoader.updateIssues(issues, "repo:keycloak/keycloak is:issue");
-        return updateIssues.stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
+        return updateIssues.stream().filter(i -> i.getLabels().contains("kind/bug") || i.getLabels().contains("kind/cve")).collect(Collectors.toList());
     }
 
     private List<GitHubIssue> loadPRs() throws IOException {
@@ -165,9 +165,9 @@ public class GitHubLoader {
         return issuesLoader.updatePRs(issues, "repo:keycloak/keycloak is:pr");
     }
 
-    private int queryIssuesWithPr() throws IOException {
+    private int queryIssuesWithPr() {
         System.out.print("Fetching bugs with PRs: ");
-        int totalCount = gitHub.searchIssues().q("repo:keycloak/keycloak is:issue is:open label:kind/bug linked:pr").list().withPageSize(1).getTotalCount();
+        int totalCount = gitHub.searchIssues().q("repo:keycloak/keycloak is:issue is:open (label:kind/bug OR label:kind/cve) linked:pr").list().withPageSize(1).getTotalCount();
         System.out.println(".");
         return totalCount;
     }

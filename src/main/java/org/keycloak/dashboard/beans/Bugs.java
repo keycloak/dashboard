@@ -1,7 +1,7 @@
 package org.keycloak.dashboard.beans;
 
 import org.keycloak.dashboard.Config;
-import org.keycloak.dashboard.beans.filters.FilteredIssues;
+import org.keycloak.dashboard.beans.filters .FilteredIssues;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.rep.Teams;
@@ -27,7 +27,7 @@ public class Bugs {
     private Map<String, Integer> flakyTestCountsByTeam;
 
     public Bugs(GitHubData data, Teams teams) {
-        issues = data.getIssues().stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
+        issues = data.getIssues().stream().filter(GitHubIssue::isBugOrCve).collect(Collectors.toList());
 
         issues.stream().filter(i -> i.isOpen() && i.getMilestone() != null && i.getMilestone().endsWith(".0.0"))
                 .map(i -> i.getMilestone()).sorted().findFirst().ifPresent(s -> nextRelease = s);
@@ -66,7 +66,7 @@ public class Bugs {
         List<BugStat> stats = new LinkedList<>();
         FilteredIssues filteredIssues = FilteredIssues.create(issues);
 
-        stats.add(BugStat.global("With PR").issues(data.getIssuesWithPr(), "is:open label:kind/bug linked:pr"));
+        stats.add(BugStat.global("With PR").issues(data.getIssuesWithPr(), "is:open (label:kind/bug OR label:kind/cve) linked:pr"));
 
         stats.add(BugStat.global("Open")
                 .issues(filteredIssues.clone().openBug().triage(false).missingInformation(false)));

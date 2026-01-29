@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class GitHubIssue {
+public class GitHubIssue implements Comparable<GitHubIssue> {
 
     public Date createdAt;
 
@@ -132,4 +132,18 @@ public class GitHubIssue {
         return false;
     }
 
+    @JsonIgnore
+    public boolean isBugOrCve() {
+        return getLabels().contains("kind/bug") || getLabels().contains("kind/cve");
+    }
+
+    @Override
+    public int compareTo(GitHubIssue o) {
+        return Integer.compare(number, o.number);
+    }
+
+    @Override
+    public String toString() {
+        return "#" + number;
+    }
 }

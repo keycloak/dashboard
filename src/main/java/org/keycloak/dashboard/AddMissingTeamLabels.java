@@ -26,7 +26,7 @@ public class AddMissingTeamLabels {
 
         GitHub gh = GitHubBuilder.fromEnvironment().withJwtToken(TokenUtil.token()).build();
 
-        PagedSearchIterable<GHIssue> issues = gh.searchIssues().q("repo:keycloak/keycloak is:issue is:open -label:area/docs -label:area/dependencies label:kind/bug -label:" + teamLabels).list();
+        PagedSearchIterable<GHIssue> issues = gh.searchIssues().q("repo:keycloak/keycloak is:issue is:open -label:area/docs -label:area/dependencies (label:kind/bug OR label:kind/cve) -label:" + teamLabels).list();
         PagedIterator<GHIssue> itr = issues.iterator();
         for (int i = 0; i < 100 && itr.hasNext(); i++) {
             GHIssue next = issues.iterator().next();

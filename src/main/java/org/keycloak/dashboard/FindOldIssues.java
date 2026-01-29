@@ -21,7 +21,7 @@ public class FindOldIssues {
 
     public static void main(String[] args) throws IOException {
         GitHub gitHub = GitHubBuilder.fromEnvironment().withJwtToken(TokenUtil.token()).build();
-        PagedSearchIterable<GHIssue> issues = gitHub.searchIssues().q("repo:keycloak/keycloak is:issue is:open label:kind/bug created:<=2022-01-01").list();
+        PagedSearchIterable<GHIssue> issues = gitHub.searchIssues().q("repo:keycloak/keycloak is:issue is:open (label:kind/bug OR label:kind/cve) created:<=2022-01-01").list();
         PagedIterator<GHIssue> itr = issues.iterator();
         while (itr.hasNext()) {
             GHIssue next = itr.next();

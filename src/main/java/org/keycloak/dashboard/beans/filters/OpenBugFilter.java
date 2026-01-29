@@ -8,12 +8,12 @@ class OpenBugFilter implements IssueFilter {
 
     @Override
     public Predicate<GitHubIssue> predicate() {
-        return gitHubIssue -> gitHubIssue.isOpen() && gitHubIssue.hasLabel("kind/bug");
+        return gitHubIssue -> gitHubIssue.isOpen() && gitHubIssue.isBugOrCve();
     }
 
     @Override
     public String ghQuery() {
-        return "is:open is:issue label:kind/bug";
+        return "is:open is:issue (label:kind/bug OR label:kind/cve)";
     }
 
 }
