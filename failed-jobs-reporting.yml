@@ -301,6 +301,8 @@ issues:
   - "21280490945/*" #(https://repository.jboss.org/nexus/content/groups/public/): status code: 403, reason phrase: Forbidden (403) -> [Help 1]
   - "21290796347/*" #(https://repository.jboss.org/nexus/content/groups/public/): status code: 403, reason phrase: Forbidden (403) -> [Help 1]
   - "21366650921/*" #cancelled
+  - "21512824876/*" #TotpTest.testTotpLookAround:59 Should accept code with skew offset 2
+  - "21679603412/*" #Quarkus IT WindowsServiceDistTest.testServiceLifecycle AssertionFailedError: Service uninstallation failed:  ==> expected: <0> but was: <-1073741502>
 - id: "keycloak-js-adapter-jar"
   description: "Could not extract/download archive: '/home/runner/.m2/repository/com/github/eirslett/node/18.16.0/node-18.16.0-linux-x64.tar.gz'"
   resolution: "ignored"
@@ -575,6 +577,13 @@ issues:
   - "12047619769/*"
   - "14862805840/*"
   - "14862544719/*"
+  - "21871262533/*" #Account UI E2E (chromium) Unable to download artifact(s): Failed to ListArtifacts: Received non-retryable error: Failed request: (403) Forbidden: Error from intermediary with HTTP status code 403 "Forbidden"
+  - "21881232372/*" #Java Distribution IT/UT (windows-latest, temurin, 25) Failed to execute goal com.github.eirslett:frontend-maven-plugin:1.15.0:pnpm (pnpm-build) on project keycloak-js-parent: Failed to run task: 'pnpm build' failed.
+  - "21863768346/*" #Java Distribution IT/UT (windows-latest, temurin, 17) Failed to execute goal com.github.eirslett:frontend-maven-plugin:1.15.0:pnpm (pnpm-build) on project keycloak-js-parent: Failed to run task: 'pnpm build' failed.
+  - "21852068484/*" #Test remote (slow) ERROR: failed to build: failed to solve: registry.access.redhat.com/ubi9: failed to resolve source metadata for registry.access.redhat.com/ubi9:latest: failed to copy
+  - "21852068484/*" #Test remote (fast) The operation was canceled
+  - "21698915023/*" #Java Distribution IT/UT (windows-latest, temurin, 17) frontend-maven-plugin: Connect timed out
+  - "21833140780/*" #fatal: unable to access 'https://github.com/keycloak/keycloak/': The requested URL returned error: 500
 - id: "nip-io-glitch"
   description: "Temporary outage in nip.io"
   resolution: "ignored"
@@ -1703,3 +1712,24 @@ issues:
     - "21679603435/*"
     - "21667869583/*"
     - "21658610990/*"
+    - "21774226505/*"
+    - "21792437316/*"
+    - "21840905493/*"
+    - "21860663392/*"
+    - "21860982464/*"
+    - "21863768393/*"
+    - "21933813524/*"
+- id: "Azure-Aurora-Migration-tests-fail-46321"
+  description: "migration tests fail Azure and Aurora"
+  issue: 46321
+  resolves:
+    - "21893049354/*"
+    - "21933813765/*"
+- id: "New-Database-Tests-fail-On-Azure-Aurora-46322"
+  description: "After GitHub Action Summary, new framework tests fail on Azure and Aurora"
+  issue: 46322
+  resolves:
+    - "21774226173/*"
+    - "21792437305/AzureDB IT"
+    - "21812647257/*"
+    - "21852069048/AzureDB IT"
