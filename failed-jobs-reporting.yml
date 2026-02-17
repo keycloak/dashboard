@@ -303,6 +303,9 @@ issues:
   - "21366650921/*" #cancelled
   - "21512824876/*" #TotpTest.testTotpLookAround:59 Should accept code with skew offset 2
   - "21679603412/*" #Quarkus IT WindowsServiceDistTest.testServiceLifecycle AssertionFailedError: Service uninstallation failed:  ==> expected: <0> but was: <-1073741502>
+  - "21678093153/*" #Forms IT (chrome) LoginPageTest.realmLocalizationMessagesAreNotCachedWithinTheTheme page not fully loaded during assertion
+  - "21882523349/*" #Forms IT (chrome) RecoveryAuthnCodesAuthenticatorTest.test07SetupRecoveryAuthnCodes one-off failure
+  - "22099463090/*" #failed quick fix for issue #46412
 - id: "keycloak-js-adapter-jar"
   description: "Could not extract/download archive: '/home/runner/.m2/repository/com/github/eirslett/node/18.16.0/node-18.16.0-linux-x64.tar.gz'"
   resolution: "ignored"
@@ -584,6 +587,8 @@ issues:
   - "21852068484/*" #Test remote (fast) The operation was canceled
   - "21698915023/*" #Java Distribution IT/UT (windows-latest, temurin, 17) frontend-maven-plugin: Connect timed out
   - "21833140780/*" #fatal: unable to access 'https://github.com/keycloak/keycloak/': The requested URL returned error: 500
+  - "21644233247/*" #Java Distribution IT/UT (windows-latest, temurin, 17) Failed to execute goal com.github.eirslett:frontend-maven-plugin:1.15.0:pnpm (pnpm-build) on project keycloak-js-parent: Failed to run task: 'pnpm build' failed.
+  - "21893049230/*" #Test OLM installation Setup Minikube-Kubernetes: Unexpected HTTP response: 502
 - id: "nip-io-glitch"
   description: "Temporary outage in nip.io"
   resolution: "ignored"
@@ -1733,3 +1738,17 @@ issues:
     - "21792437305/AzureDB IT"
     - "21812647257/*"
     - "21852069048/AzureDB IT"
+    - "21974876771/AzureDB IT"
+    - "22011225671/*"
+    - "22029783711/*"
+- id: "Docker-Maven-Plugin-Outdate-Version-46312"
+  description: "The docker maven plugin needed to update to a recent version"
+  issue: 46312
+  resolves:
+    - "21974876771/*"
+- id: "Broken-Container-Builds-46412"
+  description: "Nothing provides glibc-common"
+  issue: 46412
+  resolves:
+    - "22092491796/*"
+    - "22092914552/*"
