@@ -20,6 +20,7 @@ public class Bugs {
 
     private List<BugAreaStat> areaStats;
     private List<BugTeamStat> teamStats;
+    private List<CveTeamStat> teamCveStats;
     private final List<BugTeamBackportStat> teamBackportStats;
 
     private List<FlakyTest> flakyTests;
@@ -27,7 +28,7 @@ public class Bugs {
     private Map<String, Integer> flakyTestCountsByTeam;
 
     public Bugs(GitHubData data, Teams teams) {
-        issues = data.getIssues().stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
+        issues = data.getIssues().stream().filter(i -> (i.getLabels().contains("kind/bug") || i.getLabels().contains("kind/cve"))).collect(Collectors.toList());
 
         issues.stream().filter(i -> i.isOpen() && i.getMilestone() != null && i.getMilestone().endsWith(".0.0"))
                 .map(i -> i.getMilestone()).sorted().findFirst().ifPresent(s -> nextRelease = s);
@@ -44,6 +45,7 @@ public class Bugs {
         stats = convertToBugStat(issues, data, teams);
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
+        teamCveStats = convertToTeamCveStats(issues, teams);
         teamBackportStats = convertToTeamBackportStats(issues, teams);
     }
 
@@ -74,6 +76,8 @@ public class Bugs {
                 .issues(filteredIssues.clone().openBug().triage(true).missingInformation(false)));
         stats.add(BugStat.global("Triage Overdue")
                 .issues(filteredIssues.clone().openBug().triage(true).missingInformation(false).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
+        stats.add(BugStat.global("CVE")
+                .issues(filteredIssues.clone().openCve()));
         stats.add(BugStat.global("Weakness")
                 .issues(filteredIssues.clone().openBug().label("area/weakness")));
         stats.add(BugStat.global("Blocker")
@@ -121,7 +125,7 @@ public class Bugs {
 
         activeStreams.forEach(l -> {
             FilteredIssues openIssues = filteredIssues.clone().label("backport/" + l);
-            stats.add(BugStat.global("Backport: " + l).warnErrorKey("Backports").issues(openIssues).closedIssues(filteredIssues.clone().closedBug().label(l)));
+            stats.add(BugStat.global("Backport: " + l).warnErrorKey("Backports").issues(openIssues).closedIssues(filteredIssues.clone().label(l)));
         });
 
         stats.add(BugStat.global("Missing Area")
@@ -169,6 +173,24 @@ public class Bugs {
         return teamStats;
     }
 
+    private List<CveTeamStat> convertToTeamCveStats(List<GitHubIssue> issues, Teams teams) {
+        FilteredIssues filteredIssues = FilteredIssues.create(issues).openCve();
+        List<CveTeamStat> teamStats = new LinkedList<>();
+
+        for (String team : teams.keySet()) {
+            if (!team.equals("no-team")) {
+                FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
+                if (teamIssues.count() > 0) {
+                    teamStats.add(new CveTeamStat(team, teamIssues, nextRelease));
+                }
+            }
+        }
+
+        teamStats.sort(Comparator.comparing(CveTeamStat::getTitle));
+
+        return teamStats;
+    }
+
     private List<BugTeamBackportStat> convertToTeamBackportStats(List<GitHubIssue> issues, Teams teams) {
         FilteredIssues filteredIssues = FilteredIssues.create(issues);
         List<BugTeamBackportStat> teamStats = new LinkedList<>();
@@ -199,6 +221,10 @@ public class Bugs {
 
     public List<BugTeamStat> getTeamStats() {
         return teamStats;
+    }
+
+    public List<CveTeamStat> getTeamCveStats() {
+        return teamCveStats;
     }
 
     public List<BugTeamBackportStat> getTeamBackportStats() {
