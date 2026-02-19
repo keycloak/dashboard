@@ -29,6 +29,10 @@ public class FilteredIssues {
         filters.add(new OpenBugFilter());
         return this;
     }
+    public FilteredIssues openCve() {
+        filters.add(new OpenCveFilter());
+        return this;
+    }
 
     public FilteredIssues closedBug() {
         filters.add(new ClosedBugFilter());

@@ -73,13 +73,14 @@ public class GitHubLoader {
 
     public GitHubData update(GitHubData data) throws Exception {
         List<String> update = System.getProperty("update") != null && !System.getProperty("update").equals("all") ? Arrays.stream(System.getProperty("update").split(",")).toList() : null;
+        boolean reload = Boolean.parseBoolean(System.getProperty("reload", "false"));
 
         if (update == null || update.contains("areas")) {
             data.setAreas(queryAreas());
         }
 
         if (update == null || update.contains("issues")) {
-            data.setIssues(updateIssues(data.getIssues()));
+            data.setIssues(reload ? loadIssues() : updateIssues(data.getIssues()));
         }
 
         if (update == null || update.contains("prs")) {
@@ -141,6 +142,7 @@ public class GitHubLoader {
     private List<GitHubIssue> loadIssues() throws IOException {
         List<String> queries = new LinkedList<>();
         queries.add("repo:keycloak/keycloak is:issue is:open label:kind/bug");
+        queries.add("repo:keycloak/keycloak is:issue is:open label:kind/cve");
         for (String month : DateUtil.monthStrings(Config.MAX_HISTORY)) {
             queries.add("repo:keycloak/keycloak is:issue is:closed closed:" + month);
         }
@@ -149,7 +151,7 @@ public class GitHubLoader {
 
     private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
         List<GitHubIssue> updateIssues = issuesLoader.updateIssues(issues, "repo:keycloak/keycloak is:issue");
-        return updateIssues.stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
+        return updateIssues.stream().filter(i -> i.getLabels().contains("kind/bug") || i.getLabels().contains("kind/cve")).collect(Collectors.toList());
     }
 
     private List<GitHubIssue> loadPRs() throws IOException {
