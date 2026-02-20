@@ -304,8 +304,10 @@ issues:
   - "21512824876/*" #TotpTest.testTotpLookAround:59 Should accept code with skew offset 2
   - "21679603412/*" #Quarkus IT WindowsServiceDistTest.testServiceLifecycle AssertionFailedError: Service uninstallation failed:  ==> expected: <0> but was: <-1073741502>
   - "21678093153/*" #Forms IT (chrome) LoginPageTest.realmLocalizationMessagesAreNotCachedWithinTheTheme page not fully loaded during assertion
+  - "22106076650/*" #Forms IT (chrome) LoginPageTest.realmLocalizationMessagesAreNotCachedWithinTheTheme page not fully loaded during assertion
   - "21882523349/*" #Forms IT (chrome) RecoveryAuthnCodesAuthenticatorTest.test07SetupRecoveryAuthnCodes one-off failure
   - "22099463090/*" #failed quick fix for issue #46412
+  - "21900771092/*" #Clustering IT SessionFailoverClusterTest#setup ApiUtil.createUserWithAdminClient method returned status Forbidden (Code: 403)
 - id: "keycloak-js-adapter-jar"
   description: "Could not extract/download archive: '/home/runner/.m2/repository/com/github/eirslett/node/18.16.0/node-18.16.0-linux-x64.tar.gz'"
   resolution: "ignored"
@@ -589,6 +591,9 @@ issues:
   - "21833140780/*" #fatal: unable to access 'https://github.com/keycloak/keycloak/': The requested URL returned error: 500
   - "21644233247/*" #Java Distribution IT/UT (windows-latest, temurin, 17) Failed to execute goal com.github.eirslett:frontend-maven-plugin:1.15.0:pnpm (pnpm-build) on project keycloak-js-parent: Failed to run task: 'pnpm build' failed.
   - "21893049230/*" #Test OLM installation Setup Minikube-Kubernetes: Unexpected HTTP response: 502
+  - "22106076604/*" #Operator CI: Test remote: Downloading Minikube  v1.38.0; AxiosError: Request failed with status code 401
+  - "22102269657/*" #JavaScript CI: Admin UI E2E: failed to upload server logs; Failed request: (403) Forbidden
+  - "22145942762/*" #JavaScript CI: Check conditional: gh: Bad credentials (HTTP 401)
 - id: "nip-io-glitch"
   description: "Temporary outage in nip.io"
   resolution: "ignored"
@@ -1683,16 +1688,16 @@ issues:
     - "21043098885/*"
     - "21028775424/*"
     - "21003406479/*"
-- id: "DatabaseTestSuite"
-  description: "DatabaseTestSuite.test expected: <2> but was: <1>"
+- id: "AttackDetectionResourceTest-45986"
+  description: "DatabaseTestSuite AttackDetectionResourceTest on Aurora expected: <2> but was: <1>"
   issue: 45986
   resolves:
-    - "21366263075/*"
     - "21366263075/*"
     - "21577626346/*"
     - "21617134512/*"
     - "21504499269/*"
     - "21436251702/*"
+    - "22211442397/*"
 - id: "admin-ui-e2e-44425"
   description: "flaky, sometimes assert prior action, async"
   issue: 44425
@@ -1730,17 +1735,22 @@ issues:
   resolves:
     - "21893049354/*"
     - "21933813765/*"
+    - "21974876771/*"
+    - "22011225671/*"
+    - "22029783711/*"
+    - "22050394105/*"
+    - "22086119429/*"
+    - "22093383056/*"
+    - "22126764332/*"
+    - "22168720137/*"
 - id: "New-Database-Tests-fail-On-Azure-Aurora-46322"
   description: "After GitHub Action Summary, new framework tests fail on Azure and Aurora"
   issue: 46322
   resolves:
     - "21774226173/*"
-    - "21792437305/AzureDB IT"
+    - "21792437305/*"
     - "21812647257/*"
-    - "21852069048/AzureDB IT"
-    - "21974876771/AzureDB IT"
-    - "22011225671/*"
-    - "22029783711/*"
+    - "21852069048/*"
 - id: "Docker-Maven-Plugin-Outdate-Version-46312"
   description: "The docker maven plugin needed to update to a recent version"
   issue: 46312
@@ -1752,3 +1762,5 @@ issues:
   resolves:
     - "22092491796/*"
     - "22092914552/*"
+    - "22095982444/*"
+    - "22095982486/*"
