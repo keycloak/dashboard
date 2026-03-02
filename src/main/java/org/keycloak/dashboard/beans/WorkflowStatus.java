@@ -16,6 +16,10 @@ import java.util.Optional;
 
 public class WorkflowStatus {
 
+    private static final List<String> FILTERED_BRANCH_PREFIXES = List.of(
+            "copilot/"
+    );
+
     private List<String> branches;
 
     private List<Workflow> workflows;
@@ -60,7 +64,12 @@ public class WorkflowStatus {
         ObjectMapper objectMapper = new ObjectMapper();
         List<GHWorkflowRun> runs = objectMapper.readValue(new File("workflow-status.json"), new TypeReference<>() {});
 
-        branches = runs.stream().map(GHWorkflowRun::getHeadBranch).distinct().sorted(new BranchComparator()).toList();
+        branches = runs.stream()
+                .map(GHWorkflowRun::getHeadBranch)
+                .filter(branch -> FILTERED_BRANCH_PREFIXES.stream().noneMatch(branch::startsWith))
+                .distinct()
+                .sorted(new BranchComparator())
+                .toList();
 
         workflows = new LinkedList<>();
 
