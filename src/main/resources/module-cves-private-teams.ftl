@@ -1,21 +1,23 @@
+<#if !publish && privateCveTeamStats?has_content>
 <div class="header">
-    CVEs per team - upstream
+    CVEs per team - keycloak-private
 </div>
 <div class="body">
     <table>
         <tr>
             <th>Team</th>
-            <#list cveTeamStats[0].columns as col>
+            <#list privateCveTeamStats[0].columns as col>
             <th class="center">${col.label}</th>
             </#list>
         </tr>
-        <#list cveTeamStats as cveTeamStat>
+        <#list privateCveTeamStats as stat>
         <tr>
-            <td><a href="${cveTeamStat.teamGhLink}">${cveTeamStat.title}</a></td>
-            <#list cveTeamStat.columns as col>
+            <td><a href="${stat.teamGhLink}">${stat.title}</a></td>
+            <#list stat.columns as col>
             <td class="count ${col.cssClasses} center"><a href="${col.ghLink}">${col.count}</a></td>
             </#list>
         </tr>
         </#list>
     </table>
 </div>
+</#if>

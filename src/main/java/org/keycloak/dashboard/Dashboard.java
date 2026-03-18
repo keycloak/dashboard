@@ -10,6 +10,7 @@ import org.keycloak.dashboard.beans.WorkflowStatus;
 import org.keycloak.dashboard.beans.WorkflowWaitTimes;
 import org.keycloak.dashboard.ci.LogFailedParser;
 import org.keycloak.dashboard.ci.ResolvedIssues;
+import org.keycloak.dashboard.gh.PrivateIssuesLoader;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.TeamMembers;
 import org.keycloak.dashboard.rep.Teams;
@@ -44,6 +45,10 @@ public class Dashboard {
         Teams teams = yamlMapper.readValue(new URL("https://raw.githubusercontent.com/keycloak/keycloak/main/.github/teams.yml"), Teams.class);
         TeamMembers teamMembers = yamlMapper.readValue(new File("team-members.yml"), TeamMembers.class);
 
+        if (!Config.PUBLISH) {
+            data.setPrivateIssues(PrivateIssuesLoader.load());
+        }
+
         PR pr = new PR(data);
         Bugs bugs = new Bugs(data, teams);
 
@@ -62,6 +67,7 @@ public class Dashboard {
         attributes.put("bugAreaStats", bugs.getAreaStats());
         attributes.put("bugTeamStats", bugs.getTeamStats());
         attributes.put("cveTeamStats", bugs.getTeamCveStats());
+        attributes.put("privateCveTeamStats", bugs.getPrivateTeamCveStats());
         attributes.put("bugTeamBackportStats", bugs.getTeamBackportStats());
         attributes.put("failedRuns", logFailedParser.getFailedRuns());
         attributes.put("resolvedRuns", logFailedParser.getResolvedRuns());

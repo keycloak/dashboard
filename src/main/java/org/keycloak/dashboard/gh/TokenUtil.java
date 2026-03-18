@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 public class TokenUtil {
 
     private static final String[] AUTH_ENV_KEYS = { "GITHUB_TOKEN", "GH_TOKEN", "GITHUB_OAUTH" };
+    private static final String PRIVATE_TOKEN_KEY = "GITHUB_PRIVATE_TOKEN";
 
     public static String token() throws IOException {
         String token = tokenFromEnv();
@@ -18,6 +19,10 @@ public class TokenUtil {
         }
 
         throw new RuntimeException("Failed to get token for GitHub APIs");
+    }
+
+    public static String privateToken() {
+        return System.getenv(PRIVATE_TOKEN_KEY);
     }
 
     private static String tokenFromEnv() {

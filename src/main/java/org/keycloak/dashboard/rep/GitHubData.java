@@ -18,6 +18,8 @@ public class GitHubData {
     public List<GitHubIssue> prs;
     @JsonProperty
     public List<PullRequestWait> pullRequestWaits;
+    @JsonIgnore
+    public List<GitHubIssue> privateIssues;
     @JsonProperty
     public List<String> branches;
 
@@ -80,5 +82,15 @@ public class GitHubData {
 
     public void setBranches(List<String> branches) {
         this.branches = branches;
+    }
+
+    @JsonIgnore
+    public List<GitHubIssue> getPrivateIssues() {
+        return privateIssues;
+    }
+
+    @JsonIgnore
+    public void setPrivateIssues(List<GitHubIssue> privateIssues) {
+        this.privateIssues = privateIssues;
     }
 }

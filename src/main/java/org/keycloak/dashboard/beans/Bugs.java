@@ -21,6 +21,7 @@ public class Bugs {
     private List<BugAreaStat> areaStats;
     private List<BugTeamStat> teamStats;
     private List<CveTeamStat> teamCveStats;
+    private List<PrivateCveTeamStat> privateTeamCveStats;
     private final List<BugTeamBackportStat> teamBackportStats;
 
     private List<FlakyTest> flakyTests;
@@ -46,6 +47,7 @@ public class Bugs {
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
         teamCveStats = convertToTeamCveStats(issues, teams);
+        privateTeamCveStats = convertToPrivateTeamCveStats(data.getPrivateIssues(), teams);
         teamBackportStats = convertToTeamBackportStats(issues, teams);
     }
 
@@ -191,6 +193,27 @@ public class Bugs {
         return teamStats;
     }
 
+    private List<PrivateCveTeamStat> convertToPrivateTeamCveStats(List<GitHubIssue> privateIssues, Teams teams) {
+        if (privateIssues == null || privateIssues.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        FilteredIssues filteredIssues = FilteredIssues.createPrivate(privateIssues);
+        List<PrivateCveTeamStat> stats = new LinkedList<>();
+
+        for (String team : teams.keySet()) {
+            if (!team.equals("no-team")) {
+                FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
+                if (teamIssues.clone().openIssue().count() > 0) {
+                    stats.add(new PrivateCveTeamStat(team, teamIssues));
+                }
+            }
+        }
+
+        stats.sort(Comparator.comparing(PrivateCveTeamStat::getTitle));
+        return stats;
+    }
+
     private List<BugTeamBackportStat> convertToTeamBackportStats(List<GitHubIssue> issues, Teams teams) {
         FilteredIssues filteredIssues = FilteredIssues.create(issues);
         List<BugTeamBackportStat> teamStats = new LinkedList<>();
@@ -225,6 +248,10 @@ public class Bugs {
 
     public List<CveTeamStat> getTeamCveStats() {
         return teamCveStats;
+    }
+
+    public List<PrivateCveTeamStat> getPrivateTeamCveStats() {
+        return privateTeamCveStats;
     }
 
     public List<BugTeamBackportStat> getTeamBackportStats() {

@@ -14,14 +14,23 @@ import java.util.stream.Collectors;
 
 public class FilteredIssues {
     public static final String ISSUES_LINK = "https://github.com/keycloak/keycloak/issues";
+    private static final String PRIVATE_ISSUES_LINK = "https://github.com/keycloak/keycloak-private/issues";
+
     private final List<GitHubIssue> issues;
+    private final String issuesLink;
     private Set<IssueFilter> filters;
+
     public static FilteredIssues create(List<GitHubIssue> issues) {
-        return new FilteredIssues(issues);
+        return new FilteredIssues(issues, ISSUES_LINK);
     }
 
-    private FilteredIssues(List<GitHubIssue> issues) {
+    public static FilteredIssues createPrivate(List<GitHubIssue> issues) {
+        return new FilteredIssues(issues, PRIVATE_ISSUES_LINK);
+    }
+
+    private FilteredIssues(List<GitHubIssue> issues, String issuesLink) {
         this.issues = issues;
+        this.issuesLink = issuesLink;
         this.filters = new LinkedHashSet<>();
     }
 
@@ -31,6 +40,16 @@ public class FilteredIssues {
     }
     public FilteredIssues openCve() {
         filters.add(new OpenCveFilter());
+        return this;
+    }
+
+    public FilteredIssues openIssue() {
+        filters.add(new OpenIssueFilter());
+        return this;
+    }
+
+    public FilteredIssues severityTriageOverdue(int importantBusinessDays, int moderateBusinessDays, int lowCalendarDays) {
+        filters.add(new SeverityTriageOverdueFilter(importantBusinessDays, moderateBusinessDays, lowCalendarDays));
         return this;
     }
 
@@ -135,12 +154,12 @@ public class FilteredIssues {
 
     public String ghLink() {
         String query = filters.stream().map(IssueFilter::ghQuery).collect(Collectors.joining(" "));
-        return ISSUES_LINK + "?q=" + GHQuery.encode(query);
+        return issuesLink + "?q=" + GHQuery.encode(query);
     }
 
     @Override
     public FilteredIssues clone() {
-        FilteredIssues clone = new FilteredIssues(issues);
+        FilteredIssues clone = new FilteredIssues(issues, issuesLink);
         clone.filters = new HashSet<>(filters);
         return clone;
     }
