@@ -15,12 +15,18 @@ import java.util.List;
 public class Stars {
 
     private Date currentDate = new Date();
+    private int year;
     private long countYearStart;
-    private long countYearTarget = 32500;
-    private long startYearMonthlyAdded = 600;
+    private long countYearTarget;
+    private long yearlyGrowth;
+    private long startYearMonthlyAdded;
     private List<MonthEntry> months = new LinkedList<>();
 
-    public Stars() throws IOException, ParseException {
+    public Stars(int year, long yearlyGrowth, long startYearMonthlyAdded) throws IOException, ParseException {
+        this.year = year;
+        this.yearlyGrowth = yearlyGrowth;
+        this.startYearMonthlyAdded = startYearMonthlyAdded;
+
         File file = new File("stars");
         BufferedReader br = new BufferedReader(new FileReader(file));
         List<Date> stars = new LinkedList<>();
@@ -29,17 +35,18 @@ public class Stars {
             stars.add(date);
         }
 
-        Date yearStart = getMonthStart(2025, 1);
+        Date yearStart = getMonthStart(year, 1);
 
         countYearStart = stars.stream().filter(d -> d.before(yearStart)).count();
+        countYearTarget = countYearStart + yearlyGrowth;
 
         double monthlyAverage = (((double) (countYearTarget - countYearStart)) / 12) - startYearMonthlyAdded;
 
         double c = countYearStart;
 
         for (int i = 1; i <= 12; i++) {
-            Date monthStart = getMonthStart(2025, i);
-            Date monthEnd = getMonthStart(2025, i + 1);
+            Date monthStart = getMonthStart(year, i);
+            Date monthEnd = getMonthStart(year, i + 1);
 
             double monthlyTarget = startYearMonthlyAdded + ((monthlyAverage) / 6.5) * i;
 
@@ -54,6 +61,10 @@ public class Stars {
 
             months.add(monthEntry);
         }
+    }
+
+    public int getYear() {
+        return year;
     }
 
     public List<MonthEntry> getMonths() {

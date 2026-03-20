@@ -2,10 +2,11 @@
 
 <@template.page title="Stars status">
 <div class="content">
+    <#list starsList as stars>
     <div class="modal-float">
         <div class="modal-float-margin">
             <div class="header">
-                Months
+                ${stars.year?c}
             </div>
             <div class="body">
                 <table>
@@ -29,5 +30,6 @@
             </div>
         </div>
     </div>
+    </#list>
 </div>
 </@template.page>

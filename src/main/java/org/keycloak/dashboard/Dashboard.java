@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -72,7 +73,10 @@ public class Dashboard {
         attributes.put("nextRelease", bugs.getNextRelease());
         attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());
         attributes.put("configContents", Config.getConfigContents());
-        attributes.put("stars", new Stars());
+        List<Stars> starsList = new LinkedList<>();
+        starsList.add(new Stars(2026, 8215, 600));
+        starsList.add(new Stars(2025, 8215, 600));
+        attributes.put("starsList", starsList);
 
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);
