@@ -3,6 +3,7 @@ package org.keycloak.dashboard.rep;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
@@ -47,6 +48,7 @@ public class GitHubData {
     }
 
     public void setIssues(List<GitHubIssue> issues) {
+        issues.sort(Comparator.naturalOrder());
         this.issues = issues;
     }
 
@@ -55,6 +57,7 @@ public class GitHubData {
     }
 
     public void setPrs(List<GitHubIssue> prs) {
+        issues.sort(Comparator.naturalOrder());
         this.prs = prs;
     }
 
