@@ -3,12 +3,14 @@ package org.keycloak.dashboard.util;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class DateUtil {
 
@@ -20,6 +22,13 @@ public class DateUtil {
     private static final SimpleDateFormat TO_YEAR_STRING_FORMATTER = new SimpleDateFormat("yyyy", Locale.ENGLISH);
 
     private static final SimpleDateFormat TO_DATE_STRING_FORMATTER = new SimpleDateFormat("yyyy-MM-dd");
+
+    static {
+        JSON_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("UTC"));
+        TO_MONTH_STRING_FORMATTER.setTimeZone(TimeZone.getTimeZone("UTC"));
+        TO_YEAR_STRING_FORMATTER.setTimeZone(TimeZone.getTimeZone("UTC"));
+        TO_DATE_STRING_FORMATTER.setTimeZone(TimeZone.getTimeZone("UTC"));
+    }
 
     public static final java.util.Date MINUS_6_MONTHS = DateUtil.minusMonths(6);
     public static final java.util.Date MINUS_12_MONTHS = DateUtil.minusMonths(12);
@@ -40,25 +49,31 @@ public class DateUtil {
     public static final String MINUS_90_DAYS_STRING = DateUtil.minusDaysString(90);
 
     public static java.util.Date minusdays(int days) {
-        Calendar cal = Calendar.getInstance();
+        Calendar cal = getCalendarUTC();
         cal.set(Calendar.HOUR, 0);
         cal.set(Calendar.MINUTE, 0);
         cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
         cal.add(Calendar.DAY_OF_MONTH, -days);
         return cal.getTime();
     }
+
+    private static Calendar getCalendarUTC() {
+        return Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+    }
+
     public static java.util.Date minusMonths(int months) {
-        Calendar cal = Calendar.getInstance();
+        Calendar cal = getCalendarUTC();
         cal.add(Calendar.MONTH, -months);
         return cal.getTime();
     }
 
     public static String minusMonthsString(int months) {
-        return DATE_STRING_FORMATTER.format(LocalDateTime.now().minusMonths(months));
+        return DATE_STRING_FORMATTER.format(LocalDateTime.now(ZoneOffset.UTC).minusMonths(months));
     }
 
     public static String minusDaysString(int days) {
-        return DATE_STRING_FORMATTER.format(LocalDateTime.now().minusDays(days));
+        return DATE_STRING_FORMATTER.format(LocalDateTime.now(ZoneOffset.UTC).minusDays(days));
     }
 
     public static Date fromJson(String date) {
@@ -83,9 +98,9 @@ public class DateUtil {
 
     public static List<String> monthStrings(int history) {
         List<String> months = new LinkedList<>();
-        Calendar now = Calendar.getInstance();
+        Calendar now = getCalendarUTC();
 
-        Calendar cal = Calendar.getInstance();
+        Calendar cal = getCalendarUTC();
         cal.add(Calendar.MONTH, -history);
 
         while (true) {
