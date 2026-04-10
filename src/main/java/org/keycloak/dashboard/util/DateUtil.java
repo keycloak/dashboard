@@ -50,7 +50,7 @@ public class DateUtil {
 
     public static java.util.Date minusdays(int days) {
         Calendar cal = getCalendarUTC();
-        cal.set(Calendar.HOUR, 0);
+        cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
         cal.set(Calendar.SECOND, 0);
         cal.set(Calendar.MILLISECOND, 0);
@@ -60,6 +60,23 @@ public class DateUtil {
 
     private static Calendar getCalendarUTC() {
         return Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+    }
+
+    public static java.util.Date minusBusinessDays(int businessDays) {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        int subtracted = 0;
+        while (subtracted < businessDays) {
+            cal.add(Calendar.DAY_OF_MONTH, -1);
+            int dow = cal.get(Calendar.DAY_OF_WEEK);
+            if (dow != Calendar.SATURDAY && dow != Calendar.SUNDAY) {
+                subtracted++;
+            }
+        }
+        return cal.getTime();
     }
 
     public static java.util.Date minusMonths(int months) {

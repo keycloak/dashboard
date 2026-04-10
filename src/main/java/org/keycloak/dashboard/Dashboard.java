@@ -3,11 +3,7 @@ package org.keycloak.dashboard;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import freemarker.template.TemplateException;
-import org.keycloak.dashboard.beans.Bugs;
-import org.keycloak.dashboard.beans.PR;
-import org.keycloak.dashboard.beans.Stars;
-import org.keycloak.dashboard.beans.WorkflowStatus;
-import org.keycloak.dashboard.beans.WorkflowWaitTimes;
+import org.keycloak.dashboard.beans.*;
 import org.keycloak.dashboard.ci.LogFailedParser;
 import org.keycloak.dashboard.ci.ResolvedIssues;
 import org.keycloak.dashboard.rep.GitHubData;
@@ -19,12 +15,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * Hello world!
@@ -62,6 +54,7 @@ public class Dashboard {
         attributes.put("bugAreaStats", bugs.getAreaStats());
         attributes.put("bugTeamStats", bugs.getTeamStats());
         attributes.put("cveTeamStats", bugs.getTeamCveStats());
+        attributes.put("privateCveTeamStats", bugs.getPrivateTeamCveStats());
         attributes.put("bugTeamBackportStats", bugs.getTeamBackportStats());
         attributes.put("failedRuns", logFailedParser.getFailedRuns());
         attributes.put("resolvedRuns", logFailedParser.getResolvedRuns());
