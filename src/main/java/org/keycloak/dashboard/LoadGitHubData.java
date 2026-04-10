@@ -1,11 +1,11 @@
 package org.keycloak.dashboard;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.keycloak.dashboard.gh.GitHubLoader;
 import org.keycloak.dashboard.rep.GitHubData;
 
 import java.io.File;
-import java.util.Date;
 
 public class LoadGitHubData {
 
@@ -17,6 +17,8 @@ public class LoadGitHubData {
     public void createData() throws Exception {
         GitHubLoader gitHubLoader = new GitHubLoader();
         ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+
         File dataFile = new File("data.json");
 
         GitHubData data;

@@ -118,6 +118,7 @@ public class GitHubIssue implements Comparable<GitHubIssue> {
         return labels.stream().filter(l -> l.startsWith("area/")).collect(Collectors.toList());
     }
 
+    @JsonIgnore
     public List<String> getTeams() {
         return labels.stream().filter(l -> l.startsWith("team/")).collect(Collectors.toList());
     }

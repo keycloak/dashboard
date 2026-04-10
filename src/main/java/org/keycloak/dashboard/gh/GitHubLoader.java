@@ -51,6 +51,7 @@ public class GitHubLoader {
         // data.setKeycloakDevelopers(queryDevTeam());
 
         data.setIssues(loadIssues());
+        data.setPrivateIssues(loadPrivateIssues());
         data.setPrs(loadPRs());
         data.setIssuesWithPr(queryIssuesWithPr());
         data.setPullRequestWaits(workflowRuntimeLoader.load());
@@ -81,6 +82,10 @@ public class GitHubLoader {
 
         if (update == null || update.contains("issues")) {
             data.setIssues(reload ? loadIssues() : updateIssues(data.getIssues()));
+        }
+
+        if (update == null || update.contains("private-issues")) {
+            data.setPrivateIssues(loadPrivateIssues());
         }
 
         if (update == null || update.contains("prs")) {
@@ -154,6 +159,13 @@ public class GitHubLoader {
         return updateIssues.stream().filter(i -> i.getLabels().contains("kind/bug") || i.getLabels().contains("kind/cve")).collect(Collectors.toList());
     }
 
+    private List<GitHubIssue> loadPrivateIssues() throws IOException {
+        return issuesLoader.loadIssues("repo:keycloak/keycloak-private is:issue is:open")
+                .stream()
+                .filter(issue -> issue.getLabels().stream().anyMatch(s -> s.startsWith("team/")))
+                .map(GitHubLoader::sanitize).sorted().toList();
+    }
+
     private List<GitHubIssue> loadPRs() throws IOException {
         List<String> queries = new LinkedList<>();
         queries.add("repo:keycloak/keycloak is:pr is:open");
@@ -174,6 +186,15 @@ public class GitHubLoader {
         return totalCount;
     }
 
-
+    private static GitHubIssue sanitize(GitHubIssue issue) {
+        GitHubIssue sanitized = new GitHubIssue();
+        sanitized.setNumber(issue.getNumber());
+        sanitized.setClosedAt(issue.getClosedAt());
+        sanitized.setCreatedAt(issue.getCreatedAt());
+        sanitized.setLabels(issue.getLabels().stream().filter(l -> l.startsWith("team/") || l.startsWith("kind/") || l.equals("status/triage")).toList());
+        sanitized.setCommentsCount(issue.getCommentsCount());
+        sanitized.setUpdatedAt(issue.getUpdatedAt());
+        return sanitized;
+    }
 
 }
