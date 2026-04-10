@@ -36,7 +36,7 @@ jobs:
           java-version: '17'
           cache: 'maven'
       - name: Build dashboard
-        run: mvn clean install exec:java -Pdashboard -Dpublish
+        run: mvn -B clean install exec:java -Pdashboard -Dpublish
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
