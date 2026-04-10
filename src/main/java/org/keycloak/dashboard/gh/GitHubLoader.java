@@ -161,7 +161,9 @@ public class GitHubLoader {
 
     private List<GitHubIssue> loadPrivateIssues() throws IOException {
         return issuesLoader.loadIssues("repo:keycloak/keycloak-private is:issue is:open")
-                .stream().map(GitHubLoader::sanitize).toList();
+                .stream()
+                .filter(issue -> issue.getLabels().stream().anyMatch(s -> s.startsWith("team/")))
+                .map(GitHubLoader::sanitize).sorted().toList();
     }
 
     private List<GitHubIssue> loadPRs() throws IOException {
@@ -189,7 +191,7 @@ public class GitHubLoader {
         sanitized.setNumber(issue.getNumber());
         sanitized.setClosedAt(issue.getClosedAt());
         sanitized.setCreatedAt(issue.getCreatedAt());
-        sanitized.setLabels(issue.getLabels().stream().filter(l -> l.startsWith("team/") || l.startsWith("backport/") || l.startsWith("kind/") || l.startsWith("status/")).toList());
+        sanitized.setLabels(issue.getLabels().stream().filter(l -> l.startsWith("team/") || l.startsWith("kind/") || l.equals("status/triage")).toList());
         sanitized.setCommentsCount(issue.getCommentsCount());
         sanitized.setUpdatedAt(issue.getUpdatedAt());
         return sanitized;
