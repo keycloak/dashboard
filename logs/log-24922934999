@@ -1,0 +1,1674 @@
+Volatile Sessions IT	UNKNOWN STEP	﻿2026-04-25T04:55:24.8594341Z Current runner version: '2.333.1'
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8617394Z ##[group]Runner Image Provisioner
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8618219Z Hosted Compute Agent
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8618707Z Version: 20260213.493
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8619394Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8620053Z Build Date: 2026-02-13T00:28:41Z
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8620689Z Worker ID: {e422b585-59a6-4cae-b688-c2a15f5f738a}
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8621400Z Azure Region: northcentralus
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8622014Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8623804Z ##[group]Operating System
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8624513Z Ubuntu
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8624954Z 24.04.4
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8625408Z LTS
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8625912Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8626437Z ##[group]Runner Image
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8626976Z Image: ubuntu-24.04
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8627479Z Version: 20260413.86.1
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8628658Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8630162Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8631051Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8632000Z ##[group]GITHUB_TOKEN Permissions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8634005Z Contents: read
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8634578Z Metadata: read
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8635022Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8637320Z Secret source: Actions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.8638040Z Prepare workflow directory
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.9193857Z Prepare all required actions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:24.9248935Z Getting action download info
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.2260378Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.4614326Z Complete job name: Volatile Sessions IT
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5409204Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5410219Z with:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5410618Z   repository: keycloak/keycloak
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5411297Z   token: ***
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5411683Z   ssh-strict: true
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5412073Z   ssh-user: git
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5412472Z   persist-credentials: true
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5413119Z   clean: true
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5413530Z   sparse-checkout-cone-mode: true
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5414003Z   fetch-depth: 1
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5414388Z   fetch-tags: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5414785Z   show-progress: true
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5415182Z   lfs: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5415543Z   submodules: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5415937Z   set-safe-directory: true
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5416622Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5417170Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5417849Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5418438Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5419039Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5419528Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.5419966Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6341415Z Syncing repository: keycloak/keycloak
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6343647Z ##[group]Getting Git version info
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6344425Z Working directory is '/home/runner/work/keycloak/keycloak'
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6345568Z [command]/usr/bin/git version
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6376533Z git version 2.53.0
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6398044Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6414848Z Temporarily overriding HOME='/home/runner/work/_temp/ec03f0af-6de5-4458-b94b-9b7a8dc4ffb3' before making global git config changes
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6417173Z Adding repository directory to the temporary git global config as a safe directory
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6421103Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6454005Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6458301Z ##[group]Initializing the repository
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6463429Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6558200Z hint: Using 'master' as the name for the initial branch. This default branch name
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6559725Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6560653Z hint: to use in all of your new repositories, which will suppress this warning,
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6561359Z hint: call:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6561718Z hint:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6562198Z hint: 	git config --global init.defaultBranch <name>
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6562765Z hint:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6563709Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6565082Z hint: 'development'. The just-created branch can be renamed via this command:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6566176Z hint:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6566579Z hint: 	git branch -m <name>
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6567033Z hint:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6567623Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6568558Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6570561Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6601051Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6601781Z ##[group]Disabling automatic garbage collection
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6604752Z [command]/usr/bin/git config --local gc.auto 0
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6631908Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6639027Z ##[group]Setting up auth
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6639899Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6668691Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.6976967Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.7006341Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.7224516Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.7258385Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.7267172Z ##[group]Fetching the repository
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:25.7268524Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0ab0e47b8713ee22f3f6b11a513cc3fced19fedd:refs/remotes/origin/main
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:27.1923437Z From https://github.com/keycloak/keycloak
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:27.1926582Z  * [new ref]         0ab0e47b8713ee22f3f6b11a513cc3fced19fedd -> origin/main
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:27.1952666Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:27.1954973Z ##[group]Determining the checkout info
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:27.1957079Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:27.1961442Z [command]/usr/bin/git sparse-checkout disable
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:27.2001045Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:27.2029564Z ##[group]Checking out the ref
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:27.2034189Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.1277697Z Switched to a new branch 'main'
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.1278506Z branch 'main' set up to track 'origin/main'.
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.1314915Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.1356942Z [command]/usr/bin/git log -1 --format=%H
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.1382685Z 0ab0e47b8713ee22f3f6b11a513cc3fced19fedd
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.1675856Z Prepare all required actions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.1676397Z Getting action download info
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.3091249Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7930553Z ##[group]Run ./.github/actions/integration-test-setup
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7930925Z with:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7931137Z   jdk-dist: temurin
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7931365Z   jdk-version: 25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7931776Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7932077Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7932470Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7932794Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7933361Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7933628Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.7933884Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8024313Z Prepare all required actions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8060181Z ##[group]Run ./.github/actions/update-hosts
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8060642Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8061188Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8061629Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8061960Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8062298Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8062561Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8062805Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8110200Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8110949Z [36;1mprintf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8136746Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8137140Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8137455Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8137859Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8138217Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8138566Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8138838Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8139086Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8272057Z 
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8272116Z 
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8272731Z 127.0.0.1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8288296Z ::1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8346263Z Prepare all required actions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.8346612Z Getting action download info
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:28.9720600Z Download action repository 'actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654' (SHA:be666c2fcd27ec809703dec50e508c2fdc7f6654)
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5007278Z ##[group]Run ./.github/actions/java-setup
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5007562Z with:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5007734Z   distribution: temurin
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5007921Z   java-version: 25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5008089Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5008340Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5008686Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5008958Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5009261Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5009486Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5009707Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5099912Z ##[group]Run actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5100276Z with:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5100443Z   distribution: temurin
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5100644Z   java-version: 25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5100823Z   java-package: jdk
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5101012Z   check-latest: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5101198Z   server-id: github
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5101379Z   server-username: GITHUB_ACTOR
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5101822Z   server-password: GITHUB_TOKEN
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5102071Z   overwrite-settings: true
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5102278Z   job-status: success
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5102589Z   token: ***
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5102759Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5103229Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5103575Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5103857Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5104148Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5104541Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.5104749Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6596509Z ##[group]Installed distributions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6655429Z Resolved Java 25.0.2+10 from tool-cache
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6655773Z Setting Java 25.0.2+10 as the default
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6667395Z Creating toolchains.xml for JDK version 25 from temurin
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6747176Z Writing to /home/runner/.m2/toolchains.xml
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6747654Z 
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6747889Z Java configuration:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6748143Z   Distribution: temurin
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6748437Z   Version: 25.0.2+10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6748792Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6749176Z 
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6749468Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6763886Z Creating settings.xml with server-id: github
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6765707Z Writing to /home/runner/.m2/settings.xml
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6928674Z Prepare all required actions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.6929010Z Getting action download info
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:29.8371486Z Download action repository 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae' (SHA:27d5ce7f107fe9357f9df03efb73ab90386fccae)
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4493462Z ##[group]Run ./.github/actions/maven-cache
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4493752Z with:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4493942Z   create-cache-if-it-doesnt-exist: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4494182Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4494450Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4494798Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4495079Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4495368Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4495596Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4495912Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4496364Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4496722Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4516419Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4516864Z [36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4542313Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4542674Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4543110Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4543472Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4543772Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4544078Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4544296Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4544620Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4545077Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4545432Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4677405Z ##[group]Run actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4677791Z with:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4678027Z   path: ~/.m2/repository/*/*
+Volatile Sessions IT	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+Volatile Sessions IT	UNKNOWN STEP	
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4678339Z   key: mvn-Linux-mvn-2026-16
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4678572Z   restore-keys: mvn--mvn-2026-16
+Volatile Sessions IT	UNKNOWN STEP	
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4678805Z   enableCrossOsArchive: true
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4679025Z   fail-on-cache-miss: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4679244Z   lookup-only: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4679423Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4679852Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4680194Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4680470Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4680758Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4680977Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4681288Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4681738Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.4682210Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:30.7021917Z Cache hit for: mvn-Linux-mvn-2026-16
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:31.8173730Z Received 184549376 of 701557743 (26.3%), 175.6 MBs/sec
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:32.8168765Z Received 402653184 of 701557743 (57.4%), 191.9 MBs/sec
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:33.8314258Z Received 671088640 of 701557743 (95.7%), 212.4 MBs/sec
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:33.9944551Z Received 701557743 of 701557743 (100.0%), 210.5 MBs/sec
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:33.9947486Z Cache Size: ~669 MB (701557743 B)
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:33.9990920Z [command]/usr/bin/tar -xf /home/runner/work/_temp/a42252bd-1ce3-444a-8bb4-0e2daef396d8/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:35.8913344Z Cache restored successfully
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:35.9302256Z Cache restored from key: mvn-Linux-mvn-2026-16
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:35.9478087Z Prepare all required actions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:35.9478390Z Getting action download info
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0845950Z ##[group]Run ./.github/actions/node-cache
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0846265Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0846550Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0846906Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0847197Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0847495Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0847729Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0848075Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0848535Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0848900Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0866848Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0867640Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0868337Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0890430Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0890767Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0891048Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0891409Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0891702Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0892044Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0892343Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0892692Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0893361Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.0893721Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1036741Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1037082Z with:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1037452Z   path: ~/.m2/repository/com/github/eirslett/node
+Volatile Sessions IT	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+Volatile Sessions IT	UNKNOWN STEP	
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1037944Z   key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1038266Z   enableCrossOsArchive: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1038499Z   fail-on-cache-miss: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1038720Z   lookup-only: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1038916Z   save-always: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1039095Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1039537Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1039896Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1040174Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1040479Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1040709Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1041031Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1041496Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.1041985Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:36.3171302Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:37.4444212Z Received 134217728 of 178075408 (75.4%), 128.0 MBs/sec
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:37.6689434Z Received 178075408 of 178075408 (100.0%), 138.6 MBs/sec
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:37.6696275Z Cache Size: ~170 MB (178075408 B)
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:37.6720396Z [command]/usr/bin/tar -xf /home/runner/work/_temp/b4ebedf9-21ff-4c4f-8f17-6547928f7cb0/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.1264217Z Cache restored successfully
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.1417217Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.1582753Z Prepare all required actions
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.1583354Z Getting action download info
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.2998713Z ##[group]Run ./.github/actions/pnpm-store-cache
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.2999007Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.2999281Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.2999658Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.2999941Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3000250Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3000482Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3000817Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3001284Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3001650Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3016896Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3017369Z [36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3037989Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3038315Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3038596Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3038953Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3039261Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3039566Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3039802Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3040137Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3040606Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3040961Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3137393Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3137734Z with:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3138055Z   path: ~/.local/share/pnpm/store
+Volatile Sessions IT	UNKNOWN STEP	~/AppData/Local/pnpm/store
+Volatile Sessions IT	UNKNOWN STEP	~/Library/pnpm/store
+Volatile Sessions IT	UNKNOWN STEP	
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3138454Z   key: Linux-pnpm-store-2026-16
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3138702Z   enableCrossOsArchive: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3138937Z   fail-on-cache-miss: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3139155Z   lookup-only: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3139349Z   save-always: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3139528Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3139789Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3140147Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3140436Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3140738Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3140969Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3141295Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3141911Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.3142272Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:38.5401331Z Cache hit for: Linux-pnpm-store-2026-16
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:39.6455186Z Received 133435333 of 133435333 (100.0%), 127.9 MBs/sec
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:39.6457741Z Cache Size: ~127 MB (133435333 B)
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:39.6531652Z [command]/usr/bin/tar -xf /home/runner/work/_temp/68668bf3-25d1-4a28-9bb0-93006d9d24be/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.4951052Z Cache restored successfully
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5091572Z Cache restored from key: Linux-pnpm-store-2026-16
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5231020Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5231427Z with:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5231614Z   name: m2-keycloak.tzts
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5231839Z   merge-multiple: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5232063Z   repository: keycloak/keycloak
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5232296Z   run-id: 24922934999
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5232521Z   skip-decompress: false
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5232741Z   digest-mismatch: error
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5233399Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5233704Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5234077Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5234392Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5234717Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5234961Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5235315Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5235807Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.5236176Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.6631757Z Downloading single artifact
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.7655492Z Preparing to download the following artifacts:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.7656747Z - m2-keycloak.tzts (ID: 6637541481, Size: 432187283, Expected Digest: sha256:62e5e9c4cd7ae61238b2102e7b3f5a756c5e78e180a855fedb7bdf199253b373)
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.9379870Z Redirecting to blob download url: https://productionresultssa0.blob.core.windows.net/actions-results/79e2a383-3cd9-46a8-92c1-f40b62c69118/workflow-job-run-1b4d6b12-38c7-5a45-a1a6-6b7672cc307a/artifacts/edc4cfb0355d37e325eaae6eb235756b36f79720f66ece617babf28220e9d051.zip
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:42.9382189Z Starting download of artifact to: /home/runner/work/keycloak/keycloak
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:43.0904188Z (node:2296) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:43.0905871Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.3935615Z SHA256 digest of downloaded artifact is 62e5e9c4cd7ae61238b2102e7b3f5a756c5e78e180a855fedb7bdf199253b373
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.3936584Z Artifact download completed successfully.
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.3937120Z Total of 1 artifact(s) downloaded
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.3943491Z Download artifact has finished successfully
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4083924Z ##[group]Run if [ "$RUNNER_OS" == "Windows" ]; then
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4084469Z [36;1mif [ "$RUNNER_OS" == "Windows" ]; then[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4085143Z [36;1m  # zstd binary might be missing in older versions, install only when necessary[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4085888Z [36;1m  which zstd > /dev/null || choco install zstandard[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4086373Z [36;1mfi[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4086693Z [36;1mtar -C ~/ --use-compress-program="zstd -d" -xf m2-keycloak.tzts[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4108988Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4109326Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4109614Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4109991Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4110308Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4110646Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4111090Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4111455Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4111949Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:50.4112335Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0819732Z ##[group]Run TESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh volatile-sessions`
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0820529Z [36;1mTESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh volatile-sessions`[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0821221Z [36;1mecho "Tests: $TESTS"[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0822365Z [36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus "-Dwebdriver.chrome.driver=$CHROMEWEBDRIVER/chromedriver" -Dauth.server.feature.disable=persistent-user-sessions -Dtest=$TESTS -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh[0m
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0845141Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0845478Z env:
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0845771Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0846140Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0846457Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0846806Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0847062Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0847421Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0847913Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.0848293Z ##[endgroup]
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.1311339Z ##[error]Process completed with exit code 1.
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.1396234Z Post job cleanup.
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.1460126Z Post job cleanup.
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.2798247Z Post job cleanup.
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.3663736Z [command]/usr/bin/git version
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.3685966Z git version 2.53.0
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.3757075Z Temporarily overriding HOME='/home/runner/work/_temp/65c2354a-0ce1-4096-aafa-f83579e66fc8' before making global git config changes
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.3758604Z Adding repository directory to the temporary git global config as a safe directory
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.3762376Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.3802695Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.3847469Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.4089514Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.4113710Z http.https://github.com/.extraheader
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.4125619Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.4157184Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Volatile Sessions IT	UNKNOWN STEP	2026-04-25T04:55:51.4526709Z Cleaning up orphan processes
+External Infinispan IT (multi-site)	UNKNOWN STEP	﻿2026-04-25T04:55:23.5184121Z Current runner version: '2.333.1'
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5219597Z ##[group]Runner Image Provisioner
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5220820Z Hosted Compute Agent
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5222081Z Version: 20260213.493
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5223045Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5224283Z Build Date: 2026-02-13T00:28:41Z
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5225386Z Worker ID: {207c7b92-3767-4c7a-9352-ca210778bc63}
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5226537Z Azure Region: eastus
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5227535Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5229766Z ##[group]Operating System
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5230711Z Ubuntu
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5231870Z 24.04.4
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5232649Z LTS
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5233454Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5234332Z ##[group]Runner Image
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5235198Z Image: ubuntu-24.04
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5235965Z Version: 20260413.86.1
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5238011Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5240674Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5242635Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5244467Z ##[group]GITHUB_TOKEN Permissions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5247076Z Contents: read
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5248119Z Metadata: read
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5249740Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5253308Z Secret source: Actions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5254716Z Prepare workflow directory
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5879028Z Prepare all required actions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.5938130Z Getting action download info
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:23.8482382Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.0981894Z Complete job name: External Infinispan IT (multi-site)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1782430Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1783523Z with:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1783940Z   repository: keycloak/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1784635Z   token: ***
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1785035Z   ssh-strict: true
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1785436Z   ssh-user: git
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1785840Z   persist-credentials: true
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1786292Z   clean: true
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1786702Z   sparse-checkout-cone-mode: true
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1787191Z   fetch-depth: 1
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1787583Z   fetch-tags: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1787983Z   show-progress: true
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1788391Z   lfs: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1788768Z   submodules: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1789172Z   set-safe-directory: true
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1789820Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1790382Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1791060Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1791886Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1792486Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1792977Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.1793416Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2777391Z Syncing repository: keycloak/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2779628Z ##[group]Getting Git version info
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2780842Z Working directory is '/home/runner/work/keycloak/keycloak'
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2782838Z [command]/usr/bin/git version
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2812839Z git version 2.53.0
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2834052Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2848413Z Temporarily overriding HOME='/home/runner/work/_temp/d16f3d6e-63e0-4b9e-8c8a-407184c10629' before making global git config changes
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2850287Z Adding repository directory to the temporary git global config as a safe directory
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2854902Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2888749Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2893208Z ##[group]Initializing the repository
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.2897927Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3008751Z hint: Using 'master' as the name for the initial branch. This default branch name
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3010246Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3011895Z hint: to use in all of your new repositories, which will suppress this warning,
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3012624Z hint: call:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3012994Z hint:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3013480Z hint: 	git config --global init.defaultBranch <name>
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3014063Z hint:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3014624Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3015818Z hint: 'development'. The just-created branch can be renamed via this command:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3016954Z hint:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3017532Z hint: 	git branch -m <name>
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3018252Z hint:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3019181Z hint: Disable this message with "git config set advice.defaultBranchName false"
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3020169Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3022623Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3054454Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3055191Z ##[group]Disabling automatic garbage collection
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3058054Z [command]/usr/bin/git config --local gc.auto 0
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3088022Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3089050Z ##[group]Setting up auth
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3095256Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3126994Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3420219Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3452105Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3678108Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3714381Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3715143Z ##[group]Fetching the repository
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:24.3725839Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0ab0e47b8713ee22f3f6b11a513cc3fced19fedd:refs/remotes/origin/main
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:25.5804016Z From https://github.com/keycloak/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:25.5805140Z  * [new ref]         0ab0e47b8713ee22f3f6b11a513cc3fced19fedd -> origin/main
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:25.5835236Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:25.5836671Z ##[group]Determining the checkout info
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:25.5838126Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:25.5844643Z [command]/usr/bin/git sparse-checkout disable
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:25.5885334Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:25.5914200Z ##[group]Checking out the ref
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:25.5919754Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.5133739Z Switched to a new branch 'main'
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.5135396Z branch 'main' set up to track 'origin/main'.
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.5170793Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.5212268Z [command]/usr/bin/git log -1 --format=%H
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.5234929Z 0ab0e47b8713ee22f3f6b11a513cc3fced19fedd
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.5527239Z Prepare all required actions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.5527781Z Getting action download info
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.6696690Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9343704Z ##[group]Run ./.github/actions/integration-test-setup
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9344092Z with:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9344311Z   jdk-dist: temurin
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9344550Z   jdk-version: 25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9344981Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9345293Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9345706Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9346044Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9346391Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9346655Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9346915Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9436330Z Prepare all required actions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9472415Z ##[group]Run ./.github/actions/update-hosts
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9472774Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9473106Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9473509Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9473848Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9474194Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9474469Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9474722Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9522135Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9522923Z [36;1mprintf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9548964Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9549361Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9549683Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9550089Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9550445Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9550802Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9551289Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9551558Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9685468Z 
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9685548Z 
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9697551Z 127.0.0.1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9703649Z ::1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9761525Z Prepare all required actions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:26.9761914Z Getting action download info
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.0973461Z Download action repository 'actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654' (SHA:be666c2fcd27ec809703dec50e508c2fdc7f6654)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3845893Z ##[group]Run ./.github/actions/java-setup
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3846187Z with:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3846361Z   distribution: temurin
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3846554Z   java-version: 25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3846724Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3846983Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3847335Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3847612Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3847914Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3848141Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3848356Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3925014Z ##[group]Run actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3925392Z with:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3925555Z   distribution: temurin
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3925749Z   java-version: 25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3925924Z   java-package: jdk
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3926112Z   check-latest: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3926302Z   server-id: github
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3926486Z   server-username: GITHUB_ACTOR
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3926955Z   server-password: GITHUB_TOKEN
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3927188Z   overwrite-settings: true
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3927396Z   job-status: success
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3927717Z   token: ***
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3927885Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3928145Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3928484Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3928769Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3929062Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3929429Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.3929634Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5434712Z ##[group]Installed distributions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5807323Z Resolved Java 25.0.2+10 from tool-cache
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5807886Z Setting Java 25.0.2+10 as the default
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5826014Z Creating toolchains.xml for JDK version 25 from temurin
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5950116Z Writing to /home/runner/.m2/toolchains.xml
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5951009Z 
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5951578Z Java configuration:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5951926Z   Distribution: temurin
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5952259Z   Version: 25.0.2+10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5952745Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5953237Z 
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5953892Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5965121Z Creating settings.xml with server-id: github
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.5971594Z Writing to /home/runner/.m2/settings.xml
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.6128217Z Prepare all required actions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.6128577Z Getting action download info
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:27.7311535Z Download action repository 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae' (SHA:27d5ce7f107fe9357f9df03efb73ab90386fccae)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0044533Z ##[group]Run ./.github/actions/maven-cache
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0044812Z with:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0045007Z   create-cache-if-it-doesnt-exist: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0045263Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0045535Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0045899Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0046188Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0046485Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0046713Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0047027Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0047487Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0047844Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0066925Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0067338Z [36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0091617Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0091966Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0092247Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0092610Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0092901Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0093205Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0093422Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0093750Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0094199Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0094542Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0229863Z ##[group]Run actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0230240Z with:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0230489Z   path: ~/.m2/repository/*/*
+External Infinispan IT (multi-site)	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0230803Z   key: mvn-Linux-mvn-2026-16
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0231037Z   restore-keys: mvn--mvn-2026-16
+External Infinispan IT (multi-site)	UNKNOWN STEP	
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0231646Z   enableCrossOsArchive: true
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0231877Z   fail-on-cache-miss: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0232083Z   lookup-only: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0232272Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0232704Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0233060Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0233338Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0233628Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0233847Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0234171Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0234622Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.0235086Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:28.2005547Z Cache hit for: mvn-Linux-mvn-2026-16
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:29.2629059Z Received 268435456 of 701557743 (38.3%), 255.7 MBs/sec
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:30.2642483Z Received 532676608 of 701557743 (75.9%), 253.7 MBs/sec
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:31.2640859Z Received 671088640 of 701557743 (95.7%), 213.2 MBs/sec
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:31.4151708Z Received 701557743 of 701557743 (100.0%), 212.2 MBs/sec
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:31.4155253Z Cache Size: ~669 MB (701557743 B)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:31.4199006Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3ac26cd8-6aee-4e82-b0bc-5c04d912b7f5/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.4974317Z Cache restored successfully
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.5466816Z Cache restored from key: mvn-Linux-mvn-2026-16
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.5700090Z Prepare all required actions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.5700577Z Getting action download info
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6967310Z ##[group]Run ./.github/actions/node-cache
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6967610Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6967886Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6968241Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6968529Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6968825Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6969059Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6969398Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6969849Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6970203Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6987463Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6988223Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.6988932Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7012269Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7012594Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7012875Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7013228Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7013531Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7013862Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7014117Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7014486Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7014944Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7015320Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7184644Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7185222Z with:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7185818Z   path: ~/.m2/repository/com/github/eirslett/node
+External Infinispan IT (multi-site)	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+External Infinispan IT (multi-site)	UNKNOWN STEP	
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7186662Z   key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7187200Z   enableCrossOsArchive: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7187591Z   fail-on-cache-miss: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7187951Z   lookup-only: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7188269Z   save-always: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7188570Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7189208Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7189808Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7190295Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7190802Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7191391Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7191944Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7192725Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.7193493Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:33.9207079Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:34.9128005Z Received 178075408 of 178075408 (100.0%), 186.6 MBs/sec
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:34.9128962Z Cache Size: ~170 MB (178075408 B)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:34.9161019Z [command]/usr/bin/tar -xf /home/runner/work/_temp/4cb787b4-ca17-44e9-ab6f-68f07a555368/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.4169808Z Cache restored successfully
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.4324943Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.4494487Z Prepare all required actions
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.4494796Z Getting action download info
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5666435Z ##[group]Run ./.github/actions/pnpm-store-cache
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5666721Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5667000Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5667357Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5667660Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5667966Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5668203Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5668537Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5669001Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5669360Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5684696Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5685142Z [36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5706652Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5706971Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5707247Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5707602Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5707896Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5708210Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5708443Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5708776Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5709233Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5709602Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5805319Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5805655Z with:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5805983Z   path: ~/.local/share/pnpm/store
+External Infinispan IT (multi-site)	UNKNOWN STEP	~/AppData/Local/pnpm/store
+External Infinispan IT (multi-site)	UNKNOWN STEP	~/Library/pnpm/store
+External Infinispan IT (multi-site)	UNKNOWN STEP	
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5806385Z   key: Linux-pnpm-store-2026-16
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5806639Z   enableCrossOsArchive: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5806884Z   fail-on-cache-miss: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5807104Z   lookup-only: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5807302Z   save-always: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5807486Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5807747Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5808105Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5808393Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5808697Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5808930Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5809257Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5809719Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.5810070Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:35.7810763Z Cache hit for: Linux-pnpm-store-2026-16
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:36.3045759Z Received 133435333 of 133435333 (100.0%), 270.8 MBs/sec
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:36.3046381Z Cache Size: ~127 MB (133435333 B)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:36.3077044Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ecb763f0-aad5-4a8c-b4ca-d2f5c35af1a7/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.0757363Z Cache restored successfully
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.0894136Z Cache restored from key: Linux-pnpm-store-2026-16
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1030420Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1030815Z with:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1030998Z   name: m2-keycloak.tzts
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1031602Z   merge-multiple: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1031980Z   repository: keycloak/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1032355Z   run-id: 24922934999
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1032683Z   skip-decompress: false
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1033046Z   digest-mismatch: error
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1033405Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1033692Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1034056Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1034350Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1034662Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1034904Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1035249Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1035735Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.1036100Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.2560682Z Downloading single artifact
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.3263369Z Preparing to download the following artifacts:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.3264607Z - m2-keycloak.tzts (ID: 6637541481, Size: 432187283, Expected Digest: sha256:62e5e9c4cd7ae61238b2102e7b3f5a756c5e78e180a855fedb7bdf199253b373)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.4220458Z Redirecting to blob download url: https://productionresultssa0.blob.core.windows.net/actions-results/79e2a383-3cd9-46a8-92c1-f40b62c69118/workflow-job-run-1b4d6b12-38c7-5a45-a1a6-6b7672cc307a/artifacts/edc4cfb0355d37e325eaae6eb235756b36f79720f66ece617babf28220e9d051.zip
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.4224375Z Starting download of artifact to: /home/runner/work/keycloak/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.4884021Z (node:2342) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:39.4885212Z (Use `node --trace-deprecation ...` to show where the warning was created)
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4345472Z SHA256 digest of downloaded artifact is 62e5e9c4cd7ae61238b2102e7b3f5a756c5e78e180a855fedb7bdf199253b373
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4346255Z Artifact download completed successfully.
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4346564Z Total of 1 artifact(s) downloaded
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4355369Z Download artifact has finished successfully
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4529334Z ##[group]Run if [ "$RUNNER_OS" == "Windows" ]; then
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4529942Z [36;1mif [ "$RUNNER_OS" == "Windows" ]; then[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4530677Z [36;1m  # zstd binary might be missing in older versions, install only when necessary[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4531856Z [36;1m  which zstd > /dev/null || choco install zstandard[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4532398Z [36;1mfi[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4532913Z [36;1mtar -C ~/ --use-compress-program="zstd -d" -xf m2-keycloak.tzts[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4563713Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4564280Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4564781Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4565430Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4565966Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4566537Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4566968Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4567783Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4568654Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:44.4569324Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1387973Z ##[group]Run TESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh clusterless`
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1388718Z [36;1mTESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh clusterless`[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1389191Z [36;1mecho "Tests: $TESTS"[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1390567Z [36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus -Pinfinispan-server -Dauth.server.feature=multi-site -Dauth.server.feature.disable=persistent-user-sessions -Dtest=$TESTS -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh[0m
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1413432Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1413763Z env:
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1414055Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1414431Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1414735Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1415100Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1415354Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1415709Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1416193Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.1416579Z ##[endgroup]
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.2140910Z ##[error]Process completed with exit code 1.
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.2242463Z Post job cleanup.
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.2324576Z Post job cleanup.
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.3818747Z Post job cleanup.
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.4831944Z [command]/usr/bin/git version
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.4868993Z git version 2.53.0
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.4947382Z Temporarily overriding HOME='/home/runner/work/_temp/7bd74654-f24b-4389-bc4b-35c23d64ebfb' before making global git config changes
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.4948689Z Adding repository directory to the temporary git global config as a safe directory
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.4955493Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.4997169Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.5032127Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.5276141Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.5299729Z http.https://github.com/.extraheader
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.5310914Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.5344581Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+External Infinispan IT (multi-site)	UNKNOWN STEP	2026-04-25T04:55:45.5702064Z Cleaning up orphan processes
+External Infinispan IT (clusterless)	UNKNOWN STEP	﻿2026-04-25T04:55:23.7832773Z Current runner version: '2.333.1'
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7857435Z ##[group]Runner Image Provisioner
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7858281Z Hosted Compute Agent
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7858836Z Version: 20260213.493
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7859487Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7860224Z Build Date: 2026-02-13T00:28:41Z
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7860845Z Worker ID: {a303a195-cb43-4559-819d-1df3de061507}
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7861560Z Azure Region: centralus
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7862093Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7863372Z ##[group]Operating System
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7863934Z Ubuntu
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7864546Z 24.04.4
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7865017Z LTS
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7865673Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7866241Z ##[group]Runner Image
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7866917Z Image: ubuntu-24.04
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7867664Z Version: 20260413.86.1
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7869493Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7872040Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7873412Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7874997Z ##[group]GITHUB_TOKEN Permissions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7878029Z Contents: read
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7878770Z Metadata: read
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7879525Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7882089Z Secret source: Actions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.7883417Z Prepare workflow directory
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.8336312Z Prepare all required actions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:23.8389417Z Getting action download info
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.1641679Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.4319671Z Complete job name: External Infinispan IT (clusterless)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5082907Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5083864Z with:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5084246Z   repository: keycloak/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5084893Z   token: ***
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5085482Z   ssh-strict: true
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5085864Z   ssh-user: git
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5086253Z   persist-credentials: true
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5086675Z   clean: true
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5087063Z   sparse-checkout-cone-mode: true
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5087536Z   fetch-depth: 1
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5087913Z   fetch-tags: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5088292Z   show-progress: true
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5088678Z   lfs: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5089030Z   submodules: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5089405Z   set-safe-directory: true
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5090004Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5090530Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5091184Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5091760Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5092332Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5092792Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.5093212Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6031674Z Syncing repository: keycloak/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6033347Z ##[group]Getting Git version info
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6034010Z Working directory is '/home/runner/work/keycloak/keycloak'
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6034969Z [command]/usr/bin/git version
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6064233Z git version 2.53.0
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6085427Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6101204Z Temporarily overriding HOME='/home/runner/work/_temp/e4d334bd-9598-44d5-a1d3-0c97695330bb' before making global git config changes
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6102872Z Adding repository directory to the temporary git global config as a safe directory
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6105935Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6140883Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6144714Z ##[group]Initializing the repository
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6149326Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6235851Z hint: Using 'master' as the name for the initial branch. This default branch name
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6237377Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6238438Z hint: to use in all of your new repositories, which will suppress this warning,
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6239147Z hint: call:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6239533Z hint:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6240015Z hint: 	git config --global init.defaultBranch <name>
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6240605Z hint:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6241421Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6242743Z hint: 'development'. The just-created branch can be renamed via this command:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6243546Z hint:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6243932Z hint: 	git branch -m <name>
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6244384Z hint:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6244971Z hint: Disable this message with "git config set advice.defaultBranchName false"
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6246115Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6247816Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6311660Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6312396Z ##[group]Disabling automatic garbage collection
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6314843Z [command]/usr/bin/git config --local gc.auto 0
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6344064Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6344787Z ##[group]Setting up auth
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6350665Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6382093Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6676479Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6706949Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6940061Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6977469Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6978521Z ##[group]Fetching the repository
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:24.6987698Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0ab0e47b8713ee22f3f6b11a513cc3fced19fedd:refs/remotes/origin/main
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:26.4577564Z From https://github.com/keycloak/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:26.4579301Z  * [new ref]         0ab0e47b8713ee22f3f6b11a513cc3fced19fedd -> origin/main
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:26.4608456Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:26.4609443Z ##[group]Determining the checkout info
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:26.4610652Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:26.4615791Z [command]/usr/bin/git sparse-checkout disable
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:26.4655500Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:26.4683861Z ##[group]Checking out the ref
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:26.4687594Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:27.3908248Z Switched to a new branch 'main'
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:27.3909445Z branch 'main' set up to track 'origin/main'.
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:27.3944383Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:27.3986274Z [command]/usr/bin/git log -1 --format=%H
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:27.4011710Z 0ab0e47b8713ee22f3f6b11a513cc3fced19fedd
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:27.4408358Z Prepare all required actions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:27.4409790Z Getting action download info
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:27.5694371Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1040174Z ##[group]Run ./.github/actions/integration-test-setup
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1040662Z with:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1041134Z   jdk-dist: temurin
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1041365Z   jdk-version: 25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1041982Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1042322Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1042732Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1043066Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1043423Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1043707Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1043980Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1130426Z Prepare all required actions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1163161Z ##[group]Run ./.github/actions/update-hosts
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1163524Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1163858Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1164269Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1164616Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1164965Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1165430Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1165700Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1209298Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1210041Z [36;1mprintf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1236637Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1237045Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1237374Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1237788Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1238148Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1238498Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1238797Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1239060Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1373865Z 
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1373915Z 
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1374918Z 127.0.0.1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1390507Z ::1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1441459Z Prepare all required actions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.1441799Z Getting action download info
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:28.2874298Z Download action repository 'actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654' (SHA:be666c2fcd27ec809703dec50e508c2fdc7f6654)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0249492Z ##[group]Run ./.github/actions/java-setup
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0249847Z with:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0250084Z   distribution: temurin
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0250331Z   java-version: 25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0250558Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0250876Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0251280Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0251607Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0251964Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0252251Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0252526Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0343177Z ##[group]Run actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0343590Z with:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0343814Z   distribution: temurin
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0344090Z   java-version: 25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0344338Z   java-package: jdk
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0344579Z   check-latest: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0344831Z   server-id: github
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0345239Z   server-username: GITHUB_ACTOR
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0345786Z   server-password: GITHUB_TOKEN
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0346064Z   overwrite-settings: true
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0346331Z   job-status: success
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0346701Z   token: ***
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0346921Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0347261Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0347658Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0347998Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0348340Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0348789Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.0349053Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.1801070Z ##[group]Installed distributions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2054623Z Resolved Java 25.0.2+10 from tool-cache
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2055427Z Setting Java 25.0.2+10 as the default
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2066289Z Creating toolchains.xml for JDK version 25 from temurin
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2140812Z Writing to /home/runner/.m2/toolchains.xml
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2141248Z 
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2141454Z Java configuration:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2141850Z   Distribution: temurin
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2142224Z   Version: 25.0.2+10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2142777Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2143350Z 
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2146015Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2161051Z Creating settings.xml with server-id: github
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2161516Z Writing to /home/runner/.m2/settings.xml
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2322592Z Prepare all required actions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.2322986Z Getting action download info
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:29.3880006Z Download action repository 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae' (SHA:27d5ce7f107fe9357f9df03efb73ab90386fccae)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0402710Z ##[group]Run ./.github/actions/maven-cache
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0403016Z with:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0403221Z   create-cache-if-it-doesnt-exist: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0403476Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0403759Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0404115Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0404401Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0404695Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0404930Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0405422Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0405900Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0406265Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0426494Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0426903Z [36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0452667Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0453008Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0453280Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0453628Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0453927Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0454227Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0454459Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0454786Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0455382Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0455729Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0580851Z ##[group]Run actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0581223Z with:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0581480Z   path: ~/.m2/repository/*/*
+External Infinispan IT (clusterless)	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0581795Z   key: mvn-Linux-mvn-2026-16
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0582042Z   restore-keys: mvn--mvn-2026-16
+External Infinispan IT (clusterless)	UNKNOWN STEP	
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0582324Z   enableCrossOsArchive: true
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0582587Z   fail-on-cache-miss: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0582805Z   lookup-only: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0582999Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0583475Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0583837Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0584137Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0584440Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0584685Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0585012Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0585698Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.0586192Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:30.3109214Z Cache hit for: mvn-Linux-mvn-2026-16
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:31.4774615Z Received 121634816 of 701557743 (17.3%), 116.0 MBs/sec
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:32.4820784Z Received 360710144 of 701557743 (51.4%), 171.7 MBs/sec
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:33.4830104Z Received 566231040 of 701557743 (80.7%), 179.7 MBs/sec
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:34.1579320Z Received 701557743 of 701557743 (100.0%), 181.8 MBs/sec
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:34.1582033Z Cache Size: ~669 MB (701557743 B)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:34.1709974Z [command]/usr/bin/tar -xf /home/runner/work/_temp/a7b4af82-5d5b-46b3-8766-ae52ba3ae187/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.6212223Z Cache restored successfully
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.6767474Z Cache restored from key: mvn-Linux-mvn-2026-16
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.6993855Z Prepare all required actions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.6994181Z Getting action download info
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8472281Z ##[group]Run ./.github/actions/node-cache
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8472719Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8473159Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8473735Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8474207Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8474693Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8475236Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8475800Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8476558Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8477153Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8498546Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8499776Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8500911Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8530452Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8530945Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8531378Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8531981Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8532450Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8532962Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8533348Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8533882Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8534654Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8535386Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8733006Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8733552Z with:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8734135Z   path: ~/.m2/repository/com/github/eirslett/node
+External Infinispan IT (clusterless)	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+External Infinispan IT (clusterless)	UNKNOWN STEP	
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8734948Z   key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8735625Z   enableCrossOsArchive: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8736005Z   fail-on-cache-miss: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8736344Z   lookup-only: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8736648Z   save-always: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8736936Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8737591Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8738175Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8738645Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8739139Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8739518Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8740057Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8740835Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:36.8741593Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:37.1865850Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:38.3687202Z Received 62914560 of 178075408 (35.3%), 60.0 MBs/sec
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:38.9990118Z Received 178075408 of 178075408 (100.0%), 104.2 MBs/sec
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:38.9992610Z Cache Size: ~170 MB (178075408 B)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.0032471Z [command]/usr/bin/tar -xf /home/runner/work/_temp/48c5458a-5b83-4d1f-b3d9-3f8c024b3ecb/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.4590478Z Cache restored successfully
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.4756086Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.4934136Z Prepare all required actions
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.4934480Z Getting action download info
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6613875Z ##[group]Run ./.github/actions/pnpm-store-cache
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6614177Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6614470Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6614847Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6615388Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6615704Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6615947Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6616292Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6616759Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6617134Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6632109Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6632567Z [36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6654582Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6654904Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6655395Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6655763Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6656087Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6656396Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6656641Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6656986Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6657456Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6657826Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6754481Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6754832Z with:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6755404Z   path: ~/.local/share/pnpm/store
+External Infinispan IT (clusterless)	UNKNOWN STEP	~/AppData/Local/pnpm/store
+External Infinispan IT (clusterless)	UNKNOWN STEP	~/Library/pnpm/store
+External Infinispan IT (clusterless)	UNKNOWN STEP	
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6755819Z   key: Linux-pnpm-store-2026-16
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6756082Z   enableCrossOsArchive: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6756328Z   fail-on-cache-miss: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6756555Z   lookup-only: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6756758Z   save-always: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6756948Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6757228Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6757580Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6757873Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6758183Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6758426Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6758761Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6759405Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.6759767Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:39.9322194Z Cache hit for: Linux-pnpm-store-2026-16
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:41.0919042Z Received 88080384 of 133435333 (66.0%), 84.0 MBs/sec
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:41.3177674Z Received 133435333 of 133435333 (100.0%), 103.8 MBs/sec
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:41.3179527Z Cache Size: ~127 MB (133435333 B)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:41.3244380Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3eabaec4-6427-4b2d-b281-413be97590b0/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.8819979Z Cache restored successfully
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.8964951Z Cache restored from key: Linux-pnpm-store-2026-16
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9106840Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9107244Z with:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9107444Z   name: m2-keycloak.tzts
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9107686Z   merge-multiple: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9107926Z   repository: keycloak/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9108190Z   run-id: 24922934999
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9108409Z   skip-decompress: false
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9108632Z   digest-mismatch: error
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9108839Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9109130Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9109490Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9109804Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9110123Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9110385Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9110734Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9111208Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:43.9111574Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:44.0454987Z Downloading single artifact
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:44.2074469Z Preparing to download the following artifacts:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:44.2075751Z - m2-keycloak.tzts (ID: 6637541481, Size: 432187283, Expected Digest: sha256:62e5e9c4cd7ae61238b2102e7b3f5a756c5e78e180a855fedb7bdf199253b373)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:44.4510504Z Redirecting to blob download url: https://productionresultssa0.blob.core.windows.net/actions-results/79e2a383-3cd9-46a8-92c1-f40b62c69118/workflow-job-run-1b4d6b12-38c7-5a45-a1a6-6b7672cc307a/artifacts/edc4cfb0355d37e325eaae6eb235756b36f79720f66ece617babf28220e9d051.zip
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:44.4512637Z Starting download of artifact to: /home/runner/work/keycloak/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:44.6656528Z (node:2386) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:44.6658024Z (Use `node --trace-deprecation ...` to show where the warning was created)
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1336747Z SHA256 digest of downloaded artifact is 62e5e9c4cd7ae61238b2102e7b3f5a756c5e78e180a855fedb7bdf199253b373
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1337415Z Artifact download completed successfully.
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1337764Z Total of 1 artifact(s) downloaded
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1345614Z Download artifact has finished successfully
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1514283Z ##[group]Run if [ "$RUNNER_OS" == "Windows" ]; then
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1514691Z [36;1mif [ "$RUNNER_OS" == "Windows" ]; then[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1515406Z [36;1m  # zstd binary might be missing in older versions, install only when necessary[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1516031Z [36;1m  which zstd > /dev/null || choco install zstandard[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1516366Z [36;1mfi[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1516693Z [36;1mtar -C ~/ --use-compress-program="zstd -d" -xf m2-keycloak.tzts[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1540714Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1541062Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1541364Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1541734Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1542046Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1542596Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1542863Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1543224Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1543703Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.1544080Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7448638Z ##[group]Run TESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh clusterless`
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7449524Z [36;1mTESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh clusterless`[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7449984Z [36;1mecho "Tests: $TESTS"[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7451083Z [36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus -Pinfinispan-server -Dauth.server.feature=clusterless -Dauth.server.feature.disable=persistent-user-sessions -Dtest=$TESTS -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh[0m
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7474666Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7475014Z env:
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7475521Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7475906Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7476225Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7476619Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7476885Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7477254Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7477750Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.7478126Z ##[endgroup]
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.8031584Z ##[error]Process completed with exit code 1.
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.8115592Z Post job cleanup.
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.8179090Z Post job cleanup.
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:56.9509868Z Post job cleanup.
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0333556Z [command]/usr/bin/git version
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0370689Z git version 2.53.0
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0406848Z Temporarily overriding HOME='/home/runner/work/_temp/13d05a76-d962-4de0-8c4e-faba8db1e380' before making global git config changes
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0408158Z Adding repository directory to the temporary git global config as a safe directory
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0412597Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0450042Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0484333Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0735292Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0759456Z http.https://github.com/.extraheader
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0770846Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.0803383Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+External Infinispan IT (clusterless)	UNKNOWN STEP	2026-04-25T04:55:57.1210847Z Cleaning up orphan processes
+Status Check - Keycloak CI	UNKNOWN STEP	﻿2026-04-25T05:48:31.5331914Z Current runner version: '2.333.1'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5357610Z ##[group]Runner Image Provisioner
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5358450Z Hosted Compute Agent
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5359033Z Version: 20260213.493
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5359617Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5360256Z Build Date: 2026-02-13T00:28:41Z
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5361110Z Worker ID: {ba234ac7-08bd-4522-b2df-033d4cf2ec36}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5361753Z Azure Region: eastus2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5362275Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5363996Z ##[group]Operating System
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5364625Z Ubuntu
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5365118Z 24.04.4
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5365556Z LTS
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5366017Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5366462Z ##[group]Runner Image
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5367018Z Image: ubuntu-24.04
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5367504Z Version: 20260413.86.1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5368702Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5370166Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5371468Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5372988Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5375806Z Contents: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5376368Z Metadata: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5376916Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5378983Z Secret source: Actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5380073Z Prepare workflow directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5798629Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.5836933Z Getting action download info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:31.8659311Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.1909371Z Complete job name: Status Check - Keycloak CI
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2732749Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2734016Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2734433Z   repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2735106Z   token: ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2735479Z   ssh-strict: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2735864Z   ssh-user: git
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2736258Z   persist-credentials: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2736699Z   clean: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2737090Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2737568Z   fetch-depth: 1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2737942Z   fetch-tags: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2738337Z   show-progress: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2738726Z   lfs: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2739088Z   submodules: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2739478Z   set-safe-directory: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2740106Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2740645Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2741307Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2741896Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2742485Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2742960Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.2743582Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.3728549Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.3730239Z ##[group]Getting Git version info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.3730926Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.3731921Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.7819985Z git version 2.53.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.7845825Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.7861476Z Temporarily overriding HOME='/home/runner/work/_temp/87dc8a69-9abf-4dfa-b8d7-3bcf731615b6' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.7863836Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.7868331Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.7920296Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.7925167Z ##[group]Initializing the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.7930748Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8958868Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8960562Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8961967Z hint: to use in all of your new repositories, which will suppress this warning,
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8963058Z hint: call:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8963866Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8964588Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8965462Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8966268Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8967635Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8968709Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8969268Z hint: 	git branch -m <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8969965Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8970977Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8972518Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.8974458Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.9449462Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.9451769Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.9453878Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.9874340Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.9876513Z ##[group]Setting up auth
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.9880354Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:32.9919818Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:33.0711894Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:33.0746342Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:33.1006925Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:33.1301645Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:33.1304739Z ##[group]Fetching the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:33.1315627Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0ab0e47b8713ee22f3f6b11a513cc3fced19fedd:refs/remotes/origin/main
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:36.7262238Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:36.7262962Z  * [new ref]         0ab0e47b8713ee22f3f6b11a513cc3fced19fedd -> origin/main
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:36.7291264Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:36.7291798Z ##[group]Determining the checkout info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:36.7294190Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:36.7299422Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:36.7336550Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:36.7363657Z ##[group]Checking out the ref
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:36.7368211Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6446537Z Switched to a new branch 'main'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6448888Z branch 'main' set up to track 'origin/main'.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6493907Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6534948Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6558154Z 0ab0e47b8713ee22f3f6b11a513cc3fced19fedd
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6814930Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6886356Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6886687Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6892844Z   jobs: {
+Status Check - Keycloak CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-quarkus": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-store": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-sssd": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-webauthn": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-aurora": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-azure": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-additional-dbs": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-admin-v2": "true"
+Status Check - Keycloak CI	UNKNOWN STEP	    }
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jdk-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-model-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "clustering-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "forms-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "sssd-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "external-infinispan-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "test-framework": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-new-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "mixed-cluster-compatibility-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "authzen-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "admin-v2-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "testsuite-deprecation-check": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  }
+Status Check - Keycloak CI	UNKNOWN STEP	}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6899882Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6900164Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6900532Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6900813Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6901118Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6901356Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.6901589Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7014519Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7014890Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7015133Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7015391Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7015629Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7015875Z [36;1m      "ci-quarkus": "true",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7016114Z [36;1m      "ci-store": "true",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7016339Z [36;1m      "ci-sssd": "true",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7016559Z [36;1m      "ci-webauthn": "true",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7016805Z [36;1m      "ci-aurora": "true",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7017041Z [36;1m      "ci-azure": "true",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7017306Z [36;1m      "ci-additional-dbs": "true",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7017564Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7017782Z [36;1m      "ci-admin-v2": "true"[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7017993Z [36;1m    }[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7018163Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7018350Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7018646Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7018875Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7019067Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7019523Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7019734Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7019948Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7020137Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7020318Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7020561Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7020770Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7020962Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7021148Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7021561Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7021771Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7021961Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7022227Z [36;1m  "adapter-integration-tests-strict-cookies": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7022534Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7022757Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7022940Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7023127Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7023634Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7023872Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7024055Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7024246Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7024491Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7024704Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7024892Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7025065Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7025306Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7025521Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7025713Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7025891Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7026137Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7026350Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7026539Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7026721Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7026955Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7027174Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7027355Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7027527Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7027742Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7027956Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7028139Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7028342Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7028606Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7028815Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7029012Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7029185Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7029411Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7029632Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7029828Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7030010Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7030257Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7030471Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7030669Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7030854Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7031093Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7031307Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7031492Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7031684Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7031932Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7032145Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7032327Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7032502Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7032735Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7032944Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7033134Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7033297Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7033738Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7033955Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7034139Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7034487Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7034757Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7034980Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7035163Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7035501Z [36;1m  "test-framework": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7035830Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7036254Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7036455Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7036654Z [36;1m  "base-new-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7037058Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7037277Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7037472Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7037679Z [36;1m  "mixed-cluster-compatibility-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7037977Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7038199Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7038394Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7038579Z [36;1m  "authzen-integration-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7038844Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7039067Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7039264Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7039442Z [36;1m  "admin-v2-tests": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7039654Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7039869Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7040053Z [36;1m  },[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7040254Z [36;1m  "testsuite-deprecation-check": {[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7040528Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7040751Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7040933Z [36;1m  }[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7041092Z [36;1m}'[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7041261Z [36;1m[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7041425Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7041730Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7042060Z [36;1m[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7042298Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7042686Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7042979Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7043180Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7043602Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7043776Z [36;1m  fi[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7043933Z [36;1mdone[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7069950Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7070297Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7070582Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7070958Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7071242Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7071544Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7071771Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7071986Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7139580Z Job status:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7167994Z  - conditional: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7168321Z  - build: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7168563Z  - unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7168796Z  - base-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7169065Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7169372Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7169695Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7169930Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7170196Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7170445Z  - store-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7170720Z  - volatile-sessions-tests: failure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7170978Z  - store-model-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7171230Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7171503Z  - fips-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7171762Z  - fips-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7172025Z  - forms-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7172282Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7172535Z  - sssd-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7172946Z  - migration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7173184Z  - external-infinispan-tests: failure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7173694Z  - test-framework: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7173932Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7174219Z  - mixed-cluster-compatibility-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7174500Z  - authzen-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7174744Z  - admin-v2-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7175157Z  - testsuite-deprecation-check: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7205947Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7206154Z Status check not okay!
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7221006Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.7352633Z Post job cleanup.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8228601Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8263522Z git version 2.53.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8302804Z Temporarily overriding HOME='/home/runner/work/_temp/3d833aa8-2692-4def-991b-735f4544736e' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8304423Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8309636Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8346345Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8379612Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8628071Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8654359Z http.https://github.com/.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8669395Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.8703891Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-04-25T05:48:37.9093289Z Cleaning up orphan processes
