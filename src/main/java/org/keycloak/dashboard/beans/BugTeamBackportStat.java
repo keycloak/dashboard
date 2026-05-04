@@ -10,14 +10,14 @@ public class BugTeamBackportStat {
     private String team;
     private final FilteredIssues issues;
 
-    private List<BugStat> columns = new LinkedList<>();
+    private List<IssueStat> columns = new LinkedList<>();
 
     public BugTeamBackportStat(String team, FilteredIssues issues, List<String> activeStreams) {
         this.team = team;
         this.issues = issues;
 
         for(String stream : activeStreams) {
-            columns.add(BugStat.team(stream).warnErrorKey("Backport").issues(issues.clone().label("backport/" + stream)));
+            columns.add(IssueStat.team(stream).warnErrorKey("Backport").issues(issues.clone().label("backport/" + stream)));
         }
     }
 
@@ -25,7 +25,7 @@ public class BugTeamBackportStat {
         return team.replace("team/", "");
     }
 
-    public List<BugStat> getColumns() {
+    public List<IssueStat> getColumns() {
         return columns;
     }
 

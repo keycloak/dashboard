@@ -11,5 +11,8 @@
     <div class="modal-float">
         <div class="modal-float-margin"><#include "module-enhancements-reactions.ftl"></div>
     </div>
+    <div class="modal-float">
+        <div class="modal-float-margin"><#include "module-enhancements-missing-area.ftl"></div>
+    </div>
 </div>
 </@template.page>

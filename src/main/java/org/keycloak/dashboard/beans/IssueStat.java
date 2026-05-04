@@ -5,10 +5,10 @@ import org.keycloak.dashboard.beans.filters.FilteredIssues;
 import org.keycloak.dashboard.util.Css;
 import org.keycloak.dashboard.util.GHQuery;
 
-public class BugStat {
+public class IssueStat {
 
     private String label;
-    private final BugStatType type;
+    private final IssueStatType type;
     FilteredIssues filteredIssues;
     FilteredIssues closedFilteredIssues;
     private String warnLabel;
@@ -19,49 +19,57 @@ public class BugStat {
 
     boolean errorIfClosedLessThanOpened;
 
-    public static BugStat global(String label) {
-        return new BugStat(label, BugStatType.GLOBAL);
+    public static IssueStat global(String label) {
+        return new IssueStat(label, IssueStatType.GLOBAL);
     }
-    public static BugStat team(String label) {
-        return new BugStat(label, BugStatType.TEAM);
-    }
-
-    public static BugStat area(String label) {
-        return new BugStat(label, BugStatType.AREA);
+    public static IssueStat team(String label) {
+        return new IssueStat(label, IssueStatType.TEAM);
     }
 
-    public BugStat issues(FilteredIssues filteredIssues) {
+    public static IssueStat area(String label) {
+        return new IssueStat(label, IssueStatType.AREA);
+    }
+
+    public static IssueStat enhancement(String label) {
+        return new IssueStat(label, IssueStatType.ENHANCEMENT);
+    }
+
+    public static IssueStat enhancementTeam(String label) {
+        return new IssueStat(label, IssueStatType.ENHANCEMENT_TEAM);
+    }
+
+    public IssueStat issues(FilteredIssues filteredIssues) {
         this.filteredIssues = filteredIssues;
         return this;
     }
 
-    public BugStat closedIssues(FilteredIssues filteredIssues) {
+    public IssueStat closedIssues(FilteredIssues filteredIssues) {
         this.closedFilteredIssues = filteredIssues;
         return this;
     }
 
-    public BugStat issues(int count, String query) {
+    public IssueStat issues(int count, String query) {
         this.count = count;
         this.query = query;
         return this;
     }
 
-    public BugStat warnErrorKey(String warnErrorKey) {
+    public IssueStat warnErrorKey(String warnErrorKey) {
         this.warnLabel = warnErrorKey;
         return this;
     }
 
-    public BugStat errorIfClosedLessThanOpened() {
+    public IssueStat errorIfClosedLessThanOpened() {
         this.errorIfClosedLessThanOpened = true;
         return this;
     }
 
-    public BugStat warnCount(int warnCount) {
+    public IssueStat warnCount(int warnCount) {
         this.warnCount = warnCount;
         return this;
     }
 
-    public BugStat errorCount(int errorCount) {
+    public IssueStat errorCount(int errorCount) {
         this.errorCount = errorCount;
         return this;
     }
@@ -106,6 +114,8 @@ public class BugStat {
                 case TEAM -> Config.getBugsTeamWarn(warnLabel);
                 case AREA -> Config.getBugsAreaWarn(warnLabel);
                 case GLOBAL -> Config.getBugsWarn(warnLabel);
+                case ENHANCEMENT -> Config.getEnhancementsWarn(warnLabel);
+                case ENHANCEMENT_TEAM -> Config.getEnhancementsTeamWarn(warnLabel);
             };
         }
 
@@ -114,6 +124,8 @@ public class BugStat {
                 case TEAM -> Config.getBugsTeamError(warnLabel);
                 case AREA -> Config.getBugsAreaError(warnLabel);
                 case GLOBAL -> Config.getBugsError(warnLabel);
+                case ENHANCEMENT -> Config.getEnhancementsError(warnLabel);
+                case ENHANCEMENT_TEAM -> Config.getEnhancementsTeamError(warnLabel);
             };
         }
 
@@ -130,15 +142,17 @@ public class BugStat {
         return Css.getCountClass(getClosedCount(), -1, -1, true);
     }
 
-    private BugStat(String label, BugStatType type) {
+    private IssueStat(String label, IssueStatType type) {
         this.label = label;
         this.type = type;
     }
 
-    public enum BugStatType {
+    public enum IssueStatType {
         GLOBAL,
         TEAM,
-        AREA
+        AREA,
+        ENHANCEMENT,
+        ENHANCEMENT_TEAM
     }
 
 }

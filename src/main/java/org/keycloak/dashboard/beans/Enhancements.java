@@ -13,9 +13,10 @@ public class Enhancements {
 
     private final List<GitHubIssue> issues;
 
-    private List<BugStat> stats;
+    private List<IssueStat> stats;
     private List<EnhancementTeamStat> teamStats;
     private List<GitHubIssue> topReacted;
+    private List<GitHubIssue> missingLabelsIssues;
 
     public Enhancements(GitHubData data, Teams teams) {
         issues = data.getIssues().stream()
@@ -23,60 +24,50 @@ public class Enhancements {
                 .collect(Collectors.toList());
 
         stats = convertToStats(issues, data, teams);
-        teamStats = convertToTeamStats(issues, data, teams);
+        teamStats = convertToTeamStats(issues, teams);
         topReacted = buildTopReacted(issues);
+        missingLabelsIssues = buildMissingLabelsIssues(issues);
     }
 
-    private List<BugStat> convertToStats(List<GitHubIssue> issues, GitHubData data, Teams teams) {
-        List<BugStat> stats = new LinkedList<>();
+    private List<IssueStat> convertToStats(List<GitHubIssue> issues, GitHubData data, Teams teams) {
+        List<IssueStat> stats = new LinkedList<>();
         FilteredIssues filteredIssues = FilteredIssues.create(issues);
 
-        stats.add(BugStat.global("Open")
-                .issues(filteredIssues.clone().openEnhancement().triage(false).missingInformation(false))
-                .warnCount(-1).errorCount(-1));
+        stats.add(IssueStat.enhancement("Open")
+                .issues(filteredIssues.clone().openEnhancement()));
 
-        stats.add(BugStat.global("Triage")
-                .issues(filteredIssues.clone().openEnhancement().triage(true).missingInformation(false))
-                .warnCount(-1).errorCount(-1));
+        stats.add(IssueStat.enhancement("Missing Labels")
+                .issues(filteredIssues.clone().openEnhancement().missingArea(data.getAreas()).missingTeam(teams)));
 
-        stats.add(BugStat.global("Last 7 days")
+        stats.add(IssueStat.enhancement("Missing Area")
+                .issues(filteredIssues.clone().openEnhancement().missingArea(data.getAreas())));
+
+        stats.add(IssueStat.enhancement("Help Wanted")
+                .issues(filteredIssues.clone().openEnhancement().helpWanted(true)));
+
+        stats.add(IssueStat.enhancement("Last 7 days")
                 .issues(filteredIssues.clone().label("kind/enhancement").createdAfter(DateUtil.MINUS_7_DAYS))
-                .closedIssues(filteredIssues.clone().label("kind/enhancement").closedAfter(DateUtil.MINUS_7_DAYS))
-                .warnCount(-1).errorCount(-1));
+                .closedIssues(filteredIssues.clone().label("kind/enhancement").closedAfter(DateUtil.MINUS_7_DAYS)));
 
-        stats.add(BugStat.global("Last 30 days")
+        stats.add(IssueStat.enhancement("Last 30 days")
                 .issues(filteredIssues.clone().label("kind/enhancement").createdAfter(DateUtil.MINUS_30_DAYS))
-                .closedIssues(filteredIssues.clone().label("kind/enhancement").closedAfter(DateUtil.MINUS_30_DAYS))
-                .warnCount(-1).errorCount(-1));
+                .closedIssues(filteredIssues.clone().label("kind/enhancement").closedAfter(DateUtil.MINUS_30_DAYS)));
 
-        stats.add(BugStat.global("Last 90 days")
+        stats.add(IssueStat.enhancement("Last 90 days")
                 .issues(filteredIssues.clone().label("kind/enhancement").createdAfter(DateUtil.MINUS_90_DAYS))
-                .closedIssues(filteredIssues.clone().label("kind/enhancement").closedAfter(DateUtil.MINUS_90_DAYS))
-                .warnCount(-1).errorCount(-1));
-
-        stats.add(BugStat.global("Missing Area")
-                .issues(filteredIssues.clone().openEnhancement().missingArea(data.getAreas()).missingInformation(false))
-                .warnCount(-1).errorCount(1));
-
-        stats.add(BugStat.global("Missing Team")
-                .issues(filteredIssues.clone().openEnhancement().missingTeam(teams))
-                .warnCount(-1).errorCount(1));
-
-        stats.add(BugStat.global("Missing Information")
-                .issues(filteredIssues.clone().openEnhancement().missingInformation(true))
-                .warnCount(-1).errorCount(-1));
+                .closedIssues(filteredIssues.clone().label("kind/enhancement").closedAfter(DateUtil.MINUS_90_DAYS)));
 
         return stats;
     }
 
-    private List<EnhancementTeamStat> convertToTeamStats(List<GitHubIssue> issues, GitHubData data, Teams teams) {
+    private List<EnhancementTeamStat> convertToTeamStats(List<GitHubIssue> issues, Teams teams) {
         FilteredIssues filteredIssues = FilteredIssues.create(issues).openEnhancement();
         List<EnhancementTeamStat> teamStats = new LinkedList<>();
 
         for (String team : teams.keySet()) {
             if (!team.equals("no-team")) {
                 FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
-                teamStats.add(new EnhancementTeamStat(team, teamIssues, data.getAreas()));
+                teamStats.add(new EnhancementTeamStat(team, teamIssues));
             }
         }
 
@@ -94,7 +85,16 @@ public class Enhancements {
                 .collect(Collectors.toList());
     }
 
-    public List<BugStat> getStats() {
+    private List<GitHubIssue> buildMissingLabelsIssues(List<GitHubIssue> issues) {
+        return issues.stream()
+                .filter(GitHubIssue::isOpen)
+                .filter(i -> i.getLabels().stream().noneMatch(l -> l.startsWith("area/") || l.startsWith("team/")))
+                .sorted(Comparator.comparingInt(GitHubIssue::getReactionsCount).reversed())
+                .limit(10)
+                .collect(Collectors.toList());
+    }
+
+    public List<IssueStat> getStats() {
         return stats;
     }
 
@@ -104,5 +104,9 @@ public class Enhancements {
 
     public List<GitHubIssue> getTopReacted() {
         return topReacted;
+    }
+
+    public List<GitHubIssue> getMissingLabelsIssues() {
+        return missingLabelsIssues;
     }
 }

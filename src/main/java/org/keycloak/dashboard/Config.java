@@ -60,6 +60,22 @@ public class Config {
         return getInt("bugs.area." + title.replaceAll(" ", "") + ".error");
     }
 
+    public static int getEnhancementsWarn(String title) {
+        return getInt("enhancements." + title.replaceAll(" ", "") + ".warn");
+    }
+
+    public static int getEnhancementsError(String title) {
+        return getInt("enhancements." + title.replaceAll(" ", "") + ".error");
+    }
+
+    public static int getEnhancementsTeamWarn(String title) {
+        return getInt("enhancements.team." + title.replaceAll(" ", "") + ".warn");
+    }
+
+    public static int getEnhancementsTeamError(String title) {
+        return getInt("enhancements.team." + title.replaceAll(" ", "") + ".error");
+    }
+
     public static int getInt(String key) {
         String value = CONFIG.getProperty(key);
         if (value == null) {

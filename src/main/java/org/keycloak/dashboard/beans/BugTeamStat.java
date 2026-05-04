@@ -12,41 +12,41 @@ public class BugTeamStat {
     private String team;
     private final FilteredIssues issues;
 
-    private List<BugStat> columns = new LinkedList<>();
+    private List<IssueStat> columns = new LinkedList<>();
 
     public BugTeamStat(String team, FilteredIssues issues, String nextRelease) {
         this.team = team;
         this.issues = issues;
 
-//        columns.add(BugStat.team(nextRelease)
+//        columns.add(IssueStat.team(nextRelease)
 //                .issues(issues.clone().milestone(nextRelease))
 //                .warnErrorKey("Milestone"));
 
-        columns.add(BugStat.team("Triage")
+        columns.add(IssueStat.team("Triage")
                 .issues(issues.clone().triage(true)));
 
-        columns.add(BugStat.team("Triage Overdue")
+        columns.add(IssueStat.team("Triage Overdue")
                 .issues(issues.clone().triage(true).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
 
-        columns.add(BugStat.team("Blocker")
+        columns.add(IssueStat.team("Blocker")
                 .issues(issues.clone().triage(false).priority("blocker")));
 
-        columns.add(BugStat.team("Blocker Overdue")
+        columns.add(IssueStat.team("Blocker Overdue")
                 .issues(issues.clone().triage(false).priority("blocker").createdBefore(DateUtil.minusdays(Config.getInt("bugs.BlockerOverdue.days")))));
 
-        columns.add(BugStat.team("Important")
+        columns.add(IssueStat.team("Important")
                 .issues(issues.clone().triage(false).priority("important")));
 
-        columns.add(BugStat.team("Important Overdue")
+        columns.add(IssueStat.team("Important Overdue")
                 .issues(issues.clone().triage(false).priority("important").createdBefore(DateUtil.minusdays(Config.getInt("bugs.ImportantOverdue.days")))));
 
-        columns.add(BugStat.team("Blocked External")
+        columns.add(IssueStat.team("Blocked External")
                 .issues(issues.clone().triage(false).priority("blocker", "important").blockedExternal(true)));
 
-        columns.add(BugStat.team("Normal")
+        columns.add(IssueStat.team("Normal")
                 .issues(issues.clone().triage(false).priority("normal")));
 
-        columns.add(BugStat.team("Low")
+        columns.add(IssueStat.team("Low")
                 .issues(issues.clone().triage(false).priority("low")));
     }
 
@@ -54,7 +54,7 @@ public class BugTeamStat {
         return team.replace("team/", "");
     }
 
-    public List<BugStat> getColumns() {
+    public List<IssueStat> getColumns() {
         return columns;
     }
 

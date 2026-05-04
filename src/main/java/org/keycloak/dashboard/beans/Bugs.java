@@ -16,7 +16,7 @@ public class Bugs {
     private final List<String> activeStreams;
     private String nextRelease;
 
-    private List<BugStat> stats;
+    private List<IssueStat> stats;
 
     private List<BugAreaStat> areaStats;
     private List<BugTeamStat> teamStats;
@@ -43,7 +43,7 @@ public class Bugs {
 
         flakyTestCountsByTeam = convertToTeamCount(flakyTests, teams);
 
-        stats = convertToBugStat(issues, data, teams);
+        stats = convertToIssueStat(issues, data, teams);
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
         teamCveStats = convertToTeamCveStats(issues, teams);
@@ -66,48 +66,48 @@ public class Bugs {
         return counts;
     }
 
-    private List<BugStat> convertToBugStat(List<GitHubIssue> issues, GitHubData data, Teams teams) {
-        List<BugStat> stats = new LinkedList<>();
+    private List<IssueStat> convertToIssueStat(List<GitHubIssue> issues, GitHubData data, Teams teams) {
+        List<IssueStat> stats = new LinkedList<>();
         FilteredIssues filteredIssues = FilteredIssues.create(issues);
 
-        stats.add(BugStat.global("With PR").issues(data.getIssuesWithPr(), "is:open label:kind/bug linked:pr"));
+        stats.add(IssueStat.global("With PR").issues(data.getIssuesWithPr(), "is:open label:kind/bug linked:pr"));
 
-        stats.add(BugStat.global("Open")
+        stats.add(IssueStat.global("Open")
                 .issues(filteredIssues.clone().openBug().triage(false).missingInformation(false)));
-        stats.add(BugStat.global("Triage")
+        stats.add(IssueStat.global("Triage")
                 .issues(filteredIssues.clone().openBug().triage(true).missingInformation(false)));
-        stats.add(BugStat.global("Triage Overdue")
+        stats.add(IssueStat.global("Triage Overdue")
                 .issues(filteredIssues.clone().openBug().triage(true).missingInformation(false).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
-        stats.add(BugStat.global("CVE")
+        stats.add(IssueStat.global("CVE")
                 .issues(filteredIssues.clone().openCve()));
-        stats.add(BugStat.global("Weakness")
+        stats.add(IssueStat.global("Weakness")
                 .issues(filteredIssues.clone().openBug().label("area/weakness")));
-        stats.add(BugStat.global("Blocker")
+        stats.add(IssueStat.global("Blocker")
                 .issues(filteredIssues.clone().openBug().priority("blocker")));
-        stats.add(BugStat.global("Blocker Overdue")
+        stats.add(IssueStat.global("Blocker Overdue")
                 .issues(filteredIssues.clone().openBug().priority("blocker").createdBefore(DateUtil.minusdays(Config.getInt("bugs.BlockerOverdue.days")))));
-        stats.add(BugStat.global("Important")
+        stats.add(IssueStat.global("Important")
                 .issues(filteredIssues.clone().openBug().priority("important")));
-        stats.add(BugStat.global("Important Overdue")
+        stats.add(IssueStat.global("Important Overdue")
                 .issues(filteredIssues.clone().openBug().priority("important").createdBefore(DateUtil.minusdays(Config.getInt("bugs.ImportantOverdue.days")))));
-        stats.add(BugStat.global("Blocked External")
+        stats.add(IssueStat.global("Blocked External")
                 .issues(filteredIssues.clone().openBug().priority("blocker", "important").blockedExternal(true)));
-        stats.add(BugStat.global("Normal")
+        stats.add(IssueStat.global("Normal")
                 .issues(filteredIssues.clone().openBug().priority("normal")));
-        stats.add(BugStat.global("Low")
+        stats.add(IssueStat.global("Low")
                 .issues(filteredIssues.clone().openBug().priority("low")));
 
-        stats.add(BugStat.global("Last 7 days")
+        stats.add(IssueStat.global("Last 7 days")
                 .issues(filteredIssues.clone().label("kind/bug").createdAfter(DateUtil.MINUS_7_DAYS))
                 .closedIssues(filteredIssues.clone().label("kind/bug").closedAfter(DateUtil.MINUS_7_DAYS))
                 .errorIfClosedLessThanOpened());
 
-        stats.add(BugStat.global("Last 30 days")
+        stats.add(IssueStat.global("Last 30 days")
                 .issues(filteredIssues.clone().label("kind/bug").createdAfter(DateUtil.MINUS_30_DAYS))
                 .closedIssues(filteredIssues.clone().label("kind/bug").closedAfter(DateUtil.MINUS_30_DAYS))
                 .errorIfClosedLessThanOpened());
 
-        stats.add(BugStat.global("Last 90 days")
+        stats.add(IssueStat.global("Last 90 days")
                 .issues(filteredIssues.clone().label("kind/bug").createdAfter(DateUtil.MINUS_90_DAYS))
                 .closedIssues(filteredIssues.clone().label("kind/bug").closedAfter(DateUtil.MINUS_90_DAYS))
                 .errorIfClosedLessThanOpened());
@@ -118,7 +118,7 @@ public class Bugs {
                 .forEach((e) -> {
                     FilteredIssues openIssues = filteredIssues.clone().openBug().milestone(e.getKey());
                     if (openIssues.count() > 0) {
-                        stats.add(BugStat.global("Milestone: " + e.getKey())
+                        stats.add(IssueStat.global("Milestone: " + e.getKey())
                                 .warnErrorKey("Milestone")
                                 .issues(openIssues)
                                 .closedIssues(filteredIssues.clone().closedBug().milestone(e.getKey())));
@@ -127,16 +127,16 @@ public class Bugs {
 
         activeStreams.forEach(l -> {
             FilteredIssues openIssues = filteredIssues.clone().label("backport/" + l);
-            stats.add(BugStat.global("Backport: " + l).warnErrorKey("Backports").issues(openIssues).closedIssues(filteredIssues.clone().label(l)));
+            stats.add(IssueStat.global("Backport: " + l).warnErrorKey("Backports").issues(openIssues).closedIssues(filteredIssues.clone().label(l)));
         });
 
-        stats.add(BugStat.global("Missing Area")
+        stats.add(IssueStat.global("Missing Area")
                 .issues(filteredIssues.clone().openBug().missingArea(data.getAreas()).missingInformation(false)));
-        stats.add(BugStat.global("Missing Priority")
+        stats.add(IssueStat.global("Missing Priority")
                 .issues(filteredIssues.clone().openBug().triage(false).missingPriority().missingInformation(false)));
-        stats.add(BugStat.global("Missing Team")
+        stats.add(IssueStat.global("Missing Team")
                 .issues(filteredIssues.clone().openBug().missingTeam(teams)));
-        stats.add(BugStat.global("Missing Information")
+        stats.add(IssueStat.global("Missing Information")
                 .issues(filteredIssues.clone().openBug().missingInformation(true)));
 
         return stats;
@@ -234,7 +234,7 @@ public class Bugs {
         return nextRelease;
     }
 
-    public List<BugStat> getStats() {
+    public List<IssueStat> getStats() {
         return stats;
     }
 

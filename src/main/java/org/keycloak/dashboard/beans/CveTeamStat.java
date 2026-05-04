@@ -12,22 +12,22 @@ public class CveTeamStat {
     private String team;
     private final FilteredIssues issues;
 
-    private List<BugStat> columns = new LinkedList<>();
+    private List<IssueStat> columns = new LinkedList<>();
 
     public CveTeamStat(String team, FilteredIssues issues, String nextRelease) {
         this.team = team;
         this.issues = issues;
 
-        columns.add(BugStat.team("Triage")
+        columns.add(IssueStat.team("Triage")
                 .issues(issues.clone().triage(true)));
 
-        columns.add(BugStat.team("Triage Overdue")
+        columns.add(IssueStat.team("Triage Overdue")
                 .issues(issues.clone().triage(true).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
 
-        columns.add(BugStat.team("Open").warnErrorKey("CveOpen")
+        columns.add(IssueStat.team("Open").warnErrorKey("CveOpen")
                 .issues(issues.clone().triage(false)));
 
-        columns.add(BugStat.team("Open Overdue").warnErrorKey("CveOpenOverdue")
+        columns.add(IssueStat.team("Open Overdue").warnErrorKey("CveOpenOverdue")
                 .issues(issues.clone().triage(false).createdBefore(DateUtil.minusdays(Config.getInt("bugs.CveOverdue.days")))));
 
     }
@@ -36,7 +36,7 @@ public class CveTeamStat {
         return team.replace("team/", "");
     }
 
-    public List<BugStat> getColumns() {
+    public List<IssueStat> getColumns() {
         return columns;
     }
 

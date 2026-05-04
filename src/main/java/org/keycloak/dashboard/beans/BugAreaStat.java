@@ -7,7 +7,7 @@ import java.util.List;
 
 public class BugAreaStat {
 
-    private List<BugStat> columns = new LinkedList<>();
+    private List<IssueStat> columns = new LinkedList<>();
 
     int openCount;
     String area;
@@ -18,26 +18,26 @@ public class BugAreaStat {
         this.issues = issues;
         this.openCount = openCount;
 
-//        columns.add(BugStat.area(nextRelease)
+//        columns.add(IssueStat.area(nextRelease)
 //                .issues(issues.clone().milestone(nextRelease))
 //                .warnErrorKey("Milestone"));
 
-        columns.add(BugStat.area("Triage")
+        columns.add(IssueStat.area("Triage")
                 .issues(issues.clone().triage(true)));
 
-        columns.add(BugStat.area("Blocker")
+        columns.add(IssueStat.area("Blocker")
                 .issues(issues.clone().triage(false).priority("blocker")));
 
-        columns.add(BugStat.area("Important")
+        columns.add(IssueStat.area("Important")
                 .issues(issues.clone().triage(false).priority("important")));
 
-        columns.add(BugStat.area("Blocked External")
+        columns.add(IssueStat.area("Blocked External")
                 .issues(issues.clone().triage(false).priority("blocker", "important").blockedExternal(true)));
 
-        columns.add(BugStat.area("Normal")
+        columns.add(IssueStat.area("Normal")
                 .issues(issues.clone().triage(false).priority("normal")));
 
-        columns.add(BugStat.area("Low")
+        columns.add(IssueStat.area("Low")
                 .issues(issues.clone().triage(false).priority("low")));
     }
 
@@ -53,7 +53,7 @@ public class BugAreaStat {
         return area;
     }
 
-    public List<BugStat> getColumns() {
+    public List<IssueStat> getColumns() {
         return columns;
     }
 
