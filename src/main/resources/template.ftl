@@ -16,6 +16,7 @@
     <li><a href="workflows<#if !publish>.html</#if>">Workflows</a></li>
     <li><a href="prs<#if !publish>.html</#if>">PRs</a></li>
     <li><a href="bugs<#if !publish>.html</#if>">Bugs</a></li>
+    <li><a href="enhancements<#if !publish>.html</#if>">Enhancements</a></li>
     <li><a href="tests<#if !publish>.html</#if>">Tests</a></li>
     <li><a href="stars<#if !publish>.html</#if>">Stars</a></li>
     <li><a href="config<#if !publish>.html</#if>">Config</a></li>

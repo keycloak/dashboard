@@ -3,7 +3,12 @@ package org.keycloak.dashboard;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import freemarker.template.TemplateException;
-import org.keycloak.dashboard.beans.*;
+import org.keycloak.dashboard.beans.Bugs;
+import org.keycloak.dashboard.beans.Enhancements;
+import org.keycloak.dashboard.beans.PR;
+import org.keycloak.dashboard.beans.Stars;
+import org.keycloak.dashboard.beans.WorkflowStatus;
+import org.keycloak.dashboard.beans.WorkflowWaitTimes;
 import org.keycloak.dashboard.ci.LogFailedParser;
 import org.keycloak.dashboard.ci.ResolvedIssues;
 import org.keycloak.dashboard.rep.GitHubData;
@@ -38,6 +43,7 @@ public class Dashboard {
 
         PR pr = new PR(data);
         Bugs bugs = new Bugs(data, teams);
+        Enhancements enhancements = new Enhancements(data, teams);
 
         ResolvedIssues resolvedIssues = ResolvedIssues.load(data);
 
@@ -56,6 +62,10 @@ public class Dashboard {
         attributes.put("cveTeamStats", bugs.getTeamCveStats());
         attributes.put("privateCveTeamStats", bugs.getPrivateTeamCveStats());
         attributes.put("bugTeamBackportStats", bugs.getTeamBackportStats());
+        attributes.put("enhancementStats", enhancements.getStats());
+        attributes.put("enhancementTeamStats", enhancements.getTeamStats());
+        attributes.put("topReactedEnhancements", enhancements.getTopReacted());
+        attributes.put("missingLabelsEnhancements", enhancements.getMissingLabelsIssues());
         attributes.put("failedRuns", logFailedParser.getFailedRuns());
         attributes.put("resolvedRuns", logFailedParser.getResolvedRuns());
         attributes.put("failedJobs", logFailedParser.getUnlinkedFailedJobs());
@@ -71,6 +81,7 @@ public class Dashboard {
         FreeMarker freeMarker = new FreeMarker(attributes);
         freeMarker.template("index.ftl", output);
         freeMarker.template("bugs.ftl", new File("docs/bugs.html"));
+        freeMarker.template("enhancements.ftl", new File("docs/enhancements.html"));
         freeMarker.template("prs.ftl", new File("docs/prs.html"));
         freeMarker.template("workflows.ftl", new File("docs/workflows.html"));
         freeMarker.template("tests.ftl", new File("docs/tests.html"));

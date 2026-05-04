@@ -23,6 +23,8 @@ import java.util.stream.Collectors;
 
 public class GitHubLoader {
 
+    private static final List<String> ISSUE_KINDS = List.of("kind/bug", "kind/cve", "kind/enhancement");
+
     private GitHub gitHub;
 
     private GitHubIssuesLoader issuesLoader;
@@ -148,6 +150,7 @@ public class GitHubLoader {
         List<String> queries = new LinkedList<>();
         queries.add("repo:keycloak/keycloak is:issue is:open label:kind/bug");
         queries.add("repo:keycloak/keycloak is:issue is:open label:kind/cve");
+        queries.add("repo:keycloak/keycloak is:issue is:open label:kind/enhancement");
         for (String month : DateUtil.monthStrings(Config.MAX_HISTORY)) {
             queries.add("repo:keycloak/keycloak is:issue is:closed closed:" + month);
         }
@@ -156,7 +159,7 @@ public class GitHubLoader {
 
     private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
         List<GitHubIssue> updateIssues = issuesLoader.updateIssues(issues, "repo:keycloak/keycloak is:issue");
-        return updateIssues.stream().filter(i -> i.getLabels().contains("kind/bug") || i.getLabels().contains("kind/cve")).collect(Collectors.toList());
+        return updateIssues.stream().filter(i -> i.getLabels().stream().anyMatch(ISSUE_KINDS::contains)).collect(Collectors.toList());
     }
 
     private List<GitHubIssue> loadPrivateIssues() throws IOException {

@@ -39,6 +39,9 @@ public class GitHubIssue implements Comparable<GitHubIssue> {
     @JsonProperty
     public int commentsCount;
 
+    @JsonProperty
+    public int reactionsCount;
+
     public Date getCreatedAt() {
         return createdAt;
     }
@@ -93,6 +96,14 @@ public class GitHubIssue implements Comparable<GitHubIssue> {
 
     public void setCommentsCount(int commentsCount) {
         this.commentsCount = commentsCount;
+    }
+
+    public int getReactionsCount() {
+        return reactionsCount;
+    }
+
+    public void setReactionsCount(int reactionsCount) {
+        this.reactionsCount = reactionsCount;
     }
 
     public String getUserLogin() {

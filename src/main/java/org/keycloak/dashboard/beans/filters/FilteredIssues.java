@@ -58,6 +58,16 @@ public class FilteredIssues {
         return this;
     }
 
+    public FilteredIssues openEnhancement() {
+        filters.add(new OpenEnhancementFilter());
+        return this;
+    }
+
+    public FilteredIssues closedEnhancement() {
+        filters.add(new ClosedEnhancementFilter());
+        return this;
+    }
+
     public FilteredIssues createdAfter(Date date) {
         filters.add(new CreatedAfterFilter(date));
         return this;

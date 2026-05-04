@@ -5,6 +5,7 @@ import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.util.DateUtil;
 import org.kohsuke.github.GHIssue;
 import org.kohsuke.github.GHLabel;
+import org.kohsuke.github.GHReaction;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.PagedSearchIterable;
 
@@ -104,6 +105,15 @@ public class GitHubIssuesLoader {
             labels.add(l.getName());
         }
         issue.setLabels(labels);
+
+        if (i.getClosedAt() == null && labels.contains("kind/enhancement")) {
+            try {
+                issue.setReactionsCount(i.listReactions().toList().size());
+            } catch (Exception e) {
+                issue.setReactionsCount(0);
+            }
+        }
+
         return issue;
     }
 
