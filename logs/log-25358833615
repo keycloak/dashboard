@@ -1,0 +1,196 @@
+Test OLM installation	Arrange OLM test installation	﻿2026-05-05T05:10:29.7342381Z ##[group]Run echo "Minikube IP $(minikube ip)"
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7343896Z [36;1mecho "Minikube IP $(minikube ip)"[0m
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7344415Z [36;1meval $(minikube -p minikube docker-env)[0m
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7345080Z [36;1mREGISTRY=$(minikube ip):5000 ./scripts/olm-testing.sh ${GITHUB_SHA::6}[0m
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7377829Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7378366Z env:
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7378819Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7379399Z   MINIKUBE_VERSION: v1.38.0
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7379774Z   KUBERNETES_VERSION: v1.35.0
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7380234Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7380750Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7381547Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7382186Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.7382775Z ##[endgroup]
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:29.8547723Z Minikube IP 192.168.49.2
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2613887Z + UUID=67ef87
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2614324Z + INSTALL_NAMESPACE=default
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2614714Z + TARGET_NAMESPACES=default
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2618229Z +++ dirname -- ./scripts/olm-testing.sh
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2629560Z ++ cd -- ./scripts
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2629935Z ++ pwd
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2631815Z + SCRIPT_DIR=/home/runner/work/keycloak/keycloak/operator/scripts
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2632439Z + REGISTRY=192.168.49.2:5000
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2633034Z + VERSION=86400000.0.0
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2637912Z + cd /home/runner/work/keycloak/keycloak/operator/scripts/../../quarkus/container
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2639477Z ++ ls keycloak-999.0.0-SNAPSHOT.tar.gz
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.2654189Z + docker build --ulimit nofile=1024000 --build-arg KEYCLOAK_DIST=keycloak-999.0.0-SNAPSHOT.tar.gz . -t 192.168.49.2:5000/67ef87keycloak:86400000.0.0
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.6348906Z #0 building with "default" instance using docker driver
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.6349419Z 
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.6349620Z #1 [internal] load build definition from Dockerfile
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.6350113Z #1 transferring dockerfile: 2.73kB done
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.6350485Z #1 DONE 0.0s
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.6350648Z 
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:30.6350932Z #2 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0689346Z #2 ...
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0689787Z 
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0690453Z #3 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0691727Z #3 ERROR: unexpected status from HEAD request to https://registry.access.redhat.com/v2/ubi9-micro/manifests/latest: 503 Service Unavailable
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0845525Z 
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0846446Z #2 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0848230Z #2 CANCELED
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0848795Z ------
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0849362Z  > [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest:
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0849992Z ------
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0866463Z Dockerfile:22
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0866961Z --------------------
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0868350Z   20 |     RUN bash /tmp/ubi-null.sh java-21-openjdk-headless glibc-langpack-en findutils
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0869281Z   21 |     
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0869667Z   22 | >>> FROM registry.access.redhat.com/ubi9-micro
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0870348Z   23 |     ENV LANG=en_US.UTF-8
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0870785Z   24 |     
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0871181Z --------------------
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0873266Z ERROR: failed to build: failed to solve: registry.access.redhat.com/ubi9-micro: failed to resolve source metadata for registry.access.redhat.com/ubi9-micro:latest: unexpected status from HEAD request to https://registry.access.redhat.com/v2/ubi9-micro/manifests/latest: 503 Service Unavailable
+Test OLM installation	Arrange OLM test installation	2026-05-05T05:10:31.0948599Z ##[error]Process completed with exit code 1.
+Test OLM installation	Debug Custom Resources	﻿2026-05-05T05:10:31.0999581Z ##[group]Run kubectl get keycloaks -A -o yaml
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.0999941Z [36;1mkubectl get keycloaks -A -o yaml[0m
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1000263Z [36;1mkubectl get keycloakrealmimports -A -o yaml[0m
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1023633Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1023960Z env:
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1024239Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1024585Z   MINIKUBE_VERSION: v1.38.0
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1024819Z   KUBERNETES_VERSION: v1.35.0
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1025047Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1025354Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1025809Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1026181Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1026429Z ##[endgroup]
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1663276Z error: the server doesn't have a resource type "keycloaks"
+Test OLM installation	Debug Custom Resources	2026-05-05T05:10:31.1689825Z ##[error]Process completed with exit code 1.
+Test remote (slow)	Build Keycloak Docker images	﻿2026-05-05T05:09:49.7963172Z ##[group]Run eval $(minikube -p minikube docker-env)
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7963593Z [36;1meval $(minikube -p minikube docker-env)[0m
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7964537Z [36;1m(cd quarkus/container && docker build --build-arg KEYCLOAK_DIST=$(ls keycloak-*.tar.gz) . -t keycloak:0.0.1-67ef87)[0m
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7965303Z [36;1m(cd operator && ./scripts/build-testing-docker-images.sh 0.0.1-67ef87 keycloak custom-keycloak)[0m
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7987301Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7987653Z env:
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7987949Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7988461Z   MINIKUBE_VERSION: v1.38.0
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7988717Z   KUBERNETES_VERSION: v1.35.0
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7988950Z   MINIKUBE_MEMORY: 4096
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7989178Z   version_remote: 0.0.1-67ef87
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7989517Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7989986Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.2-10/x64
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7990400Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:49.7990670Z ##[endgroup]
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.3941454Z #0 building with "default" instance using docker driver
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.3942221Z 
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.3942523Z #1 [internal] load build definition from Dockerfile
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.3942969Z #1 transferring dockerfile: 2.73kB done
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.3943294Z #1 DONE 0.0s
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.3943440Z 
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.3943672Z #2 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.6937614Z #2 ...
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.6938196Z 
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.6938471Z #3 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.6939533Z #3 ERROR: unexpected status from HEAD request to https://registry.access.redhat.com/v2/ubi9-micro/manifests/latest: 503 Service Unavailable
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7073891Z 
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7074368Z #2 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7075094Z #2 CANCELED
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7075284Z ------
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7075608Z  > [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest:
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7076171Z ------
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7090161Z Dockerfile:22
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7090677Z --------------------
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7091315Z   20 |     RUN bash /tmp/ubi-null.sh java-21-openjdk-headless glibc-langpack-en findutils
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7091758Z   21 |     
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7092013Z   22 | >>> FROM registry.access.redhat.com/ubi9-micro
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7092318Z   23 |     ENV LANG=en_US.UTF-8
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7092547Z   24 |     
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7092726Z --------------------
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7094066Z ERROR: failed to build: failed to solve: registry.access.redhat.com/ubi9-micro: failed to resolve source metadata for registry.access.redhat.com/ubi9-micro:latest: unexpected status from HEAD request to https://registry.access.redhat.com/v2/ubi9-micro/manifests/latest: 503 Service Unavailable
+Test remote (slow)	Build Keycloak Docker images	2026-05-05T05:09:50.7139879Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	﻿2026-05-05T05:15:57.5391273Z Prepare all required actions
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5504486Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5505679Z with:
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5509771Z   jobs: {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	      "operator": "true"
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    }
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "build": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "test-local-apiserver": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "test-remote": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "test-olm": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  }
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5514620Z env:
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5515676Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5517093Z   MINIKUBE_VERSION: v1.38.0
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5518019Z   KUBERNETES_VERSION: v1.35.0
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5518946Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5519766Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5645359Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5646420Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5647231Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5648259Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5649271Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5650194Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5651185Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5651907Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5652640Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5653647Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5654629Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5655501Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5656285Z [36;1m  "test-local-apiserver": {[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5657341Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5658288Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5659134Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5659857Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5660763Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5661749Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5662572Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5663391Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5664254Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5665203Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5666046Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5666723Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5667399Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5668082Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5669343Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5670721Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5671762Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5673471Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5674711Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5675558Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5676593Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5677342Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5678039Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5707038Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5708354Z env:
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5709401Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5710813Z   MINIKUBE_VERSION: v1.38.0
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5711728Z   KUBERNETES_VERSION: v1.35.0
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5712649Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5713615Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5791039Z Job status:
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5822231Z  - conditional: success
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5823368Z  - build: success
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5824200Z  - test-local-apiserver: success
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5825219Z  - test-remote: failure
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5826043Z  - test-olm: failure
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5858565Z 
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5858978Z Status check not okay!
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-05-05T05:15:57.5875784Z ##[error]Process completed with exit code 1.
