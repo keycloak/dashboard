@@ -224,7 +224,10 @@ public class LogFailedParser {
         for (String l = br.readLine(); l != null; l = br.readLine()) {
             if (l.startsWith(job.getName()) && l.contains("✖") && !l.matches(".*of .* failed.*")) {
                 l = l.substring(l.indexOf("✖") + 1);
-                errorLines.add("* " + l.split("\\[0m")[1]);
+                try {
+                    errorLines.add("* " + l.split("\\[0m")[1]);
+                } catch (ArrayIndexOutOfBoundsException e) {
+                }
             } else if (l.startsWith(job.getName()) && l.contains("[error]")) {
                 errorLines.add(l);
             }
