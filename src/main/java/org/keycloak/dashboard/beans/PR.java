@@ -62,14 +62,14 @@ public class PR {
             int teamCount = (int) prs.stream().filter(i -> i.hasLabel(team) && i.isOpen()).count();
             int teamOverdueCount = (int) prs.stream().filter(i -> i.hasLabel(team) && i.isOpen() && i.getCreatedAt().before(DateUtil.MINUS_30_DAYS)).count();
             if (teamCount > 0) {
-                teamStats.add(new PRStat(team.replace("team/", ""), teamCount, 25, 50, "is:open label:" + team, teamOverdueCount, 1, 5, "is:open label:" + team + " created:<=" + DateUtil.MINUS_30_DAYS_STRING));
+                teamStats.add(new PRStat(team.replace("team/", ""), teamCount, 25, 50, "is:open label:" + team, teamOverdueCount, 1, 5, "is:open label:" + team + " created:<" + DateUtil.MINUS_30_DAYS_STRING));
             }
         }
 
         int noTeamStat = (int) prs.stream().filter(i -> i.isOpen() && !i.hasLabel(teams.keySet().toArray(new String[0]))).count();
         int noTeamOverDueStat = (int) prs.stream().filter(i -> i.isOpen() && !i.hasLabel(teams.keySet().toArray(new String[0])) && i.getCreatedAt().before(DateUtil.MINUS_30_DAYS)).count();
         String noTeamQuery = "is:open -label:" + String.join(",", teams.keySet());
-        String noTeamQueryOverDue = noTeamQuery + " created:<=" + DateUtil.MINUS_30_DAYS_STRING;
+        String noTeamQueryOverDue = noTeamQuery + " created:<" + DateUtil.MINUS_30_DAYS_STRING;
         teamStats.add(new PRStat("No team", noTeamStat, 5, 10, noTeamQuery, noTeamOverDueStat, 1, 5, noTeamQueryOverDue));
 
     }
