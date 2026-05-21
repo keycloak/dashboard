@@ -8,6 +8,8 @@ import org.keycloak.dashboard.util.DateUtil;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class PR {
 
@@ -62,6 +64,11 @@ public class PR {
                 teamStats.add(new PRStat(team.replace("team/", ""), teamCount, 25, 50, "is:open label:" + team));
             }
         }
+
+        int noTeamStat = (int) prs.stream().filter(i -> i.isOpen() && !i.hasLabel(teams.keySet().toArray(new String[0]))).count();
+        String noTeamQuery = "is:open -label:" + String.join(",", teams.keySet());
+        teamStats.add(new PRStat("No team", noTeamStat, 5, 10, noTeamQuery));
+
     }
 
     public List<PRStat> getStats() {
