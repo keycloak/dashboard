@@ -36,7 +36,7 @@ public class Dashboard {
         Teams teams = yamlMapper.readValue(new URL("https://raw.githubusercontent.com/keycloak/keycloak/main/.github/teams.yml"), Teams.class);
         TeamMembers teamMembers = yamlMapper.readValue(new File("team-members.yml"), TeamMembers.class);
 
-        PR pr = new PR(data);
+        PR pr = new PR(data, teams);
         Bugs bugs = new Bugs(data, teams);
 
         ResolvedIssues resolvedIssues = ResolvedIssues.load(data);
@@ -50,6 +50,7 @@ public class Dashboard {
         attributes.put("updatedDate", data.getUpdatedDate());
         attributes.put("workflowStatus", new WorkflowStatus());
         attributes.put("prStats", pr.getStats());
+        attributes.put("prTeamStats", pr.getTeamStats());
         attributes.put("bugStats", bugs.getStats());
         attributes.put("bugAreaStats", bugs.getAreaStats());
         attributes.put("bugTeamStats", bugs.getTeamStats());

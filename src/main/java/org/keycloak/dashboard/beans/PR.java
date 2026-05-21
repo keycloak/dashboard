@@ -3,6 +3,7 @@ package org.keycloak.dashboard.beans;
 import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
+import org.keycloak.dashboard.rep.Teams;
 import org.keycloak.dashboard.util.DateUtil;
 
 import java.util.LinkedList;
@@ -11,8 +12,11 @@ import java.util.List;
 public class PR {
 
     private List<PRStat> stats;
+    private List<PRStat> teamStats;
+    private final Teams teams;
 
-    public PR(GitHubData data) {
+    public PR(GitHubData data, Teams teams) {
+        this.teams = teams;
         List<GitHubIssue> prs = data.getPrs();
 
         int open = (int) prs.stream().filter(i -> i.isOpen()).count();
@@ -49,10 +53,23 @@ public class PR {
         stats.add(new PRStat("Last 90 days",
                 createdLast90Days, 0, createdLast90Days > closedLast90Days ? 1 : 999, "created:>=" + DateUtil.MINUS_90_DAYS_STRING,
                 closedLast90Days, 0, createdLast90Days > closedLast90Days ? 1 : 999, "is:closed closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
+
+        teamStats = new LinkedList<>();
+
+        for (String team : teams.keySet()) {
+            int teamCount = (int) prs.stream().filter(i -> i.hasLabel(team) && i.isOpen()).count();
+            if (teamCount > 0) {
+                teamStats.add(new PRStat(team.replace("team/", ""), teamCount, 25, 50, "is:open label:" + team));
+            }
+        }
     }
 
     public List<PRStat> getStats() {
         return stats;
+    }
+
+    public List<PRStat> getTeamStats() {
+        return teamStats;
     }
 
 }
