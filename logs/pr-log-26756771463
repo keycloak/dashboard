@@ -1,0 +1,1404 @@
+WebAuthn IT	UNKNOWN STEP	﻿2026-06-01T13:12:08.7839179Z Current runner version: '2.334.0'
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7869612Z ##[group]Runner Image Provisioner
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7870910Z Hosted Compute Agent
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7871756Z Version: 20260520.533
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7872655Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7873579Z Build Date: 2026-05-20T17:44:04Z
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7874373Z Worker ID: {7c0f381e-c8d8-4d45-9e5d-0f1410063a42}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7875278Z Azure Region: eastus
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7875938Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7878231Z ##[group]Operating System
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7878911Z Ubuntu
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7879463Z 24.04.4
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7880055Z LTS
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7880632Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7881194Z ##[group]Runner Image
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7881889Z Image: ubuntu-24.04
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7882516Z Version: 20260525.161.1
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7883872Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7885412Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7886473Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7887740Z ##[group]GITHUB_TOKEN Permissions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7890073Z Contents: read
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7890730Z Metadata: read
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7891388Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7893599Z Secret source: None
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.7894654Z Prepare workflow directory
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.9702561Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:08.9739904Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:09.2363749Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:09.5695779Z Complete job name: WebAuthn IT
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0964648Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0965768Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0966259Z   repository: keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0971569Z   token: ***
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0972093Z   ssh-strict: true
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0972577Z   ssh-user: git
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0973068Z   persist-credentials: true
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0973596Z   clean: true
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0974081Z   sparse-checkout-cone-mode: true
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0974658Z   fetch-depth: 1
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0975132Z   fetch-tags: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0975613Z   show-progress: true
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0976104Z   lfs: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0976572Z   submodules: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0977357Z   set-safe-directory: true
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0978289Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0978933Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0979722Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0980432Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0981132Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0981704Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.0982250Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2029687Z Syncing repository: keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2031881Z ##[group]Getting Git version info
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2032669Z Working directory is '/home/runner/work/keycloak/keycloak'
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2034091Z [command]/usr/bin/git version
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2050081Z git version 2.54.0
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2102057Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2116145Z Temporarily overriding HOME='/home/runner/work/_temp/b87bec73-2bc2-45c3-8b26-94d27f4b7058' before making global git config changes
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2118350Z Adding repository directory to the temporary git global config as a safe directory
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2121556Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2169160Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2173363Z ##[group]Initializing the repository
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2177968Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2253679Z hint: Using 'master' as the name for the initial branch. This default branch name
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2255986Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2257842Z hint: to use in all of your new repositories, which will suppress this warning,
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2259196Z hint: call:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2259694Z hint:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2260326Z hint: 	git config --global init.defaultBranch <name>
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2261062Z hint:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2261740Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2262792Z hint: 'development'. The just-created branch can be renamed via this command:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2263632Z hint:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2264139Z hint: 	git branch -m <name>
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2264737Z hint:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2265467Z hint: Disable this message with "git config set advice.defaultBranchName false"
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2266942Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2269628Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2307278Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2308249Z ##[group]Disabling automatic garbage collection
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2310936Z [command]/usr/bin/git config --local gc.auto 0
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2340167Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2340978Z ##[group]Setting up auth
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2346588Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2379484Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2691191Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2723102Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2959336Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2997931Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.2998831Z ##[group]Fetching the repository
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:10.3006712Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2abadbb1535fc86316eb4344080966b3559a39a4:refs/remotes/pull/49015/merge
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:13.9854122Z From https://github.com/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:13.9856509Z  * [new ref]         2abadbb1535fc86316eb4344080966b3559a39a4 -> pull/49015/merge
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:13.9886967Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:13.9888999Z ##[group]Determining the checkout info
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:13.9890847Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:13.9895989Z [command]/usr/bin/git sparse-checkout disable
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:13.9943800Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:13.9973482Z ##[group]Checking out the ref
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:13.9978107Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/49015/merge
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9569849Z Note: switching to 'refs/remotes/pull/49015/merge'.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9570446Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9570825Z You are in 'detached HEAD' state. You can look around, make experimental
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9571651Z changes and commit them, and you can discard any commits you make in this
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9572386Z state without impacting any branches by switching back to a branch.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9572746Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9573010Z If you want to create a new branch to retain commits you create, you may
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9573611Z do so (now or later) by using -c with the switch command. Example:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9573907Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9574068Z   git switch -c <new-branch-name>
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9574284Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9574437Z Or undo this operation with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9575066Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9575187Z   git switch -
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9575444Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9576198Z Turn off this advice by setting config variable advice.detachedHead to false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9577206Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9577995Z HEAD is now at 2abadbb Merge e39e8894c4c5b670615510159e6c971eca323dcf into 823cec49bccc22dd26f0a8ac5425fbf131b6975c
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9608884Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9655580Z [command]/usr/bin/git log -1 --format=%H
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:14.9680979Z 2abadbb1535fc86316eb4344080966b3559a39a4
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.1521432Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.1521975Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.3639255Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7571252Z ##[group]Run ./.github/actions/integration-test-setup
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7571666Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7571930Z   jdk-dist: temurin
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7572228Z   jdk-version: 25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7572534Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7572899Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7573351Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7573723Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7574105Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7574421Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.7574724Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.8477633Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9067393Z ##[group]Run ./.github/actions/update-hosts
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9067798Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9068179Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9068620Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9068994Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9069375Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9069690Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9070014Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9928816Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9929642Z ^[[36;1mprintf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9964868Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9965291Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9965662Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9966105Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9966508Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9966896Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9967629Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:15.9967932Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.0117365Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.0117386Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.0118058Z 127.0.0.1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.0134253Z ::1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.1459878Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.1460301Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.3053356Z Download action repository 'actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654' (SHA:be666c2fcd27ec809703dec50e508c2fdc7f6654)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6204427Z ##[group]Run ./.github/actions/java-setup
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6204737Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6204938Z   distribution: temurin
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6205163Z   java-version: 25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6205362Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6205659Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6206044Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6206352Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6206672Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6206925Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.6207573Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7381236Z ##[group]Run actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7381644Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7381862Z   distribution: temurin
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7382104Z   java-version: 25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7382334Z   java-package: jdk
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7382562Z   check-latest: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7382793Z   server-id: github
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7383028Z   server-username: GITHUB_ACTOR
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7383654Z   server-password: GITHUB_TOKEN
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7383932Z   overwrite-settings: true
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7384181Z   job-status: success
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7387786Z   token: ***
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7388011Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7388331Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7388719Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7389043Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7389394Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7389662Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.7389927Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.8980094Z ##[group]Installed distributions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9035036Z Resolved Java 25.0.3+9 from tool-cache
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9035557Z Setting Java 25.0.3+9 as the default
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9047467Z Creating toolchains.xml for JDK version 25 from temurin
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9120790Z Writing to /home/runner/.m2/toolchains.xml
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9122368Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9123019Z Java configuration:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9123423Z   Distribution: temurin
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9123810Z   Version: 25.0.3+9
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9124321Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9124758Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9125235Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9138385Z Creating settings.xml with server-id: github
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9141871Z Writing to /home/runner/.m2/settings.xml
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9521638Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:16.9522023Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.1303686Z Download action repository 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae' (SHA:27d5ce7f107fe9357f9df03efb73ab90386fccae)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2969814Z ##[group]Run ./.github/actions/maven-cache
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2970114Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2970370Z   create-cache-if-it-doesnt-exist: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2970649Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2970963Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2971377Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2971700Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2972043Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2972310Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2972675Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2973165Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.2973565Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3162079Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3162565Z ^[[36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3196947Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3197648Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3197969Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3198370Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3198718Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3199058Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3199325Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3199712Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3200232Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3200630Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3839512Z ##[group]Run actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3840168Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3840456Z   path: ~/.m2/repository/*/*
+WebAuthn IT	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+WebAuthn IT	UNKNOWN STEP	
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3840807Z   key: mvn-Linux-mvn-2026-22
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3841073Z   restore-keys: mvn--mvn-2026-22
+WebAuthn IT	UNKNOWN STEP	
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3841339Z   enableCrossOsArchive: true
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3841583Z   fail-on-cache-miss: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3841820Z   lookup-only: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3842029Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3842516Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3842895Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3843212Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3843539Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3843795Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3844141Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3844651Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.3845035Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:17.5815451Z Cache hit for: mvn-Linux-mvn-2026-22
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:18.6289931Z Received 239075328 of 720230580 (33.2%), 228.0 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:19.6311512Z Received 562036736 of 720230580 (78.0%), 267.7 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:20.1858127Z Received 720230580 of 720230580 (100.0%), 269.3 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:20.1858975Z Cache Size: ~687 MB (720230580 B)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:20.1900103Z [command]/usr/bin/tar -xf /home/runner/work/_temp/9901e42f-7338-4d15-a7e0-f14c14cf13fc/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.0126715Z Cache restored successfully
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.0550760Z Cache restored from key: mvn-Linux-mvn-2026-22
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.1009791Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.1010153Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3664681Z ##[group]Run ./.github/actions/node-cache
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3665012Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3665342Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3665719Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3666038Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3666370Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3666634Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3667239Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3667750Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3668141Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3816157Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3816939Z ^[[36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3817794Z ^[[36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3846113Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3846471Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3846795Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3847366Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3847713Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3848073Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3848373Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3848751Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3849245Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.3849649Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4447547Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4447920Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4448315Z   path: ~/.m2/repository/com/github/eirslett/node
+WebAuthn IT	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+WebAuthn IT	UNKNOWN STEP	
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4449139Z   key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4449482Z   enableCrossOsArchive: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4449742Z   fail-on-cache-miss: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4450010Z   lookup-only: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4450240Z   save-always: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4450456Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4450771Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4451149Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4451636Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4451984Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4452256Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4452627Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4453114Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.4453501Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:22.6421823Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:23.5007667Z Received 182409230 of 182409230 (100.0%), 217.4 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:23.5008194Z Cache Size: ~174 MB (182409230 B)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:23.5127810Z [command]/usr/bin/tar -xf /home/runner/work/_temp/019c3955-5f97-46b8-a2ca-eae146eb6ed9/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:23.9829694Z Cache restored successfully
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.0002745Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.0579176Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.0579557Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2740604Z ##[group]Run ./.github/actions/pnpm-store-cache
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2740939Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2741272Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2741681Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2742014Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2742392Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2742671Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2743048Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2743566Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2743960Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2953929Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2954490Z ^[[36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2983169Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2983530Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2983851Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2984237Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2984562Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2984907Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2985195Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2985563Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2986055Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.2986453Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3546887Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3547464Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3547840Z   path: ~/.local/share/pnpm/store
+WebAuthn IT	UNKNOWN STEP	~/AppData/Local/pnpm/store
+WebAuthn IT	UNKNOWN STEP	~/Library/pnpm/store
+WebAuthn IT	UNKNOWN STEP	
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3548328Z   key: Linux-pnpm-store-2026-22
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3548637Z   enableCrossOsArchive: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3548925Z   fail-on-cache-miss: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3549199Z   lookup-only: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3549443Z   save-always: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3549672Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3550008Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3550402Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3550960Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3551310Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3551594Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3551981Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3552486Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.3552880Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:24.5878907Z Cache hit for: Linux-pnpm-store-2026-22
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:25.1966723Z Received 134577167 of 134577167 (100.0%), 233.8 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:25.1967656Z Cache Size: ~128 MB (134577167 B)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:25.1993898Z [command]/usr/bin/tar -xf /home/runner/work/_temp/14053be8-d9f6-4b8d-8e01-693478500533/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.8542295Z Cache restored successfully
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.8687812Z Cache restored from key: Linux-pnpm-store-2026-22
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9636662Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9637265Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9637496Z   name: m2-keycloak.tzts
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9637772Z   merge-multiple: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9638025Z   repository: keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9638296Z   run-id: 26756771463
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9638536Z   skip-decompress: false
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9638785Z   digest-mismatch: error
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9639020Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9639374Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9639782Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9640127Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9640474Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9640751Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9641133Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9641641Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:27.9642055Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:28.1020248Z Downloading single artifact
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:28.2127440Z Preparing to download the following artifacts:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:28.2128569Z - m2-keycloak.tzts (ID: 7332339806, Size: 436420031, Expected Digest: sha256:606aeaa39e624fcd987497e549b3fe8435d840eebcef80113a8cd5f4dbf5a3a8)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:28.3748802Z Redirecting to blob download url: https://productionresultssa10.blob.core.windows.net/actions-results/88fd9786-1919-417d-8d4a-a911bba78e43/workflow-job-run-9b14e42e-1391-543e-96c1-08c8e3b49eb4/artifacts/edc4cfb0355d37e325eaae6eb235756b36f79720f66ece617babf28220e9d051.zip
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:28.3750136Z Starting download of artifact to: /home/runner/work/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:28.4694539Z (node:2405) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:28.4695844Z (Use `node --trace-deprecation ...` to show where the warning was created)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:33.9826691Z SHA256 digest of downloaded artifact is 606aeaa39e624fcd987497e549b3fe8435d840eebcef80113a8cd5f4dbf5a3a8
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:33.9827892Z Artifact download completed successfully.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:33.9828452Z Total of 1 artifact(s) downloaded
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:33.9834481Z Download artifact has finished successfully
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0212051Z ##[group]Run if [ "$RUNNER_OS" == "Windows" ]; then
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0212728Z ^[[36;1mif [ "$RUNNER_OS" == "Windows" ]; then^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0213451Z ^[[36;1m  # zstd binary might be missing in older versions, install only when necessary^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0214255Z ^[[36;1m  which zstd > /dev/null || choco install zstandard^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0214815Z ^[[36;1mfi^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0215410Z ^[[36;1mtar -C ~/ --use-compress-program="zstd -d" -xf m2-keycloak.tzts^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0256180Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0257355Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0257906Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0258579Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0259126Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0259711Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0260185Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0260821Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0261917Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.0262674Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.6809556Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7100620Z ##[group]Run ./.github/actions/install-chrome
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7100961Z with:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7101210Z   version: default
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7101461Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7101819Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7102243Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7102611Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7102978Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7103288Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7103687Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7104214Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7104633Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7535575Z ##[group]Run google-chrome --version
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7536076Z ^[[36;1mgoogle-chrome --version^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7536475Z ^[[36;1m$CHROMEWEBDRIVER/chromedriver --version^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7564753Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7565151Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7565495Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7565908Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7566265Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7566653Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7566962Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7567666Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7568199Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:34.7568624Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:36.8860030Z Google Chrome 148.0.7778.178 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1466703Z ChromeDriver 148.0.7778.178 (d096af1c9e98c45c3596e59620622b1a049bfecb-refs/branch-heads/7778@{#3196})
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1796846Z ##[group]Run TESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh webauthn`
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1797923Z ^[[36;1mTESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh webauthn`^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1798400Z ^[[36;1mecho "Tests: $TESTS"^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1799381Z ^[[36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus -Dtest=$TESTS -Dbrowser=chrome "-Dwebdriver.chrome.driver=$CHROMEWEBDRIVER/chromedriver" -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1829160Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1829530Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1829859Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1830253Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1830591Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1830948Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1831274Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1831663Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1832170Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1832568Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:37.1965060Z Tests: org.keycloak.testsuite.webauthn.**
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:38.8818887Z -- WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:38.8832422Z -- WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/.m2/wrapper/dists/apache-maven-3.9.11/a2d47e15/lib/guice-5.1.0-classes.jar)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:38.8834810Z -- WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:38.8836288Z -- WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:39.8005850Z -- [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:39.8161176Z -- [INFO] Scanning for projects...
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:41.3427427Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:41.3451585Z -- [INFO] ------< org.keycloak.testsuite:integration-arquillian-tests-base >------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:41.3478449Z -- [INFO] Building Base TestSuite 999.0.0-SNAPSHOT
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:41.3517918Z -- [INFO]   from pom.xml
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:41.3544303Z -- [INFO] --------------------------------[ jar ]---------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:41.3857658Z -- [WARNING] Parameter 'overWriteIfNewer' is unknown for plugin 'maven-resources-plugin:3.0.1:copy-resources (example-realms)'
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.0411645Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.0412745Z -- [INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.1930271Z -- [INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.1950311Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.1951411Z -- [INFO] --- resources:3.0.1:copy-resources (copy-truststore) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.2852760Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.2948597Z -- [INFO] Copying 3 resources
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3009285Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3010537Z -- [INFO] --- resources:3.0.1:copy-resources (copy-common-dependencies) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3034085Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3095212Z -- [INFO] Copying 12 resources
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3123161Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3124196Z -- [INFO] --- resources:3.0.1:resources (default-resources) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3157363Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3161782Z -- [INFO] Copying 2 resources
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3167694Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:43.3170731Z -- [INFO] --- xml:1.0.1:transform (arquillian-default-protocol) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:44.2755996Z -- [INFO] Transforming file: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/resources/arquillian.xml
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:44.4470411Z -- [INFO] Transformed 1 file(s).
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:44.4488901Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:44.4489970Z -- [INFO] --- compiler:3.13.0:compile (default-compile) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:44.5785751Z -- [INFO] Recompiling the module because of changed source code.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:44.5940433Z -- [INFO] Compiling 333 source files with javac [debug release 17] to target/classes
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2169821Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[54,16] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2202979Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[148,20] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2259158Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[182,13] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2288985Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[213,48] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2309039Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[237,50] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2323409Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[261,28] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2327744Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/AdminClientUtil.java:[152,66] org.jboss.resteasy.client.jaxrs.engines.ClientHttpEngineBuilder43 in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2331273Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ServerTestEnricherUtil.java: Some input files use or override a deprecated API.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2334040Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ServerTestEnricherUtil.java: Recompile with -Xlint:deprecation for details.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2336841Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java: Some input files use unchecked or unsafe operations.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2339851Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java: Recompile with -Xlint:unchecked for details.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2341505Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2342322Z -- [INFO] --- resources:3.0.1:copy-resources (example-realms) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2343438Z -- [INFO] Skipping the execution.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2344016Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.2345199Z -- [INFO] --- dependency:3.1.2:unpack (unpack-undertow-server) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.5293402Z -- [INFO] Skipping plugin execution
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.5320019Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.5320996Z -- [INFO] --- dependency:3.1.2:unpack (unpack-quarkus-server) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.5322803Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-servers-auth-server-quarkus:999.0.0-SNAPSHOT:zip
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:49.5554211Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-auth-server-quarkus/999.0.0-SNAPSHOT/integration-arquillian-servers-auth-server-quarkus-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.1524065Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.1524828Z -- [INFO] --- dependency:3.1.2:unpack (unpack-app-server) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.1558163Z -- [INFO] Skipping plugin execution
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.1558702Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.1559425Z -- [INFO] --- dependency:3.1.2:unpack (unpack-client-cli-dist) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.1560510Z -- [INFO] Configured Artifact: org.keycloak:keycloak-client-cli-dist:999.0.0-SNAPSHOT:zip
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.1619267Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/keycloak-client-cli-dist/999.0.0-SNAPSHOT/keycloak-client-cli-dist-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.2715982Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.2717800Z -- [INFO] --- dependency:3.1.2:copy-dependencies (copy-testsuite-providers-to-base-testsuite) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.2819453Z -- [INFO] Copying integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/lib/integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.2890456Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.2893359Z -- [INFO] --- resources:3.0.1:testResources (default-testResources) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.2924650Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.2984604Z -- [INFO] Copying 24 resources
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.6149001Z -- [INFO] Copying 205 resources
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.6588374Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.6623421Z -- [INFO] --- antrun:3.1.0:run (clean-second-cache-server-arquillian-bug-workaround) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.6913893Z -- [INFO] Skipping Antrun execution
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.6978189Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.6979029Z -- [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.7426725Z -- [INFO] Recompiling the module because of changed dependency.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:12:51.7501443Z -- [INFO] Compiling 674 source files with javac [debug release 17] to target/test-classes
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6665273Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6698017Z --   reason: class file for org.infinispan.factories.scopes.Scopes not found
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6704949Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6706178Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6708494Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testframework/realm/ManagedRealm.java:[8,19] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6712224Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testframework/realm/ManagedRealm.java:[11,25] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6715593Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testframework/remote/timeoffset/TimeOffSet.java:[9,19] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6749002Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testframework/remote/timeoffset/TimeOffSet.java:[11,23] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6752764Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AbstractTestRealmKeycloakTest.java:[48,61] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6829468Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java:[57,13] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6859012Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java:[59,30] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6898887Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AbstractAuthTest.java:[46,48] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6902312Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AbstractAuthenticationTest.java:[37,58] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6905687Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AbstractConcurrencyTest.java:[66,85] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6909071Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[30,19] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6912232Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[33,25] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6915578Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/InfinispanTestTimeServiceRule.java:[33,19] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6919375Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/InfinispanTestTimeServiceRule.java:[35,42] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6923206Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/AbstractAuthzTest.java:[19,49] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6926366Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/EntitlementAPITest.java:[2606,62] non-varargs call of varargs method with inexact argument type for last parameter;
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6939767Z --   cast to java.lang.String for a varargs call
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6940564Z --   cast to java.lang.String[] for a non-varargs call and to suppress this warning
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6942666Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/UmaDiscoveryDocumentTest.java:[43,47] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6946034Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/AbstractPolicyManagementTest.java:[56,60] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6949610Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractBaseBrokerTest.java:[85,54] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6953213Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AccountLinkTest.java:[68,38] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6956483Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcSamlIdPInitiatedSsoTest.java:[82,48] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6960054Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcSamlParseIdPDescriptorTest.java:[44,51] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6963416Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[105,38] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.6966669Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cli/AbstractCliTest.java:[16,47] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7000327Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/AbstractClientRegistrationTest.java:[42,62] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7003764Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[202,58] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7006916Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/CIBATest.java:[1663,36] non-varargs call of varargs method with inexact argument type for last parameter;
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7009154Z --   cast to java.lang.String for a varargs call
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7009925Z --   cast to java.lang.String[] for a non-varargs call and to suppress this warning
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7012063Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractClusterTest.java:[34,51] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7015424Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/composites/AbstractCompositeKeycloakTest.java:[28,61] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7018956Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cookies/CookieTest.java:[71,33] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7022292Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cookies/DefaultCookieProviderTest.java:[26,48] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7025653Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/docker/DockerClientTest.java:[54,39] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7059950Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/domainextension/CustomExtensionTest.java:[39,42] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7063654Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[282,9] org.jboss.resteasy.client.jaxrs.engines.ApacheHttpClient43Engine in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7067814Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[282,47] org.jboss.resteasy.client.jaxrs.engines.ApacheHttpClient43Engine in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7071721Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/AbstractUserStorageDirtyDeletionTest.java:[37,68] org.keycloak.testsuite.AbstractConcurrencyTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7075163Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/migration/AbstractMigrationTest.java:[137,53] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7078735Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/migration/MigrationDeniedTest.java:[42,42] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7082055Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AbstractClientAuthSignedJWTTest.java:[141,63] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7086082Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AccessTokenDuplicateEmailsNotCleanedUpTest.java:[40,65] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7120112Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AccessTokenDuplicateEmailsTest.java:[41,53] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7123570Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AccessTokenNoEmailLoginTest.java:[38,50] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7126950Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AccessTokenResponseTest.java:[28,46] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7130430Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AccessTokenTest.java:[145,38] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7134100Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AuthorizationCodeTest.java:[70,44] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7137655Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/ClientAuthPostMethodTest.java:[64,47] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7141041Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/ClientAuthSecretSignedJWTTest.java:[98,52] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7144480Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/LoginStatusIframeEndpointTest.java:[70,52] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7178258Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/LogoutCorsTest.java:[45,37] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7181645Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/LogoutTest.java:[89,33] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7185088Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuth2DeviceAuthorizationGrantTest.java:[84,57] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7188628Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/AbstractWellKnownProviderTest.java:[91,61] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7192417Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuthDanceClientSessionExtensionTest.java:[40,59] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7195876Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuthGrantTest.java:[68,37] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7199424Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuthProofKeyForCodeExchangeTest.java:[58,55] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7202660Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuthRedirectUriTest.java:[69,43] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7205599Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuthRedirectUriTest.java:[508,66] non-varargs call of varargs method with inexact argument type for last parameter;
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7207874Z --   cast to java.lang.Object for a varargs call
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7208613Z --   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7210436Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuthRedirectUriTest.java:[509,67] non-varargs call of varargs method with inexact argument type for last parameter;
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7212156Z --   cast to java.lang.Object for a varargs call
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7212869Z --   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7214733Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuthRedirectUriTest.java:[510,75] non-varargs call of varargs method with inexact argument type for last parameter;
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7216410Z --   cast to java.lang.Object for a varargs call
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7217319Z --   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7219079Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuthRedirectUriTest.java:[511,68] non-varargs call of varargs method with inexact argument type for last parameter;
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7220913Z --   cast to java.lang.Object for a varargs call
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7221710Z --   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7223854Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OAuthScopeInTokenResponseTest.java:[34,52] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7227495Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OIDCProtocolMappersTest.java:[119,46] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7231431Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/ResourceOwnerPasswordCredentialsGrantTest.java:[92,64] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7234763Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/ServiceAccountTest.java:[84,41] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7238223Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/ServiceAccountUserProfileTest.java:[59,52] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7241485Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/TokenEndpointCorsTest.java:[33,44] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7244694Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/TokenRevocationCorsTest.java:[44,46] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7248050Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/TokenRevocationTest.java:[83,42] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7251592Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/UserInfoEndpointCorsTest.java:[27,47] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7254952Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/tokenexchange/ClientTokenExchangeSAML2Test.java:[97,51] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7258622Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/tokenexchange/StandardTokenExchangeV1Test.java:[66,50] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7262182Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/tokenexchange/SubjectImpersonationTokenExchangeV1Test.java:[71,62] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7265603Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/OIDCPublicClientTest.java:[51,43] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7269345Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/UserInfoTest.java:[128,35] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7272431Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/providers/ProvidersOverrideTest.java:[47,44] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7275894Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/SamlRelayStateTest.java:[171,9] org.keycloak.testsuite.AbstractConcurrencyTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7279276Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/theme/DefaultThemeManagerTest.java:[22,46] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7282450Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/NoCacheAnnotationTest.java:[34,44] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7285740Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/validation/BuiltinValidatorsTest.java:[56,44] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7294539Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/validation/ValidatorsTest.java:[53,37] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7298837Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/webauthn/passwordless/PasskeysConditionalUITest.java:[59,69] org.keycloak.authentication.authenticators.browser.PasskeysConditionalUIAuthenticatorFactory in org.keycloak.authentication.authenticators.browser has been deprecated and marked for removal
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7302843Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/ClientPoliciesUtil.java: Some input files use or override a deprecated API.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7304894Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/ClientPoliciesUtil.java: Recompile with -Xlint:deprecation for details.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7307268Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java: Some input files use unchecked or unsafe operations.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7309548Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java: Recompile with -Xlint:unchecked for details.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7310951Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7311837Z -- [INFO] --- shrinkwrap-resolver:3.2.1:propagate-execution-context (default) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7795070Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:02.7818502Z -- [INFO] --- docker:0.48.1:start (start-db-container) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:03.1109349Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:03.1128921Z -- [INFO] --- surefire:3.5.4:test (default-test) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:03.2974625Z -- [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:03.3090799Z -- [WARNING] System property [browser] overwritten by user properties from Maven session
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:03.7698888Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.4/surefire-junit-platform-3.5.4.pom
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.3739473Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.4/surefire-junit-platform-3.5.4.pom (5.2 kB at 8.5 kB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.3796087Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.4/surefire-providers-3.5.4.pom
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.4022473Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.4/surefire-providers-3.5.4.pom (2.5 kB at 115 kB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.4055022Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.4/common-java5-3.5.4.pom
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.4266024Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.4/common-java5-3.5.4.pom (3.1 kB at 146 kB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.4295418Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.1/junit-platform-engine-1.12.1.pom
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.4502787Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.1/junit-platform-engine-1.12.1.pom (3.2 kB at 160 kB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.4548758Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.1/junit-platform-commons-1.12.1.pom
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.4799097Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.1/junit-platform-commons-1.12.1.pom (2.8 kB at 113 kB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.4829599Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.1/junit-platform-launcher-1.12.1.pom
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.5025809Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.1/junit-platform-launcher-1.12.1.pom (3.0 kB at 151 kB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.5064000Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.4/surefire-junit-platform-3.5.4.jar
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.5321582Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.4/surefire-junit-platform-3.5.4.jar (35 kB at 1.4 MB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.5375389Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.4/common-java5-3.5.4.jar
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.5377693Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.1/junit-platform-engine-1.12.1.jar
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.5401122Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.1/junit-platform-commons-1.12.1.jar
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.5409434Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.1/junit-platform-launcher-1.12.1.jar
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.5672380Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.4/common-java5-3.5.4.jar (18 kB at 534 kB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.6227837Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.1/junit-platform-commons-1.12.1.jar (152 kB at 1.7 MB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.6276818Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.1/junit-platform-launcher-1.12.1.jar (208 kB at 2.4 MB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.6338225Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.1/junit-platform-engine-1.12.1.jar (256 kB at 2.6 MB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.6410979Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.pom
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.6611833Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.pom (3.2 kB at 160 kB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.6642071Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.6888996Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar (245 kB at 9.8 MB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.6906106Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.3/junit-platform-launcher-1.10.3.pom
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.7086744Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.3/junit-platform-launcher-1.10.3.pom (3.0 kB at 168 kB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.7126042Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.3/junit-platform-launcher-1.10.3.jar
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.7345352Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.3/junit-platform-launcher-1.10.3.jar (184 kB at 8.0 MB/s)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.7471199Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.7471720Z -- [INFO] -------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.7472271Z -- [INFO]  T E S T S
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:04.7472612Z -- [INFO] -------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:13:05.8663322Z [INFO] Running org.keycloak.testsuite.webauthn.AppInitiatedActionWebAuthnSkipIfExistsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:14:33.0740218Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 87.16 s -- in org.keycloak.testsuite.webauthn.AppInitiatedActionWebAuthnSkipIfExistsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:14:33.1898443Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:14:33.1986253Z -- Jun 01, 2026 1:14:33 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:14:33.1990118Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:14:33.1991293Z [INFO] Running org.keycloak.testsuite.webauthn.AppInitiatedActionWebAuthnTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:20.0690354Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.84 s -- in org.keycloak.testsuite.webauthn.AppInitiatedActionWebAuthnTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:20.2008441Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:20.2264711Z -- Jun 01, 2026 1:15:20 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:20.2265636Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:20.2266915Z [INFO] Running org.keycloak.testsuite.webauthn.VirtualAuthenticatorsManagerTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:37.7386736Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.49 s -- in org.keycloak.testsuite.webauthn.VirtualAuthenticatorsManagerTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:37.8470394Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:37.8631155Z -- Jun 01, 2026 1:15:37 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:37.8632172Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:15:37.8633065Z [INFO] Running org.keycloak.testsuite.webauthn.WebAuthnIdlessTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:16:32.4018952Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 54.52 s -- in org.keycloak.testsuite.webauthn.WebAuthnIdlessTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:16:32.5485390Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:16:32.5978771Z -- Jun 01, 2026 1:16:32 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:16:32.5979853Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:16:32.5980754Z [INFO] Running org.keycloak.testsuite.webauthn.WebAuthnPropertyTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:17:39.5774918Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 66.96 s -- in org.keycloak.testsuite.webauthn.WebAuthnPropertyTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:17:39.6579983Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:17:39.6901885Z -- Jun 01, 2026 1:17:39 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:17:39.6902556Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:17:39.6903278Z [INFO] Running org.keycloak.testsuite.webauthn.WebAuthnTransportsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:18:31.6265880Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.91 s -- in org.keycloak.testsuite.webauthn.WebAuthnTransportsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:18:31.7528075Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:18:31.7682801Z -- Jun 01, 2026 1:18:31 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:18:31.7683821Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:18:31.7684620Z [INFO] Running org.keycloak.testsuite.webauthn.account.WebAuthnErrorTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:19:04.5215631Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.73 s -- in org.keycloak.testsuite.webauthn.account.WebAuthnErrorTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:19:04.6365380Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:19:04.6741832Z -- Jun 01, 2026 1:19:04 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:19:04.6744852Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:19:04.6745851Z [INFO] Running org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:24:51.4764957Z [INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 346.8 s -- in org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:24:51.6078416Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:24:51.6079492Z -- Jun 01, 2026 1:24:51 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:24:51.6080390Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:24:51.6081517Z [INFO] Running org.keycloak.testsuite.webauthn.passwordless.AppInitiatedActionPwdLessSkipIfExistsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:25:53.1318740Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 61.51 s -- in org.keycloak.testsuite.webauthn.passwordless.AppInitiatedActionPwdLessSkipIfExistsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:25:53.2222487Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:25:53.2542445Z -- Jun 01, 2026 1:25:53 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:25:53.2543340Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:25:53.2544292Z [INFO] Running org.keycloak.testsuite.webauthn.passwordless.AppInitiatedActionPwdLessTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:26:39.7385346Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.47 s -- in org.keycloak.testsuite.webauthn.passwordless.AppInitiatedActionPwdLessTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:26:39.8570264Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:26:39.8570858Z -- Jun 01, 2026 1:26:39 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:26:39.8571409Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:26:39.8572168Z [INFO] Running org.keycloak.testsuite.webauthn.passwordless.PasskeysConditionalUITest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:14.1102289Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.24 s -- in org.keycloak.testsuite.webauthn.passwordless.PasskeysConditionalUITest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:14.2588864Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:14.2589445Z -- Jun 01, 2026 1:27:14 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:14.2590001Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:14.2590899Z [INFO] Running org.keycloak.testsuite.webauthn.passwordless.PasskeysDefaultBrowserFlowTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:54.6199975Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.34 s -- in org.keycloak.testsuite.webauthn.passwordless.PasskeysDefaultBrowserFlowTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:54.7509228Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:54.7517882Z -- Jun 01, 2026 1:27:54 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:54.7535034Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:27:54.7558437Z [INFO] Running org.keycloak.testsuite.webauthn.passwordless.PasskeysKcOidcFirstBrokerLoginTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:29:15.8639050Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 81.10 s -- in org.keycloak.testsuite.webauthn.passwordless.PasskeysKcOidcFirstBrokerLoginTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:29:15.9617447Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:29:15.9905457Z -- Jun 01, 2026 1:29:15 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:29:15.9905935Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:29:15.9906576Z [INFO] Running org.keycloak.testsuite.webauthn.passwordless.PasskeysOrganizationAuthenticationTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:30:31.4178988Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 75.32 s -- in org.keycloak.testsuite.webauthn.passwordless.PasskeysOrganizationAuthenticationTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:30:31.4758192Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:30:31.5283863Z -- Jun 01, 2026 1:30:31 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:30:31.5284946Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:30:31.5286093Z [INFO] Running org.keycloak.testsuite.webauthn.passwordless.WebAuthnPwdLessPropertyTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:31:27.5006842Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 55.96 s -- in org.keycloak.testsuite.webauthn.passwordless.WebAuthnPwdLessPropertyTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:31:27.6115617Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:31:27.6116037Z -- Jun 01, 2026 1:31:27 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:31:27.6116457Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:31:27.6117350Z [INFO] Running org.keycloak.testsuite.webauthn.registration.AttestationConveyanceRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:32:30.3114535Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 62.68 s -- in org.keycloak.testsuite.webauthn.registration.AttestationConveyanceRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:32:30.4176171Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:32:30.4176776Z -- Jun 01, 2026 1:32:30 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:32:30.4177658Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:32:30.4178505Z [INFO] Running org.keycloak.testsuite.webauthn.registration.AuthAttachmentRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:15.2678610Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 44.84 s -- in org.keycloak.testsuite.webauthn.registration.AuthAttachmentRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:15.4025924Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:15.4026426Z -- Jun 01, 2026 1:33:15 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:15.4026856Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:15.4027769Z [INFO] Running org.keycloak.testsuite.webauthn.registration.PolicyJsInjectionTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:59.8205638Z [WARNING] Tests run: 7, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 44.40 s -- in org.keycloak.testsuite.webauthn.registration.PolicyJsInjectionTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:59.9648952Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:59.9649584Z -- Jun 01, 2026 1:33:59 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:59.9650067Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:33:59.9650595Z [INFO] Running org.keycloak.testsuite.webauthn.registration.PubKeySignRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:34:59.9566979Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 59.97 s -- in org.keycloak.testsuite.webauthn.registration.PubKeySignRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:35:00.0736974Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:35:00.0740158Z -- Jun 01, 2026 1:35:00 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:35:00.0740676Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:35:00.0741490Z [INFO] Running org.keycloak.testsuite.webauthn.registration.ResidentKeyRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:36:07.1271285Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.04 s -- in org.keycloak.testsuite.webauthn.registration.ResidentKeyRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:36:07.2410601Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:36:07.2413294Z -- Jun 01, 2026 1:36:07 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:36:07.2413755Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:36:07.2414320Z [INFO] Running org.keycloak.testsuite.webauthn.registration.UserVerificationRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:37:44.5746389Z [INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 97.32 s -- in org.keycloak.testsuite.webauthn.registration.UserVerificationRegisterTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:37:44.6954197Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:37:44.7189886Z -- Jun 01, 2026 1:37:44 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:37:44.7190494Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:37:44.7191053Z [INFO] Running org.keycloak.testsuite.webauthn.registration.WebAuthnOtherSettingsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:38:40.4772806Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 55.74 s -- in org.keycloak.testsuite.webauthn.registration.WebAuthnOtherSettingsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:38:40.5798312Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:38:40.6158606Z -- Jun 01, 2026 1:38:40 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:38:40.6159242Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:38:40.6159890Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessAttestationRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:39:42.8313572Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 62.20 s -- in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessAttestationRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:39:42.9685629Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:39:42.9686248Z -- Jun 01, 2026 1:39:42 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:39:42.9686804Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:39:42.9687868Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessAuthAttachmentRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:40:27.1330387Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 44.15 s -- in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessAuthAttachmentRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:40:27.2344711Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:40:27.2345247Z -- Jun 01, 2026 1:40:27 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:40:27.2345802Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:40:27.2346685Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessOtherSettingsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:41:24.0840133Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 56.83 s -- in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessOtherSettingsTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:41:24.2160139Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:41:24.2160560Z -- Jun 01, 2026 1:41:24 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:41:24.2160984Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:41:24.2161616Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessPolicyJsInjectionTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:42:04.4466972Z [WARNING] Tests run: 7, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 40.22 s -- in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessPolicyJsInjectionTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:42:04.5728429Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:42:04.5729237Z -- Jun 01, 2026 1:42:04 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:42:04.5729974Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:42:04.5730879Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessPubKeySignRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:43:05.0391928Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 60.46 s -- in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessPubKeySignRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:43:05.1531440Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:43:05.1531954Z -- Jun 01, 2026 1:43:05 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:43:05.1532501Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:43:05.1533346Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessResidentKeyRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:44:10.8080628Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 65.64 s -- in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessResidentKeyRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:44:10.9405966Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:44:10.9406449Z -- Jun 01, 2026 1:44:10 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:44:10.9406883Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:44:10.9407727Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessUserVerRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.1080264Z [INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 96.15 s -- in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessUserVerRegTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.2149899Z -- Log has ended
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.2601101Z -- Jun 01, 2026 1:45:47 PM io.undertow.Undertow stop
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.2602160Z -- INFO: stopping server: Undertow - 2.3.24.Final
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5795109Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5795534Z -- [INFO] Results:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5806037Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5806549Z -- [WARNING] Tests run: 143, Failures: 0, Errors: 0, Skipped: 9
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5807589Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5821982Z -- [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5822652Z -- [INFO] --- docker:0.48.1:stop (stop-db-container) @ integration-arquillian-tests-base ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5873601Z -- [INFO] ------------------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5874511Z -- [INFO] BUILD SUCCESS
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5875374Z -- [INFO] ------------------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5877367Z -- [INFO] Total time:  33:07 min
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5879909Z -- [INFO] Finished at: 2026-06-01T13:45:47Z
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.5880839Z -- [INFO] ------------------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6410574Z ##[group]Run ./mvnw test -f tests/webauthn/pom.xml
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6411003Z ^[[36;1m./mvnw test -f tests/webauthn/pom.xml^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6438812Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6439176Z env:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6439508Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6439902Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6440245Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6440623Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6440944Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6441338Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6442053Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:47.6442465Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:48.4986263Z WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:48.4987979Z WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/home/runner/.m2/wrapper/dists/apache-maven-3.9.11/a2d47e15/lib/guice-5.1.0-classes.jar)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:48.4989560Z WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:48.4990504Z WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:49.2158349Z [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:49.2275190Z [INFO] Scanning for projects...
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:49.3335862Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:49.3336859Z [INFO] -------------< org.keycloak.tests:keycloak-tests-webauthn >-------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:49.3341701Z [INFO] Building New Keycloak WebAuthn Testsuite 999.0.0-SNAPSHOT
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:49.3372607Z [INFO]   from pom.xml
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:49.3373435Z [INFO] --------------------------------[ jar ]---------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:51.2938352Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:51.2940679Z [INFO] --- resources:3.3.1:resources (default-resources) @ keycloak-tests-webauthn ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:51.3704891Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/webauthn/src/main/resources
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:51.3718109Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:51.3741625Z [INFO] --- compiler:3.13.0:compile (default-compile) @ keycloak-tests-webauthn ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:51.4649700Z [INFO] Recompiling the module because of changed source code.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:51.4726060Z [INFO] Compiling 7 source files with javac [debug release 17] to target/classes
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:52.8178503Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:52.8247764Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ keycloak-tests-webauthn ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:52.8248810Z [INFO] Copying 1 resource from src/test/resources to target/test-classes
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:52.8289029Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:52.8289951Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ keycloak-tests-webauthn ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:52.8361803Z [INFO] Recompiling the module because of changed dependency.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:52.8366693Z [INFO] Compiling 6 source files with javac [debug release 17] to target/test-classes
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:53.7865185Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:53.7866143Z [INFO] --- surefire:3.5.4:test (default-test) @ keycloak-tests-webauthn ---
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:53.8908696Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:53.9163465Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:53.9174325Z [INFO] -------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:53.9184952Z [INFO]  T E S T S
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:53.9202229Z [INFO] -------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:55.1152801Z [INFO] Running org.keycloak.tests.webauthn.WebAuthnPolicyComplianceTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:55.3749317Z 2026-06-01 13:45:55,334 INFO  [testinfo] (main) ----------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:45:55.3756522Z 2026-06-01 13:45:55,339 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.webauthn.WebAuthnPolicyComplianceTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:46:20.1388567Z 2026-06-01 13:46:20,059 WARNING [org.openqa.selenium.devtools.CdpVersionFinder] (main) Unable to find CDP implementation matching 148
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:46:20.1392295Z 2026-06-01 13:46:20,060 WARNING [org.openqa.selenium.chromium.ChromiumDriver] (main) Unable to find version of CDP to use for 148.0.7778.178. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:46:36.1738839Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.98 s -- in org.keycloak.tests.webauthn.WebAuthnPolicyComplianceTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:46:36.1744511Z [INFO] Running org.keycloak.tests.webauthn.WebAuthnRegisterAndLoginTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:46:36.1745424Z 2026-06-01 13:46:36,108 INFO  [testinfo] (main) ----------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:46:36.1746348Z 2026-06-01 13:46:36,108 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.webauthn.WebAuthnRegisterAndLoginTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:01.6695069Z 2026-06-01 13:47:01,660 ERROR [testinfo] (main)     FAILED - org.keycloak.tests.webauthn.WebAuthnRegisterAndLoginTest / registerUserSuccess
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1319769Z [ERROR] Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 25.98 s <<< FAILURE! -- in org.keycloak.tests.webauthn.WebAuthnRegisterAndLoginTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1326413Z [ERROR] org.keycloak.tests.webauthn.WebAuthnRegisterAndLoginTest.registerUserSuccess -- Time elapsed: 3.244 s <<< ERROR!
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1348336Z java.lang.RuntimeException: Cannot logout user
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1349600Z 	at org.keycloak.tests.webauthn.AbstractWebAuthnVirtualTest.logout(AbstractWebAuthnVirtualTest.java:356)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1351477Z 	at org.keycloak.tests.webauthn.WebAuthnRegisterAndLoginTest.registerUserSuccess(WebAuthnRegisterAndLoginTest.java:176)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1353518Z Caused by: org.openqa.selenium.WebDriverException: unknown error: unhandled inspector error: {"code":-32000,"message":"Node with given id does not belong to the document"}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1354921Z   (Session info: chrome=148.0.7778.178)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1355647Z Build info: version: '4.28.1', revision: '73f5ad48a2'
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1356661Z System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1015-azure', java.version: '25.0.3'
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1357891Z Driver info: org.openqa.selenium.chrome.ChromeDriver
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1359439Z Command: [44a066fcda7c2fd7f2f571f3549aeb71, getElementAttribute {id=f.D7E37C92B4394FFB7088C11230296232.d.DABBC7D49FB8545AB2A61E7897125854.e.4, name=data-page-id}]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1365331Z Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40757}, goog:processID: 15596, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:40757/devtoo..., se:cdpVersion: 148.0.7778.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 5000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1375085Z Element: [[ChromeDriver: chrome on linux (44a066fcda7c2fd7f2f571f3549aeb71)] -> xpath: //body]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1387583Z Session ID: 44a066fcda7c2fd7f2f571f3549aeb71
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1391682Z 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1393150Z 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1394022Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1394795Z 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1395660Z 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1396679Z 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1397971Z 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1399511Z 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1400864Z 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1402032Z 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1403019Z 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1404083Z 	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:149)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1405260Z 	at org.keycloak.testframework.ui.webdriver.PageUtils.getCurrentPageId(PageUtils.java:30)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1406453Z 	at org.keycloak.testframework.ui.webdriver.WaitUtils.lambda$waitForPage$0(WaitUtils.java:25)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1407744Z 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1408734Z 	at org.keycloak.testframework.ui.webdriver.WaitUtils.waitForPage(WaitUtils.java:25)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1409859Z 	at org.keycloak.testframework.ui.page.AbstractPage.assertCurrent(AbstractPage.java:16)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1411141Z 	at org.keycloak.tests.webauthn.AbstractWebAuthnVirtualTest.logout(AbstractWebAuthnVirtualTest.java:353)
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1412063Z 	... 1 more
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1412270Z 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1412642Z [INFO] Running org.keycloak.tests.webauthn.WebAuthnTransportLocaleTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1413625Z 2026-06-01 13:47:02,093 INFO  [testinfo] (main) ----------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:02.1414779Z 2026-06-01 13:47:02,093 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.webauthn.WebAuthnTransportLocaleTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:31.6979195Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.59 s -- in org.keycloak.tests.webauthn.WebAuthnTransportLocaleTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:31.6981001Z [INFO] Running org.keycloak.tests.webauthn.passwordless.PasskeysUsernameFormTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:31.6982489Z 2026-06-01 13:47:31,689 INFO  [testinfo] (main) ----------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:47:31.6984021Z 2026-06-01 13:47:31,689 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.webauthn.passwordless.PasskeysUsernameFormTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:02.3130606Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.60 s -- in org.keycloak.tests.webauthn.passwordless.PasskeysUsernameFormTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:02.3138065Z [INFO] Running org.keycloak.tests.webauthn.passwordless.PasskeysUsernamePasswordFormTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:02.3153950Z 2026-06-01 13:48:02,295 INFO  [testinfo] (main) ----------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:02.3155848Z 2026-06-01 13:48:02,295 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.webauthn.passwordless.PasskeysUsernamePasswordFormTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:36.9949277Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.69 s -- in org.keycloak.tests.webauthn.passwordless.PasskeysUsernamePasswordFormTest
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2296287Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2296762Z [INFO] Results:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2297790Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2300271Z [ERROR] Errors: 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2301903Z [ERROR]   WebAuthnRegisterAndLoginTest.registerUserSuccess:176->AbstractWebAuthnVirtualTest.logout:356 » Runtime Cannot logout user
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2302876Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2303262Z [ERROR] Tests run: 32, Failures: 0, Errors: 1, Skipped: 0
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2303779Z [INFO] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2338339Z [INFO] ------------------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2338952Z [INFO] BUILD FAILURE
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2339500Z [INFO] ------------------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2342939Z [INFO] Total time:  02:48 min
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2345172Z [INFO] Finished at: 2026-06-01T13:48:37Z
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2345930Z [INFO] ------------------------------------------------------------------------
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2358446Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.4:test (default-test) on project keycloak-tests-webauthn: 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2359445Z [ERROR] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2360226Z [ERROR] See /home/runner/work/keycloak/keycloak/tests/webauthn/target/surefire-reports for the individual test results.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2361202Z [ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2361689Z [ERROR] -> [Help 1]
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2361934Z [ERROR] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2362297Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2362822Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2363195Z [ERROR] 
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2363635Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2364314Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.2599569Z ##[error]Process completed with exit code 1.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.3222732Z Post job cleanup.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.4487713Z Post job cleanup.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.7051166Z Post job cleanup.
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.7915113Z [command]/usr/bin/git version
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.7986616Z git version 2.54.0
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8023499Z Temporarily overriding HOME='/home/runner/work/_temp/f070e6d9-de29-4c97-8cec-11de21b05ace' before making global git config changes
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8024844Z Adding repository directory to the temporary git global config as a safe directory
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8028663Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8068561Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8104783Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8373104Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8404739Z http.https://github.com/.extraheader
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8415758Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8449790Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+WebAuthn IT	UNKNOWN STEP	2026-06-01T13:48:37.8863829Z Cleaning up orphan processes
+Status Check - Keycloak CI	UNKNOWN STEP	﻿2026-06-01T14:10:07.5048696Z Current runner version: '2.334.0'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5075637Z ##[group]Runner Image Provisioner
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5076757Z Hosted Compute Agent
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5077375Z Version: 20260520.533
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5078127Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5079217Z Build Date: 2026-05-20T17:44:04Z
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5080018Z Worker ID: {916fc585-477c-409a-909d-f7881523d335}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5080797Z Azure Region: eastus2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5081405Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5082978Z ##[group]Operating System
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5083622Z Ubuntu
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5084188Z 24.04.4
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5084785Z LTS
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5085328Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5085928Z ##[group]Runner Image
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5086565Z Image: ubuntu-24.04
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5087184Z Version: 20260525.161.1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5088730Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5090333Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5091370Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5092587Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5094772Z Contents: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5095397Z Metadata: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5096076Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5099159Z Secret source: None
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.5100239Z Prepare workflow directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.6914504Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:07.6953430Z Getting action download info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.0141348Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.2951247Z Complete job name: Status Check - Keycloak CI
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8649821Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8651020Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8651505Z   repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8656601Z   token: ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8657090Z   ssh-strict: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8657567Z   ssh-user: git
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8658053Z   persist-credentials: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8658746Z   clean: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8659226Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8659806Z   fetch-depth: 1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8660273Z   fetch-tags: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8660760Z   show-progress: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8661244Z   lfs: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8661692Z   submodules: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8662175Z   set-safe-directory: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8662901Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8663554Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8664327Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8665040Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8665739Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8666310Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.8666853Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9668014Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9670384Z ##[group]Getting Git version info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9671188Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9672354Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9712594Z git version 2.54.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9764186Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9780292Z Temporarily overriding HOME='/home/runner/work/_temp/227ef763-a2e2-4e53-a5b5-c62332774922' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9782957Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9785314Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9834519Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9839906Z ##[group]Initializing the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9844295Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9931529Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9932707Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9933717Z hint: to use in all of your new repositories, which will suppress this warning,
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9934506Z hint: call:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9934963Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9935533Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9936543Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9937519Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9939176Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9940604Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9941416Z hint: 	git branch -m <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9942393Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9943642Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9945617Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9950779Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9992159Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9993047Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:08.9995001Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0023820Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0024624Z ##[group]Setting up auth
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0030922Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0067336Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0412648Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0444097Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0674444Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0710693Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0711770Z ##[group]Fetching the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:09.0719001Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2abadbb1535fc86316eb4344080966b3559a39a4:refs/remotes/pull/49015/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:13.0579722Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:13.0581734Z  * [new ref]         2abadbb1535fc86316eb4344080966b3559a39a4 -> pull/49015/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:13.0615153Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:13.0615942Z ##[group]Determining the checkout info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:13.0618008Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:13.0623712Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:13.0670801Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:13.0699521Z ##[group]Checking out the ref
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:13.0704028Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/49015/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0298362Z Note: switching to 'refs/remotes/pull/49015/merge'.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0299101Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0299380Z You are in 'detached HEAD' state. You can look around, make experimental
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0299957Z changes and commit them, and you can discard any commits you make in this
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0300517Z state without impacting any branches by switching back to a branch.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0300926Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0301182Z If you want to create a new branch to retain commits you create, you may
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0301761Z do so (now or later) by using -c with the switch command. Example:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0302058Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0302205Z   git switch -c <new-branch-name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0302417Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0302560Z Or undo this operation with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0303173Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0303291Z   git switch -
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0303488Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0303728Z Turn off this advice by setting config variable advice.detachedHead to false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0304108Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0304477Z HEAD is now at 2abadbb Merge e39e8894c4c5b670615510159e6c971eca323dcf into 823cec49bccc22dd26f0a8ac5425fbf131b6975c
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0338105Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0385248Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.0409691Z 2abadbb1535fc86316eb4344080966b3559a39a4
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.2199573Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.2985570Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.2985944Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.2992035Z   jobs: {
+Status Check - Keycloak CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-webauthn": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-aurora": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-azure": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-quarkus": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-store": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-additional-dbs": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-admin-v2": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-sssd": "false"
+Status Check - Keycloak CI	UNKNOWN STEP	    }
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jdk-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-model-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "clustering-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "forms-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "sssd-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests-cs": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "external-infinispan-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "test-framework": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-new-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "mixed-cluster-compatibility-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "authzen-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "admin-v2-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "testsuite-deprecation-check": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  }
+Status Check - Keycloak CI	UNKNOWN STEP	}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.2998233Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.2998811Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.2999261Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.2999685Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.3000063Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.3000371Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.3000667Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4171981Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4172784Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4173076Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4173395Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4173732Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4174026Z ^[[36;1m      "ci-webauthn": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4174352Z ^[[36;1m      "ci-aurora": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4174672Z ^[[36;1m      "ci-azure": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4174987Z ^[[36;1m      "ci": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4175512Z ^[[36;1m      "ci-quarkus": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4175834Z ^[[36;1m      "ci-store": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4176165Z ^[[36;1m      "ci-additional-dbs": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4176521Z ^[[36;1m      "ci-admin-v2": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4176838Z ^[[36;1m      "ci-sssd": "false"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4177129Z ^[[36;1m    }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4177371Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4177615Z ^[[36;1m  "build": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4177894Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4178560Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4178842Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4179088Z ^[[36;1m  "unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4179374Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4179673Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4179936Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4180204Z ^[[36;1m  "base-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4180518Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4180831Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4181107Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4181376Z ^[[36;1m  "adapter-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4181708Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4181996Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4182256Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4182596Z ^[[36;1m  "adapter-integration-tests-strict-cookies": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4183005Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4183305Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4183587Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4183845Z ^[[36;1m  "quarkus-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4184163Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4184454Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4184716Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4184980Z ^[[36;1m  "quarkus-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4185299Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4185589Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4185857Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4186116Z ^[[36;1m  "jdk-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4186425Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4186707Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4186969Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4187226Z ^[[36;1m  "store-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4187545Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4187828Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4188088Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4188364Z ^[[36;1m  "volatile-sessions-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4188884Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4189170Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4189497Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4189784Z ^[[36;1m  "store-model-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4190080Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4190363Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4190625Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4190900Z ^[[36;1m  "clustering-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4191241Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4191531Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4191800Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4192053Z ^[[36;1m  "fips-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4192349Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4192638Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4192900Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4193156Z ^[[36;1m  "fips-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4193480Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4193777Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4194040Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4194300Z ^[[36;1m  "forms-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4194611Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4194890Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4195154Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4195426Z ^[[36;1m  "webauthn-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4195751Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4196190Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4196455Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4196705Z ^[[36;1m  "sssd-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4196999Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4197285Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4197544Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4197792Z ^[[36;1m  "migration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4198081Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4198375Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4198902Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4199164Z ^[[36;1m  "migration-tests-cs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4199463Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4199747Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4200010Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4200280Z ^[[36;1m  "external-infinispan-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4200613Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4200898Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4201165Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4201414Z ^[[36;1m  "test-framework": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4201704Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4201988Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4202251Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4202517Z ^[[36;1m  "base-new-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4202833Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4203122Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4203380Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4203672Z ^[[36;1m  "mixed-cluster-compatibility-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4204020Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4204304Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4204563Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4204833Z ^[[36;1m  "authzen-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4205154Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4205438Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4205700Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4205948Z ^[[36;1m  "admin-v2-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4206285Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4206570Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4206832Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4207101Z ^[[36;1m  "testsuite-deprecation-check": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4207430Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4207714Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4207978Z ^[[36;1m  }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4208212Z ^[[36;1m}'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4208553Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4208810Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4209213Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4209614Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4209944Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4210425Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4210797Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4211089Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4211399Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4211647Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4211886Z ^[[36;1mdone^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4246904Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4247328Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4247683Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4248131Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4248703Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4249112Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4249418Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4249725Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4324978Z Job status:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4357571Z  - conditional: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4357930Z  - build: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4358230Z  - unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4358792Z  - base-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4359163Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4359825Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4360236Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4360577Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4360926Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4361260Z  - store-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4361610Z  - volatile-sessions-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4361948Z  - store-model-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4362292Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4362782Z  - fips-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4363108Z  - fips-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4363446Z  - forms-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4363793Z  - webauthn-integration-tests: failure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4364132Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4364511Z  - migration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4364975Z  - migration-tests-cs: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4365478Z  - external-infinispan-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4366009Z  - test-framework: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4366505Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4367079Z  - mixed-cluster-compatibility-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4367662Z  - authzen-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4368187Z  - admin-v2-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4368866Z  - testsuite-deprecation-check: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4396337Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4396534Z Status check not okay!
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:14.4410209Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.1074069Z Post job cleanup.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.1926270Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.1995109Z git version 2.54.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2031371Z Temporarily overriding HOME='/home/runner/work/_temp/99fc04b1-7c5c-47f2-af17-2f64053209ad' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2033168Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2037590Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2074758Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2110424Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2359250Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2386820Z http.https://github.com/.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2397879Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2430381Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-01T14:10:15.2810661Z Cleaning up orphan processes
