@@ -23,6 +23,8 @@ public class GitHubData {
     public List<GitHubIssue> privateIssues;
     @JsonProperty
     public List<String> branches;
+    @JsonProperty
+    public List<CveStat> cveStats;
 
     @JsonIgnore
     public List<String> keycloakDevelopers;
@@ -93,5 +95,13 @@ public class GitHubData {
 
     public void setPrivateIssues(List<GitHubIssue> privateIssues) {
         this.privateIssues = privateIssues;
+    }
+
+    public List<CveStat> getCveStats() {
+        return cveStats;
+    }
+
+    public void setCveStats(List<CveStat> cveStat) {
+        this.cveStats = cveStat;
     }
 }
