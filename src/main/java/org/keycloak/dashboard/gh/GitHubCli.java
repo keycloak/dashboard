@@ -2,12 +2,11 @@ package org.keycloak.dashboard.gh;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -61,11 +60,18 @@ public class GitHubCli {
         // gh api --paginate returns multiple json documents
         JsonParser parser = jsonFactory.createParser(output);
         parser.setCodec(objectMapper);
-        parser.nextToken();
         List<T> list = new LinkedList<>();
-        while (parser.hasCurrentToken()) {
-            list.add(parser.readValueAs(clazz));
-            parser.nextToken();
+
+        JsonToken jsonToken = parser.nextToken();
+        if (jsonToken == JsonToken.START_ARRAY) {
+            while (parser.nextToken() != JsonToken.END_ARRAY) {
+                list.add(parser.readValueAs(clazz));
+            }
+        } else {
+            while (parser.hasCurrentToken()) {
+                list.add(parser.readValueAs(clazz));
+                parser.nextToken();
+            }
         }
         return list;
     }

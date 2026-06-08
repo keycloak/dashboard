@@ -4,25 +4,19 @@ import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.FailedJobsLoader;
 import org.keycloak.dashboard.RetriedPrsLoader;
 import org.keycloak.dashboard.WorkflowStatusLoader;
+import org.keycloak.dashboard.rep.CveStat;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.util.DateUtil;
-import org.kohsuke.github.GHBranch;
-import org.kohsuke.github.GHLabel;
-import org.kohsuke.github.GHPerson;
-import org.kohsuke.github.GHRepository;
-import org.kohsuke.github.GitHub;
-import org.kohsuke.github.GitHubBuilder;
+import org.kohsuke.github.*;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class GitHubLoader {
 
+    private final GitHubCli ghCli;
     private GitHub gitHub;
 
     private GitHubIssuesLoader issuesLoader;
@@ -35,7 +29,7 @@ public class GitHubLoader {
 
     public GitHubLoader() throws IOException {
         gitHub = GitHubBuilder.fromEnvironment().withJwtToken(TokenUtil.token()).build();
-        GitHubCli ghCli = new GitHubCli();
+        ghCli = new GitHubCli();
         issuesLoader = new GitHubIssuesLoader(gitHub);
         workflowRuntimeLoader = new WorkflowRuntimeLoader();
         failedJobsLoader = new FailedJobsLoader(gitHub, ghCli);
@@ -58,6 +52,8 @@ public class GitHubLoader {
         data.setBranches(listBranches());
 
         data.setUpdatedDate(new Date());
+
+        data.setCveStats(loadCveStats());
 
         System.out.println("Created data.json");
 
@@ -117,6 +113,10 @@ public class GitHubLoader {
             data.setBranches(listBranches());
         }
 
+        if (update == null || update.contains("cve-stats")) {
+            data.setCveStats(loadCveStats());
+        }
+
         if (update == null) {
             data.setUpdatedDate(new Date());
         }
@@ -165,6 +165,48 @@ public class GitHubLoader {
                 .filter(issue -> issue.getLabels().stream().anyMatch(s -> s.startsWith("team/")))
                 .map(GitHubLoader::sanitize).sorted().toList();
     }
+
+    public List<CveStat> loadCveStats() throws IOException, InterruptedException {
+        System.out.print("Loading cve stats: ");
+
+        List<String> refs = new LinkedList<>();
+        refs.add("refs/heads/main");
+
+        gitHub.getRepository("keycloak/keycloak").getBranches().keySet().stream().filter(s -> s.startsWith("release/")).forEach(b -> refs.add("refs/heads/" + b));
+        System.out.print(".");
+
+        PagedIterator<GHRelease> releaseIterator = gitHub.getRepository("keycloak/keycloak").listReleases().iterator();
+        String release = releaseIterator.next().getName();
+        if (release.equals("nightly")) {
+            release = releaseIterator.next().getName();
+        }
+        refs.add("refs/tags/" + release);
+        System.out.print(".");
+
+        List<CveStat> cveStats = new LinkedList<>();
+
+        for (String ref : refs) {
+            CveStat cveStat = new CveStat(ref);
+
+            List<GhCodeScanning> ghCodeScannings = ghCli.apiGet(GhCodeScanning.class, "repos/keycloak/keycloak/code-scanning/alerts", "-F", "tool_name=Trivy", "-F", "ref=" + ref, "-F", "state=open", "--paginate");
+
+            List<String> scanningIds = ghCodeScannings.stream().map(s -> s.rule().id()).distinct().toList();
+
+            for (String id : scanningIds) {
+                GhCodeScanning ghCodeScanning = ghCodeScannings.stream().filter(s -> s.rule().id().equals(id)).findFirst().get();
+                cveStat.increase(ghCodeScanning.rule().security_severity_level());
+            }
+
+            cveStats.add(cveStat);
+
+            System.out.print(".");
+        }
+
+        System.out.println();
+
+        return cveStats;
+    }
+
 
     private List<GitHubIssue> loadPRs() throws IOException {
         List<String> queries = new LinkedList<>();

@@ -67,6 +67,7 @@ public class Dashboard {
         attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());
         attributes.put("configContents", Config.getConfigContents());
         attributes.put("stars", new Stars());
+        attributes.put("cveStats", data.getCveStats().stream().map(CveStatsBean::new).toList());
 
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);
