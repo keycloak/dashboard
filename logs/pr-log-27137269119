@@ -1,0 +1,885 @@
+Base IT (6)	UNKNOWN STEP	﻿2026-06-08T12:27:08.2343602Z Current runner version: '2.334.0'
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2369396Z ##[group]Runner Image Provisioner
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2370337Z Hosted Compute Agent
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2371002Z Version: 20260520.533
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2371648Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2372456Z Build Date: 2026-05-20T17:44:04Z
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2373225Z Worker ID: {a0a11ecd-dd9e-4ae2-a0e9-765a6c85cb89}
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2373994Z Azure Region: northcentralus
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2374737Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2376233Z ##[group]Operating System
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2376982Z Ubuntu
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2377516Z 24.04.4
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2378115Z LTS
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2378690Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2379454Z ##[group]Runner Image
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2380129Z Image: ubuntu-24.04
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2380716Z Version: 20260525.161.1
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2382008Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2383659Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2384775Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2385898Z ##[group]GITHUB_TOKEN Permissions
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2387861Z Contents: read
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2388521Z Metadata: read
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2389610Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2391866Z Secret source: None
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2392692Z Prepare workflow directory
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2829926Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.2868468Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.6168464Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.8672779Z Complete job name: Base IT (6)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9398433Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9399773Z with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9400235Z   repository: keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9404376Z   token: ***
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9404829Z   ssh-strict: true
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9405288Z   ssh-user: git
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9405845Z   persist-credentials: true
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9406359Z   clean: true
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9406818Z   sparse-checkout-cone-mode: true
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9407351Z   fetch-depth: 1
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9407816Z   fetch-tags: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9408287Z   show-progress: true
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9408748Z   lfs: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9409558Z   submodules: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9410118Z   set-safe-directory: true
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9411027Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9411753Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9412484Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9413194Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9413844Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9414385Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:08.9414909Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0393902Z Syncing repository: keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0395868Z ##[group]Getting Git version info
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0396677Z Working directory is '/home/runner/work/keycloak/keycloak'
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0397786Z [command]/usr/bin/git version
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0470489Z git version 2.54.0
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0524304Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0538918Z Temporarily overriding HOME='/home/runner/work/_temp/acf0f785-d8aa-4871-8547-c45c3206bc45' before making global git config changes
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0541741Z Adding repository directory to the temporary git global config as a safe directory
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0545196Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0596009Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0600647Z ##[group]Initializing the repository
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0605110Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0703761Z hint: Using 'master' as the name for the initial branch. This default branch name
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0705153Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0706164Z hint: to use in all of your new repositories, which will suppress this warning,
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0706967Z hint: call:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0707396Z hint:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0707944Z hint: 	git config --global init.defaultBranch <name>
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0708890Z hint:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0710129Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0711433Z hint: 'development'. The just-created branch can be renamed via this command:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0712241Z hint:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0712687Z hint: 	git branch -m <name>
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0713223Z hint:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0713894Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0715087Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0721158Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0765963Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0767282Z ##[group]Disabling automatic garbage collection
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0770961Z [command]/usr/bin/git config --local gc.auto 0
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0801298Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0802679Z ##[group]Setting up auth
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0808427Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.0849667Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.1199393Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.1229726Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.1449676Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.1484054Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.1484914Z ##[group]Fetching the repository
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:09.1493278Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +238f7033f52bdbc90ecb2c79074cbd655d0b2606:refs/remotes/pull/49507/merge
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:10.6342590Z From https://github.com/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:10.6345353Z  * [new ref]         238f7033f52bdbc90ecb2c79074cbd655d0b2606 -> pull/49507/merge
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:10.6381843Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:10.6383703Z ##[group]Determining the checkout info
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:10.6385385Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:10.6389812Z [command]/usr/bin/git sparse-checkout disable
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:10.6433921Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:10.6462512Z ##[group]Checking out the ref
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:10.6466218Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/49507/merge
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5980848Z Note: switching to 'refs/remotes/pull/49507/merge'.
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5981555Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5982007Z You are in 'detached HEAD' state. You can look around, make experimental
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5982939Z changes and commit them, and you can discard any commits you make in this
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5983815Z state without impacting any branches by switching back to a branch.
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5984320Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5984694Z If you want to create a new branch to retain commits you create, you may
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5985618Z do so (now or later) by using -c with the switch command. Example:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5986084Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5986335Z   git switch -c <new-branch-name>
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5986662Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5986900Z Or undo this operation with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5987592Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5987788Z   git switch -
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5988069Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5988496Z Turn off this advice by setting config variable advice.detachedHead to false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5989319Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.5989990Z HEAD is now at 238f703 Merge ec441531b3fce738d94ac0cf809653235f9baf4f into 42f97462e602e55c841bc3cae570688f25fd01f2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.6020334Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.6070450Z [command]/usr/bin/git log -1 --format=%H
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.6094668Z 238f7033f52bdbc90ecb2c79074cbd655d0b2606
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.6384826Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.6385353Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:11.9287191Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2862702Z ##[group]Run ./.github/actions/integration-test-setup
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2863059Z with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2863261Z   jdk-dist: temurin
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2863480Z   jdk-version: 25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2863697Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2863984Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2864358Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2864656Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2864973Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2865219Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2865455Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2955189Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2997626Z ##[group]Run ./.github/actions/update-hosts
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2997944Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2998258Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2998636Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2998942Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.2999731Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3000001Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3000255Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3051569Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3052314Z ^[[36;1mprintf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3083466Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3083840Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3084140Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3084530Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3084880Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3085222Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3085500Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3085738Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3219819Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3220021Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3220995Z 127.0.0.1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3235671Z ::1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3294358Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.3294680Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:12.5697710Z Download action repository 'actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654' (SHA:be666c2fcd27ec809703dec50e508c2fdc7f6654)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0780272Z ##[group]Run ./.github/actions/java-setup
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0780584Z with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0780782Z   distribution: temurin
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0780998Z   java-version: 25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0781190Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0781475Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0781846Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0782145Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0782462Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0782864Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0783094Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0879313Z ##[group]Run actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0879702Z with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0879912Z   distribution: temurin
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0880293Z   java-version: 25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0880636Z   java-package: jdk
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0880851Z   check-latest: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0881060Z   server-id: github
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0881274Z   server-username: GITHUB_ACTOR
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0881761Z   server-password: GITHUB_TOKEN
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0882024Z   overwrite-settings: true
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0882258Z   job-status: success
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0884927Z   token: ***
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0885116Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0885399Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0885767Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0886076Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0886405Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0886653Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.0886900Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2430619Z ##[group]Installed distributions
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2586309Z Resolved Java 25.0.3+9 from tool-cache
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2586882Z Setting Java 25.0.3+9 as the default
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2599506Z Creating toolchains.xml for JDK version 25 from temurin
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2680108Z Writing to /home/runner/.m2/toolchains.xml
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2699811Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2720144Z Java configuration:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2726297Z   Distribution: temurin
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2726757Z   Version: 25.0.3+9
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2727327Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2728118Z 
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2728717Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2741842Z Creating settings.xml with server-id: github
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2742512Z Writing to /home/runner/.m2/settings.xml
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2862102Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.2862446Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.4620975Z Download action repository 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae' (SHA:27d5ce7f107fe9357f9df03efb73ab90386fccae)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6345750Z ##[group]Run ./.github/actions/maven-cache
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6346055Z with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6346275Z   create-cache-if-it-doesnt-exist: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6346545Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6346830Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6347210Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6347518Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6347842Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6348086Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6348424Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6348906Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6349511Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6375324Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6375760Z ^[[36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6405636Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6405989Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6406290Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6406681Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6407003Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6407330Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6407576Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6407923Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6408399Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6408777Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6541791Z ##[group]Run actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6542321Z with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6542583Z   path: ~/.m2/repository/*/*
+Base IT (6)	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+Base IT (6)	UNKNOWN STEP	
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6542925Z   key: mvn-Linux-mvn-2026-23
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6543177Z   restore-keys: mvn--mvn-2026-23
+Base IT (6)	UNKNOWN STEP	
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6543438Z   enableCrossOsArchive: true
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6543682Z   fail-on-cache-miss: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6543912Z   lookup-only: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6544112Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6544538Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6544914Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6545225Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6545548Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6545796Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6546134Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6546607Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.6546979Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:13.9243984Z Cache hit for: mvn-Linux-mvn-2026-23
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:15.0721068Z Received 121634816 of 716540382 (17.0%), 115.9 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:16.0670725Z Received 268435456 of 716540382 (37.5%), 127.9 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:17.0673469Z Received 482344960 of 716540382 (67.3%), 153.2 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:18.0881335Z Received 671088640 of 716540382 (93.7%), 159.2 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:18.3354855Z Received 716540382 of 716540382 (100.0%), 160.0 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:18.3357512Z Cache Size: ~683 MB (716540382 B)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:18.3471758Z [command]/usr/bin/tar -xf /home/runner/work/_temp/cb8f43e4-e8a6-43d9-929b-c08b3a032aca/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.4128293Z Cache restored successfully
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.4519693Z Cache restored from key: mvn-Linux-mvn-2026-23
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.4698139Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.4698485Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6352869Z ##[group]Run ./.github/actions/node-cache
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6353182Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6353478Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6353856Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6354170Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6354503Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6354754Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6355114Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6355597Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6355970Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6379409Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6380208Z ^[[36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6380951Z ^[[36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6406945Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6407302Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6407603Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6407981Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6408299Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6408647Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6408899Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6409408Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6409895Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6410271Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6601234Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6601765Z with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6602137Z   path: ~/.m2/repository/com/github/eirslett/node
+Base IT (6)	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+Base IT (6)	UNKNOWN STEP	
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6602646Z   key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6602979Z   enableCrossOsArchive: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6603231Z   fail-on-cache-miss: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6603470Z   lookup-only: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6603678Z   save-always: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6603873Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6604306Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6604684Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6605000Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6605321Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6605571Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6605913Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6606407Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.6606781Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:20.9106607Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:22.0466797Z Received 104857600 of 182409230 (57.5%), 99.8 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:22.4394103Z Received 182409230 of 182409230 (100.0%), 124.7 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:22.4396902Z Cache Size: ~174 MB (182409230 B)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:22.4514544Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c29d6965-2aa4-4ff6-9105-c103a219f251/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:22.9090052Z Cache restored successfully
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:22.9252375Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:22.9391255Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:22.9391582Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1009304Z ##[group]Run ./.github/actions/pnpm-store-cache
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1009649Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1009947Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1010331Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1010643Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1010973Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1011234Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1011584Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1012085Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1012477Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1029718Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1030201Z ^[[36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1056026Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1056387Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1056690Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1057094Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1057412Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1057745Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1058019Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1058379Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1058898Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1059469Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1161836Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1162204Z with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1162543Z   path: ~/.local/share/pnpm/store
+Base IT (6)	UNKNOWN STEP	~/AppData/Local/pnpm/store
+Base IT (6)	UNKNOWN STEP	~/Library/pnpm/store
+Base IT (6)	UNKNOWN STEP	
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1162985Z   key: Linux-pnpm-store-2026-23
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1163264Z   enableCrossOsArchive: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1163530Z   fail-on-cache-miss: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1163779Z   lookup-only: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1164169Z   save-always: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1164378Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1164674Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1165058Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1165382Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1165713Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1165974Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1166334Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1166971Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.1167362Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:23.3974128Z Cache hit for: Linux-pnpm-store-2026-23
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:24.3155660Z Received 113431125 of 113431125 (100.0%), 132.7 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:24.3156552Z Cache Size: ~108 MB (113431125 B)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:24.3189568Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3984c113-8712-4a8a-b5ce-819e2a1fe4b6/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8549713Z Cache restored successfully
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8676423Z Cache restored from key: Linux-pnpm-store-2026-23
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8817421Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8817837Z with:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8818053Z   name: m2-keycloak.tzts
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8818304Z   merge-multiple: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8818552Z   repository: keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8818819Z   run-id: 27137269119
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8819494Z   skip-decompress: false
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8819775Z   digest-mismatch: error
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8820007Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8820311Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8820706Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8821029Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8821374Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8821651Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8822023Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8822519Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:26.8822916Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:27.0162591Z Downloading single artifact
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:27.1918868Z Preparing to download the following artifacts:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:27.1920317Z - m2-keycloak.tzts (ID: 7480113447, Size: 436436966, Expected Digest: sha256:1ed5a47fdc55309bfd340c57d161306a6a1ad71caca767f379330a5256f8545c)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:27.4345778Z Redirecting to blob download url: https://productionresultssa6.blob.core.windows.net/actions-results/9da0d2db-c30f-43f7-8628-b9a88822cce2/workflow-job-run-53ed2156-34c8-503e-94f3-5e658b7801b9/artifacts/edc4cfb0355d37e325eaae6eb235756b36f79720f66ece617babf28220e9d051.zip
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:27.4347414Z Starting download of artifact to: /home/runner/work/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:27.6032102Z (node:2387) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:27.6033801Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7696376Z SHA256 digest of downloaded artifact is 1ed5a47fdc55309bfd340c57d161306a6a1ad71caca767f379330a5256f8545c
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7710651Z Artifact download completed successfully.
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7711402Z Total of 1 artifact(s) downloaded
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7712340Z Download artifact has finished successfully
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7860804Z ##[group]Run if [ "$RUNNER_OS" == "Windows" ]; then
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7861223Z ^[[36;1mif [ "$RUNNER_OS" == "Windows" ]; then^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7861688Z ^[[36;1m  # zstd binary might be missing in older versions, install only when necessary^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7862184Z ^[[36;1m  which zstd > /dev/null || choco install zstandard^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7862690Z ^[[36;1mfi^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7863021Z ^[[36;1mtar -C ~/ --use-compress-program="zstd -d" -xf m2-keycloak.tzts^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7890532Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7890941Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7891285Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7891704Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7892045Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7892584Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7892874Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7893248Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7893763Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:33.7894167Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4666992Z ##[group]Run TESTS=`testsuite/integration-arquillian/tests/base/testsuites/base-suite.sh 6`
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4668218Z ^[[36;1mTESTS=`testsuite/integration-arquillian/tests/base/testsuites/base-suite.sh 6`^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4669031Z ^[[36;1mecho "Tests: $TESTS"^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4671222Z ^[[36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus -Dauth.server.feature=http-optimized-serializers -Dtest=$TESTS -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh^[[0m
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4707025Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4707609Z env:
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4708133Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4708817Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4709789Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4710396Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4710920Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4711556Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4712438Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.4713115Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:34.6946330Z Tests: org.keycloak.testsuite.oauth.**,org.keycloak.testsuite.oidc.**,org.keycloak.testsuite.policy.**,org.keycloak.testsuite.saml.**,org.keycloak.testsuite.script.**,org.keycloak.testsuite.sessionlimits.**,org.keycloak.testsuite.theme.**,org.keycloak.testsuite.validation.**
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.1302764Z -- wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.1354835Z ##[error]Process completed with exit code 1.
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.1443832Z Post job cleanup.
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.1503694Z Post job cleanup.
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.2913878Z Post job cleanup.
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.3901657Z [command]/usr/bin/git version
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.3942703Z git version 2.54.0
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4020260Z Temporarily overriding HOME='/home/runner/work/_temp/eb2efa08-c7d5-49c9-8335-84762a907bb9' before making global git config changes
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4021766Z Adding repository directory to the temporary git global config as a safe directory
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4027190Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4071733Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4110906Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4381325Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4417666Z http.https://github.com/.extraheader
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4432003Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4471957Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Base IT (6)	UNKNOWN STEP	2026-06-08T12:27:38.4879956Z Cleaning up orphan processes
+Status Check - Keycloak CI	UNKNOWN STEP	﻿2026-06-08T13:24:20.2708126Z Current runner version: '2.334.0'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2732066Z ##[group]Runner Image Provisioner
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2733085Z Hosted Compute Agent
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2733740Z Version: 20260520.533
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2734428Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2735214Z Build Date: 2026-05-20T17:44:04Z
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2735935Z Worker ID: {dc7e989c-5579-4281-b4cb-9a92d0efc35d}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2736702Z Azure Region: westus
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2737296Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2738690Z ##[group]Operating System
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2739830Z Ubuntu
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2740400Z 24.04.4
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2740975Z LTS
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2741514Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2742078Z ##[group]Runner Image
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2742759Z Image: ubuntu-24.04
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2743348Z Version: 20260525.161.1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2744646Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2746195Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2747299Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2748444Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2750573Z Contents: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2751212Z Metadata: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2751769Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2754008Z Secret source: None
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.2754771Z Prepare workflow directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.3172537Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.3218298Z Getting action download info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:20.8009068Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0105621Z Complete job name: Status Check - Keycloak CI
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0870985Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0872163Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0872678Z   repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0877648Z   token: ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0878148Z   ssh-strict: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0878657Z   ssh-user: git
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0879167Z   persist-credentials: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0879963Z   clean: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0880469Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0881057Z   fetch-depth: 1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0881539Z   fetch-tags: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0882051Z   show-progress: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0882558Z   lfs: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0883033Z   submodules: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0883541Z   set-safe-directory: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0884340Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0885006Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0885808Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0886530Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0887246Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0887843Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.0888515Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.1856793Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.1858732Z ##[group]Getting Git version info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.1859771Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.1860966Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.1939736Z git version 2.54.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.1994599Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2011660Z Temporarily overriding HOME='/home/runner/work/_temp/ff56db03-b387-43a1-8a41-441dc404bea6' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2014472Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2017601Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2071655Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2075955Z ##[group]Initializing the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2080428Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2185697Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2187656Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2189232Z hint: to use in all of your new repositories, which will suppress this warning,
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2190390Z hint: call:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2190970Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2192038Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2193271Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2194549Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2196603Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2198231Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2199158Z hint: 	git branch -m <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2200537Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2201858Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2203920Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2207439Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2251391Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2252903Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2255553Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2285709Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2287277Z ##[group]Setting up auth
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2293241Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2326806Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2683441Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2715074Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2931802Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2967100Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2968017Z ##[group]Fetching the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:21.2976343Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +238f7033f52bdbc90ecb2c79074cbd655d0b2606:refs/remotes/pull/49507/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:25.6581110Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:25.6582608Z  * [new ref]         238f7033f52bdbc90ecb2c79074cbd655d0b2606 -> pull/49507/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:25.6617628Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:25.6618404Z ##[group]Determining the checkout info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:25.6620675Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:25.6626210Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:25.6670030Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:25.6698196Z ##[group]Checking out the ref
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:25.6703112Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/49507/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6206098Z Note: switching to 'refs/remotes/pull/49507/merge'.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6207096Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6210001Z You are in 'detached HEAD' state. You can look around, make experimental
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6211243Z changes and commit them, and you can discard any commits you make in this
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6212411Z state without impacting any branches by switching back to a branch.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6213019Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6213413Z If you want to create a new branch to retain commits you create, you may
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6214535Z do so (now or later) by using -c with the switch command. Example:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6215118Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6215363Z   git switch -c <new-branch-name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6215733Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6215972Z Or undo this operation with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6216804Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6217020Z   git switch -
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6217329Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6217763Z Turn off this advice by setting config variable advice.detachedHead to false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6218445Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6219103Z HEAD is now at 238f703 Merge ec441531b3fce738d94ac0cf809653235f9baf4f into 42f97462e602e55c841bc3cae570688f25fd01f2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6246545Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6292019Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6316510Z 238f7033f52bdbc90ecb2c79074cbd655d0b2606
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6578330Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6658899Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6659222Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6666189Z   jobs: {
+Status Check - Keycloak CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-additional-dbs": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-quarkus": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-admin-v2": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-store": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-sssd": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-webauthn": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-aurora": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-azure": "false"
+Status Check - Keycloak CI	UNKNOWN STEP	    }
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jdk-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-model-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "clustering-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "forms-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "sssd-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests-cs": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "external-infinispan-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "test-framework": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-new-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "mixed-cluster-compatibility-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "authzen-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "admin-v2-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "testsuite-deprecation-check": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "cacheless-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  }
+Status Check - Keycloak CI	UNKNOWN STEP	}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6673252Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6673553Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6673937Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6674289Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6674623Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6674880Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6675126Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6788923Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6789814Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6790052Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6790325Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6790602Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6790872Z ^[[36;1m      "ci-additional-dbs": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6791176Z ^[[36;1m      "ci": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6791422Z ^[[36;1m      "ci-quarkus": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6791905Z ^[[36;1m      "ci-admin-v2": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6792182Z ^[[36;1m      "ci-store": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6792446Z ^[[36;1m      "ci-sssd": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6792705Z ^[[36;1m      "ci-webauthn": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6792969Z ^[[36;1m      "ci-aurora": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6793221Z ^[[36;1m      "ci-azure": "false"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6793459Z ^[[36;1m    }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6793654Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6793850Z ^[[36;1m  "build": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6794274Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6794546Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6794771Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6794968Z ^[[36;1m  "unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6795202Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6795444Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6795663Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6795879Z ^[[36;1m  "base-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6796174Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6796422Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6796641Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6796863Z ^[[36;1m  "adapter-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6864966Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6865345Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6865616Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6865985Z ^[[36;1m  "adapter-integration-tests-strict-cookies": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6866408Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6866684Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6866912Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6867118Z ^[[36;1m  "quarkus-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6867386Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6867642Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6867865Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6868114Z ^[[36;1m  "quarkus-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6868445Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6868691Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6868921Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6869128Z ^[[36;1m  "jdk-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6869556Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6869806Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6870021Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6870231Z ^[[36;1m  "store-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6870504Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6870736Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6870952Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6871160Z ^[[36;1m  "volatile-sessions-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6871428Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6871669Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6871894Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6872094Z ^[[36;1m  "store-model-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6872338Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6872580Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6872818Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6873055Z ^[[36;1m  "clustering-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6873353Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6873607Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6873830Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6874041Z ^[[36;1m  "fips-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6874286Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6874540Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6874768Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6874991Z ^[[36;1m  "fips-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6875269Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6875518Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6875739Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6875957Z ^[[36;1m  "forms-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6876232Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6876466Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6876679Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6876919Z ^[[36;1m  "webauthn-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6877446Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6877702Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6877920Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6878114Z ^[[36;1m  "sssd-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6878367Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6878608Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6878821Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6879014Z ^[[36;1m  "migration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6879480Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6879990Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6880351Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6880573Z ^[[36;1m  "migration-tests-cs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6880851Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6881108Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6881337Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6881566Z ^[[36;1m  "external-infinispan-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6881861Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6882140Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6882363Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6882568Z ^[[36;1m  "test-framework": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6882813Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6883060Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6883283Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6883510Z ^[[36;1m  "base-new-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6883797Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6884042Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6884271Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6884518Z ^[[36;1m  "mixed-cluster-compatibility-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6884824Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6885078Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6885303Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6885523Z ^[[36;1m  "authzen-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6885810Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6886051Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6886278Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6886477Z ^[[36;1m  "admin-v2-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6886720Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6886965Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6887186Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6887412Z ^[[36;1m  "testsuite-deprecation-check": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6887696Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6887936Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6888154Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6888364Z ^[[36;1m  "cacheless-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6888610Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6888851Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6889066Z ^[[36;1m  }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6889408Z ^[[36;1m}'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6889614Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6889811Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6890159Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6890533Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6890825Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6891255Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6891570Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6891806Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6892071Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6892274Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6892461Z ^[[36;1mdone^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6924879Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6925261Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6925573Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6925961Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6926293Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6926628Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6926888Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.6927131Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7000178Z Job status:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7028630Z  - conditional: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7028939Z  - build: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7029182Z  - unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7029749Z  - base-integration-tests: failure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7030063Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7030414Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7030759Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7031029Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7031532Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7031821Z  - store-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7032106Z  - volatile-sessions-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7032393Z  - store-model-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7032662Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7032954Z  - fips-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7033206Z  - fips-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7033476Z  - forms-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7033762Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7034036Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7034278Z  - migration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7034520Z  - migration-tests-cs: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7034787Z  - external-infinispan-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7035058Z  - test-framework: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7035309Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7035866Z  - mixed-cluster-compatibility-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7036435Z  - authzen-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7036928Z  - admin-v2-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7037388Z  - testsuite-deprecation-check: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7037868Z  - cacheless-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7065173Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7065357Z Status check not okay!
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7078630Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.7220434Z Post job cleanup.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8026790Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8063168Z git version 2.54.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8134488Z Temporarily overriding HOME='/home/runner/work/_temp/e97dd035-ba0e-4d65-ae73-def318e3b1a1' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8136536Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8141324Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8178090Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8213073Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8450592Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8474985Z http.https://github.com/.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8485264Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8517848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-06-08T13:24:26.8886065Z Cleaning up orphan processes
