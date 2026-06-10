@@ -1,0 +1,598 @@
+Build distribution	UNKNOWN STEP	﻿2026-06-09T07:17:42.6882433Z Current runner version: '2.334.0'
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6916556Z ##[group]Runner Image Provisioner
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6918010Z Hosted Compute Agent
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6919099Z Version: 20260520.533
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6920207Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6921795Z Build Date: 2026-05-20T17:44:04Z
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6923157Z Worker ID: {9e9180e5-c972-4e77-b372-fbc9e58022ce}
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6924494Z Azure Region: northcentralus
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6925571Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6928253Z ##[group]Operating System
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6929691Z Ubuntu
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6930687Z 24.04.4
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6931616Z LTS
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6932560Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6933601Z ##[group]Runner Image
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6934637Z Image: ubuntu-24.04
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6935650Z Version: 20260525.161.1
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6938105Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6940937Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6942861Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6944830Z ##[group]GITHUB_TOKEN Permissions
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6948201Z Contents: read
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6949247Z Metadata: read
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6950445Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6953446Z Secret source: None
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.6954749Z Prepare workflow directory
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.7447631Z Prepare all required actions
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:42.7501403Z Getting action download info
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.1392694Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.3803163Z Complete job name: Build distribution
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4508106Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4509177Z with:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4509650Z   repository: keycloak/keycloak
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4514254Z   token: ***
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4514701Z   ssh-strict: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4515166Z   ssh-user: git
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4515628Z   persist-credentials: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4516130Z   clean: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4516814Z   sparse-checkout-cone-mode: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4517365Z   fetch-depth: 1
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4517821Z   fetch-tags: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4518281Z   show-progress: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4518753Z   lfs: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4519179Z   submodules: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4519650Z   set-safe-directory: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4520394Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4521002Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4521732Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4522284Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4522808Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.4523279Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5526553Z Syncing repository: keycloak/keycloak
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5528617Z ##[group]Getting Git version info
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5529405Z Working directory is '/home/runner/work/keycloak/keycloak'
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5530471Z [command]/usr/bin/git version
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5641390Z git version 2.54.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5662537Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5677365Z Temporarily overriding HOME='/home/runner/work/_temp/6ae5de33-a445-49c5-b615-fe7c69adba45' before making global git config changes
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5678890Z Adding repository directory to the temporary git global config as a safe directory
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5682800Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5737233Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5741744Z ##[group]Initializing the repository
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5746998Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5879538Z hint: Using 'master' as the name for the initial branch. This default branch name
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5881232Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5882413Z hint: to use in all of your new repositories, which will suppress this warning,
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5883357Z hint: call:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5884259Z hint:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5885223Z hint: 	git config --global init.defaultBranch <name>
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5885964Z hint:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5886890Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5888507Z hint: 'development'. The just-created branch can be renamed via this command:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5889782Z hint:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5890478Z hint: 	git branch -m <name>
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5891212Z hint:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5892422Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5894200Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5898910Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5942305Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5943131Z ##[group]Disabling automatic garbage collection
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5945562Z [command]/usr/bin/git config --local gc.auto 0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5973275Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5974465Z ##[group]Setting up auth
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.5980414Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.6015342Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.6376084Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.6410019Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.6638331Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.6676181Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.6677341Z ##[group]Fetching the repository
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:43.6685582Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +885a47ee66cf4017163e9721a28a2708d3acf69a:refs/remotes/pull/48787/merge
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:45.4130413Z From https://github.com/keycloak/keycloak
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:45.4132510Z  * [new ref]         885a47ee66cf4017163e9721a28a2708d3acf69a -> pull/48787/merge
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:45.4168719Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:45.4169623Z ##[group]Determining the checkout info
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:45.4171292Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:45.4176488Z [command]/usr/bin/git sparse-checkout disable
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:45.4220499Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:45.4246853Z ##[group]Checking out the ref
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:45.4250487Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/48787/merge
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3839364Z Note: switching to 'refs/remotes/pull/48787/merge'.
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3840317Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3840976Z You are in 'detached HEAD' state. You can look around, make experimental
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3842460Z changes and commit them, and you can discard any commits you make in this
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3843954Z state without impacting any branches by switching back to a branch.
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3844807Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3845418Z If you want to create a new branch to retain commits you create, you may
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3847023Z do so (now or later) by using -c with the switch command. Example:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3847857Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3848300Z   git switch -c <new-branch-name>
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3848908Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3849283Z Or undo this operation with:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3849836Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3850152Z   git switch -
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3850888Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3851673Z Turn off this advice by setting config variable advice.detachedHead to false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3852740Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3853955Z HEAD is now at 885a47e Merge a4559d745b71f5abdff8c8c41663123713ff16e0 into 7dd3fc87dfe7c134c61a62e81d79785da102e99b
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3874418Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3919322Z [command]/usr/bin/git log -1 --format=%H
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.3951066Z 885a47ee66cf4017163e9721a28a2708d3acf69a
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.4416779Z Prepare all required actions
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.4418334Z Getting action download info
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.6199622Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7220615Z ##[group]Run ./.github/actions/build-keycloak
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7221048Z with:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7221324Z   upload-m2-repo: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7221627Z   upload-dist: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7221936Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7222335Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7222806Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7223131Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7223456Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7223746Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7312172Z Prepare all required actions
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.7312598Z Getting action download info
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:46.9340886Z Download action repository 'actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654' (SHA:be666c2fcd27ec809703dec50e508c2fdc7f6654)
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3480216Z ##[group]Run ./.github/actions/java-setup
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3480575Z with:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3480822Z   distribution: temurin
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3481102Z   java-version: 25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3481349Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3481696Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3482114Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3482409Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3482718Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3482982Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3592104Z ##[group]Run actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3592545Z with:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3592787Z   distribution: temurin
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3593057Z   java-version: 25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3593314Z   java-package: jdk
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3593582Z   check-latest: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3593861Z   server-id: github
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3594126Z   server-username: GITHUB_ACTOR
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3594438Z   server-password: GITHUB_TOKEN
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3594743Z   overwrite-settings: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3595026Z   job-status: success
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3598485Z   token: ***
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3598728Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3599066Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3599488Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3599780Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3600069Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.3600338Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5151511Z ##[group]Installed distributions
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5214042Z Resolved Java 25.0.3+9 from tool-cache
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5214707Z Setting Java 25.0.3+9 as the default
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5225415Z Creating toolchains.xml for JDK version 25 from temurin
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5304282Z Writing to /home/runner/.m2/toolchains.xml
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5304869Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5305520Z Java configuration:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5306083Z   Distribution: temurin
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5306855Z   Version: 25.0.3+9
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5307518Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5308069Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5308657Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5323908Z Creating settings.xml with server-id: github
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5324659Z Writing to /home/runner/.m2/settings.xml
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5500459Z Prepare all required actions
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.5500853Z Getting action download info
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.7112336Z Download action repository 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae' (SHA:27d5ce7f107fe9357f9df03efb73ab90386fccae)
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8288013Z ##[group]Run ./.github/actions/maven-cache
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8288393Z with:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8288659Z   create-cache-if-it-doesnt-exist: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8288991Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8289342Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8289976Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8290285Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8290576Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8290957Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8291508Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8291940Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8365619Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8366178Z ^[[36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8399098Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8399511Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8399913Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8400330Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8400615Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8400901Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8401303Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8401842Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8402260Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8566903Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8567341Z with:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8567661Z   path: ~/.m2/repository/*/*
+Build distribution	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+Build distribution	UNKNOWN STEP	
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8568056Z   key: mvn-Linux-mvn-2026-23
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8568362Z   restore-keys: mvn--mvn-2026-23
+Build distribution	UNKNOWN STEP	
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8568703Z   enableCrossOsArchive: true
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8569003Z   fail-on-cache-miss: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8569316Z   lookup-only: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8569589Z   save-always: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8569835Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8570173Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8570598Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8570885Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8571191Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8571576Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8572112Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:47.8572548Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:48.1031396Z Cache hit for: mvn-Linux-mvn-2026-23
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:49.2692847Z Received 117440512 of 716540382 (16.4%), 111.8 MBs/sec
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:50.2757678Z Received 310378496 of 716540382 (43.3%), 147.4 MBs/sec
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:51.3037679Z Received 536870912 of 716540382 (74.9%), 168.6 MBs/sec
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:52.2004350Z Received 716540382 of 716540382 (100.0%), 173.7 MBs/sec
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:52.2006904Z Cache Size: ~683 MB (716540382 B)
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:52.2127811Z [command]/usr/bin/tar -xf /home/runner/work/_temp/78df2391-54e2-4f06-b8fb-dba2dc80002b/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.3324867Z Cache restored successfully
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.3707915Z Cache restored from key: mvn-Linux-mvn-2026-23
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.3891828Z Prepare all required actions
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.3892155Z Getting action download info
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5470275Z ##[group]Run ./.github/actions/node-cache
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5470568Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5470864Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5471235Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5471480Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5471729Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5472233Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5472715Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5473091Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5500956Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5501926Z ^[[36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT^[[0m
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5502665Z ^[[36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT^[[0m
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5530867Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5531209Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5531508Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5531885Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5532152Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5532398Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5532728Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5533208Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5533604Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5705916Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5706578Z with:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5706977Z   path: ~/.m2/repository/com/github/eirslett/node
+Build distribution	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+Build distribution	UNKNOWN STEP	
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5707487Z   key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5707821Z   enableCrossOsArchive: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5708083Z   fail-on-cache-miss: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5708315Z   lookup-only: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5708521Z   save-always: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5708717Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5708997Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5709370Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5709602Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5709839Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5710156Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5710636Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.5711010Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:54.8460859Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:55.9786015Z Received 130023424 of 182409230 (71.3%), 124.0 MBs/sec
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:56.2937650Z Received 182409230 of 182409230 (100.0%), 132.3 MBs/sec
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:56.2941056Z Cache Size: ~174 MB (182409230 B)
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:56.3051397Z [command]/usr/bin/tar -xf /home/runner/work/_temp/6ca7f740-c434-4650-9c6c-37e2fb619207/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:56.7633994Z Cache restored successfully
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:56.7796243Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:56.7935770Z Prepare all required actions
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:56.7936105Z Getting action download info
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.0345715Z Download action repository 'google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5' (SHA:9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5)
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1727761Z ##[group]Run ./.github/actions/pnpm-store-cache
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1728068Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1728387Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1728787Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1729035Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1729284Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1729617Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1730108Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1730492Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1748209Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1748844Z ^[[36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1774223Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1774558Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1774851Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1775221Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1775617Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1775864Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1776443Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1776994Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1777369Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1872734Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1873087Z with:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1873433Z   path: ~/.local/share/pnpm/store
+Build distribution	UNKNOWN STEP	~/AppData/Local/pnpm/store
+Build distribution	UNKNOWN STEP	~/Library/pnpm/store
+Build distribution	UNKNOWN STEP	
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1873869Z   key: Linux-pnpm-store-2026-23
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1874134Z   enableCrossOsArchive: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1874394Z   fail-on-cache-miss: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1874631Z   lookup-only: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1874844Z   save-always: false
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1875052Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1875339Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1875714Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1875964Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1876457Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1876822Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1877320Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.1877701Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:57.4427746Z Cache hit for: Linux-pnpm-store-2026-23
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:58.5070246Z Received 113431125 of 113431125 (100.0%), 117.1 MBs/sec
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:58.5072946Z Cache Size: ~108 MB (113431125 B)
+Build distribution	UNKNOWN STEP	2026-06-09T07:17:58.5151474Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c64172b8-70a9-4429-8bb6-6ca1b62b42db/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0528174Z Cache restored successfully
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0661798Z Cache restored from key: Linux-pnpm-store-2026-23
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0791440Z ##[group]Run google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0791823Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0792134Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0792515Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0792785Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0793042Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0793392Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0793885Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.0794278Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.1082751Z [main] Launching background custodian service
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.1090611Z [main] Writing logs to /tmp/wireit_custodian_logs_ru1ZQf
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5145115Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5147448Z [custodian] Trying port 61420
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5148469Z [custodian] Listening on port 61420
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5149302Z 
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5149670Z [main] Custodian server ready
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5204728Z ##[group]Run # Ensure this plugin is built first to avoid warnings in the build
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5205299Z ^[[36;1m# Ensure this plugin is built first to avoid warnings in the build^[[0m
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5205896Z ^[[36;1m./mvnw install -Pdistribution -am -pl distribution/maven-plugins/licenses-processor^[[0m
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5206914Z ^[[36;1m# By using "dependency:resolve", it will download all dependencies used in later stages for running the tests^[[0m
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5207830Z ^[[36;1m./mvnw install dependency:resolve -V -e -DskipTests -DskipExamples -DexcludeGroupIds=org.keycloak -Dsilent=true -DcommitProtoLockChanges=true^[[0m
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5234381Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5234740Z env:
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5235052Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5235440Z   MINIKUBE_VERSION: v1.38.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5235700Z   KUBERNETES_VERSION: v1.35.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5235957Z   MINIKUBE_MEMORY: 4096
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5236888Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5237462Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5237877Z   WIREIT_CACHE: github
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5238146Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 61420
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.5238432Z ##[endgroup]
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.6665876Z wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.6692325Z ##[error]Process completed with exit code 1.
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.6814658Z Post job cleanup.
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.6878601Z Post job cleanup.
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.8238540Z Post job cleanup.
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9068897Z [command]/usr/bin/git version
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9137078Z git version 2.54.0
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9176145Z Temporarily overriding HOME='/home/runner/work/_temp/2a902f72-5ce1-4deb-b10a-dac42c3b0fb3' before making global git config changes
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9177852Z Adding repository directory to the temporary git global config as a safe directory
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9182113Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9219427Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9253234Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9490418Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9515653Z http.https://github.com/.extraheader
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9525857Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9556956Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:01.9915387Z Cleaning up orphan processes
+Build distribution	UNKNOWN STEP	2026-06-09T07:18:02.0267257Z Terminate orphan process: pid (2423) (node)
+Status Check - Keycloak Operator CI	UNKNOWN STEP	﻿2026-06-09T07:18:07.1876611Z Current runner version: '2.334.0'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1902220Z ##[group]Runner Image Provisioner
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1903144Z Hosted Compute Agent
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1903728Z Version: 20260520.533
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1904454Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1905196Z Build Date: 2026-05-20T17:44:04Z
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1905953Z Worker ID: {5fb13d55-62dd-4e68-bc30-f738988d5122}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1906722Z Azure Region: westus
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1907405Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1908897Z ##[group]Operating System
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1909585Z Ubuntu
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1910199Z 24.04.4
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1911200Z LTS
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1911753Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1912385Z ##[group]Runner Image
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1912996Z Image: ubuntu-24.04
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1913555Z Version: 20260525.161.1
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1914940Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1916562Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1917560Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1918687Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1920922Z Contents: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1921546Z Metadata: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1922245Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1924391Z Secret source: None
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.1925260Z Prepare workflow directory
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.2396045Z Prepare all required actions
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.2450729Z Getting action download info
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.6926947Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9193310Z Complete job name: Status Check - Keycloak Operator CI
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9963845Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9964933Z with:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9965410Z   repository: keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9970094Z   token: ***
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9970767Z   ssh-strict: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9971231Z   ssh-user: git
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9971695Z   persist-credentials: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9972206Z   clean: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9972672Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9973209Z   fetch-depth: 1
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9973740Z   fetch-tags: false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9974210Z   show-progress: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9974680Z   lfs: false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9975105Z   submodules: false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9975559Z   set-safe-directory: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9976326Z env:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9976938Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9977695Z   MINIKUBE_VERSION: v1.38.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9978251Z   KUBERNETES_VERSION: v1.35.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9978766Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:07.9979228Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.0961973Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.0963784Z ##[group]Getting Git version info
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.0964631Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.0965656Z [command]/usr/bin/git version
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1056585Z git version 2.54.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1078052Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1093715Z Temporarily overriding HOME='/home/runner/work/_temp/14258971-2476-4151-bdbe-2c95ebc78098' before making global git config changes
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1096004Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1099322Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1152057Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1156307Z ##[group]Initializing the repository
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1160802Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1277172Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1278811Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1280877Z hint: to use in all of your new repositories, which will suppress this warning,
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1282230Z hint: call:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1282897Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1283792Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1284794Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1285855Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1287567Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1288973Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1289744Z hint: 	git branch -m <name>
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1290821Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1292018Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1293777Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1299248Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1349347Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1351282Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1354570Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1384804Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1385543Z ##[group]Setting up auth
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1391524Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1426415Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1816729Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.1849197Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.2070761Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.2106418Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.2107413Z ##[group]Fetching the repository
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:08.2116268Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +885a47ee66cf4017163e9721a28a2708d3acf69a:refs/remotes/pull/48787/merge
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:09.9953278Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:09.9955241Z  * [new ref]         885a47ee66cf4017163e9721a28a2708d3acf69a -> pull/48787/merge
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:09.9997009Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:09.9998692Z ##[group]Determining the checkout info
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.0000232Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.0004887Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.0053362Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.0083721Z ##[group]Checking out the ref
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.0087295Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/48787/merge
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9761623Z Note: switching to 'refs/remotes/pull/48787/merge'.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9762396Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9762789Z You are in 'detached HEAD' state. You can look around, make experimental
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9763789Z changes and commit them, and you can discard any commits you make in this
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9764673Z state without impacting any branches by switching back to a branch.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9765170Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9765439Z If you want to create a new branch to retain commits you create, you may
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9766019Z do so (now or later) by using -c with the switch command. Example:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9766342Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9766615Z   git switch -c <new-branch-name>
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9766838Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9766989Z Or undo this operation with:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9767192Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9767307Z   git switch -
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9767797Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9768087Z Turn off this advice by setting config variable advice.detachedHead to false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9768467Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9768891Z HEAD is now at 885a47e Merge a4559d745b71f5abdff8c8c41663123713ff16e0 into 7dd3fc87dfe7c134c61a62e81d79785da102e99b
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9797816Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9864678Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:10.9888820Z 885a47ee66cf4017163e9721a28a2708d3acf69a
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0156707Z Prepare all required actions
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0237956Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0238339Z with:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0239423Z   jobs: {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	      "operator": "true"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    }
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "test-local-apiserver": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "test-remote": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "test-olm": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  }
+Status Check - Keycloak Operator CI	UNKNOWN STEP	}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0240817Z env:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0241151Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0241553Z   MINIKUBE_VERSION: v1.38.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0241869Z   KUBERNETES_VERSION: v1.35.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0242150Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0242408Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0359370Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0359799Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0360127Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0360656Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0360972Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0361249Z ^[[36;1m      "operator": "true"^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0361533Z ^[[36;1m    }^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0361765Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0362009Z ^[[36;1m  "build": {^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0362272Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0362564Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0362826Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0363091Z ^[[36;1m  "test-local-apiserver": {^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0363407Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0363710Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0363971Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0364205Z ^[[36;1m  "test-remote": {^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0364481Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0364764Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0365019Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0365255Z ^[[36;1m  "test-olm": {^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0365520Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0365798Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0366054Z ^[[36;1m  }^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0366276Z ^[[36;1m}'^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0366511Z ^[[36;1m^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0366732Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0367140Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0367546Z ^[[36;1m^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0367876Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0368339Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0368696Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0368967Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0369273Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0369512Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0369735Z ^[[36;1mdone^[[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0400141Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0400772Z env:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0401113Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0401521Z   MINIKUBE_VERSION: v1.38.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0402155Z   KUBERNETES_VERSION: v1.35.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0402657Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0402941Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0546215Z Job status:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0577031Z  - conditional: success
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0577417Z  - build: failure
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0577714Z  - test-local-apiserver: skipped
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0578351Z  - test-remote: skipped
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0578624Z  - test-olm: skipped
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0611236Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0611542Z Status check not okay!
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0626023Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.0771923Z Post job cleanup.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.1619336Z [command]/usr/bin/git version
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.1688470Z git version 2.54.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.1726373Z Temporarily overriding HOME='/home/runner/work/_temp/8d07345e-db93-4157-bd38-89c23e6b7129' before making global git config changes
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.1727440Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.1732398Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.1770698Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.1805190Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.2045840Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.2073470Z http.https://github.com/.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.2087336Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.2119073Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2026-06-09T07:18:11.2482728Z Cleaning up orphan processes
