@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 public class Bugs {
 
     private final List<GitHubIssue> issues;
+    private final List<GitHubIssue> privateIssues;
     private final List<String> activeStreams;
     private String nextRelease;
 
@@ -43,11 +44,13 @@ public class Bugs {
 
         flakyTestCountsByTeam = convertToTeamCount(flakyTests, teams);
 
-        stats = convertToBugStat(issues, data, teams);
+        privateIssues = data.getPrivateIssues() != null ? data.getPrivateIssues() : Collections.emptyList();
+
+        stats = convertToBugStat(issues, data, teams, privateIssues);
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
         teamCveStats = convertToTeamCveStats(issues, teams);
-        privateTeamCveStats = convertToPrivateTeamCveStats(data.getPrivateIssues(), teams);
+        privateTeamCveStats = convertToPrivateTeamCveStats(privateIssues, teams);
         teamBackportStats = convertToTeamBackportStats(issues, teams);
     }
 
@@ -66,7 +69,7 @@ public class Bugs {
         return counts;
     }
 
-    private List<BugStat> convertToBugStat(List<GitHubIssue> issues, GitHubData data, Teams teams) {
+    private List<BugStat> convertToBugStat(List<GitHubIssue> issues, GitHubData data, Teams teams, List<GitHubIssue> privateIssues) {
         List<BugStat> stats = new LinkedList<>();
         FilteredIssues filteredIssues = FilteredIssues.create(issues);
 
@@ -80,6 +83,9 @@ public class Bugs {
                 .issues(filteredIssues.clone().openBug().triage(true).missingInformation(false).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
         stats.add(BugStat.global("CVE")
                 .issues(filteredIssues.clone().openCve()));
+        FilteredIssues privateCves = FilteredIssues.createPrivate(privateIssues);
+        stats.add(BugStat.global("CVE: Missing Information").warnErrorKey("CveMissingInformation")
+                .issues(privateCves.clone().openIssue().missingInformation(true)));
         stats.add(BugStat.global("Weakness")
                 .issues(filteredIssues.clone().openBug().label("area/weakness")));
         stats.add(BugStat.global("Blocker")
@@ -194,7 +200,7 @@ public class Bugs {
     }
 
     private List<PrivateCveTeamStat> convertToPrivateTeamCveStats(List<GitHubIssue> privateIssues, Teams teams) {
-        if (privateIssues == null || privateIssues.isEmpty()) {
+        if (privateIssues.isEmpty()) {
             return Collections.emptyList();
         }
 

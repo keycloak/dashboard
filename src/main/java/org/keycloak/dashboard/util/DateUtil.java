@@ -63,7 +63,7 @@ public class DateUtil {
     }
 
     public static java.util.Date minusBusinessDays(int businessDays) {
-        Calendar cal = Calendar.getInstance();
+        Calendar cal = getCalendarUTC();
         cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
         cal.set(Calendar.SECOND, 0);

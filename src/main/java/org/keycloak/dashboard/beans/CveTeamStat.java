@@ -22,13 +22,18 @@ public class CveTeamStat {
                 .issues(issues.clone().triage(true)));
 
         columns.add(BugStat.team("Triage Overdue")
-                .issues(issues.clone().triage(true).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
+                .issues(issues.clone().triage(true).ready(false)
+                        .createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
 
         columns.add(BugStat.team("Open").warnErrorKey("CveOpen")
                 .issues(issues.clone().triage(false)));
 
         columns.add(BugStat.team("Open Overdue").warnErrorKey("CveOpenOverdue")
-                .issues(issues.clone().triage(false).createdBefore(DateUtil.minusdays(Config.getInt("bugs.CveOverdue.days")))));
+                .issues(issues.clone().triage(false).ready(false)
+                        .createdBefore(DateUtil.minusdays(Config.getInt("bugs.CveOverdue.days")))));
+
+        columns.add(BugStat.team("Blocked External").warnErrorKey("CveBlockedExternal")
+                .issues(issues.clone().blockedExternal(true)));
 
     }
 
