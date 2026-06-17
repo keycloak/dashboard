@@ -30,7 +30,7 @@ public class PrivateCveTeamStat {
                 .issues(triageBase.clone()));
 
         columns.add(BugStat.team("Triage Overdue").warnErrorKey("PrivateTriageOverdue")
-                .issues(triageBase.clone().severityTriageOverdue(importantBizDays, moderateBizDays, lowDays)));
+                .issues(triageBase.clone().ready(false).severityTriageOverdue(importantBizDays, moderateBizDays, lowDays)));
 
         FilteredIssues cveOpen = allIssues.clone().openCve().triage(false);
 
@@ -38,8 +38,11 @@ public class PrivateCveTeamStat {
                 .issues(cveOpen.clone()));
 
         columns.add(BugStat.team("Open Overdue").warnErrorKey("CveOpenOverdue")
-                .issues(cveOpen.clone().createdBefore(
+                .issues(cveOpen.clone().ready(false).createdBefore(
                         DateUtil.minusdays(Config.getInt("bugs.CveOverdue.days")))));
+
+        columns.add(BugStat.team("Blocked External").warnErrorKey("CveBlockedExternal")
+                .issues(allIssues.clone().openIssue().blockedExternal(true)));
     }
 
     public String getTitle() {

@@ -124,6 +124,11 @@ public class FilteredIssues {
         return this;
     }
 
+    public FilteredIssues ready(boolean include) {
+        filters.add(new ReadyFilter(include));
+        return this;
+    }
+
     public FilteredIssues missingTeam(Teams teams) {
         filters.add(new MissingTeamFilter(teams));
         return this;
