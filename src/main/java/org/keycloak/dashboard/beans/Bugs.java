@@ -30,7 +30,7 @@ public class Bugs {
     private Map<String, Integer> flakyTestCountsByTeam;
 
     public Bugs(GitHubData data, Teams teams) {
-        issues = data.getIssues().stream().filter(i -> (i.getLabels().contains("kind/bug") || i.getLabels().contains("kind/cve"))).collect(Collectors.toList());
+        issues = data.getIssues().stream().filter(i -> (i.getLabels().contains("kind/bug") || i.getLabels().contains("kind/cve") || i.getLabels().contains("kind/weakness"))).collect(Collectors.toList());
 
         issues.stream().filter(i -> i.isOpen() && i.getMilestone() != null && i.getMilestone().endsWith(".0.0"))
                 .map(i -> i.getMilestone()).sorted().findFirst().ifPresent(s -> nextRelease = s);
@@ -87,7 +87,7 @@ public class Bugs {
         stats.add(BugStat.global("CVE: Missing Information").warnErrorKey("CveMissingInformation")
                 .issues(privateCves.clone().openIssue().missingInformation(true)));
         stats.add(BugStat.global("Weakness")
-                .issues(filteredIssues.clone().openBug().label("area/weakness")));
+                .issues(filteredIssues.clone().openIssue().label("kind/weakness")));
         stats.add(BugStat.global("Blocker")
                 .issues(filteredIssues.clone().openBug().priority("blocker")));
         stats.add(BugStat.global("Blocker Overdue")
