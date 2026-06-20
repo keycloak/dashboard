@@ -1,5 +1,5 @@
 {
-  "updatedDate" : 1781851528555,
+  "updatedDate" : 1781937153143,
   "areas" : [ "area/account/api", "area/account/ui", "area/adapter/fuse", "area/adapter/java-cli", "area/adapter/javascript", "area/adapter/jee", "area/adapter/saml", "area/adapter/spring", "area/admin/api", "area/admin/api-v2", "area/admin/cli", "area/admin/client-java", "area/admin/client-js", "area/admin/fine-grained-permissions", "area/admin/rbac", "area/admin/ui", "area/authentication", "area/authentication/webauthn", "area/authorization-services", "area/ci", "area/core", "area/dependencies", "area/dist/quarkus", "area/docs", "area/events", "area/extensions", "area/identity-brokering", "area/import-export", "area/infinispan", "area/ldap", "area/login/ui", "area/observability", "area/oid4vc", "area/oidc", "area/operator", "area/organizations", "area/performance", "area/saml", "area/scim", "area/ssf", "area/storage", "area/test-framework", "area/testsuite", "area/token-exchange", "area/token-exchange/federated", "area/token-exchange/standard", "area/token-exchange/subject-impersonation", "area/translations", "area/user-profile", "area/weakness", "area/welcome/ui", "area/workflows" ],
   "issues" : [ {
     "createdAt" : 1636377646000,
@@ -86897,12 +86897,12 @@
     "commentsCount" : 3
   }, {
     "createdAt" : 1771188882000,
-    "updatedAt" : 1775663775000,
+    "updatedAt" : 1781924594000,
     "number" : 46349,
     "title" : "Update password page timeout leads to inconsistent login restart and unexpected error page",
     "userLogin" : "OrenKaizer1",
     "labels" : [ "kind/bug", "help wanted", "area/login/ui", "team/core-clients", "priority/low", "status/auto-expire", "status/auto-bump", "team/core-authn" ],
-    "commentsCount" : 1
+    "commentsCount" : 2
   }, {
     "createdAt" : 1771190277000,
     "updatedAt" : 1772718479000,
@@ -92247,12 +92247,13 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1781008230000,
-    "updatedAt" : 1781885091000,
+    "updatedAt" : 1781903711000,
+    "closedAt" : 1781903678000,
     "number" : 49830,
     "title" : "26.6.x upgrade runs unbounded OFFLINE_CLIENT_SESSION REALM_ID backfill, blocking startup on large data sets",
     "userLogin" : "dbubenheim",
-    "labels" : [ "kind/bug", "area/storage", "help wanted", "team/production-readiness", "status/auto-bump", "priority/normal" ],
-    "commentsCount" : 11
+    "labels" : [ "kind/bug", "area/storage", "help wanted", "team/production-readiness", "status/auto-bump", "priority/normal", "backport/26.6", "release/26.7.0" ],
+    "commentsCount" : 12
   }, {
     "createdAt" : 1781052896000,
     "updatedAt" : 1781117080000,
@@ -92547,12 +92548,12 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1781334521000,
-    "updatedAt" : 1781899419000,
+    "updatedAt" : 1781928312000,
     "number" : 49985,
     "title" : "Flaky test: org.keycloak.testsuite.saml.SamlClientTest#testLoginWithOIDCClient",
     "userLogin" : "keycloak-github-bot[bot]",
     "labels" : [ "kind/bug", "area/ci", "flaky-test", "team/core-clients" ],
-    "commentsCount" : 720
+    "commentsCount" : 744
   }, {
     "createdAt" : 1781334522000,
     "updatedAt" : 1781599198000,
@@ -92681,12 +92682,12 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1781769736000,
-    "updatedAt" : 1781769741000,
+    "updatedAt" : 1781902708000,
     "number" : 50107,
     "title" : "Keycloak/MySQL dependency telemetry per request increased significantly over time while request volume stayed mostly stable",
     "userLogin" : "SimiDieTulpe",
-    "labels" : [ "kind/bug", "team/cloud-native", "status/triage", "team/production-readiness", "area/observability" ],
-    "commentsCount" : 0
+    "labels" : [ "kind/bug", "team/cloud-native", "team/production-readiness", "status/auto-expire", "status/missing-information", "area/observability" ],
+    "commentsCount" : 2
   }, {
     "createdAt" : 1781774256000,
     "updatedAt" : 1781805228000,
@@ -92784,6 +92785,22 @@
     "title" : "`KcAdmV2ClientCLITest#testListClientsWithFieldsProjection` is failing as query param cannot be exploded anymore",
     "userLogin" : "michalvavrik",
     "labels" : [ "kind/bug", "area/admin/cli", "team/cloud-native" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781903668000,
+    "updatedAt" : 1781903673000,
+    "number" : 50177,
+    "title" : "SAML client creation fails with \"Error creating X509v1Certificate\" when Client ID contains URL query string characters",
+    "userLogin" : "btuttle2",
+    "labels" : [ "area/saml", "kind/bug", "status/triage", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781905573000,
+    "updatedAt" : 1781905578000,
+    "number" : 50178,
+    "title" : "Scope-based permission accepts a scope not associated with the selected resource (Admin REST API)",
+    "userLogin" : "hakdogan",
+    "labels" : [ "area/authorization-services", "kind/bug", "status/triage", "team/core-iam" ],
     "commentsCount" : 0
   } ],
   "prs" : [ {
@@ -234816,14 +234833,6 @@
     "labels" : [ ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1777572149000,
-    "updatedAt" : 1779353049000,
-    "number" : 48641,
-    "title" : "Feat: implements idp mappers optional claims",
-    "userLogin" : "romarioliveira25",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 1
-  }, {
     "createdAt" : 1777565622000,
     "updatedAt" : 1779362349000,
     "closedAt" : 1779353073000,
@@ -234920,14 +234929,6 @@
     "userLogin" : "hammadxcm",
     "labels" : [ "team/core-iam" ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1776373394000,
-    "updatedAt" : 1779353436000,
-    "number" : 48176,
-    "title" : "Allow replacing existing federated identity link for same user (opt-in)",
-    "userLogin" : "Oluwatobi-Mustapha",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1776332615000,
     "updatedAt" : 1779353495000,
@@ -240448,14 +240449,6 @@
     "labels" : [ ],
     "commentsCount" : 4
   }, {
-    "createdAt" : 1779277268000,
-    "updatedAt" : 1781259049000,
-    "number" : 49158,
-    "title" : "SSF: Add initial documentation for experimental SSF Transmitter feature",
-    "userLogin" : "thomasdarimont",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 2
-  }, {
     "createdAt" : 1778151960000,
     "updatedAt" : 1781255830000,
     "closedAt" : 1781255830000,
@@ -240702,14 +240695,6 @@
     "userLogin" : "aqeelat",
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 6
-  }, {
-    "createdAt" : 1781527843000,
-    "updatedAt" : 1781531396000,
-    "number" : 50011,
-    "title" : "[OID4VCI] Add a client policy to allow preauth offers",
-    "userLogin" : "tdiesler",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
   }, {
     "createdAt" : 1781522731000,
     "updatedAt" : 1781558299000,
@@ -240982,14 +240967,6 @@
     "labels" : [ "team/core-iam", "team/core-shared" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1781596511000,
-    "updatedAt" : 1781600928000,
-    "number" : 50028,
-    "title" : "[OID4VCI] Restore support for pre-auth tx_code",
-    "userLogin" : "tdiesler",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1781596029000,
     "updatedAt" : 1781599638000,
     "closedAt" : 1781596401000,
@@ -241187,14 +241164,6 @@
     "labels" : [ "flaky-test", "area/test-framework" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1781683850000,
-    "updatedAt" : 1781683905000,
-    "number" : 50062,
-    "title" : "Admin Console sessions page fails with unknown_error when federated u…",
-    "userLogin" : "martin-kanis",
-    "labels" : [ "team/core-iam", "team/core-shared" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1781682234000,
     "updatedAt" : 1781693867000,
     "closedAt" : 1781693867000,
@@ -241255,30 +241224,6 @@
     "labels" : [ "team/core-shared" ],
     "commentsCount" : 2
   }, {
-    "createdAt" : 1781495834000,
-    "updatedAt" : 1781668065000,
-    "number" : 49998,
-    "title" : "Customize token exchange endpoint to issue ID-JAG",
-    "userLogin" : "bucchi",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781349264000,
-    "updatedAt" : 1781712390000,
-    "number" : 49989,
-    "title" : "Add section to verify a graceful shutdown to the docs",
-    "userLogin" : "ahus1",
-    "labels" : [ "team/production-readiness" ],
-    "commentsCount" : 3
-  }, {
-    "createdAt" : 1781294433000,
-    "updatedAt" : 1781689625000,
-    "number" : 49983,
-    "title" : "Document WorkflowProviderEvent types for ProviderEventListener implem…",
-    "userLogin" : "sguilhen",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1781278482000,
     "updatedAt" : 1781674972000,
     "number" : 49970,
@@ -241286,14 +241231,6 @@
     "userLogin" : "rmartinc",
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1781275199000,
-    "updatedAt" : 1781727432000,
-    "number" : 49966,
-    "title" : "update documentation to expose multi-namespace install modes",
-    "userLogin" : "edewit",
-    "labels" : [ "team/cloud-native", "flaky-test" ],
-    "commentsCount" : 2
   }, {
     "createdAt" : 1781266617000,
     "updatedAt" : 1781673706000,
@@ -241346,14 +241283,6 @@
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1780918361000,
-    "updatedAt" : 1781721300000,
-    "number" : 49775,
-    "title" : "Document operator client CRDs supported by Admin API v2",
-    "userLogin" : "michalvavrik",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 3
-  }, {
     "createdAt" : 1780840367000,
     "updatedAt" : 1781663819000,
     "closedAt" : 1781600025000,
@@ -241362,38 +241291,6 @@
     "userLogin" : "tnorimat",
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 2
-  }, {
-    "createdAt" : 1779279068000,
-    "updatedAt" : 1781721386000,
-    "number" : 49162,
-    "title" : "fix: restricting when the create user page is shown",
-    "userLogin" : "shawkins",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 6
-  }, {
-    "createdAt" : 1779218870000,
-    "updatedAt" : 1781714310000,
-    "number" : 49138,
-    "title" : "fix: normalizing logic when context is not available",
-    "userLogin" : "shawkins",
-    "labels" : [ "team/cloud-native", "flaky-test" ],
-    "commentsCount" : 9
-  }, {
-    "createdAt" : 1778193044000,
-    "updatedAt" : 1781712491000,
-    "number" : 48814,
-    "title" : "fix: Identity providers should not be hidden from login page when the user goes back from the reset credentials page",
-    "userLogin" : "vilmosnagy",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 9
-  }, {
-    "createdAt" : 1777366280000,
-    "updatedAt" : 1781724664000,
-    "number" : 48535,
-    "title" : "feat(org): add client_id and redirect_uri params to invite-user endpoints",
-    "userLogin" : "hemmerlein",
-    "labels" : [ "flaky-test", "team/core-iam", "area/organizations" ],
-    "commentsCount" : 7
   }, {
     "createdAt" : 1774040309000,
     "updatedAt" : 1781724649000,
@@ -241412,30 +241309,6 @@
     "labels" : [ "flaky-test", "team/core-authn" ],
     "commentsCount" : 10
   }, {
-    "createdAt" : 1781850764000,
-    "updatedAt" : 1781850862000,
-    "number" : 50147,
-    "title" : "Fix inverted return value in legacy KEYCLOAK_SESSION cookie comparison",
-    "userLogin" : "MdTanwer",
-    "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781848974000,
-    "updatedAt" : 1781849235000,
-    "number" : 50146,
-    "title" : "Validate client URLs during partial import",
-    "userLogin" : "MdTanwer",
-    "labels" : [ "team/core-shared", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781845796000,
-    "updatedAt" : 1781845946000,
-    "number" : 50145,
-    "title" : "Pin UBI base images by digest in container Dockerfiles",
-    "userLogin" : "MdTanwer",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1781824137000,
     "updatedAt" : 1781824941000,
     "number" : 50144,
@@ -241444,140 +241317,12 @@
     "labels" : [ "team/core-clients", "team/core-authn" ],
     "commentsCount" : 2
   }, {
-    "createdAt" : 1781800710000,
-    "updatedAt" : 1781849543000,
-    "number" : 50141,
-    "title" : "Backport-26.6-Reject redirect URIs containing pre-loaded OIDC response parameters (#49959)",
-    "userLogin" : "jimmychakkalakal",
-    "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781800294000,
-    "updatedAt" : 1781800297000,
-    "number" : 50140,
-    "title" : "Client Secret Rotation docs incorrectly mark feature as experimental instead of preview",
-    "userLogin" : "mabartos",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781799898000,
-    "updatedAt" : 1781849586000,
-    "number" : 50138,
-    "title" : "Backport-26.4-Reject redirect URIs containing pre-loaded OIDC response parameters (#49959)",
-    "userLogin" : "jimmychakkalakal",
-    "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781799589000,
-    "updatedAt" : 1781799850000,
-    "number" : 50137,
-    "title" : "Client Secret and Secret Rotated are always the same",
-    "userLogin" : "mabartos",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781797510000,
-    "updatedAt" : 1781803884000,
-    "number" : 50132,
-    "title" : "Bump vite from 7.3.2 to 7.3.5 in /js",
-    "userLogin" : "dependabot[bot]",
-    "labels" : [ "area/dependencies", "team/ui", "flaky-test" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781795191000,
-    "updatedAt" : 1781846133000,
-    "number" : 50130,
-    "title" : "Fixes #50128 - ensure DL_DIR exists",
-    "userLogin" : "baidarka",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781795041000,
-    "updatedAt" : 1781808403000,
-    "number" : 50129,
-    "title" : "[OID4VCI] Replace realm options Trusted Key IDs and Trusted Keys (JSON) with trust-material IdPs configured on the client",
-    "userLogin" : "IngridPuppet",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1781794348000,
-    "updatedAt" : 1781849248000,
-    "number" : 50127,
-    "title" : "Migrates SamlClientTest using new Testframework",
-    "userLogin" : "jimmychakkalakal",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1781793172000,
-    "updatedAt" : 1781846196000,
-    "number" : 50126,
-    "title" : "[OID4VCI-FAPI2] Pass fapi2-security-profile-final-par-ensure-reused-request-uri-prior-to-auth-completion-succeeds",
-    "userLogin" : "tdiesler",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781793136000,
-    "updatedAt" : 1781846195000,
-    "number" : 50125,
-    "title" : "[OID4VCI-FAPI2] Pass fapi2-security-profile-final-dpop-negative-tests",
-    "userLogin" : "tdiesler",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1781786813000,
-    "updatedAt" : 1781846973000,
-    "number" : 50122,
-    "title" : "feat: pass totpSecretKeyUri to the totp template",
-    "userLogin" : "whawker",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781783794000,
-    "updatedAt" : 1781811197000,
-    "number" : 50121,
-    "title" : "Add theme upload and management via admin REST API",
-    "userLogin" : "vikas0686",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1781782669000,
-    "updatedAt" : 1781846195000,
-    "number" : 50120,
-    "title" : "[OID4VCI] Fix c_nonce replay protection",
-    "userLogin" : "forkimenjeckayang",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1781779006000,
     "updatedAt" : 1781782353000,
     "number" : 50115,
     "title" : "Only run testsuite deprecation in main repository on main branch",
     "userLogin" : "stianst",
     "labels" : [ "flaky-test" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781778437000,
-    "updatedAt" : 1781846194000,
-    "number" : 50112,
-    "title" : "[OID4VCI] Enforce DID uniqueness and restrict DID updates to admins",
-    "userLogin" : "Awambeng",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781776118000,
-    "updatedAt" : 1781847245000,
-    "number" : 50111,
-    "title" : "Thread dumps guide",
-    "userLogin" : "tkyjovsk",
-    "labels" : [ "team/cloud-native", "team/production-readiness" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781773927000,
-    "updatedAt" : 1781774127000,
-    "number" : 50109,
-    "title" : "Return HTTP 400 for malformed Content-Type header",
-    "userLogin" : "MdTanwer",
-    "labels" : [ "team/core-protocols" ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1781768896000,
@@ -241606,31 +241351,6 @@
     "labels" : [ ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1781767036000,
-    "updatedAt" : 1781846102000,
-    "closedAt" : 1781846102000,
-    "number" : 50102,
-    "title" : "Upgrade to Quarkus 3.33.2.1",
-    "userLogin" : "vmuzikar",
-    "labels" : [ "flaky-test" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781764588000,
-    "updatedAt" : 1781846972000,
-    "number" : 50099,
-    "title" : "Use versioned FreeMarker Configuration defaults",
-    "userLogin" : "MdTanwer",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781760315000,
-    "updatedAt" : 1781841194000,
-    "number" : 50098,
-    "title" : "Enforce path containment in FolderTheme.getTemplate()",
-    "userLogin" : "MdTanwer",
-    "labels" : [ "team/cloud-native", "team/core-shared", "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1781753354000,
     "updatedAt" : 1781767527000,
     "closedAt" : 1781767526000,
@@ -241646,14 +241366,6 @@
     "title" : "Bump the npm-dependencies group across 1 directory with 25 updates",
     "userLogin" : "dependabot[bot]",
     "labels" : [ "area/dependencies", "team/ui" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781746156000,
-    "updatedAt" : 1781847011000,
-    "number" : 50095,
-    "title" : "Use exact match in InvitationManager.getByEmail()",
-    "userLogin" : "kota65535",
-    "labels" : [ "flaky-test", "team/core-iam" ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1781745888000,
@@ -241683,14 +241395,6 @@
     "labels" : [ "flaky-test", "team/core-iam" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1781710589000,
-    "updatedAt" : 1781847285000,
-    "number" : 50083,
-    "title" : "Fix client secret length to always use HS512 entropy #49793",
-    "userLogin" : "MdTanwer",
-    "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1781709559000,
     "updatedAt" : 1781773794000,
     "closedAt" : 1781773794000,
@@ -241699,38 +241403,6 @@
     "userLogin" : "mposolda",
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 1
-  }, {
-    "createdAt" : 1781704486000,
-    "updatedAt" : 1781847318000,
-    "number" : 50078,
-    "title" : "Remove unused method and tag databaseTest to a method",
-    "userLogin" : "gaoyikeshuer",
-    "labels" : [ "flaky-test", "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781704400000,
-    "updatedAt" : 1781846194000,
-    "number" : 50077,
-    "title" : "add client_id variable to email templates",
-    "userLogin" : "yanxch",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781704173000,
-    "updatedAt" : 1781849445000,
-    "number" : 50075,
-    "title" : "add pre-triage linked issue check and labeling",
-    "userLogin" : "shawkins",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781702321000,
-    "updatedAt" : 1781749955000,
-    "number" : 50073,
-    "title" : "Filter empty/blank redirectUris and webOrigins before persistence",
-    "userLogin" : "sguilhen",
-    "labels" : [ "team/rh-iam", "flaky-test", "team/core-iam" ],
-    "commentsCount" : 0
   }, {
     "createdAt" : 1781695536000,
     "updatedAt" : 1781779793000,
@@ -241741,38 +241413,6 @@
     "labels" : [ "flaky-test" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1781693813000,
-    "updatedAt" : 1781846193000,
-    "number" : 50071,
-    "title" : "fix(partial-import): recreate service account users on client overwrite",
-    "userLogin" : "wilmerdooley",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781692688000,
-    "updatedAt" : 1781846192000,
-    "number" : 50070,
-    "title" : "fix(login): apply kc_locale on every action token request",
-    "userLogin" : "wilmerdooley",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781692203000,
-    "updatedAt" : 1781846897000,
-    "number" : 50068,
-    "title" : "Fix #50054: Only warn about explicitly enabled deprecated features",
-    "userLogin" : "Shruti181807",
-    "labels" : [ "team/cloud-native", "team/core-protocols" ],
-    "commentsCount" : 4
-  }, {
-    "createdAt" : 1781688615000,
-    "updatedAt" : 1781847342000,
-    "number" : 50066,
-    "title" : "Convert try finally to registered clean up",
-    "userLogin" : "gaoyikeshuer",
-    "labels" : [ "flaky-test", "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1781682943000,
     "updatedAt" : 1781780002000,
     "closedAt" : 1781780002000,
@@ -241782,38 +241422,6 @@
     "labels" : [ "flaky-test" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1781680387000,
-    "updatedAt" : 1781850828000,
-    "number" : 50057,
-    "title" : "[OID4VCI] Warning in conformance tests due to custom field in authorization_details",
-    "userLogin" : "tdiesler",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1781675584000,
-    "updatedAt" : 1781847011000,
-    "number" : 50056,
-    "title" : "fix: avoid duplicate role creation when importing realm roles",
-    "userLogin" : "wilmerdooley",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781675505000,
-    "updatedAt" : 1781846192000,
-    "number" : 50055,
-    "title" : "fix(client-registration): avoid NPE when isPublicClient() is null",
-    "userLogin" : "wilmerdooley",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1781645271000,
-    "updatedAt" : 1781835448000,
-    "number" : 50052,
-    "title" : "Translations update from Hosted Weblate",
-    "userLogin" : "weblate",
-    "labels" : [ "flaky-test" ],
-    "commentsCount" : 1
-  }, {
     "createdAt" : 1781643602000,
     "updatedAt" : 1781819872000,
     "number" : 50051,
@@ -241822,14 +241430,6 @@
     "labels" : [ "flaky-test", "team/core-iam", "area/ssf" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1781634283000,
-    "updatedAt" : 1781746235000,
-    "number" : 50048,
-    "title" : "Add federated users support for user verifiable credentials",
-    "userLogin" : "jimmychakkalakal",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 2
-  }, {
     "createdAt" : 1781615863000,
     "updatedAt" : 1781801415000,
     "number" : 50042,
@@ -241837,38 +241437,6 @@
     "userLogin" : "uzmamansoor09",
     "labels" : [ "flaky-test", "team/core-clients", "team/core-shared" ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1781612533000,
-    "updatedAt" : 1781796439000,
-    "number" : 50037,
-    "title" : "Documentation for parameterized client scopes",
-    "userLogin" : "mabartos",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1781593622000,
-    "updatedAt" : 1781773025000,
-    "number" : 50026,
-    "title" : "Enforce secure redirect URIs on authorization requests",
-    "userLogin" : "mitsu3333",
-    "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 2
-  }, {
-    "createdAt" : 1781563460000,
-    "updatedAt" : 1781794227000,
-    "number" : 50021,
-    "title" : "Document querying syntax",
-    "userLogin" : "Pepo48",
-    "labels" : [ "team/cloud-native", "flaky-test" ],
-    "commentsCount" : 2
-  }, {
-    "createdAt" : 1781479022000,
-    "updatedAt" : 1781798423000,
-    "number" : 49997,
-    "title" : "Client CLI v2: move connection options to root, implement list projection and more",
-    "userLogin" : "michalvavrik",
-    "labels" : [ "team/cloud-native", "flaky-test" ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1781292476000,
     "updatedAt" : 1781811246000,
@@ -241879,23 +241447,6 @@
     "labels" : [ "flaky-test", "team/production-readiness" ],
     "commentsCount" : 5
   }, {
-    "createdAt" : 1781284341000,
-    "updatedAt" : 1781848958000,
-    "closedAt" : 1781848958000,
-    "number" : 49979,
-    "title" : "Set default Kubernetes identity provider issuer",
-    "userLogin" : "chance-coleman",
-    "labels" : [ "flaky-test" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1781280827000,
-    "updatedAt" : 1781791981000,
-    "number" : 49971,
-    "title" : "Baseline for a project and team level agent instructions",
-    "userLogin" : "pedroigor",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1781269235000,
     "updatedAt" : 1781795053000,
     "closedAt" : 1781795053000,
@@ -241904,30 +241455,6 @@
     "userLogin" : "jimmychakkalakal",
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 6
-  }, {
-    "createdAt" : 1781253479000,
-    "updatedAt" : 1781820442000,
-    "number" : 49949,
-    "title" : " Fix to concurrent backchannel logout sessions.",
-    "userLogin" : "msdaly200",
-    "labels" : [ "flaky-test", "team/core-clients", "team/core-authn" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1781210624000,
-    "updatedAt" : 1781817135000,
-    "number" : 49929,
-    "title" : "Making transmission of cluster events synchronous for callers",
-    "userLogin" : "ahus1",
-    "labels" : [ "flaky-test", "team/production-readiness" ],
-    "commentsCount" : 7
-  }, {
-    "createdAt" : 1781198594000,
-    "updatedAt" : 1781847550000,
-    "number" : 49914,
-    "title" : "Build-time provider discovery via @KeycloakProvider annotation (#49216)",
-    "userLogin" : "thomasdarimont",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 0
   }, {
     "createdAt" : 1781170033000,
     "updatedAt" : 1781779658000,
@@ -241955,62 +241482,6 @@
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1781095450000,
-    "updatedAt" : 1781850580000,
-    "number" : 49872,
-    "title" : "Add sort parameters to Client Admin API v2",
-    "userLogin" : "edewit",
-    "labels" : [ "team/cloud-native", "flaky-test" ],
-    "commentsCount" : 5
-  }, {
-    "createdAt" : 1781091432000,
-    "updatedAt" : 1781801134000,
-    "number" : 49867,
-    "title" : "added created and last modified timestamps",
-    "userLogin" : "edewit",
-    "labels" : [ "team/cloud-native", "flaky-test" ],
-    "commentsCount" : 10
-  }, {
-    "createdAt" : 1781088645000,
-    "updatedAt" : 1781805464000,
-    "number" : 49866,
-    "title" : "Add conformance tests to CI",
-    "userLogin" : "dominikschlosser",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 7
-  }, {
-    "createdAt" : 1781062763000,
-    "updatedAt" : 1781848951000,
-    "number" : 49850,
-    "title" : "[OID4VCI-FAPI2] Pass fapi2-security-profile-final-ensure-holder-of-key-required",
-    "userLogin" : "tdiesler",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1780911914000,
-    "updatedAt" : 1781780668000,
-    "number" : 49768,
-    "title" : "refactor ssf to use react hook form and admin client",
-    "userLogin" : "edewit",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 7
-  }, {
-    "createdAt" : 1780482797000,
-    "updatedAt" : 1781850320000,
-    "number" : 49647,
-    "title" : "made style sheet imports more flexible",
-    "userLogin" : "edewit",
-    "labels" : [ "flaky-test", "team/core-clients" ],
-    "commentsCount" : 5
-  }, {
-    "createdAt" : 1780472762000,
-    "updatedAt" : 1781798402000,
-    "number" : 49638,
-    "title" : "initial server side pagination client v2",
-    "userLogin" : "edewit",
-    "labels" : [ "team/cloud-native", "flaky-test" ],
-    "commentsCount" : 19
-  }, {
     "createdAt" : 1780387773000,
     "updatedAt" : 1781790597000,
     "closedAt" : 1781790188000,
@@ -242019,38 +241490,6 @@
     "userLogin" : "mangod12",
     "labels" : [ "team/cloud-native" ],
     "commentsCount" : 9
-  }, {
-    "createdAt" : 1780383366000,
-    "updatedAt" : 1781783298000,
-    "number" : 49563,
-    "title" : "[OID4VCI] Conformance with OpenID HAIP Profile",
-    "userLogin" : "tdiesler",
-    "labels" : [ "flaky-test", "team/core-authn" ],
-    "commentsCount" : 2
-  }, {
-    "createdAt" : 1779821198000,
-    "updatedAt" : 1781772911000,
-    "number" : 49349,
-    "title" : "Client Policy extension to other representations",
-    "userLogin" : "slaskawi",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 4
-  }, {
-    "createdAt" : 1779543536000,
-    "updatedAt" : 1781793802000,
-    "number" : 49273,
-    "title" : "fix: refining the health check and exposing excluding the health check",
-    "userLogin" : "shawkins",
-    "labels" : [ "team/cloud-native", "flaky-test" ],
-    "commentsCount" : 6
-  }, {
-    "createdAt" : 1778345168000,
-    "updatedAt" : 1781848554000,
-    "number" : 48857,
-    "title" : "fix: Re-authentication flow does not support re-authenticating brokered users with no local credentials set",
-    "userLogin" : "vilmosnagy",
-    "labels" : [ "flaky-test", "team/core-authn" ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1778251701000,
     "updatedAt" : 1781801072000,
@@ -242067,30 +241506,6 @@
     "userLogin" : "kota65535",
     "labels" : [ "flaky-test", "team/core-iam" ],
     "commentsCount" : 6
-  }, {
-    "createdAt" : 1777254087000,
-    "updatedAt" : 1781838078000,
-    "number" : 48485,
-    "title" : "Fix removal of custom required actions via admin user API",
-    "userLogin" : "ozimakov",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 2
-  }, {
-    "createdAt" : 1776868091000,
-    "updatedAt" : 1781771174000,
-    "number" : 48372,
-    "title" : "Handle orphan authenticator providers in flows",
-    "userLogin" : "erenkan",
-    "labels" : [ "flaky-test", "team/core-authn" ],
-    "commentsCount" : 2
-  }, {
-    "createdAt" : 1776486728000,
-    "updatedAt" : 1781838101000,
-    "number" : 48219,
-    "title" : "Fix XMLSignatureUtil to omit KeyInfo when includeKeyInfoInSignature is false",
-    "userLogin" : "ozimakov",
-    "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1776247232000,
     "updatedAt" : 1781784007000,
@@ -242132,6 +241547,765 @@
     "userLogin" : "slaskawi",
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 5
+  }, {
+    "createdAt" : 1781924592000,
+    "updatedAt" : 1781928305000,
+    "number" : 50179,
+    "title" : "Show expired-link page for stale reset credentials and required action flows",
+    "userLogin" : "wilmerdooley",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781902686000,
+    "updatedAt" : 1781906352000,
+    "number" : 50176,
+    "title" : "Fix KcAdmV2ClientCLITest#testListClientsWithFieldsProjection by respecting explode attribute value",
+    "userLogin" : "michalvavrik",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781896459000,
+    "updatedAt" : 1781896820000,
+    "number" : 50173,
+    "title" : "First Admin UI Tests for SSF",
+    "userLogin" : "ssilvert",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781892649000,
+    "updatedAt" : 1781899412000,
+    "number" : 50171,
+    "title" : "Align Workflows UI permission check with API requireRealmAdmin",
+    "userLogin" : "sguilhen",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781885085000,
+    "updatedAt" : 1781903677000,
+    "closedAt" : 1781903677000,
+    "number" : 50163,
+    "title" : "Add warning about the slow migration to 26.6",
+    "userLogin" : "pruivo",
+    "labels" : [ "team/production-readiness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781883290000,
+    "updatedAt" : 1781886992000,
+    "number" : 50162,
+    "title" : "Introducing RefreshTokenProvider",
+    "userLogin" : "mposolda",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781880161000,
+    "updatedAt" : 1781885806000,
+    "number" : 50160,
+    "title" : "make uuid unmodified more generic",
+    "userLogin" : "edewit",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781875185000,
+    "updatedAt" : 1781904295000,
+    "number" : 50158,
+    "title" : "Bump org.apache.logging.log4j:log4j-core from 2.25.3 to 2.25.4",
+    "userLogin" : "dependabot[bot]",
+    "labels" : [ "team/cloud-native", "flaky-test", "dependencies", "java" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781873450000,
+    "updatedAt" : 1781873837000,
+    "number" : 50157,
+    "title" : "[OID4VCI] Update proof documentation for trust-material identity providers",
+    "userLogin" : "forkimenjeckayang",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781871839000,
+    "updatedAt" : 1781893872000,
+    "number" : 50156,
+    "title" : "Document Hardcoded LDAP Attribute Mapper in Server Administration Guide",
+    "userLogin" : "Prakhar147",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781869559000,
+    "updatedAt" : 1781873262000,
+    "number" : 50155,
+    "title" : "Flaky test: OidcAdvancedClaimToGroupMapperTest#mapperStillWorksWhenTopLevelGroupIsConvertedToSubGroup",
+    "userLogin" : "pedroigor",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781868106000,
+    "updatedAt" : 1781871659000,
+    "number" : 50153,
+    "title" : "Use exact match in InvitationManager for email, firstName, lastName",
+    "userLogin" : "martin-kanis",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781863429000,
+    "updatedAt" : 1781876960000,
+    "number" : 50152,
+    "title" : "Update vc and vci to reference credential scopes by ID",
+    "userLogin" : "graziang",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781858899000,
+    "updatedAt" : 1781914585000,
+    "number" : 50151,
+    "title" : "Add option 'Add Default Scopes' in 'Allowed Client Scopes' Client Reg…",
+    "userLogin" : "cgeorgilakis",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781856942000,
+    "updatedAt" : 1781866776000,
+    "number" : 50150,
+    "title" : "Full user representation when querying organization members",
+    "userLogin" : "martin-kanis",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781856135000,
+    "updatedAt" : 1781867695000,
+    "number" : 50149,
+    "title" : "[WIP] Generate BCFKS truststore in strict FIPS",
+    "userLogin" : "slaskawi",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781853844000,
+    "updatedAt" : 1781905194000,
+    "closedAt" : 1781905193000,
+    "number" : 50148,
+    "title" : "Enforce allowed-protocol-mappers on Admin REST API protocol mapper operations",
+    "userLogin" : "MdTanwer",
+    "labels" : [ "team/core-shared", "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781850764000,
+    "updatedAt" : 1781905204000,
+    "closedAt" : 1781905204000,
+    "number" : 50147,
+    "title" : "Fix inverted return value in legacy KEYCLOAK_SESSION cookie comparison",
+    "userLogin" : "MdTanwer",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781848974000,
+    "updatedAt" : 1781905209000,
+    "closedAt" : 1781905208000,
+    "number" : 50146,
+    "title" : "Validate client URLs during partial import",
+    "userLogin" : "MdTanwer",
+    "labels" : [ "team/core-shared", "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781845796000,
+    "updatedAt" : 1781905219000,
+    "closedAt" : 1781905219000,
+    "number" : 50145,
+    "title" : "Pin UBI base images by digest in container Dockerfiles",
+    "userLogin" : "MdTanwer",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781800710000,
+    "updatedAt" : 1781849543000,
+    "number" : 50141,
+    "title" : "Backport-26.6-Reject redirect URIs containing pre-loaded OIDC response parameters (#49959)",
+    "userLogin" : "jimmychakkalakal",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781800294000,
+    "updatedAt" : 1781871085000,
+    "closedAt" : 1781871085000,
+    "number" : 50140,
+    "title" : "Client Secret Rotation docs incorrectly mark feature as experimental instead of preview",
+    "userLogin" : "mabartos",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781799898000,
+    "updatedAt" : 1781849586000,
+    "number" : 50138,
+    "title" : "Backport-26.4-Reject redirect URIs containing pre-loaded OIDC response parameters (#49959)",
+    "userLogin" : "jimmychakkalakal",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781799589000,
+    "updatedAt" : 1781871214000,
+    "closedAt" : 1781871214000,
+    "number" : 50137,
+    "title" : "Client Secret and Secret Rotated are always the same",
+    "userLogin" : "mabartos",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781797510000,
+    "updatedAt" : 1781875127000,
+    "closedAt" : 1781875124000,
+    "number" : 50132,
+    "title" : "Bump vite from 7.3.2 to 7.3.5 in /js",
+    "userLogin" : "dependabot[bot]",
+    "labels" : [ "area/dependencies", "team/ui", "flaky-test" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781795191000,
+    "updatedAt" : 1781873628000,
+    "number" : 50130,
+    "title" : "Fixes #50128 - ensure DL_DIR exists",
+    "userLogin" : "baidarka",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781795041000,
+    "updatedAt" : 1781895168000,
+    "closedAt" : 1781856578000,
+    "number" : 50129,
+    "title" : "[OID4VCI] Replace realm options Trusted Key IDs and Trusted Keys (JSON) with trust-material IdPs configured on the client",
+    "userLogin" : "IngridPuppet",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781794348000,
+    "updatedAt" : 1781869658000,
+    "number" : 50127,
+    "title" : "Migrates SamlClientTest using new Testframework",
+    "userLogin" : "jimmychakkalakal",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781793172000,
+    "updatedAt" : 1781872879000,
+    "number" : 50126,
+    "title" : "[OID4VCI-FAPI2] Pass fapi2-security-profile-final-par-ensure-reused-request-uri-prior-to-auth-completion-succeeds",
+    "userLogin" : "tdiesler",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781793136000,
+    "updatedAt" : 1781866893000,
+    "number" : 50125,
+    "title" : "[OID4VCI-FAPI2] Pass fapi2-security-profile-final-dpop-negative-tests",
+    "userLogin" : "tdiesler",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781786813000,
+    "updatedAt" : 1781846973000,
+    "number" : 50122,
+    "title" : "feat: pass totpSecretKeyUri to the totp template",
+    "userLogin" : "whawker",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781783794000,
+    "updatedAt" : 1781914550000,
+    "number" : 50121,
+    "title" : "Add theme upload and management via admin REST API",
+    "userLogin" : "vikas0686",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 3
+  }, {
+    "createdAt" : 1781782669000,
+    "updatedAt" : 1781883366000,
+    "number" : 50120,
+    "title" : "[OID4VCI] Fix c_nonce replay protection",
+    "userLogin" : "forkimenjeckayang",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1781778437000,
+    "updatedAt" : 1781875846000,
+    "number" : 50112,
+    "title" : "[OID4VCI] Enforce DID uniqueness and restrict DID updates to admins",
+    "userLogin" : "Awambeng",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781776118000,
+    "updatedAt" : 1781847245000,
+    "number" : 50111,
+    "title" : "Thread dumps guide",
+    "userLogin" : "tkyjovsk",
+    "labels" : [ "team/cloud-native", "team/production-readiness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781773927000,
+    "updatedAt" : 1781905224000,
+    "closedAt" : 1781905223000,
+    "number" : 50109,
+    "title" : "Return HTTP 400 for malformed Content-Type header",
+    "userLogin" : "MdTanwer",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781767036000,
+    "updatedAt" : 1781846102000,
+    "closedAt" : 1781846102000,
+    "number" : 50102,
+    "title" : "Upgrade to Quarkus 3.33.2.1",
+    "userLogin" : "vmuzikar",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781764588000,
+    "updatedAt" : 1781923094000,
+    "closedAt" : 1781905242000,
+    "number" : 50099,
+    "title" : "Use versioned FreeMarker Configuration defaults",
+    "userLogin" : "MdTanwer",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1781760315000,
+    "updatedAt" : 1781927368000,
+    "number" : 50098,
+    "title" : "Enforce path containment in FolderTheme.getTemplate()",
+    "userLogin" : "MdTanwer",
+    "labels" : [ "team/cloud-native", "team/core-shared", "team/core-authn" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1781746156000,
+    "updatedAt" : 1781847011000,
+    "number" : 50095,
+    "title" : "Use exact match in InvitationManager.getByEmail()",
+    "userLogin" : "kota65535",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781710589000,
+    "updatedAt" : 1781926682000,
+    "number" : 50083,
+    "title" : "Fix client secret length to always use HS512 entropy #49793",
+    "userLogin" : "MdTanwer",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781704486000,
+    "updatedAt" : 1781867662000,
+    "closedAt" : 1781867662000,
+    "number" : 50078,
+    "title" : "Remove unused method and tag databaseTest to a method",
+    "userLogin" : "gaoyikeshuer",
+    "labels" : [ "flaky-test", "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781704400000,
+    "updatedAt" : 1781846194000,
+    "number" : 50077,
+    "title" : "add client_id variable to email templates",
+    "userLogin" : "yanxch",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781704173000,
+    "updatedAt" : 1781849445000,
+    "number" : 50075,
+    "title" : "add pre-triage linked issue check and labeling",
+    "userLogin" : "shawkins",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781702321000,
+    "updatedAt" : 1781904232000,
+    "number" : 50073,
+    "title" : "Filter empty/blank redirectUris and webOrigins before persistence",
+    "userLogin" : "sguilhen",
+    "labels" : [ "team/rh-iam", "flaky-test", "team/core-iam" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1781693813000,
+    "updatedAt" : 1781846193000,
+    "number" : 50071,
+    "title" : "fix(partial-import): recreate service account users on client overwrite",
+    "userLogin" : "wilmerdooley",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781692688000,
+    "updatedAt" : 1781846192000,
+    "number" : 50070,
+    "title" : "fix(login): apply kc_locale on every action token request",
+    "userLogin" : "wilmerdooley",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781692203000,
+    "updatedAt" : 1781846897000,
+    "number" : 50068,
+    "title" : "Fix #50054: Only warn about explicitly enabled deprecated features",
+    "userLogin" : "Shruti181807",
+    "labels" : [ "team/cloud-native", "team/core-protocols" ],
+    "commentsCount" : 4
+  }, {
+    "createdAt" : 1781688615000,
+    "updatedAt" : 1781866845000,
+    "number" : 50066,
+    "title" : "Convert try finally to registered clean up",
+    "userLogin" : "gaoyikeshuer",
+    "labels" : [ "flaky-test", "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781683850000,
+    "updatedAt" : 1781866810000,
+    "number" : 50062,
+    "title" : "Admin Console sessions page fails with unknown_error when federated u…",
+    "userLogin" : "martin-kanis",
+    "labels" : [ "team/core-iam", "team/core-shared" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781680387000,
+    "updatedAt" : 1781860983000,
+    "closedAt" : 1781859830000,
+    "number" : 50057,
+    "title" : "[OID4VCI] Warning in conformance tests due to custom field in authorization_details",
+    "userLogin" : "tdiesler",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 3
+  }, {
+    "createdAt" : 1781675584000,
+    "updatedAt" : 1781847011000,
+    "number" : 50056,
+    "title" : "fix: avoid duplicate role creation when importing realm roles",
+    "userLogin" : "wilmerdooley",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781675505000,
+    "updatedAt" : 1781846192000,
+    "number" : 50055,
+    "title" : "fix(client-registration): avoid NPE when isPublicClient() is null",
+    "userLogin" : "wilmerdooley",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781645271000,
+    "updatedAt" : 1781921292000,
+    "number" : 50052,
+    "title" : "Translations update from Hosted Weblate",
+    "userLogin" : "weblate",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1781634283000,
+    "updatedAt" : 1781869230000,
+    "number" : 50048,
+    "title" : "Add federated users support for user verifiable credentials",
+    "userLogin" : "jimmychakkalakal",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 3
+  }, {
+    "createdAt" : 1781612533000,
+    "updatedAt" : 1781857586000,
+    "closedAt" : 1781857586000,
+    "number" : 50037,
+    "title" : "Documentation for parameterized client scopes",
+    "userLogin" : "mabartos",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781596511000,
+    "updatedAt" : 1781874286000,
+    "number" : 50028,
+    "title" : "[OID4VCI] Restore support for pre-auth tx_code",
+    "userLogin" : "tdiesler",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781593622000,
+    "updatedAt" : 1781861938000,
+    "number" : 50026,
+    "title" : "Enforce secure redirect URIs on authorization requests",
+    "userLogin" : "mitsu3333",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 4
+  }, {
+    "createdAt" : 1781563460000,
+    "updatedAt" : 1781881811000,
+    "number" : 50021,
+    "title" : "Document querying syntax",
+    "userLogin" : "Pepo48",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1781527843000,
+    "updatedAt" : 1781874134000,
+    "number" : 50011,
+    "title" : "[OID4VCI] Add a client policy to allow preauth offers",
+    "userLogin" : "tdiesler",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781495834000,
+    "updatedAt" : 1781859876000,
+    "number" : 49998,
+    "title" : "Customize token exchange endpoint to issue ID-JAG",
+    "userLogin" : "bucchi",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781479022000,
+    "updatedAt" : 1781892866000,
+    "closedAt" : 1781890853000,
+    "number" : 49997,
+    "title" : "Client CLI v2: move connection options to root, implement list projection and more",
+    "userLogin" : "michalvavrik",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 7
+  }, {
+    "createdAt" : 1781349264000,
+    "updatedAt" : 1781867127000,
+    "closedAt" : 1781867126000,
+    "number" : 49989,
+    "title" : "Add section to verify a graceful shutdown to the docs",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/production-readiness" ],
+    "commentsCount" : 3
+  }, {
+    "createdAt" : 1781294433000,
+    "updatedAt" : 1781875089000,
+    "closedAt" : 1781875089000,
+    "number" : 49983,
+    "title" : "Document WorkflowProviderEvent types for ProviderEventListener implem…",
+    "userLogin" : "sguilhen",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781284341000,
+    "updatedAt" : 1781848958000,
+    "closedAt" : 1781848958000,
+    "number" : 49979,
+    "title" : "Set default Kubernetes identity provider issuer",
+    "userLogin" : "chance-coleman",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781280827000,
+    "updatedAt" : 1781869766000,
+    "number" : 49971,
+    "title" : "Baseline for a project and team level agent instructions",
+    "userLogin" : "pedroigor",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1781275199000,
+    "updatedAt" : 1781869228000,
+    "number" : 49966,
+    "title" : "update documentation to expose multi-namespace install modes",
+    "userLogin" : "edewit",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1781253479000,
+    "updatedAt" : 1781866116000,
+    "number" : 49949,
+    "title" : " Fix to concurrent backchannel logout sessions.",
+    "userLogin" : "msdaly200",
+    "labels" : [ "flaky-test", "team/core-clients", "team/core-authn" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1781210624000,
+    "updatedAt" : 1781906886000,
+    "number" : 49929,
+    "title" : "Making transmission of cluster events synchronous for callers",
+    "userLogin" : "ahus1",
+    "labels" : [ "flaky-test", "team/production-readiness" ],
+    "commentsCount" : 8
+  }, {
+    "createdAt" : 1781198594000,
+    "updatedAt" : 1781896375000,
+    "number" : 49914,
+    "title" : "Build-time provider discovery via @KeycloakProvider annotation (#49216)",
+    "userLogin" : "thomasdarimont",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1781095450000,
+    "updatedAt" : 1781879491000,
+    "number" : 49872,
+    "title" : "Add sort parameters to Client Admin API v2",
+    "userLogin" : "edewit",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 7
+  }, {
+    "createdAt" : 1781091432000,
+    "updatedAt" : 1781878524000,
+    "number" : 49867,
+    "title" : "added created and last modified timestamps",
+    "userLogin" : "edewit",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 10
+  }, {
+    "createdAt" : 1781088645000,
+    "updatedAt" : 1781886743000,
+    "number" : 49866,
+    "title" : "Add conformance tests to CI",
+    "userLogin" : "dominikschlosser",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 8
+  }, {
+    "createdAt" : 1781062763000,
+    "updatedAt" : 1781904865000,
+    "number" : 49850,
+    "title" : "[OID4VCI-FAPI2] Pass fapi2-security-profile-final-ensure-holder-of-key-required",
+    "userLogin" : "tdiesler",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1780918361000,
+    "updatedAt" : 1781892438000,
+    "closedAt" : 1781890531000,
+    "number" : 49775,
+    "title" : "Document operator client CRDs supported by Admin API v2",
+    "userLogin" : "michalvavrik",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 4
+  }, {
+    "createdAt" : 1780911914000,
+    "updatedAt" : 1781857070000,
+    "number" : 49768,
+    "title" : "refactor ssf to use react hook form and admin client",
+    "userLogin" : "edewit",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 7
+  }, {
+    "createdAt" : 1780482797000,
+    "updatedAt" : 1781877001000,
+    "number" : 49647,
+    "title" : "made style sheet imports more flexible",
+    "userLogin" : "edewit",
+    "labels" : [ "flaky-test", "team/core-clients" ],
+    "commentsCount" : 6
+  }, {
+    "createdAt" : 1780472762000,
+    "updatedAt" : 1781866058000,
+    "number" : 49638,
+    "title" : "initial server side pagination client v2",
+    "userLogin" : "edewit",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 20
+  }, {
+    "createdAt" : 1780383366000,
+    "updatedAt" : 1781871092000,
+    "number" : 49563,
+    "title" : "[OID4VCI] Conformance with OpenID HAIP Profile",
+    "userLogin" : "tdiesler",
+    "labels" : [ "flaky-test", "team/core-authn" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1779821198000,
+    "updatedAt" : 1781859595000,
+    "number" : 49349,
+    "title" : "Client Policy extension to other representations",
+    "userLogin" : "slaskawi",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 4
+  }, {
+    "createdAt" : 1779543536000,
+    "updatedAt" : 1781891725000,
+    "number" : 49273,
+    "title" : "fix: refining the health check and exposing excluding the health check",
+    "userLogin" : "shawkins",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 7
+  }, {
+    "createdAt" : 1779279068000,
+    "updatedAt" : 1781891895000,
+    "closedAt" : 1781891895000,
+    "number" : 49162,
+    "title" : "fix: restricting when the create user page is shown",
+    "userLogin" : "shawkins",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 6
+  }, {
+    "createdAt" : 1779277268000,
+    "updatedAt" : 1781887704000,
+    "closedAt" : 1781887704000,
+    "number" : 49158,
+    "title" : "SSF: Add initial documentation for experimental SSF Transmitter feature",
+    "userLogin" : "thomasdarimont",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1779218870000,
+    "updatedAt" : 1781895397000,
+    "number" : 49138,
+    "title" : "fix: normalizing logic when context is not available",
+    "userLogin" : "shawkins",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 9
+  }, {
+    "createdAt" : 1778345168000,
+    "updatedAt" : 1781851730000,
+    "number" : 48857,
+    "title" : "fix: Re-authentication flow does not support re-authenticating brokered users with no local credentials set",
+    "userLogin" : "vilmosnagy",
+    "labels" : [ "flaky-test", "team/core-authn" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1778193044000,
+    "updatedAt" : 1781852500000,
+    "closedAt" : 1781852500000,
+    "number" : 48814,
+    "title" : "fix: Identity providers should not be hidden from login page when the user goes back from the reset credentials page",
+    "userLogin" : "vilmosnagy",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 9
+  }, {
+    "createdAt" : 1777572149000,
+    "updatedAt" : 1781875645000,
+    "number" : 48641,
+    "title" : "Feat: implements idp mappers optional claims",
+    "userLogin" : "romarioliveira25",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 3
+  }, {
+    "createdAt" : 1777366280000,
+    "updatedAt" : 1781867488000,
+    "number" : 48535,
+    "title" : "feat(org): add client_id and redirect_uri params to invite-user endpoints",
+    "userLogin" : "hemmerlein",
+    "labels" : [ "flaky-test", "team/core-iam", "area/organizations" ],
+    "commentsCount" : 7
+  }, {
+    "createdAt" : 1777254087000,
+    "updatedAt" : 1781838078000,
+    "number" : 48485,
+    "title" : "Fix removal of custom required actions via admin user API",
+    "userLogin" : "ozimakov",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1776868091000,
+    "updatedAt" : 1781856511000,
+    "number" : 48372,
+    "title" : "Handle orphan authenticator providers in flows",
+    "userLogin" : "erenkan",
+    "labels" : [ "flaky-test", "team/core-authn" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1776486728000,
+    "updatedAt" : 1781838101000,
+    "number" : 48219,
+    "title" : "Fix XMLSignatureUtil to omit KeyInfo when includeKeyInfoInSignature is false",
+    "userLogin" : "ozimakov",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1776373394000,
+    "updatedAt" : 1781903235000,
+    "number" : 48176,
+    "title" : "Allow replacing existing federated identity link for same user (opt-in)",
+    "userLogin" : "Oluwatobi-Mustapha",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 4
   } ],
   "pullRequestWaits" : [ {
     "number" : 45056,
@@ -242169,11 +242343,25 @@
     "author" : "robson90",
     "baseRef" : "main"
   }, {
+    "number" : 49158,
+    "minutes" : 4,
+    "mergedAt" : 1781887704000,
+    "completedAt" : 1781257783000,
+    "author" : "thomasdarimont",
+    "baseRef" : "main"
+  }, {
     "number" : 49159,
     "minutes" : 79,
     "mergedAt" : 1779874764000,
     "completedAt" : 1779806348000,
     "author" : "artur-baltabayev",
+    "baseRef" : "main"
+  }, {
+    "number" : 49162,
+    "minutes" : 62,
+    "mergedAt" : 1781891894000,
+    "completedAt" : 1780078804000,
+    "author" : "shawkins",
     "baseRef" : "main"
   }, {
     "number" : 45067,
@@ -245473,6 +245661,13 @@
     "author" : "pedroigor",
     "baseRef" : "release/26.4"
   }, {
+    "number" : 49775,
+    "minutes" : 4,
+    "mergedAt" : 1781890531000,
+    "completedAt" : 1781885451000,
+    "author" : "michalvavrik",
+    "baseRef" : "main"
+  }, {
     "number" : 45681,
     "minutes" : 57,
     "mergedAt" : 1769097579000,
@@ -246509,6 +246704,13 @@
     "author" : "vaceksimon",
     "baseRef" : "main"
   }, {
+    "number" : 49983,
+    "minutes" : 2,
+    "mergedAt" : 1781875089000,
+    "completedAt" : 1781294622000,
+    "author" : "sguilhen",
+    "baseRef" : "main"
+  }, {
     "number" : 41796,
     "minutes" : 68,
     "mergedAt" : 1756392953000,
@@ -246521,6 +246723,13 @@
     "mergedAt" : 1769772622000,
     "completedAt" : 1769772620000,
     "author" : "mabartos",
+    "baseRef" : "main"
+  }, {
+    "number" : 49989,
+    "minutes" : 4,
+    "mergedAt" : 1781867126000,
+    "completedAt" : 1781349645000,
+    "author" : "ahus1",
     "baseRef" : "main"
   }, {
     "number" : 45895,
@@ -246549,6 +246758,13 @@
     "mergedAt" : 1781624092000,
     "completedAt" : 1781623584000,
     "author" : "niels-van-nerum",
+    "baseRef" : "main"
+  }, {
+    "number" : 49997,
+    "minutes" : 61,
+    "mergedAt" : 1781890853000,
+    "completedAt" : 1781555767000,
+    "author" : "michalvavrik",
     "baseRef" : "main"
   }, {
     "number" : 41806,
@@ -246719,6 +246935,13 @@
     "author" : "forkimenjeckayang",
     "baseRef" : "main"
   }, {
+    "number" : 50037,
+    "minutes" : 1,
+    "mergedAt" : 1781857586000,
+    "completedAt" : 1781693522000,
+    "author" : "mabartos",
+    "baseRef" : "main"
+  }, {
     "number" : 45942,
     "minutes" : 57,
     "mergedAt" : 1770059442000,
@@ -246845,6 +247068,13 @@
     "author" : "ryanemerson",
     "baseRef" : "main"
   }, {
+    "number" : 50057,
+    "minutes" : 60,
+    "mergedAt" : 1781859829000,
+    "completedAt" : 1781858485000,
+    "author" : "tdiesler",
+    "baseRef" : "main"
+  }, {
     "number" : 45963,
     "minutes" : 58,
     "mergedAt" : 1770122414000,
@@ -246941,6 +247171,13 @@
     "mergedAt" : 1770830329000,
     "completedAt" : 1770653171000,
     "author" : "mabartos",
+    "baseRef" : "main"
+  }, {
+    "number" : 50078,
+    "minutes" : 62,
+    "mergedAt" : 1781867662000,
+    "completedAt" : 1781778477000,
+    "author" : "gaoyikeshuer",
     "baseRef" : "main"
   }, {
     "number" : 45984,
@@ -247167,6 +247404,13 @@
     "author" : "michalvavrik",
     "baseRef" : "main"
   }, {
+    "number" : 50129,
+    "minutes" : 864,
+    "mergedAt" : 1781856578000,
+    "completedAt" : 1781856619000,
+    "author" : "IngridPuppet",
+    "baseRef" : "main"
+  }, {
     "number" : 46035,
     "minutes" : 56,
     "mergedAt" : 1770287453000,
@@ -247179,6 +247423,13 @@
     "mergedAt" : 1770637515000,
     "completedAt" : 1770328602000,
     "author" : "andymunro",
+    "baseRef" : "main"
+  }, {
+    "number" : 50132,
+    "minutes" : 1293,
+    "mergedAt" : 1781875124000,
+    "completedAt" : 1781875122000,
+    "author" : "dependabot",
     "baseRef" : "main"
   }, {
     "number" : 41941,
@@ -247195,6 +247446,13 @@
     "author" : "mabartos",
     "baseRef" : "feature/admin-api-v2"
   }, {
+    "number" : 50137,
+    "minutes" : 30,
+    "mergedAt" : 1781871214000,
+    "completedAt" : 1781801403000,
+    "author" : "mabartos",
+    "baseRef" : "main"
+  }, {
     "number" : 41947,
     "minutes" : 73,
     "mergedAt" : 1758020853000,
@@ -247206,6 +247464,13 @@
     "minutes" : 57,
     "mergedAt" : 1770288699000,
     "completedAt" : 1770283128000,
+    "author" : "mabartos",
+    "baseRef" : "main"
+  }, {
+    "number" : 50140,
+    "minutes" : 1,
+    "mergedAt" : 1781871085000,
+    "completedAt" : 1781800409000,
     "author" : "mabartos",
     "baseRef" : "main"
   }, {
@@ -247361,6 +247626,13 @@
     "mergedAt" : 1755605440000,
     "completedAt" : 1755601471000,
     "author" : "dependabot",
+    "baseRef" : "main"
+  }, {
+    "number" : 50163,
+    "minutes" : 1,
+    "mergedAt" : 1781903677000,
+    "completedAt" : 1781885190000,
+    "author" : "pruivo",
     "baseRef" : "main"
   }, {
     "number" : 41972,
@@ -261167,6 +261439,13 @@
     "author" : "sguilhen",
     "baseRef" : "main"
   }, {
+    "number" : 48814,
+    "minutes" : 60,
+    "mergedAt" : 1781852500000,
+    "completedAt" : 1781646639000,
+    "author" : "vilmosnagy",
+    "baseRef" : "main"
+  }, {
     "number" : 48817,
     "minutes" : 45,
     "mergedAt" : 1779199016000,
@@ -262581,10 +262860,10 @@
     "commentsCount" : 24
   }, {
     "createdAt" : 1781072151000,
-    "updatedAt" : 1781812422000,
+    "updatedAt" : 1781880297000,
     "number" : 747,
     "labels" : [ "team/cloud-native", "status/triage", "team/core-protocols", "team/core-iam" ],
-    "commentsCount" : 7
+    "commentsCount" : 8
   }, {
     "createdAt" : 1781072189000,
     "updatedAt" : 1781723718000,
@@ -262604,12 +262883,6 @@
     "labels" : [ "team/security" ],
     "commentsCount" : 4
   }, {
-    "createdAt" : 1781538681000,
-    "updatedAt" : 1781790741000,
-    "number" : 766,
-    "labels" : [ "kind/weakness", "status/triage", "team/core-protocols" ],
-    "commentsCount" : 3
-  }, {
     "createdAt" : 1781614761000,
     "updatedAt" : 1781723595000,
     "number" : 767,
@@ -262617,7 +262890,7 @@
     "commentsCount" : 2
   }, {
     "createdAt" : 1781620161000,
-    "updatedAt" : 1781800469000,
+    "updatedAt" : 1781861121000,
     "number" : 768,
     "labels" : [ "status/triage", "team/core-protocols", "status/missing-information" ],
     "commentsCount" : 4
@@ -262628,19 +262901,13 @@
     "labels" : [ "status/triage", "severity/medium", "team/core-iam" ],
     "commentsCount" : 2
   }, {
-    "createdAt" : 1781703943000,
-    "updatedAt" : 1781721496000,
-    "number" : 773,
-    "labels" : [ "status/triage", "team/core-iam" ],
+    "createdAt" : 1781851160000,
+    "updatedAt" : 1781875659000,
+    "number" : 779,
+    "labels" : [ "kind/weakness", "status/triage", "team/core-iam" ],
     "commentsCount" : 2
-  }, {
-    "createdAt" : 1781709560000,
-    "updatedAt" : 1781799790000,
-    "number" : 774,
-    "labels" : [ "status/triage", "team/core-protocols", "kind/bug" ],
-    "commentsCount" : 3
   } ],
-  "branches" : [ "archive/map-store", "archive/release/20.0", "archive/release/21.0", "archive/release/21.1", "archive/release/22.0", "archive/release/23.0", "archive/release/24.0", "archive/release/25.0", "archive/release/26.0", "archive/release/26.1", "archive/release/26.2", "archive/release/26.3", "archive/release/26.5", "copilot/add-copilot-instructions", "copilot/fix-code-for-review-comments", "copilot/fix-quarkus-it-job", "copilot/list-duplicated-issues", "copilot/overview-pull-requests-last-30-days", "copilot/refactor-java-keystore-provider", "copilot/use-quarkus-properties-first", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.0.1", "dependabot/npm_and_yarn/js/npm-dependencies-c101d4b159", "dependabot/npm_and_yarn/js/uuid-14.0.0", "dependabot/npm_and_yarn/js/vite-7.3.5", "dependabot/npm_and_yarn/js/vitest-4.1.0", "feature/admin-api-v2", "main", "quarkus-next", "release/26.4", "release/26.6" ],
+  "branches" : [ "archive/map-store", "archive/release/20.0", "archive/release/21.0", "archive/release/21.1", "archive/release/22.0", "archive/release/23.0", "archive/release/24.0", "archive/release/25.0", "archive/release/26.0", "archive/release/26.1", "archive/release/26.2", "archive/release/26.3", "archive/release/26.5", "copilot/add-copilot-instructions", "copilot/enhanced-cluster-wide-operator-milestone-2", "copilot/fix-code-for-review-comments", "copilot/fix-quarkus-it-job", "copilot/list-duplicated-issues", "copilot/overview-pull-requests-last-30-days", "copilot/refactor-java-keystore-provider", "copilot/use-quarkus-properties-first", "dependabot/maven/org.apache.logging.log4j-log4j-core-2.25.4", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.0.1", "dependabot/npm_and_yarn/js/npm-dependencies-c101d4b159", "dependabot/npm_and_yarn/js/uuid-14.0.0", "dependabot/npm_and_yarn/js/vitest-4.1.0", "feature/admin-api-v2", "main", "quarkus-next", "release/26.4", "release/26.6" ],
   "cveStats" : [ {
     "ref" : "refs/heads/main",
     "criticalCount" : 0,
@@ -262666,5 +262933,5 @@
     "mediumCount" : 20,
     "lowCount" : 1
   } ],
-  "issuesWithPr" : 88
+  "issuesWithPr" : 89
 }
