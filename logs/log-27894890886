@@ -1,0 +1,197 @@
+Admin UI E2E (chromium)	Run Playwright tests	﻿2026-06-21T05:44:35.9528324Z ##[group]Run pnpm --fail-if-no-match --filter @keycloak/keycloak-admin-ui test:integration -- --project=chromium
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9529225Z ^[[36;1mpnpm --fail-if-no-match --filter @keycloak/keycloak-admin-ui test:integration -- --project=chromium^[[0m
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9561539Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9561893Z env:
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9562206Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9562600Z   WORKSPACE: @keycloak/keycloak-admin-ui
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9562890Z   RETRY_COUNT: 3
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9563105Z   WIREIT_CACHE: github
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9563361Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 58225
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9563766Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9564307Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:35.9564727Z ##[endgroup]
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:36.3933595Z $ wireit -- --project=chromium
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:36.5384350Z Analyzing
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:37.3137697Z (node:5770) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:37.3138957Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:37.5383848Z  75% [3 / 4] [1 running] test:integration
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:40.1642355Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:44:40.1643070Z Running 433 tests using 1 worker
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:48:47.3305706Z ················································································
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:52:08.5912627Z ······················································°·························
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:55:29.2882005Z ················································································
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:58:58.6257923Z ················································································
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T05:59:13.0378128Z ····F::error file=js/apps/admin-ui/test/utils/masthead.ts,title=[chromium] › test/realm-settings/general.spec.ts:64:3 › Realm settings general tab tests › realm enable/disable switch,line=5,col=48::  1) [chromium] › test/realm-settings/general.spec.ts:64:3 › Realm settings general tab tests › realm enable/disable switch %0A    Error: expect(locator).toHaveText(expected) failed%0A%0A    Locator: getByTestId('last-alert')%0A    Expected: "Realm successfully updated"%0A    Timeout: 5000ms%0A    Error: element(s) not found%0A%0A    Call log:%0A      - Expect "toHaveText" with timeout 5000ms%0A      - waiting for getByTestId('last-alert')%0A%0A%0A       at utils/masthead.ts:5%0A%0A      3 |%0A      4 | export async function assertNotificationMessage(page: Page, message: string) {%0A    > 5 |   await expect(page.getByTestId("last-alert")).toHaveText(message);%0A        |                                                ^%0A      6 | }%0A      7 |%0A      8 | function getActionToggleButton(page: Page) {%0A        at assertNotificationMessage (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/masthead.ts:5:48)%0A        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-settings/general.spec.ts:67:11
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:02:15.8907705Z °°°°°······································································
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2959366Z ·································
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2964545Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2973708Z   1) [chromium] › test/realm-settings/general.spec.ts:64:3 › Realm settings general tab tests › realm enable/disable switch 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2974562Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2975434Z     Error: ^[[2mexpect(^[[22m^[[31mlocator^[[39m^[[2m).^[[22mtoHaveText^[[2m(^[[22m^[[32mexpected^[[39m^[[2m)^[[22m failed
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2976273Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2976561Z     Locator: getByTestId('last-alert')
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2977252Z     Expected: ^[[32m"Realm successfully updated"^[[39m
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2977615Z     Timeout: 5000ms
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2977891Z     Error: element(s) not found
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2978079Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2978518Z     Call log:
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2978909Z     ^[[2m  - Expect "toHaveText" with timeout 5000ms^[[22m
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2979395Z     ^[[2m  - waiting for getByTestId('last-alert')^[[22m
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2979641Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2979648Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2979766Z        at utils/masthead.ts:5
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2979957Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2980051Z       3 |
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2980545Z       4 | export async function assertNotificationMessage(page: Page, message: string) {
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2981258Z     > 5 |   await expect(page.getByTestId("last-alert")).toHaveText(message);
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2981781Z         |                                                ^
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2982146Z       6 | }
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2982370Z       7 |
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2982809Z       8 | function getActionToggleButton(page: Page) {
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2984053Z         at assertNotificationMessage (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/masthead.ts:5:48)
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2985585Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-settings/general.spec.ts:67:11
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2986956Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2987540Z     Error Context: test-results/realm-settings-general-Rea-df9a0-realm-enable-disable-switch-chromium/error-context.md
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2988157Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2988726Z     Error Context: test-results/realm-settings-general-Rea-df9a0-realm-enable-disable-switch-chromium/error-context.md
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2989331Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2989843Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2990726Z     test-results/realm-settings-general-Rea-df9a0-realm-enable-disable-switch-chromium/trace.zip
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2991492Z     Usage:
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2991612Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2992150Z         pnpm exec playwright show-trace test-results/realm-settings-general-Rea-df9a0-realm-enable-disable-switch-chromium/trace.zip
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2992717Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2993091Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2993395Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2993488Z   1 failed
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2994115Z     [chromium] › test/realm-settings/general.spec.ts:64:3 › Realm settings general tab tests › realm enable/disable switch 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2994660Z   1 skipped
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2994873Z   5 did not run
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.2995101Z   426 passed (19.0m)
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.3018290Z ##[notice]  1 failed
+Admin UI E2E (chromium)	Run Playwright tests	    [chromium] › test/realm-settings/general.spec.ts:64:3 › Realm settings general tab tests › realm enable/disable switch 
+Admin UI E2E (chromium)	Run Playwright tests	  1 skipped
+Admin UI E2E (chromium)	Run Playwright tests	  5 did not run
+Admin UI E2E (chromium)	Run Playwright tests	  426 passed (19.0m)
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.5659495Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.5660298Z ❌ [test:integration] exited with exit code 1.
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.5664290Z ❌ 1 script failed.
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.5892047Z /home/runner/work/keycloak/keycloak/js/apps/admin-ui:
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.5893934Z [ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL] @keycloak/keycloak-admin-ui@999.0.0-SNAPSHOT test:integration: `wireit -- --project=chromium`
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.5895300Z Exit status 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-06-21T06:03:35.6090699Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	﻿2026-06-21T06:07:54.6775023Z Prepare all required actions
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.6892352Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.6893586Z with:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.6901288Z   jobs: {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	      "js-ci": "true"
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    }
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "build-keycloak": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-client": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "ui-shared": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "account-ui": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "account-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-ui": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "keycloak-admin-client": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  }
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.6909280Z env:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.6910469Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.6911995Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7039120Z ##[group]Run JOBS='{
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7040215Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7041093Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7042118Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7043206Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7044208Z ^[[36;1m      "js-ci": "true"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7045195Z ^[[36;1m    }^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7046003Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7047103Z ^[[36;1m  "build-keycloak": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7048144Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7049180Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7050105Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7050922Z ^[[36;1m  "admin-client": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7051910Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7052964Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7053884Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7054681Z ^[[36;1m  "ui-shared": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7055637Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7056824Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7057768Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7058579Z ^[[36;1m  "account-ui": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7059557Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7060597Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7061532Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7062354Z ^[[36;1m  "account-ui-e2e": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7063378Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7064430Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7065365Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7066281Z ^[[36;1m  "admin-ui": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7067231Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7068258Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7069193Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7070000Z ^[[36;1m  "admin-ui-e2e": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7070997Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7072042Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7073002Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7074069Z ^[[36;1m  "keycloak-admin-client": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7075196Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7076354Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7077338Z ^[[36;1m  }^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7078102Z ^[[36;1m}'^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7078863Z ^[[36;1m^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7079639Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7081135Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7082633Z ^[[36;1m^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7083766Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7085490Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7087006Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7087945Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7089070Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7089902Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7090670Z ^[[36;1mdone^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7269939Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7271599Z env:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7272744Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7274228Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7359076Z Job status:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7388085Z  - conditional: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7389407Z  - build-keycloak: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7390405Z  - admin-client: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7391340Z  - ui-shared: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7392258Z  - account-ui: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7393184Z  - account-ui-e2e: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7394126Z  - admin-ui: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7395442Z  - admin-ui-e2e: failure
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7397274Z  - keycloak-admin-client: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7422672Z 
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7423311Z Status check not okay!
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-21T06:07:54.7440991Z ##[error]Process completed with exit code 1.
