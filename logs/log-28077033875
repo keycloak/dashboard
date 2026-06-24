@@ -1,0 +1,223 @@
+Admin UI E2E (firefox)	Run Playwright tests	﻿2026-06-24T05:26:15.9830696Z ##[group]Run pnpm --fail-if-no-match --filter @keycloak/keycloak-admin-ui test:integration -- --project=firefox
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9832348Z ^[[36;1mpnpm --fail-if-no-match --filter @keycloak/keycloak-admin-ui test:integration -- --project=firefox^[[0m
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9882922Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9883509Z env:
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9884027Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9884695Z   WORKSPACE: @keycloak/keycloak-admin-ui
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9885187Z   RETRY_COUNT: 3
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9885544Z   WIREIT_CACHE: github
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9885965Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 65069
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9886913Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9887773Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:15.9888432Z ##[endgroup]
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:16.4010886Z $ wireit -- --project=firefox
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:16.5462631Z Analyzing
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:16.9906805Z (node:5803) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:16.9908888Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:17.5533452Z  75% [3 / 4] [1 running] test:integration
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:19.7626936Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:26:19.7627622Z Running 433 tests using 1 worker
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:31:24.9564106Z ················································································
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:35:46.9363229Z ·················°·········°··························°·························
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:37:07.0384309Z ··························F::error file=js/apps/admin-ui/test/identity-providers/main.ts,title=[firefox] › test/identity-providers/jwt-authorization-grant.spec.ts:71:3 › JWT Authorization Grant identity provider test › should create a JWT Authorization Grant provider with public key pem,line=85,col=5::  1) [firefox] › test/identity-providers/jwt-authorization-grant.spec.ts:71:3 › JWT Authorization Grant identity provider test › should create a JWT Authorization Grant provider with public key pem %0A    Error: expect(locator).toBeVisible() failed%0A%0A    Locator: getByTestId('config.publicKeySignatureVerifierKeyId')%0A    Expected: visible%0A    Timeout: 5000ms%0A    Error: element(s) not found%0A%0A    Call log:%0A      - Expect "toBeVisible" with timeout 5000ms%0A      - waiting for getByTestId('config.publicKeySignatureVerifierKeyId')%0A%0A%0A       at identity-providers/main.ts:85%0A%0A      83 |   await expect(%0A      84 |     page.getByTestId("config.publicKeySignatureVerifierKeyId"),%0A    > 85 |   ).toBeVisible();%0A         |     ^%0A      86 |   await page.getByTestId("config.publicKeySignatureVerifierKeyId").fill(keyId);%0A      87 |   await page.getByTestId("config.publicKeySignatureVerifier").fill(key);%0A      88 |   await clickAddButton(page);%0A        at createJwtAuthorizationGrantProviderKey (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/identity-providers/main.ts:85:5)%0A        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/identity-providers/jwt-authorization-grant.spec.ts:74:5
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:37:07.0425805Z ##[error]  1) [firefox] › test/identity-providers/jwt-authorization-grant.spec.ts:71:3 › JWT Authorization Grant identity provider test › should create a JWT Authorization Grant provider with public key pem 
+Admin UI E2E (firefox)	Run Playwright tests	    Error: HTTP 404 Not Found
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	       at ../../../libs/keycloak-admin-client/src/utils/fetchWithError.ts:25
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	      23 |     const responseData = await parseResponse(response);
+Admin UI E2E (firefox)	Run Playwright tests	      24 |     const message = getErrorMessage(responseData);
+Admin UI E2E (firefox)	Run Playwright tests	    > 25 |     throw new NetworkError(message, {
+Admin UI E2E (firefox)	Run Playwright tests	         |           ^
+Admin UI E2E (firefox)	Run Playwright tests	      26 |       response,
+Admin UI E2E (firefox)	Run Playwright tests	      27 |       responseData,
+Admin UI E2E (firefox)	Run Playwright tests	      28 |     });
+Admin UI E2E (firefox)	Run Playwright tests	        at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/src/utils/fetchWithError.ts:25:11)
+Admin UI E2E (firefox)	Run Playwright tests	        at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/src/resources/agent.ts:248:19)
+Admin UI E2E (firefox)	Run Playwright tests	        at AdminClient.deleteIdentityProvider (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/AdminClient.ts:344:5)
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:40:05.6827637Z ·····················································
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:44:27.4847282Z ················································································
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:48:37.8514206Z ················································································
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0272895Z ·································
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0276783Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0338703Z   1) [firefox] › test/identity-providers/jwt-authorization-grant.spec.ts:71:3 › JWT Authorization Grant identity provider test › should create a JWT Authorization Grant provider with public key pem 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0340020Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0340722Z     Error: ^[[2mexpect(^[[22m^[[31mlocator^[[39m^[[2m).^[[22mtoBeVisible^[[2m(^[[22m^[[2m)^[[22m failed
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0341310Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0341708Z     Locator: getByTestId('config.publicKeySignatureVerifierKeyId')
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0342543Z     Expected: visible
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0342946Z     Timeout: 5000ms
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0343366Z     Error: element(s) not found
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0343636Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0343769Z     Call log:
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0344387Z     ^[[2m  - Expect "toBeVisible" with timeout 5000ms^[[22m
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0346908Z     ^[[2m  - waiting for getByTestId('config.publicKeySignatureVerifierKeyId')^[[22m
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0347473Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0347485Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0347729Z        at identity-providers/main.ts:85
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0348074Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0348240Z       83 |   await expect(
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0348859Z       84 |     page.getByTestId("config.publicKeySignatureVerifierKeyId"),
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0349534Z     > 85 |   ).toBeVisible();
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0349950Z          |     ^
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0350692Z       86 |   await page.getByTestId("config.publicKeySignatureVerifierKeyId").fill(keyId);
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0351751Z       87 |   await page.getByTestId("config.publicKeySignatureVerifier").fill(key);
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0352735Z       88 |   await clickAddButton(page);
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0353961Z         at createJwtAuthorizationGrantProviderKey (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/identity-providers/main.ts:85:5)
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0355622Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/identity-providers/jwt-authorization-grant.spec.ts:74:5
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0356423Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0356600Z     Error: HTTP 404 Not Found
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0356896Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0357316Z        at ../../../libs/keycloak-admin-client/src/utils/fetchWithError.ts:25
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0357813Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0358156Z       23 |     const responseData = await parseResponse(response);
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0358897Z       24 |     const message = getErrorMessage(responseData);
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0359532Z     > 25 |     throw new NetworkError(message, {
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0360002Z          |           ^
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0360387Z       26 |       response,
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0360822Z       27 |       responseData,
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0361234Z       28 |     });
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0362469Z         at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/src/utils/fetchWithError.ts:25:11)
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0364072Z         at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/src/resources/agent.ts:248:19)
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0365601Z         at AdminClient.deleteIdentityProvider (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/AdminClient.ts:344:5)
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0366478Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0367321Z     Error Context: test-results/identity-providers-jwt-aut-807fb-rovider-with-public-key-pem-firefox/error-context.md
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0368208Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0369379Z     attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0370786Z     test-results/identity-providers-jwt-aut-807fb-rovider-with-public-key-pem-firefox/trace.zip
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0371680Z     Usage:
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0371878Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0372973Z         pnpm exec playwright show-trace test-results/identity-providers-jwt-aut-807fb-rovider-with-public-key-pem-firefox/trace.zip
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0373924Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0374606Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0375131Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0375272Z   1 failed
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0377247Z     [firefox] › test/identity-providers/jwt-authorization-grant.spec.ts:71:3 › JWT Authorization Grant identity provider test › should create a JWT Authorization Grant provider with public key pem 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0378603Z   3 skipped
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0378943Z   429 passed (24.0m)
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.0388734Z ##[notice]  1 failed
+Admin UI E2E (firefox)	Run Playwright tests	    [firefox] › test/identity-providers/jwt-authorization-grant.spec.ts:71:3 › JWT Authorization Grant identity provider test › should create a JWT Authorization Grant provider with public key pem 
+Admin UI E2E (firefox)	Run Playwright tests	  3 skipped
+Admin UI E2E (firefox)	Run Playwright tests	  429 passed (24.0m)
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.3730633Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.3731653Z ❌ [test:integration] exited with exit code 1.
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.3736660Z ❌ 1 script failed.
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.3982964Z /home/runner/work/keycloak/keycloak/js/apps/admin-ui:
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.3984020Z [ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL] @keycloak/keycloak-admin-ui@999.0.0-SNAPSHOT test:integration: `wireit -- --project=firefox`
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.3984679Z Exit status 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-06-24T05:50:17.4183722Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	﻿2026-06-24T05:50:30.3656481Z Prepare all required actions
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3727410Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3727843Z with:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3729765Z   jobs: {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	      "js-ci": "true"
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    }
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "build-keycloak": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-client": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "ui-shared": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "account-ui": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "account-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-ui": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "keycloak-admin-client": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  }
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3731854Z env:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3732238Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3732705Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3840120Z ##[group]Run JOBS='{
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3840620Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3840930Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3841273Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3841638Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3841980Z ^[[36;1m      "js-ci": "true"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3842299Z ^[[36;1m    }^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3842567Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3842855Z ^[[36;1m  "build-keycloak": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3843201Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3843544Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3844178Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3844478Z ^[[36;1m  "admin-client": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3844808Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3845143Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3845444Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3845715Z ^[[36;1m  "ui-shared": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3846027Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3846380Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3846679Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3846948Z ^[[36;1m  "account-ui": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3847326Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3847659Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3847958Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3848234Z ^[[36;1m  "account-ui-e2e": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3848566Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3848892Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3849188Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3849468Z ^[[36;1m  "admin-ui": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3849783Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3850115Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3850423Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3850695Z ^[[36;1m  "admin-ui-e2e": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3851015Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3851334Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3851630Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3852133Z ^[[36;1m  "keycloak-admin-client": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3852507Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3852839Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3853151Z ^[[36;1m  }^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3853409Z ^[[36;1m}'^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3853820Z ^[[36;1m^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3854098Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3854569Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3855047Z ^[[36;1m^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3855432Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3855994Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3856405Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3856778Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3857431Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3857844Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.3858123Z ^[[36;1mdone^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5279516Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5280414Z env:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5280849Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5281349Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5359364Z Job status:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5387886Z  - conditional: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5388311Z  - build-keycloak: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5388670Z  - admin-client: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5388998Z  - ui-shared: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5389315Z  - account-ui: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5389643Z  - account-ui-e2e: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5389982Z  - admin-ui: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5390302Z  - admin-ui-e2e: failure
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5390686Z  - keycloak-admin-client: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5420748Z 
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5421095Z Status check not okay!
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-06-24T05:50:30.5433582Z ##[error]Process completed with exit code 1.
