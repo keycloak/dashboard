@@ -43,6 +43,11 @@ public class FilteredIssues {
         return this;
     }
 
+    public FilteredIssues openWeakness() {
+        filters.add(new OpenWeaknessFilter());
+        return this;
+    }
+
     public FilteredIssues openIssue() {
         filters.add(new OpenIssueFilter());
         return this;

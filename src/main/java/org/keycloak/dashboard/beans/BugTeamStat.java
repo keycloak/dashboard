@@ -11,43 +11,56 @@ public class BugTeamStat {
 
     private String team;
     private final FilteredIssues issues;
+    private final String configNamespace;
 
     private List<BugStat> columns = new LinkedList<>();
 
     public BugTeamStat(String team, FilteredIssues issues, String nextRelease) {
+        this(team, issues, nextRelease, "bugs");
+    }
+
+    protected BugTeamStat(String team, FilteredIssues issues, String nextRelease, String configNamespace) {
         this.team = team;
         this.issues = issues;
+        this.configNamespace = configNamespace;
 
 //        columns.add(BugStat.team(nextRelease)
 //                .issues(issues.clone().milestone(nextRelease))
 //                .warnErrorKey("Milestone"));
 
-        columns.add(BugStat.team("Triage")
+        columns.add(column("Triage")
                 .issues(issues.clone().triage(true)));
 
-        columns.add(BugStat.team("Triage Overdue")
+        columns.add(column("Triage Overdue")
                 .issues(issues.clone().triage(true).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
 
-        columns.add(BugStat.team("Blocker")
+        columns.add(column("Blocker")
                 .issues(issues.clone().triage(false).priority("blocker")));
 
-        columns.add(BugStat.team("Blocker Overdue")
+        columns.add(column("Blocker Overdue")
                 .issues(issues.clone().triage(false).priority("blocker").createdBefore(DateUtil.minusdays(Config.getInt("bugs.BlockerOverdue.days")))));
 
-        columns.add(BugStat.team("Important")
+        columns.add(column("Important")
                 .issues(issues.clone().triage(false).priority("important")));
 
-        columns.add(BugStat.team("Important Overdue")
+        columns.add(column("Important Overdue")
                 .issues(issues.clone().triage(false).priority("important").createdBefore(DateUtil.minusdays(Config.getInt("bugs.ImportantOverdue.days")))));
 
-        columns.add(BugStat.team("Blocked External")
+        columns.add(column("Blocked External")
                 .issues(issues.clone().triage(false).priority("blocker", "important").blockedExternal(true)));
 
-        columns.add(BugStat.team("Normal")
+        columns.add(column("Normal")
                 .issues(issues.clone().triage(false).priority("normal")));
 
-        columns.add(BugStat.team("Low")
+        columns.add(column("Low")
                 .issues(issues.clone().triage(false).priority("low")));
+    }
+
+    private BugStat column(String label) {
+        String key = configNamespace + ".team." + label.replaceAll(" ", "");
+        return BugStat.team(label)
+                .warnCount(Config.getInt(key + ".warn"))
+                .errorCount(Config.getInt(key + ".error"));
     }
 
     public String getTitle() {

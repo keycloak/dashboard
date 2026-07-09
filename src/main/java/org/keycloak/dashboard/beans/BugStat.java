@@ -51,6 +51,7 @@ public class BugStat {
         return this;
     }
 
+
     public BugStat errorIfClosedLessThanOpened() {
         this.errorIfClosedLessThanOpened = true;
         return this;

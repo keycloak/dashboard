@@ -55,6 +55,7 @@ public class Dashboard {
         attributes.put("bugAreaStats", bugs.getAreaStats());
         attributes.put("bugTeamStats", bugs.getTeamStats());
         attributes.put("cveTeamStats", bugs.getTeamCveStats());
+        attributes.put("weaknessTeamStats", bugs.getTeamWeaknessStats());
         attributes.put("privateCveTeamStats", bugs.getPrivateTeamCveStats());
         attributes.put("bugTeamBackportStats", bugs.getTeamBackportStats());
         attributes.put("failedRuns", logFailedParser.getFailedRuns());
