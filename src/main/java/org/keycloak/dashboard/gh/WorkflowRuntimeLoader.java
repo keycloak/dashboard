@@ -7,8 +7,8 @@ import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.PullRequestWait;
 import org.keycloak.dashboard.util.DateUtil;
 
-import javax.json.JsonObject;
-import javax.json.JsonValue;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonValue;
 import java.nio.charset.StandardCharsets;
 import java.util.Comparator;
 import java.util.Date;
