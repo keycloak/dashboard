@@ -22,6 +22,7 @@ public class Bugs {
     private List<BugAreaStat> areaStats;
     private List<BugTeamStat> teamStats;
     private List<CveTeamStat> teamCveStats;
+    private List<WeaknessTeamStat> teamWeaknessStats;
     private List<PrivateCveTeamStat> privateTeamCveStats;
     private final List<BugTeamBackportStat> teamBackportStats;
 
@@ -50,6 +51,7 @@ public class Bugs {
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
         teamCveStats = convertToTeamCveStats(issues, teams);
+        teamWeaknessStats = convertToTeamWeaknessStats(issues, teams);
         privateTeamCveStats = convertToPrivateTeamCveStats(privateIssues, teams);
         teamBackportStats = convertToTeamBackportStats(issues, teams);
     }
@@ -57,7 +59,7 @@ public class Bugs {
     private Map<String, Integer> convertToTeamCount(List<FlakyTest> flakyTests, Teams teams) {
         Map<String, Integer> counts = new TreeMap<>();
         for (String team : teams.keySet()) {
-            if (!team.equals("no-team")) {
+            if (!team.equals(Teams.NO_TEAM)) {
                 counts.put(team.substring("team/".length()), 0);
             }
         }
@@ -170,7 +172,7 @@ public class Bugs {
         List<BugTeamStat> teamStats = new LinkedList<>();
 
         for (String team : teams.keySet()) {
-            if (!team.equals("no-team")) {
+            if (!team.equals(Teams.NO_TEAM)) {
                 FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
                 teamStats.add(new BugTeamStat(team, teamIssues, nextRelease));
             }
@@ -186,7 +188,7 @@ public class Bugs {
         List<CveTeamStat> teamStats = new LinkedList<>();
 
         for (String team : teams.keySet()) {
-            if (!team.equals("no-team")) {
+            if (!team.equals(Teams.NO_TEAM)) {
                 FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
                 if (teamIssues.count() > 0) {
                     teamStats.add(new CveTeamStat(team, teamIssues, nextRelease));
@@ -195,6 +197,24 @@ public class Bugs {
         }
 
         teamStats.sort(Comparator.comparing(CveTeamStat::getTitle));
+
+        return teamStats;
+    }
+
+    private List<WeaknessTeamStat> convertToTeamWeaknessStats(List<GitHubIssue> issues, Teams teams) {
+        FilteredIssues filteredIssues = FilteredIssues.create(issues).openWeakness();
+        List<WeaknessTeamStat> teamStats = new LinkedList<>();
+
+        for (String team : teams.keySet()) {
+            if (!team.equals(Teams.NO_TEAM)) {
+                FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
+                if (teamIssues.count() > 0) {
+                    teamStats.add(new WeaknessTeamStat(team, teamIssues, nextRelease));
+                }
+            }
+        }
+
+        teamStats.sort(Comparator.comparing(WeaknessTeamStat::getTitle));
 
         return teamStats;
     }
@@ -208,7 +228,7 @@ public class Bugs {
         List<PrivateCveTeamStat> stats = new LinkedList<>();
 
         for (String team : teams.keySet()) {
-            if (!team.equals("no-team")) {
+            if (!team.equals(Teams.NO_TEAM)) {
                 FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
                 if (teamIssues.count() > 0) {
                     stats.add(new PrivateCveTeamStat(team, teamIssues));
@@ -225,7 +245,7 @@ public class Bugs {
         List<BugTeamBackportStat> teamStats = new LinkedList<>();
 
         for (String team : teams.keySet()) {
-            if (!team.equals("no-team")) {
+            if (!team.equals(Teams.NO_TEAM)) {
                 FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
                 teamStats.add(new BugTeamBackportStat(team, teamIssues, activeStreams));
             }
@@ -254,6 +274,10 @@ public class Bugs {
 
     public List<CveTeamStat> getTeamCveStats() {
         return teamCveStats;
+    }
+
+    public List<WeaknessTeamStat> getTeamWeaknessStats() {
+        return teamWeaknessStats;
     }
 
     public List<PrivateCveTeamStat> getPrivateTeamCveStats() {

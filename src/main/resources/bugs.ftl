@@ -9,6 +9,7 @@
         <div class="modal-float-margin"><#include "module-cves-teams.ftl"></div>
         <div class="modal-float-margin"><#include "module-cves-private-teams.ftl"></div>
         <div class="modal-float-margin"><#include "module-cves-deps.ftl"></div>
+        <div class="modal-float-margin"><#include "module-weakness-teams.ftl"></div>
         <div class="modal-float-margin"><#include "module-bugs-teams.ftl"></div>
         <div class="modal-float-margin"><#include "module-bugs-backports.ftl"></div>
     </div>
