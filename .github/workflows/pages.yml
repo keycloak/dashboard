@@ -38,7 +38,7 @@ jobs:
       - name: Build dashboard
         run: mvn -B clean install exec:java -Pdashboard -Dpublish
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: 'docs'
       - name: Deploy to GitHub Pages
