@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -44,6 +45,8 @@ public class FailedJobsLoader {
 
         GHWorkflowRuns runs = GHWorkflowRuns.combine(l);
 
+        List<String> warnings = new ArrayList<>();
+
         for (GHWorkflowRun r : runs.getWorkflowRuns()) {
             if (!r.getEvent().equals("pull_request")) {
                 File jobsFile = new File(logsDir, "jobs-" + r.getId());
@@ -63,7 +66,12 @@ public class FailedJobsLoader {
                         }
                     }
 
-                    ghCli.download(jobsLog, "gh", "run", "view", "-R", "keycloak/keycloak", Long.toString(r.getId()), "--log-failed");
+                    try {
+                        ghCli.download(jobsLog, "gh", "run", "view", "-R", "keycloak/keycloak", Long.toString(r.getId()), "--log-failed");
+                    } catch (IOException e) {
+                        warnings.add("Failed to download log for run " + r.getId() + ": " + e.getMessage());
+                        jobsLog.delete();
+                    }
 
                     System.out.print(".");
                 }
@@ -71,6 +79,9 @@ public class FailedJobsLoader {
         }
 
         System.out.println();
+        for (String warning : warnings) {
+            System.out.println("[WARN] " + warning);
+        }
 
         System.out.print("Deleting expired failed-jobs: ");
 
