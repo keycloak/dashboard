@@ -165,8 +165,10 @@ public class LogFailedParser {
             }
         }
 
+        // Log file may be absent when the download failed and was cleaned up
+        boolean logExists = logFile.exists();
         for (FailedJob job : jobs) {
-            if (job.getConclusion() == JobConclusion.FAILURE) {
+            if (job.getConclusion() == JobConclusion.FAILURE && logExists) {
                 if (job.getFailedRun().getWorkflow().equals("js-ci.yml")) {
                     failedRun.add(parseJsTest(job, logFile));
                 } else if (job.getName().equals("Store Model Tests")) {
