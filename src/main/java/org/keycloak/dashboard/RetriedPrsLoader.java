@@ -17,6 +17,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.LinkedList;
@@ -75,6 +76,8 @@ public class RetriedPrsLoader {
 
         objectMapper.writeValue(cachedRunsFile, runs);
 
+        List<String> warnings = new ArrayList<>();
+
         for (GHWorkflowRun r : runs.getWorkflowRuns()) {
             File jobsFile = new File(logsDir, "pr-jobs-" + r.getId());
             File jobsLog = new File(logsDir, "pr-log-" + r.getId());
@@ -106,13 +109,21 @@ public class RetriedPrsLoader {
                 String conclusion = jobsFileHeader.split(" ")[5];
 
                 if ("failure".equals(conclusion)) {
-                    ghCli.download(jobsLog, "gh", "run", "view", "-R", "keycloak/keycloak", Long.toString(r.getId()), "--attempt", Integer.toString(r.getRunAttempt() - 1), "--log-failed");
-                    System.out.print(".");
+                    try {
+                        ghCli.download(jobsLog, "gh", "run", "view", "-R", "keycloak/keycloak", Long.toString(r.getId()), "--attempt", Integer.toString(r.getRunAttempt() - 1), "--log-failed");
+                        System.out.print(".");
+                    } catch (IOException e) {
+                        warnings.add("Failed to download log for run " + r.getId() + ": " + e.getMessage());
+                        jobsLog.delete();
+                    }
                 }
             }
         }
 
         System.out.println();
+        for (String warning : warnings) {
+            System.out.println("[WARN] " + warning);
+        }
 
         System.out.print("Deleting expired retried-prs: ");
 
