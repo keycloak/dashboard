@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directories:
+      - "/"
+      - "/.github/actions/*"
+    schedule:
+      interval: weekly
+      day: "sunday"
+      time: "03:00"
+      timezone: Etc/GMT
+    open-pull-requests-limit: 10
+    rebase-strategy: disabled
+  - package-ecosystem: maven
+    directories:
+      - "/"
+    schedule:
+      interval: weekly
+      day: "sunday"
+      time: "03:00"
+      timezone: Etc/GMT
+    open-pull-requests-limit: 10
+    rebase-strategy: disabled
