@@ -48,8 +48,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           ./update-data.sh ${{ github.event.inputs.category }}
-          ./download-stars.sh
-          if ( ! git diff --exit-code &>/dev/null ); then 
+          if ( ! git diff --exit-code &>/dev/null ); then
             git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git config --global user.name "github-actions[bot]"
             git add --all 
