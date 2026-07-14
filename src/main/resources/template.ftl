@@ -17,7 +17,6 @@
     <li><a href="prs<#if !publish>.html</#if>">PRs</a></li>
     <li><a href="bugs<#if !publish>.html</#if>">Bugs</a></li>
     <li><a href="tests<#if !publish>.html</#if>">Tests</a></li>
-    <li><a href="stars<#if !publish>.html</#if>">Stars</a></li>
     <li><a href="config<#if !publish>.html</#if>">Config</a></li>
 </ul>
 <div class="updated">Last updated: ${updatedDate?string["dd MMMM yyyy, HH:mm '('zzz')'"]}</div>

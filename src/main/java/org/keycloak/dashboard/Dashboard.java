@@ -67,7 +67,6 @@ public class Dashboard {
         attributes.put("nextRelease", bugs.getNextRelease());
         attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());
         attributes.put("configContents", Config.getConfigContents());
-        attributes.put("stars", new Stars());
         attributes.put("cveStats", data.getCveStats().stream().map(CveStatsBean::new).toList());
 
         File output = new File("docs/index.html");
@@ -78,7 +77,6 @@ public class Dashboard {
         freeMarker.template("workflows.ftl", new File("docs/workflows.html"));
         freeMarker.template("tests.ftl", new File("docs/tests.html"));
         freeMarker.template("config.ftl", new File("docs/config.html"));
-        freeMarker.template("stars.ftl", new File("docs/stars.html"));
 
         System.out.println("Created dashboard: " + output.toURI());
     }
