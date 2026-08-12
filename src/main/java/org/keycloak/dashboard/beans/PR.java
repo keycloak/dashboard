@@ -62,7 +62,7 @@ public class PR {
             int teamCount = (int) prs.stream().filter(i -> i.hasLabel(team) && i.isOpen()).count();
             int teamOverdueCount = (int) prs.stream().filter(i -> i.hasLabel(team) && i.isOpen() && i.getCreatedAt().before(DateUtil.MINUS_30_DAYS)).count();
             if (teamCount > 0) {
-                teamStats.add(new PRStat(team.replace("team/", ""), teamCount, 25, 50, "is:open label:" + team, teamOverdueCount, 1, 5, "is:open label:" + team + " created:<" + DateUtil.MINUS_30_DAYS_STRING));
+                teamStats.add(new PRStat(team.replace("team/", ""), teamCount, 25, 50, "is:open label:" + team, teamOverdueCount, 1, 25, "is:open label:" + team + " created:<" + DateUtil.MINUS_30_DAYS_STRING));
             }
         }
 
