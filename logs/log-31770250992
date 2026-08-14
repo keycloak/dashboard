@@ -1,0 +1,185 @@
+Test kustomize installation	Arrange kustomize test installation for own namespace	﻿2026-08-14T04:40:00.2628492Z ##[group]Run kubectl create ns keycloak-own
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2628910Z ^[[36;1mkubectl create ns keycloak-own^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2629189Z ^[[36;1m^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2629544Z ^[[36;1meval $(minikube -p minikube docker-env)^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2630279Z ^[[36;1m./mvnw install -Poperator -pl :keycloak-operator -am \^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2630756Z ^[[36;1m    -Dquarkus.container-image.build=true \^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2631169Z ^[[36;1m    -Dquarkus.kubernetes.image-pull-policy=IfNotPresent \^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2631617Z ^[[36;1m    -Dkc.operator.keycloak.image=keycloak:0.0.1-66c7e1 \^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2633149Z ^[[36;1m    -Dquarkus.kubernetes.env.vars.kc-operator-keycloak-image-pull-policy=Never \^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2633831Z ^[[36;1m    --no-transfer-progress -DskipTests -Dkustomize.namespace=keycloak-own^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2634265Z ^[[36;1m^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2634509Z ^[[36;1mkubectl apply -k operator/target/kubernetes^[[0m
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2679106Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2679508Z env:
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2679824Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2680223Z   MINIKUBE_VERSION: v1.38.0
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2680468Z   KUBERNETES_VERSION: v1.35.0
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2680718Z   MINIKUBE_MEMORY: 4096
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2681106Z   version_remote: 0.0.1-66c7e1
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2681512Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2682010Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2682782Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.2683060Z ##[endgroup]
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:00.6359335Z namespace/keycloak-own created
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:01.2559108Z wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.16/apache-maven-3.9.16-bin.zip
+Test kustomize installation	Arrange kustomize test installation for own namespace	2026-08-14T04:40:01.2578656Z ##[error]Process completed with exit code 1.
+Test kustomize installation	Debug Custom Resources	﻿2026-08-14T04:40:01.2623612Z ##[group]Run kubectl get keycloaks -A -o yaml
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2624005Z ^[[36;1mkubectl get keycloaks -A -o yaml^[[0m
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2624340Z ^[[36;1mkubectl get keycloakrealmimports -A -o yaml^[[0m
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2668990Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2669354Z env:
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2669672Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2670073Z   MINIKUBE_VERSION: v1.38.0
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2670319Z   KUBERNETES_VERSION: v1.35.0
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2670575Z   MINIKUBE_MEMORY: 4096
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2670810Z   version_remote: 0.0.1-66c7e1
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2671152Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2671639Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.3-9/x64
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2672043Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.2672508Z ##[endgroup]
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.3803520Z error: the server doesn't have a resource type "keycloaks"
+Test kustomize installation	Debug Custom Resources	2026-08-14T04:40:01.3827466Z ##[error]Process completed with exit code 1.
+Test OLM installation	Install Yq	﻿2026-08-14T04:39:28.1453647Z ##[group]Run sudo snap install yq
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1454041Z ^[[36;1msudo snap install yq^[[0m
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1498767Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1499150Z env:
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1499863Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1500401Z   MINIKUBE_VERSION: v1.38.0
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1500760Z   KUBERNETES_VERSION: v1.35.0
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1501198Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1501757Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1502391Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1503308Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	Install Yq	2026-08-14T04:39:28.1503730Z ##[endgroup]
+Test OLM installation	Install Yq	2026-08-14T04:40:08.4880524Z error: unable to contact snap store
+Test OLM installation	Install Yq	2026-08-14T04:40:08.4913166Z ##[error]Process completed with exit code 1.
+Test OLM installation	Debug Custom Resources	﻿2026-08-14T04:40:08.4974416Z ##[group]Run kubectl get keycloaks -A -o yaml
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.4974798Z ^[[36;1mkubectl get keycloaks -A -o yaml^[[0m
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.4975147Z ^[[36;1mkubectl get keycloakrealmimports -A -o yaml^[[0m
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5015731Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5016078Z env:
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5016386Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5016769Z   MINIKUBE_VERSION: v1.38.0
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5017010Z   KUBERNETES_VERSION: v1.35.0
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5017258Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5017590Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5018053Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5018437Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.5018714Z ##[endgroup]
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.7701082Z error: the server doesn't have a resource type "keycloaks"
+Test OLM installation	Debug Custom Resources	2026-08-14T04:40:08.7733590Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	﻿2026-08-14T05:14:22.1732705Z Prepare all required actions
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1804150Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1804488Z with:
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1806032Z   jobs: {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	      "operator": "true"
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    }
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "build": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "test-local-apiserver": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "test-remote": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "test-helm": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "test-helm-install": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "test-olm": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  "test-kustomize": {
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	  }
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1807681Z env:
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1807981Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1808370Z   MINIKUBE_VERSION: v1.38.0
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1808631Z   KUBERNETES_VERSION: v1.35.0
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1808893Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1809165Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1867965Z ##[start-action display=Check jobs;id=__self.check-jobs]
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1927058Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1927589Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1927932Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1928211Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1928488Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1928738Z ^[[36;1m      "operator": "true"^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1928991Z ^[[36;1m    }^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1929196Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1929405Z ^[[36;1m  "build": {^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1929633Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1929888Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1930151Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1930371Z ^[[36;1m  "test-local-apiserver": {^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1930648Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1930898Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1931137Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1931342Z ^[[36;1m  "test-remote": {^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1931587Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1931838Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1932341Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1932575Z ^[[36;1m  "test-helm": {^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1932820Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1933074Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1933302Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1933515Z ^[[36;1m  "test-helm-install": {^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1933772Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1934022Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1934248Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1934449Z ^[[36;1m  "test-olm": {^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1934944Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1935196Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1935421Z ^[[36;1m  },^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1935629Z ^[[36;1m  "test-kustomize": {^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1935882Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1936142Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1936371Z ^[[36;1m  }^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1936567Z ^[[36;1m}'^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1936763Z ^[[36;1m^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1936969Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1937352Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1937729Z ^[[36;1m^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1938021Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1938446Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1938770Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1939011Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1939303Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1939519Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1939723Z ^[[36;1mdone^[[0m
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1989185Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1989573Z env:
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1990147Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1990537Z   MINIKUBE_VERSION: v1.38.0
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1990802Z   KUBERNETES_VERSION: v1.35.0
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1991060Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.1991288Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2076514Z Job status:
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2104960Z  - conditional: success
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2105328Z  - build: success
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2105599Z  - test-local-apiserver: success
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2105891Z  - test-remote: success
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2106132Z  - test-helm: success
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2106373Z  - test-helm-install: success
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2106623Z  - test-olm: failure
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2106855Z  - test-kustomize: failure
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2138440Z 
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2138673Z Status check not okay!
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2151116Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run ./.github/actions/status-check	2026-08-14T05:14:22.2168447Z ##[end-action id=__self.check-jobs;outcome=failure;conclusion=failure;duration_ms=29]
