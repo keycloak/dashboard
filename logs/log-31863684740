@@ -1,0 +1,217 @@
+Admin UI E2E (firefox)	Run Playwright tests	﻿2026-08-15T04:15:10.2980423Z ##[group]Run pnpm --fail-if-no-match --filter @keycloak/keycloak-admin-ui test:integration -- --project=firefox
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.2981252Z ^[[36;1mpnpm --fail-if-no-match --filter @keycloak/keycloak-admin-ui test:integration -- --project=firefox^[[0m
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3022240Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3022624Z env:
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3022976Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3023432Z   WORKSPACE: @keycloak/keycloak-admin-ui
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3023732Z   RETRY_COUNT: 3
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3023975Z   WIREIT_CACHE: github
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3024246Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 50185
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3024669Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3025348Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.3025761Z ##[endgroup]
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.7150343Z $ wireit -- --project=firefox
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:10.8622643Z Analyzing
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:11.7621463Z (node:5780) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:11.7622932Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:11.8626834Z  75% [3 / 4] [1 running] test:integration
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:14.6742390Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:15:14.6743102Z Running 450 tests using 1 worker
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:18:32.0383992Z ···········································T::error file=js/apps/admin-ui/test/client-scope/mappers.spec.ts,title=[firefox] › test/client-scope/mappers.spec.ts:85:3 › Mappers tab › creates and removes mappers by configuration::  1) [firefox] › test/client-scope/mappers.spec.ts:85:3 › Mappers tab › creates and removes mappers by configuration %0A    Test timeout of 30000ms exceeded.
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:18:32.0420394Z ##[error]  1) [firefox] › test/client-scope/mappers.spec.ts:85:3 › Mappers tab › creates and removes mappers by configuration 
+Admin UI E2E (firefox)	Run Playwright tests	    Error: locator.click: Test timeout of 30000ms exceeded.
+Admin UI E2E (firefox)	Run Playwright tests	    Call log:
+Admin UI E2E (firefox)	Run Playwright tests	      - waiting for getByRole('menuitem', { name: 'Delete' })
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	       at utils/table.ts:101
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	       99 |     .getByLabel("Kebab toggle")
+Admin UI E2E (firefox)	Run Playwright tests	      100 |     .click();
+Admin UI E2E (firefox)	Run Playwright tests	    > 101 |   await page.getByRole("menuitem", { name: action }).click();
+Admin UI E2E (firefox)	Run Playwright tests	          |                                                      ^
+Admin UI E2E (firefox)	Run Playwright tests	      102 | }
+Admin UI E2E (firefox)	Run Playwright tests	      103 |
+Admin UI E2E (firefox)	Run Playwright tests	      104 | export async function assertRowExists(
+Admin UI E2E (firefox)	Run Playwright tests	        at clickRowKebabItem (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:101:54)
+Admin UI E2E (firefox)	Run Playwright tests	        at removeMappers (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/client-scope/mappers.ts:95:5)
+Admin UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/client-scope/mappers.spec.ts:100:5
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:20:53.5439124Z ····································
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:25:38.0062259Z ·················°·············°···························°····················
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:29:47.2478478Z ················································································
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:34:21.1313441Z ················································································
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:36:44.7891673Z ···············································[switch:user-reg-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('user-reg-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" id="kc-user-reg-switch" class="pf-v5-c-switch__input" data-testid="user-reg-switch" aria-label="User registration"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:36:45.5621964Z [switch:forgot-pw-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('forgot-pw-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" id="kc-forgot-pw-switch" name="resetPasswordAllowed" aria-label="Forgot password" class="pf-v5-c-switch__input" data-testid="forgot-pw-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:36:46.2855996Z [switch:remember-me-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('remember-me-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" aria-label="Remember me" id="kc-remember-me-switch" class="pf-v5-c-switch__input" data-testid="remember-me-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:36:46.9832402Z [switch:login-with-email-switch] attempt 1: uncheck failed (locator.uncheck: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('login-with-email-switch')^[[22m ^[[2m - locator resolved to <input checked value="on" type="checkbox" class="pf-v5-c-switch__input" aria-label="Login with email" id="kc-login-with-email-switch" data-testid="login-with-email-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via uncheck on attempt 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:36:47.6757802Z [switch:duplicate-emails-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('duplicate-emails-switch')^[[22m ^[[2m - locator resolved to <input type="checkbox" class="pf-v5-c-switch__input" aria-label="Duplicate emails" id="kc-duplicate-emails-switch" data-testid="duplicate-emails-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:36:50.4518167Z ·[switch:passkeys-enabled-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('passkeys-enabled-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" aria-label="Enable Passkeys" class="pf-v5-c-switch__input" id="kc-passkeys-enabled-switch" data-testid="passkeys-enabled-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:38:12.4027879Z ·······················[switch:edit-username-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for locator('#kc-edit-username-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" aria-label="Edit username" id="kc-edit-username-switch" class="pf-v5-c-switch__input" data-testid="edit-username-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:38:16.5402712Z ·[switch:email-as-username-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for locator('#kc-email-as-username-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" class="pf-v5-c-switch__input" aria-label="Email as username" id="kc-email-as-username-switch" data-testid="email-as-username-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:38:41.1505226Z ········
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0535214Z ··················································
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0542531Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0552799Z   1) [firefox] › test/client-scope/mappers.spec.ts:85:3 › Mappers tab › creates and removes mappers by configuration 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0553591Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0553918Z     ^[[31mTest timeout of 30000ms exceeded.^[[39m
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0554259Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0554567Z     Error: locator.click: Test timeout of 30000ms exceeded.
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0555243Z     Call log:
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0555861Z     ^[[2m  - waiting for getByRole('menuitem', { name: 'Delete' })^[[22m
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0556439Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0557363Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0557715Z        at utils/table.ts:101
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0558084Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0558438Z        99 |     .getByLabel("Kebab toggle")
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0559219Z       100 |     .click();
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0559897Z     > 101 |   await page.getByRole("menuitem", { name: action }).click();
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0560573Z           |                                                      ^
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0561008Z       102 | }
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0561303Z       103 |
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0561710Z       104 | export async function assertRowExists(
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0563162Z         at clickRowKebabItem (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:101:54)
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0564452Z         at removeMappers (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/client-scope/mappers.ts:95:5)
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0565926Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/client-scope/mappers.spec.ts:100:5
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0566555Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0567331Z     Error Context: test-results/client-scope-mappers-Mappe-57e10-es-mappers-by-configuration-firefox/error-context.md
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0568143Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0568949Z     attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0570102Z     test-results/client-scope-mappers-Mappe-57e10-es-mappers-by-configuration-firefox/trace.zip
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0570634Z     Usage:
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0570768Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0571280Z         pnpm exec playwright show-trace test-results/client-scope-mappers-Mappe-57e10-es-mappers-by-configuration-firefox/trace.zip
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0571818Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0572256Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0572565Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0572670Z   1 failed
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0573306Z     [firefox] › test/client-scope/mappers.spec.ts:85:3 › Mappers tab › creates and removes mappers by configuration 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0573827Z   3 skipped
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0574060Z   446 passed (26.1m)
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.0580430Z ##[notice]  1 failed
+Admin UI E2E (firefox)	Run Playwright tests	    [firefox] › test/client-scope/mappers.spec.ts:85:3 › Mappers tab › creates and removes mappers by configuration 
+Admin UI E2E (firefox)	Run Playwright tests	  3 skipped
+Admin UI E2E (firefox)	Run Playwright tests	  446 passed (26.1m)
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.3740180Z 
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.3741324Z ❌ [test:integration] exited with exit code 1.
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.3746013Z ❌ 1 script failed.
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.4077662Z /home/runner/work/keycloak/keycloak/js/apps/admin-ui:
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.4079051Z [ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL] @keycloak/keycloak-admin-ui@999.0.0-SNAPSHOT test:integration: `wireit -- --project=firefox`
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.4080062Z Exit status 1
+Admin UI E2E (firefox)	Run Playwright tests	2026-08-15T04:41:17.4578419Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	﻿2026-08-15T04:41:30.6292158Z Prepare all required actions
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6365437Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6365836Z with:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6367615Z   jobs: {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	      "js-ci": "true"
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    }
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "build-keycloak": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-client": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "ui-shared": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "account-ui": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "account-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-ui": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "keycloak-admin-client": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  }
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6369536Z env:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6369883Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6370364Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6426203Z ##[start-action display=Check jobs;id=__self.check-jobs]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6483757Z ##[group]Run JOBS='{
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6484231Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6484509Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6484825Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6485162Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6485444Z ^[[36;1m      "js-ci": "true"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6485716Z ^[[36;1m    }^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6485940Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6486182Z ^[[36;1m  "build-keycloak": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6486466Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6486752Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6487009Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6487251Z ^[[36;1m  "admin-client": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6487528Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6487810Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6488093Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6488323Z ^[[36;1m  "ui-shared": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6488599Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6488878Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6489132Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6489357Z ^[[36;1m  "account-ui": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6489621Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6489899Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6490152Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6490392Z ^[[36;1m  "account-ui-e2e": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6490845Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6491128Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6491380Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6491622Z ^[[36;1m  "admin-ui": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6491906Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6492193Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6492498Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6492734Z ^[[36;1m  "admin-ui-e2e": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6493014Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6493511Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6493783Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6494033Z ^[[36;1m  "keycloak-admin-client": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6494347Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6494628Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6494884Z ^[[36;1m  }^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6495094Z ^[[36;1m}'^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6495328Z ^[[36;1m^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6495560Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6495985Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6496403Z ^[[36;1m^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6496734Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6497203Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6497559Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6497828Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6498131Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6498375Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6498597Z ^[[36;1mdone^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6542186Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6542631Z env:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6542967Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6543371Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6622400Z Job status:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6651753Z  - conditional: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6652294Z  - build-keycloak: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6652792Z  - admin-client: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6653263Z  - ui-shared: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6653668Z  - account-ui: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6653959Z  - account-ui-e2e: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6654255Z  - admin-ui: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6654527Z  - admin-ui-e2e: failure
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6654818Z  - keycloak-admin-client: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6686183Z 
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6686785Z Status check not okay!
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6699953Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-08-15T04:41:30.6717223Z ##[end-action id=__self.check-jobs;outcome=failure;conclusion=failure;duration_ms=29]
