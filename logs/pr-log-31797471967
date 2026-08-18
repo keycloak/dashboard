@@ -1,0 +1,1005 @@
+WebAuthn IT	UNKNOWN STEP	﻿2026-08-17T07:38:21.8622813Z Current runner version: '2.336.0'
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8648277Z ##[group]Runner Image Provisioner
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8649161Z Hosted Compute Agent
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8649847Z Version: 20260729.566
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8650515Z Commit: cf7153fe6e25b664e8693c24944bf2b00355d109
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8651282Z Build Date: 2026-07-29T19:17:02Z
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8652029Z Worker ID: {a8838a58-8bfa-490e-bca0-305f7b210b51}
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8652760Z Azure Region: westcentralus
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8653346Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8654842Z ##[group]Operating System
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8655498Z Ubuntu
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8656115Z 24.04.4
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8656646Z LTS
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8657160Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8657756Z ##[group]Runner Image
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8658716Z Image: ubuntu-24.04
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8659317Z Version: 20260810.271.1
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8660677Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260810.271/images/ubuntu/Ubuntu2404-Readme.md
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8662253Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260810.271
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8663213Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8664419Z ##[group]GITHUB_TOKEN Permissions
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8666280Z Contents: read
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8666883Z Metadata: read
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8667596Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8669909Z Secret source: None
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.8671045Z Prepare workflow directory
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.9094486Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:21.9143935Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.2047158Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.4409584Z Complete job name: WebAuthn IT
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5184657Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5185733Z with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5186188Z   repository: keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5190079Z   token: ***
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5190531Z   ssh-strict: true
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5190983Z   ssh-user: git
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5191444Z   persist-credentials: true
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5191941Z   clean: true
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5192392Z   sparse-checkout-cone-mode: true
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5192919Z   fetch-depth: 1
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5193355Z   fetch-tags: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5193817Z   show-progress: true
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5194267Z   lfs: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5194680Z   submodules: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5195124Z   set-safe-directory: true
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5195635Z   allow-unsafe-pr-checkout: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5196410Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5197014Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5197785Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5198862Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5199539Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5200082Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.5200667Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6155548Z Syncing repository: keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6157320Z ##[group]Getting Git version info
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6158340Z Working directory is '/home/runner/work/keycloak/keycloak'
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6159413Z [command]/usr/bin/git version
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6231012Z git version 2.54.0
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6283838Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6294219Z Temporarily overriding HOME='/home/runner/work/_temp/2619d54a-7c99-4b28-b9ef-9e3ccfe36961' before making global git config changes
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6299275Z Adding repository directory to the temporary git global config as a safe directory
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6300493Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6341357Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6344684Z ##[group]Determining repository object format
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6346362Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6347405Z ##[group]Initializing the repository
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6350826Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6445414Z hint: Using 'master' as the name for the initial branch. This default branch name
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6446673Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6447733Z hint: to use in all of your new repositories, which will suppress this warning,
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6448875Z hint: call:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6449337Z hint:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6449881Z hint: 	git config --global init.defaultBranch <name>
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6450568Z hint:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6451562Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6453444Z hint: 'development'. The just-created branch can be renamed via this command:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6454867Z hint:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6455686Z hint: 	git branch -m <name>
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6456606Z hint:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6457842Z hint: Disable this message with "git config set advice.defaultBranchName false"
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6460528Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6465085Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6509282Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6510601Z ##[group]Disabling automatic garbage collection
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6513557Z [command]/usr/bin/git config --local gc.auto 0
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6542433Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6543582Z ##[group]Setting up auth
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6544435Z Removing SSH command configuration
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6547972Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6580971Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6927509Z Removing HTTP extra header
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6933049Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.6962629Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7174095Z Removing includeIf entries pointing to credentials config files
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7180547Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7211060Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7431679Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7467058Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git.path /home/runner/work/_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7496053Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7528440Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7559233Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7586584Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7587360Z ##[group]Fetching the repository
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:22.7594675Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b7f00d4c099a4a8a7c3aebe1db00bccfec7dc5b6:refs/remotes/pull/51635/merge
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:27.7348611Z From https://github.com/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:27.7351280Z  * [new ref]         b7f00d4c099a4a8a7c3aebe1db00bccfec7dc5b6 -> pull/51635/merge
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:27.7384087Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:27.7385598Z ##[group]Determining the checkout info
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:27.7390961Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:27.7397840Z [command]/usr/bin/git sparse-checkout disable
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:27.7437772Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:27.7466005Z ##[group]Checking out the ref
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:27.7469572Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/51635/merge
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7465089Z Note: switching to 'refs/remotes/pull/51635/merge'.
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7467000Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7467605Z You are in 'detached HEAD' state. You can look around, make experimental
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7468829Z changes and commit them, and you can discard any commits you make in this
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7469535Z state without impacting any branches by switching back to a branch.
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7469924Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7470189Z If you want to create a new branch to retain commits you create, you may
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7470795Z do so (now or later) by using -c with the switch command. Example:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7471140Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7471293Z   git switch -c <new-branch-name>
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7471526Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7471687Z Or undo this operation with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7471906Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7472111Z   git switch -
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7472295Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7472610Z Turn off this advice by setting config variable advice.detachedHead to false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7473004Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7473732Z HEAD is now at b7f00d4 Merge 6f542654c7b6a7e2fa6019dbb26f71cfd979be3f into 33bc6b65d222a8c5677f88d9f52ca964b88de048
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7501372Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7541136Z [command]/usr/bin/git log -1 --format=%H
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7565276Z b7f00d4c099a4a8a7c3aebe1db00bccfec7dc5b6
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7877928Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.7878841Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:28.9068704Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5274237Z ##[group]Run ./.github/actions/integration-test-setup
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5274594Z with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5274793Z   jdk-dist: temurin
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5275008Z   jdk-version: 25
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5275224Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5275515Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5275893Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5276195Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5276518Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5276763Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5276996Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5336766Z ##[start-action display=Update /etc/hosts;id=integration-test-setup.update-hosts]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5369256Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5407012Z ##[group]Run ./.github/actions/update-hosts
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5407327Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5407634Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5408225Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5408553Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5408877Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5409127Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5409362Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5412922Z ##[start-action display=Update /etc/hosts;id=integration-test-setup.update-hosts.update-hosts-linux]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5458199Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5458929Z ^[[36;1mprintf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5500429Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5500802Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5501123Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5501509Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5501817Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5502174Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5502431Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5502668Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5644235Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5644254Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5644896Z 127.0.0.1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5660219Z ::1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5673978Z ##[end-action id=integration-test-setup.update-hosts.update-hosts-linux;outcome=success;conclusion=success;duration_ms=25]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5679754Z ##[start-action display=Update C:\Windows\System32\drivers\etc\hosts;id=integration-test-setup.update-hosts.update-hosts-windows]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5685289Z ##[end-action id=integration-test-setup.update-hosts.update-hosts-windows;outcome=skipped;conclusion=skipped;duration_ms=0]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5696755Z ##[end-action id=integration-test-setup.update-hosts;outcome=success;conclusion=success;duration_ms=35]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5699266Z ##[start-action display=Setup Java;id=integration-test-setup.setup-java]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5720486Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.5720924Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:29.6939731Z Download action repository 'actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961' (SHA:b6effb05e454b25005698d916606bdc6ffcbf961)
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5700498Z ##[group]Run ./.github/actions/java-setup
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5700801Z with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5700991Z   distribution: temurin
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5701426Z   java-version: 25
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5701629Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5701937Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5702303Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5702605Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5702931Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5703173Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5703403Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5706708Z ##[start-action display=Setup Java;id=integration-test-setup.setup-java.setup-java]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5790078Z ##[group]Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5790456Z with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5790646Z   distribution: temurin
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5790864Z   java-version: 25
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5791067Z   java-package: jdk
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5791274Z   check-latest: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5791495Z   set-default: true
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5791703Z   verify-signature: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5791929Z   server-id: github
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5792149Z   server-username: GITHUB_ACTOR
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5792404Z   server-password: GITHUB_TOKEN
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5792667Z   overwrite-settings: true
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5792895Z   job-status: success
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5795315Z   token: ***
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5795534Z   show-download-progress: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5795772Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5796056Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5796432Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5796741Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5797064Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5797308Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.5797539Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7310595Z ##[group]Installed distributions
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7388360Z Resolved Java 25.0.4+7 from tool-cache
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7389174Z Setting Java 25.0.4+7 as the default
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7389627Z Creating toolchains.xml for JDK version 25 from temurin
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7473409Z Writing to /home/runner/.m2/toolchains.xml
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7473788Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7473957Z Java configuration:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7476132Z   Distribution: temurin
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7476651Z   Version: 25.0.4+7
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7477179Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7477676Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7478204Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7506098Z Creating settings.xml with server-id: github
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7506609Z Writing to /home/runner/.m2/settings.xml
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7507459Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7591335Z ##[end-action id=integration-test-setup.setup-java.setup-java;outcome=success;conclusion=success;duration_ms=188]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7595984Z ##[end-action id=integration-test-setup.setup-java;outcome=success;conclusion=success;duration_ms=1189]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7598674Z ##[start-action display=Maven cache;id=integration-test-setup.maven-cache]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7638591Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.7639024Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:30.8854586Z Download action repository 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0032597Z ##[group]Run ./.github/actions/maven-cache
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0032883Z with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0033098Z   create-cache-if-it-doesnt-exist: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0033366Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0033669Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0034055Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0034366Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0034687Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0035121Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0035475Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0035967Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0036345Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0041707Z ##[start-action display=Key for weekly rotation of cache;id=integration-test-setup.maven-cache.weekly-cache-key]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0064185Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0064632Z ^[[36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0105943Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0106294Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0106607Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0107000Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0107307Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0107645Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0107911Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0108468Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0108971Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0109351Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0190124Z ##[end-action id=integration-test-setup.maven-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=14]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0192718Z ##[start-action display=Maven cache;id=integration-test-setup.maven-cache.cache-maven-repository]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0199658Z ##[end-action id=integration-test-setup.maven-cache.cache-maven-repository;outcome=skipped;conclusion=skipped;duration_ms=0]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0202162Z ##[start-action display=Maven cache;id=integration-test-setup.maven-cache.restore-maven-repository]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0265941Z ##[group]Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0266491Z with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0266813Z   path: ~/.m2/repository/*/*
+WebAuthn IT	UNKNOWN STEP	~/.m2/wrapper/dists
+WebAuthn IT	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+WebAuthn IT	UNKNOWN STEP	
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0267233Z   key: mvn-and-wrapper-Linux-mvn-2026-33
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0267523Z   enableCrossOsArchive: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0267770Z   fail-on-cache-miss: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0267993Z   lookup-only: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0268498Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0268802Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0269185Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0269484Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0269800Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0270040Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0270392Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0270895Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.0271282Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:31.3420525Z Cache hit for: mvn-and-wrapper-Linux-mvn-2026-33
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:32.5834333Z Received 25165824 of 739313418 (3.4%), 24.0 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:33.5839237Z Received 134217728 of 739313418 (18.2%), 64.0 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:34.5851172Z Received 268435456 of 739313418 (36.3%), 85.3 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:35.5856020Z Received 402653184 of 739313418 (54.5%), 96.0 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:36.5848926Z Received 532676608 of 739313418 (72.1%), 101.6 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:37.5862458Z Received 662700032 of 739313418 (89.6%), 105.3 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:38.4981762Z Received 739313418 of 739313418 (100.0%), 102.0 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:38.4984906Z Cache Size: ~705 MB (739313418 B)
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:38.5053968Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2eef7a24-6f94-437a-82bb-cf88c85a7d23/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.4139980Z Cache restored successfully
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.4543687Z Cache restored from key: mvn-and-wrapper-Linux-mvn-2026-33
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.4662611Z ##[end-action id=integration-test-setup.maven-cache.restore-maven-repository;outcome=success;conclusion=success;duration_ms=9445]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.4666939Z ##[start-action display=Node cache;id=integration-test-setup.maven-cache.node-cache]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.4707235Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.4707676Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5910761Z ##[group]Run ./.github/actions/node-cache
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5911041Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5911350Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5911742Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5912051Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5912381Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5912629Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5912981Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5913520Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5913899Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5918325Z ##[start-action display=Get Node.js and PNPM versions;id=integration-test-setup.maven-cache.node-cache.tooling-versions]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5964333Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5965137Z ^[[36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.5965887Z ^[[36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6002226Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6002571Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6002886Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6003464Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6003784Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6004129Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6004383Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6004731Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6005240Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6005625Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6127870Z ##[end-action id=integration-test-setup.maven-cache.node-cache.tooling-versions;outcome=success;conclusion=success;duration_ms=20]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6130786Z ##[start-action display=Cache Node.js and PNPM binaries;id=integration-test-setup.maven-cache.node-cache.cache-binaries]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6166769Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6167123Z with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6167497Z   path: ~/.m2/repository/com/github/eirslett/node
+WebAuthn IT	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+WebAuthn IT	UNKNOWN STEP	
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6168697Z   key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6169089Z   enableCrossOsArchive: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6169354Z   fail-on-cache-miss: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6169596Z   lookup-only: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6169817Z   save-always: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6170022Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6170337Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6170746Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6171069Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6171401Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6171657Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6172007Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6172498Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.6172879Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:40.9256127Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:42.1461764Z Received 33554432 of 182409230 (18.4%), 32.0 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.1469015Z Received 150994944 of 182409230 (82.8%), 72.0 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.4950387Z Received 182409230 of 182409230 (100.0%), 74.1 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.4953760Z Cache Size: ~174 MB (182409230 B)
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.5032873Z [command]/usr/bin/tar -xf /home/runner/work/_temp/906ec51d-efd3-4123-8355-375c69eeb73e/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9616548Z Cache restored successfully
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9778617Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9875896Z ##[end-action id=integration-test-setup.maven-cache.node-cache.cache-binaries;outcome=success;conclusion=success;duration_ms=3374]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9879279Z ##[start-action display=Download Node.js and PNPM;id=integration-test-setup.maven-cache.node-cache.__run]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9884523Z ##[end-action id=integration-test-setup.maven-cache.node-cache.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9889360Z ##[end-action id=integration-test-setup.maven-cache.node-cache;outcome=success;conclusion=success;duration_ms=3522]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9893474Z ##[end-action id=integration-test-setup.maven-cache;outcome=success;conclusion=success;duration_ms=13229]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9895808Z ##[start-action display=Restore Quarkus snapshot cache;id=integration-test-setup.restore-quarkus-snapshot]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9902070Z ##[end-action id=integration-test-setup.restore-quarkus-snapshot;outcome=skipped;conclusion=skipped;duration_ms=0]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9904094Z ##[start-action display=PNPM store cache;id=integration-test-setup.pnpm-store-cache]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9926821Z Prepare all required actions
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:43.9927343Z Getting action download info
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.1252701Z Download action repository 'google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5' (SHA:9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5)
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3310473Z ##[group]Run ./.github/actions/pnpm-store-cache
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3310784Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3311104Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3311496Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3311815Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3312146Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3312398Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3312754Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3313244Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3313631Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3318304Z ##[start-action display=Key for weekly rotation of cache;id=integration-test-setup.pnpm-store-cache.weekly-cache-key]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3334268Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3334782Z ^[[36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3370453Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3370797Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3371113Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3371507Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3371825Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3372156Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3372410Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3372769Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3373253Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3373633Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3450431Z ##[end-action id=integration-test-setup.pnpm-store-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=13]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3453376Z ##[start-action display=Cache PNPM store;id=integration-test-setup.pnpm-store-cache.__actions_cache]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3489771Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3490125Z with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3490457Z   path: ~/.local/share/pnpm/store
+WebAuthn IT	UNKNOWN STEP	~/AppData/Local/pnpm/store
+WebAuthn IT	UNKNOWN STEP	~/Library/pnpm/store
+WebAuthn IT	UNKNOWN STEP	
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3490906Z   key: Linux-pnpm-store-2026-33
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3491185Z   enableCrossOsArchive: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3491439Z   fail-on-cache-miss: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3491676Z   lookup-only: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3491901Z   save-always: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3492104Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3492409Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3492808Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3493120Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3493450Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3493718Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3494083Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3494573Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.3494951Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:44.6878449Z Cache hit for: Linux-pnpm-store-2026-33
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:45.9139002Z Received 33554432 of 112475645 (29.8%), 32.0 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:46.4743548Z Received 112475645 of 112475645 (100.0%), 68.7 MBs/sec
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:46.4746092Z Cache Size: ~107 MB (112475645 B)
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:46.4788891Z [command]/usr/bin/tar -xf /home/runner/work/_temp/39180f49-7949-486e-a1fc-2f96f1cb82d7/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1487698Z Cache restored successfully
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1619680Z Cache restored from key: Linux-pnpm-store-2026-33
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1716638Z ##[end-action id=integration-test-setup.pnpm-store-cache.__actions_cache;outcome=success;conclusion=success;duration_ms=4826]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1719943Z ##[start-action display=Set up Wireit GitHub Actions caching;id=integration-test-setup.pnpm-store-cache.__google_wireit]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1747501Z ##[group]Run google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1747874Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1748556Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1748970Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1749301Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1749634Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1749906Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1750263Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1750764Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.1751161Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.2018264Z [main] Launching background custodian service
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.2025323Z [main] Writing logs to /tmp/wireit_custodian_logs_ZKfscD
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5074809Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5076543Z [custodian] Trying port 49604
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5077226Z [custodian] Listening on port 49604
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5077639Z 
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5077865Z [main] Custodian server ready
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5129675Z ##[end-action id=integration-test-setup.pnpm-store-cache.__google_wireit;outcome=success;conclusion=success;duration_ms=340]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5139060Z ##[end-action id=integration-test-setup.pnpm-store-cache;outcome=success;conclusion=success;duration_ms=5523]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5143418Z ##[start-action display=Download Keycloak Maven artifacts;id=integration-test-setup.download-keycloak]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5284529Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5285251Z with:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5285618Z   name: m2-keycloak.tzts
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5286057Z   merge-multiple: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5286523Z   repository: keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5287246Z   run-id: 31797471967
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5287672Z   skip-decompress: false
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5288407Z   digest-mismatch: error
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5288831Z env:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5289399Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5290141Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5290728Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5291330Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5291812Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5292455Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5293345Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-7/x64
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5294075Z   WIREIT_CACHE: github
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5294537Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 49604
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.5295070Z ##[endgroup]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.6648319Z Downloading single artifact
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9101573Z ##[error]Unable to download artifact(s): Artifact not found for name: m2-keycloak.tzts
+WebAuthn IT	UNKNOWN STEP	        Please ensure that your artifact is not expired and the artifact was uploaded using a compatible version of toolkit/upload-artifact.
+WebAuthn IT	UNKNOWN STEP	        For more information, visit the GitHub Artifacts FAQ: https://github.com/actions/toolkit/blob/main/packages/artifact/docs/faq.md
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9155512Z ##[end-action id=integration-test-setup.download-keycloak;outcome=failure;conclusion=failure;duration_ms=401]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9159634Z ##[start-action display=Extract Keycloak Maven artifacts;id=integration-test-setup.extract-maven-artifacts]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9163034Z ##[end-action id=integration-test-setup.extract-maven-artifacts;outcome=skipped;conclusion=skipped;duration_ms=0]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9289059Z Post job cleanup.
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9295217Z ##[start-action display=Cache PNPM store;id=__85fd2e95-cc3e-4e95-bfe2-88dcc5607699.__actions_cache]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9297537Z ##[end-action id=__85fd2e95-cc3e-4e95-bfe2-88dcc5607699.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9299870Z ##[start-action display=Cache Node.js and PNPM binaries;id=__85fd2e95-cc3e-4e95-bfe2-88dcc5607699.cache-binaries]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9301898Z ##[end-action id=__85fd2e95-cc3e-4e95-bfe2-88dcc5607699.cache-binaries;outcome=skipped;conclusion=skipped;duration_ms=0]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9303792Z ##[start-action display=Setup Java;id=__85fd2e95-cc3e-4e95-bfe2-88dcc5607699.setup-java]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:49.9362257Z Post job cleanup.
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.0684508Z ##[end-action id=__85fd2e95-cc3e-4e95-bfe2-88dcc5607699.setup-java;outcome=success;conclusion=success;duration_ms=137]
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.0766650Z Post job cleanup.
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.1670447Z [command]/usr/bin/git version
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.1712799Z git version 2.54.0
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.1751771Z Temporarily overriding HOME='/home/runner/work/_temp/ecfb1fcd-620b-474d-b95a-feec60643445' before making global git config changes
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.1753234Z Adding repository directory to the temporary git global config as a safe directory
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.1758319Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.1793384Z Removing SSH command configuration
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.1801193Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.1837882Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2076855Z Removing HTTP extra header
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2083024Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2118777Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2352286Z Removing includeIf entries pointing to credentials config files
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2358719Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2382442Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2383682Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2384861Z includeif.gitdir:/github/workspace/.git.path
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2385894Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2392943Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2413641Z /home/runner/work/_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2423804Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-8004801f\-2bd1\-4c09\-a68f\-73c0430d7917\.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2458554Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2487518Z /home/runner/work/_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2496344Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-8004801f\-2bd1\-4c09\-a68f\-73c0430d7917\.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2526382Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2550505Z /github/runner_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2558674Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-8004801f\-2bd1\-4c09\-a68f\-73c0430d7917\.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2588459Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2609862Z /github/runner_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2618409Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-8004801f\-2bd1\-4c09\-a68f\-73c0430d7917\.config
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2651022Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.2884073Z Removing credentials config '/home/runner/work/_temp/git-credentials-8004801f-2bd1-4c09-a68f-73c0430d7917.config'
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.3024175Z Cleaning up orphan processes
+WebAuthn IT	UNKNOWN STEP	2026-08-17T07:38:50.3384253Z Terminate orphan process: pid (2430) (node)
+Status Check - Keycloak CI	UNKNOWN STEP	﻿2026-08-17T07:38:54.7408815Z Current runner version: '2.336.0'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7443255Z ##[group]Runner Image Provisioner
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7444609Z Hosted Compute Agent
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7445627Z Version: 20260729.566
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7446704Z Commit: cf7153fe6e25b664e8693c24944bf2b00355d109
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7447866Z Build Date: 2026-07-29T19:17:02Z
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7449025Z Worker ID: {fb1cc59d-54d0-449d-878d-b45b930f6a00}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7450269Z Azure Region: eastus
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7451185Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7453908Z ##[group]Operating System
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7454899Z Ubuntu
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7455707Z 24.04.4
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7456636Z LTS
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7457488Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7458416Z ##[group]Runner Image
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7459591Z Image: ubuntu-24.04
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7460518Z Version: 20260810.271.1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7462922Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260810.271/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7465705Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260810.271
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7467345Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7469099Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7471983Z Contents: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7473184Z Metadata: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7474278Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7477179Z Secret source: None
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.7479333Z Prepare workflow directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.8059409Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.8128126Z Getting action download info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:54.9983280Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.2598228Z Complete job name: Status Check - Keycloak CI
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3387034Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3388143Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3388599Z   repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3392669Z   token: ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3393116Z   ssh-strict: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3393560Z   ssh-user: git
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3394020Z   persist-credentials: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3394513Z   clean: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3394963Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3395540Z   fetch-depth: 1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3395968Z   fetch-tags: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3396423Z   show-progress: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3396987Z   lfs: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3397460Z   submodules: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3397964Z   set-safe-directory: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3398477Z   allow-unsafe-pr-checkout: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3399271Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3399870Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3400631Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3401246Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3401887Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3402597Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.3403103Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4456675Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4459232Z ##[group]Getting Git version info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4459983Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4461212Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4522238Z git version 2.54.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4543096Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4555966Z Temporarily overriding HOME='/home/runner/work/_temp/c0cd7d1a-d9c8-460b-a34b-7e121ea98cd4' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4559210Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4562903Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4610064Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4614256Z ##[group]Determining repository object format
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4615868Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4617212Z ##[group]Initializing the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4620776Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4727861Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4729295Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4730474Z hint: to use in all of your new repositories, which will suppress this warning,
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4731475Z hint: call:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4732506Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4733525Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4734758Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4735922Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4737918Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4739263Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4740008Z hint: 	git branch -m <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4740867Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4741975Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4744078Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4747423Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4798707Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4799983Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4803231Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4835603Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4836886Z ##[group]Setting up auth
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4837864Z Removing SSH command configuration
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4843161Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.4878509Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5223741Z Removing HTTP extra header
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5230136Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5262454Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5483296Z Removing includeIf entries pointing to credentials config files
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5489089Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5521542Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5747375Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5787462Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git.path /home/runner/work/_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5819127Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5853998Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5885893Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5913145Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5913915Z ##[group]Fetching the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:55.5920550Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b7f00d4c099a4a8a7c3aebe1db00bccfec7dc5b6:refs/remotes/pull/51635/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:59.9052797Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:59.9055296Z  * [new ref]         b7f00d4c099a4a8a7c3aebe1db00bccfec7dc5b6 -> pull/51635/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:59.9089334Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:59.9090651Z ##[group]Determining the checkout info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:59.9091939Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:59.9097271Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:59.9142069Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:59.9169156Z ##[group]Checking out the ref
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:38:59.9172860Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/51635/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9269841Z Note: switching to 'refs/remotes/pull/51635/merge'.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9271958Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9272761Z You are in 'detached HEAD' state. You can look around, make experimental
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9273716Z changes and commit them, and you can discard any commits you make in this
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9274611Z state without impacting any branches by switching back to a branch.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9275124Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9275479Z If you want to create a new branch to retain commits you create, you may
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9276344Z do so (now or later) by using -c with the switch command. Example:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9276807Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9277007Z   git switch -c <new-branch-name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9277343Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9277548Z Or undo this operation with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9277836Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9278025Z   git switch -
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9278269Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9278694Z Turn off this advice by setting config variable advice.detachedHead to false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9279253Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9280122Z HEAD is now at b7f00d4 Merge 6f542654c7b6a7e2fa6019dbb26f71cfd979be3f into 33bc6b65d222a8c5677f88d9f52ca964b88de048
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9310026Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9357862Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9384497Z b7f00d4c099a4a8a7c3aebe1db00bccfec7dc5b6
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9667970Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9749485Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9749868Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9757376Z   jobs: {
+Status Check - Keycloak CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-admin-v2": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-jackson3": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-sssd": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-aurora": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-azure": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-quarkus": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-store": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-webauthn": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-additional-dbs": "false"
+Status Check - Keycloak CI	UNKNOWN STEP	    }
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jdk-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-model-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "clustering-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "forms-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "sssd-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests-cs": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "external-infinispan-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "test-framework": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-new-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "mixed-cluster-compatibility-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "authzen-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "admin-v2-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jackson3-admin-client-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "testsuite-deprecation-check": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "stateless-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "stateless-cluster-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  }
+Status Check - Keycloak CI	UNKNOWN STEP	}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9765465Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9765839Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9766266Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9766661Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9767039Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9767332Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9767612Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9821302Z ##[start-action display=Check jobs;id=__self.check-jobs]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9960788Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9961755Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9962053Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9962816Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9963166Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9963478Z ^[[36;1m      "ci-admin-v2": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9963833Z ^[[36;1m      "ci-jackson3": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9964174Z ^[[36;1m      "ci-sssd": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9964504Z ^[[36;1m      "ci-aurora": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9964833Z ^[[36;1m      "ci-azure": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9965153Z ^[[36;1m      "ci": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9965492Z ^[[36;1m      "ci-quarkus": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9966132Z ^[[36;1m      "ci-store": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9966478Z ^[[36;1m      "ci-webauthn": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9966832Z ^[[36;1m      "ci-additional-dbs": "false"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9967191Z ^[[36;1m    }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9967444Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9967701Z ^[[36;1m  "build": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9967996Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9968316Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9968609Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9968868Z ^[[36;1m  "unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9969165Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9969478Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9969771Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9970046Z ^[[36;1m  "base-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9970388Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9970708Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9971003Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9971271Z ^[[36;1m  "adapter-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9971604Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9971898Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9972316Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9972658Z ^[[36;1m  "adapter-integration-tests-strict-cookies": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9973040Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9973333Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9973599Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9973852Z ^[[36;1m  "quarkus-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9974158Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9974445Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9974714Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9974973Z ^[[36;1m  "quarkus-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9975296Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9975587Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9975851Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9976415Z ^[[36;1m  "jdk-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9976732Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9977018Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9977284Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9977536Z ^[[36;1m  "store-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9977854Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9978137Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9978394Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9978705Z ^[[36;1m  "volatile-sessions-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9979019Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9979303Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9979568Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9979811Z ^[[36;1m  "store-model-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9980104Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9980390Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9980651Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9980919Z ^[[36;1m  "clustering-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9981265Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9981561Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9981822Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9982068Z ^[[36;1m  "fips-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9982502Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9982787Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9983051Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9983302Z ^[[36;1m  "fips-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9983616Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9983903Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9984161Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9984412Z ^[[36;1m  "forms-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9984729Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9985012Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9985273Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9985539Z ^[[36;1m  "webauthn-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9985871Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9986170Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9986441Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9986840Z ^[[36;1m  "sssd-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9987144Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9987444Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9987707Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9987955Z ^[[36;1m  "migration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9988249Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9988544Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9988810Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9989062Z ^[[36;1m  "migration-tests-cs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9989365Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9989654Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9989920Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9990180Z ^[[36;1m  "external-infinispan-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9990510Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9990808Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9991070Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9991321Z ^[[36;1m  "test-framework": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9991615Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9991904Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9992293Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9992564Z ^[[36;1m  "base-new-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9992911Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9993207Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9993471Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9993758Z ^[[36;1m  "mixed-cluster-compatibility-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9994115Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9994403Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9994667Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9994927Z ^[[36;1m  "authzen-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9995253Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9995541Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9995806Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9996052Z ^[[36;1m  "admin-v2-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9996487Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9996779Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9997049Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9997311Z ^[[36;1m  "jackson3-admin-client-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9997642Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9997930Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9998194Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9998460Z ^[[36;1m  "testsuite-deprecation-check": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9998791Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9999082Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9999349Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9999593Z ^[[36;1m  "stateless-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:00.9999890Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0000178Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0000440Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0000723Z ^[[36;1m  "stateless-cluster-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0001075Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0001369Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0001632Z ^[[36;1m  }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0001854Z ^[[36;1m}'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0002365Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0002798Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0003206Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0003612Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0003937Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0004405Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0004789Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0005071Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0005390Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0005636Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0005867Z ^[[36;1mdone^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0048930Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0049353Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0049717Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0050331Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0050711Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0051097Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0051392Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0051677Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0137404Z Job status:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0167395Z  - conditional: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0167930Z  - build: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0168417Z  - unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0168935Z  - base-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0169392Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0169827Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0170251Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0170598Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0170954Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0171323Z  - store-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0171712Z  - volatile-sessions-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0172052Z  - store-model-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0172698Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0173072Z  - fips-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0173390Z  - fips-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0173728Z  - forms-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0174071Z  - webauthn-integration-tests: failure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0174407Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0174706Z  - migration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0175205Z  - migration-tests-cs: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0175753Z  - external-infinispan-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0176320Z  - test-framework: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0176891Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0177497Z  - mixed-cluster-compatibility-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0178158Z  - authzen-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0178727Z  - admin-v2-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0179571Z  - jackson3-admin-client-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0180360Z  - testsuite-deprecation-check: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0180973Z  - stateless-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0181589Z  - stateless-cluster-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0206116Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0206717Z Status check not okay!
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0220420Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0237397Z ##[end-action id=__self.check-jobs;outcome=failure;conclusion=failure;duration_ms=41]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.0395048Z Post job cleanup.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1234364Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1280887Z git version 2.54.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1319608Z Temporarily overriding HOME='/home/runner/work/_temp/18431fa0-220d-4576-b317-15b460908794' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1321154Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1325794Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1358644Z Removing SSH command configuration
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1365560Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1401880Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1642945Z Removing HTTP extra header
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1650399Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1684395Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1936635Z Removing includeIf entries pointing to credentials config files
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1946965Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1974408Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1975674Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1976823Z includeif.gitdir:/github/workspace/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1977925Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.1984807Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2007481Z /home/runner/work/_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2018236Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-de9ef1f6\-1d50\-4576\-8abb\-3920eba84d7b\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2057896Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2081751Z /home/runner/work/_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2090948Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-de9ef1f6\-1d50\-4576\-8abb\-3920eba84d7b\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2130707Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2151990Z /github/runner_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2159609Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-de9ef1f6\-1d50\-4576\-8abb\-3920eba84d7b\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2190374Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2211576Z /github/runner_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2220224Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-de9ef1f6\-1d50\-4576\-8abb\-3920eba84d7b\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2252051Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2481379Z Removing credentials config '/home/runner/work/_temp/git-credentials-de9ef1f6-1d50-4576-8abb-3920eba84d7b.config'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-17T07:39:01.2622569Z Cleaning up orphan processes
