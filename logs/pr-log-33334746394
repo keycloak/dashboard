@@ -1,0 +1,1257 @@
+Store IT (mariadb)	UNKNOWN STEP	﻿2026-08-30T20:54:24.3388508Z Current runner version: '2.336.0'
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3420160Z ##[group]Runner Image Provisioner
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3421845Z Hosted Compute Agent
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3422792Z Version: 20260819.586
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3423807Z Commit: 3cc4a88dfa507ef76119ad1bb3eccc6378bb2b76
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3425222Z Build Date: 2026-08-18T23:20:18Z
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3426385Z Worker ID: {6a4a8c85-99f2-486a-9c08-6db96710156f}
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3427696Z Azure Region: eastus
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3428647Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3431126Z ##[group]Operating System
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3431924Z Ubuntu
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3432459Z 24.04.4
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3433051Z LTS
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3433563Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3434104Z ##[group]Runner Image
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3434791Z Image: ubuntu-24.04
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3435363Z Version: 20260823.283.1
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3436656Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260823.283/images/ubuntu/Ubuntu2404-Readme.md
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3438230Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260823.283
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3439292Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3440721Z ##[group]GITHUB_TOKEN Permissions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3442649Z Contents: read
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3443256Z Metadata: read
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3443855Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3445814Z Secret source: None
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3446959Z Prepare workflow directory
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3844111Z Prepare all required actions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.3889467Z Getting action download info
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.5732718Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8297855Z Complete job name: Store IT (mariadb)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8987332Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8988429Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8988893Z   repository: keycloak/keycloak
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8992978Z   token: ***
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8993438Z   ssh-strict: true
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8993894Z   ssh-user: git
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8994349Z   persist-credentials: true
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8994845Z   clean: true
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8995290Z   sparse-checkout-cone-mode: true
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8995817Z   fetch-depth: 1
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8996263Z   fetch-tags: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8996715Z   show-progress: true
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8997169Z   lfs: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8997596Z   submodules: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8998050Z   set-safe-directory: true
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8998561Z   allow-unsafe-pr-checkout: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8999341Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.8999938Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.9001133Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.9001766Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.9002423Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.9002953Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.9003459Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.9992717Z Syncing repository: keycloak/keycloak
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.9994707Z ##[group]Getting Git version info
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.9995618Z Working directory is '/home/runner/work/keycloak/keycloak'
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:24.9996656Z [command]/usr/bin/git version
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0041351Z git version 2.55.0
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0094234Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0105967Z Temporarily overriding HOME='/home/runner/work/_temp/949314ab-28fd-4d5f-bf38-79738ef732a7' before making global git config changes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0108939Z Adding repository directory to the temporary git global config as a safe directory
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0111923Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0154511Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0158057Z ##[group]Determining repository object format
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0159500Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0161008Z ##[group]Initializing the repository
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0163945Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0263135Z hint: Using 'master' as the name for the initial branch. This default branch name
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0265366Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0268092Z hint: to use in all of your new repositories, which will suppress this warning,
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0270939Z hint: call:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0272468Z hint:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0273784Z hint: 	git config --global init.defaultBranch <name>
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0275024Z hint:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0276197Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0278116Z hint: 'development'. The just-created branch can be renamed via this command:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0279702Z hint:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0280790Z hint: 	git branch -m <name>
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0281726Z hint:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0282896Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0284661Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0287131Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0324234Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0325632Z ##[group]Disabling automatic garbage collection
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0327785Z [command]/usr/bin/git config --local gc.auto 0
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0357246Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0358654Z ##[group]Setting up auth
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0359669Z Removing SSH command configuration
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0364098Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0395587Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0711082Z Removing HTTP extra header
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0715875Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0747235Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0961629Z Removing includeIf entries pointing to credentials config files
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0966937Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.0998639Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.1215383Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.1247860Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git.path /home/runner/work/_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.1275796Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.1308997Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.1339064Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.1365838Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.1366649Z ##[group]Fetching the repository
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:25.1372401Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c7923f355396bc15a02b3ed3b0f91bd4d690cce2:refs/remotes/pull/52128/merge
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:26.6968606Z From https://github.com/keycloak/keycloak
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:26.6972548Z  * [new ref]           c7923f355396bc15a02b3ed3b0f91bd4d690cce2 -> pull/52128/merge
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:26.6976420Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:26.6977968Z ##[group]Determining the checkout info
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:26.6979997Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:26.6981508Z [command]/usr/bin/git sparse-checkout disable
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:26.7027389Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:26.7058159Z ##[group]Checking out the ref
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:26.7059757Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/52128/merge
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7062778Z Note: switching to 'refs/remotes/pull/52128/merge'.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7064444Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7064780Z You are in 'detached HEAD' state. You can look around, make experimental
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7065754Z changes and commit them, and you can discard any commits you make in this
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7066515Z state without impacting any branches by switching back to a branch.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7066864Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7067098Z If you want to create a new branch to retain commits you create, you may
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7067618Z do so (now or later) by using -c with the switch command. Example:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7067910Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7068047Z   git switch -c <new-branch-name>
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7068244Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7068386Z Or undo this operation with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7068567Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7068685Z   git switch -
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7068906Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7069199Z Turn off this advice by setting config variable advice.detachedHead to false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7069546Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7070453Z HEAD is now at c7923f35 Merge c45692849e9d26eb5d06b80422c0d3c9cc08f1c8 into ae1a37058febedf3fe89e6ff3bc3b0f20176a43f
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7097535Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7141143Z [command]/usr/bin/git log -1 --format=%H
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7165102Z c7923f355396bc15a02b3ed3b0f91bd4d690cce2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7486873Z Prepare all required actions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7487545Z Getting action download info
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7594024Z ##[group]Run ./.github/actions/run-store-tests
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7594440Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7594677Z   db: mariadb
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7594905Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7595231Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7595680Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7596032Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7596411Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7596708Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7596983Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7655178Z ##[start-action display=Integration test setup;id=run-store-tests.integration-test-setup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7790646Z Prepare all required actions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.7791195Z Getting action download info
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:27.8627713Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0239452Z ##[group]Run ./.github/actions/integration-test-setup
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0239836Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0240068Z   jdk-dist: temurin
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0240545Z   jdk-version: 25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0240798Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0241128Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0241555Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0241915Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0242282Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0242571Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0242844Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0251286Z ##[start-action display=Update /etc/hosts;id=run-store-tests.integration-test-setup.update-hosts]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0276787Z Prepare all required actions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0366781Z ##[group]Run ./.github/actions/update-hosts
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0367127Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0367461Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0367874Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0368220Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0368596Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0368885Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0369156Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0373570Z ##[start-action display=Update /etc/hosts;id=run-store-tests.integration-test-setup.update-hosts.update-hosts-linux]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0424493Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0425254Z ^[[36;1mprintf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0466714Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0467131Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0467505Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0467924Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0468281Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0468654Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0468948Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0469227Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0608156Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0608179Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0608888Z 127.0.0.1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0624556Z ::1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0641681Z ##[end-action id=run-store-tests.integration-test-setup.update-hosts.update-hosts-linux;outcome=success;conclusion=success;duration_ms=26]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0647800Z ##[start-action display=Update C:\Windows\System32\drivers\etc\hosts;id=run-store-tests.integration-test-setup.update-hosts.update-hosts-windows]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0654631Z ##[end-action id=run-store-tests.integration-test-setup.update-hosts.update-hosts-windows;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0666894Z ##[end-action id=run-store-tests.integration-test-setup.update-hosts;outcome=success;conclusion=success;duration_ms=41]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0669513Z ##[start-action display=Setup Java;id=run-store-tests.integration-test-setup.setup-java]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0692592Z Prepare all required actions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.0693082Z Getting action download info
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.1491820Z Download action repository 'actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961' (SHA:b6effb05e454b25005698d916606bdc6ffcbf961)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3831999Z ##[group]Run ./.github/actions/java-setup
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3832298Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3832495Z   distribution: temurin
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3832733Z   java-version: 25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3832927Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3833227Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3833611Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3833925Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3834251Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3834503Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3834749Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3837876Z ##[start-action display=Setup Java;id=run-store-tests.integration-test-setup.setup-java.setup-java]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3975413Z ##[group]Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3975805Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3976055Z   distribution: temurin
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3976340Z   java-version: 25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3976544Z   java-package: jdk
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3976752Z   check-latest: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3976960Z   set-default: true
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3977165Z   verify-signature: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3977568Z   server-id: github
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3977787Z   server-username: GITHUB_ACTOR
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3978041Z   server-password: GITHUB_TOKEN
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3978295Z   overwrite-settings: true
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3978525Z   job-status: success
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3981277Z   token: ***
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3981509Z   show-download-progress: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3981767Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3982060Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3982455Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3982785Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3983111Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3983361Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.3983594Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5480519Z ##[group]Installed distributions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5703821Z Resolved Java 25.0.4+1 from tool-cache
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5704515Z Setting Java 25.0.4+1 as the default
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5715664Z Creating toolchains.xml for JDK version 25 from temurin
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5789894Z Writing to /home/runner/.m2/toolchains.xml
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5790671Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5790910Z Java configuration:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5791470Z   Distribution: temurin
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5792036Z   Version: 25.0.4+1
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5792810Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5793418Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5793828Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5818953Z Creating settings.xml with server-id: github
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5819411Z Writing to /home/runner/.m2/settings.xml
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5820529Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5901867Z ##[end-action id=run-store-tests.integration-test-setup.setup-java.setup-java;outcome=success;conclusion=success;duration_ms=206]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5907368Z ##[end-action id=run-store-tests.integration-test-setup.setup-java;outcome=success;conclusion=success;duration_ms=523]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5910150Z ##[start-action display=Maven cache;id=run-store-tests.integration-test-setup.maven-cache]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5956190Z Prepare all required actions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.5956636Z Getting action download info
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.6777905Z Download action repository 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8005935Z ##[group]Run ./.github/actions/maven-cache
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8006233Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8006460Z   create-cache-if-it-doesnt-exist: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8006738Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8007041Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8007443Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8007754Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8008082Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8008348Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8008705Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8009181Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8009551Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8015763Z ##[start-action display=Key for weekly rotation of cache;id=run-store-tests.integration-test-setup.maven-cache.weekly-cache-key]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8041756Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8042213Z ^[[36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8082585Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8082949Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8083269Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8083692Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8084023Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8084526Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8084791Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8085142Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8085640Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8086021Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8168643Z ##[end-action id=run-store-tests.integration-test-setup.maven-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=15]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8171738Z ##[start-action display=Maven cache;id=run-store-tests.integration-test-setup.maven-cache.cache-maven-repository]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8178112Z ##[end-action id=run-store-tests.integration-test-setup.maven-cache.cache-maven-repository;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8180895Z ##[start-action display=Maven cache;id=run-store-tests.integration-test-setup.maven-cache.restore-maven-repository]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8232599Z ##[group]Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8232997Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8233321Z   path: ~/.m2/repository/*/*
+Store IT (mariadb)	UNKNOWN STEP	~/.m2/wrapper/dists
+Store IT (mariadb)	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+Store IT (mariadb)	UNKNOWN STEP	
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8233743Z   key: mvn-and-wrapper-Linux-mvn-2026-35
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8234041Z   enableCrossOsArchive: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8234297Z   fail-on-cache-miss: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8234530Z   lookup-only: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8234744Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8235048Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8235445Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8235756Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8236085Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8236333Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8236684Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8237168Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:28.8237696Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:29.0010781Z Cache hit for: mvn-and-wrapper-Linux-mvn-2026-35
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:30.0664585Z Received 222298112 of 740537693 (30.0%), 212.0 MBs/sec
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:31.0752497Z Received 473956352 of 740537693 (64.0%), 225.0 MBs/sec
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:32.0069035Z Received 740537693 of 740537693 (100.0%), 240.2 MBs/sec
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:32.0071633Z Cache Size: ~706 MB (740537693 B)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:32.0181410Z [command]/usr/bin/tar -xf /home/runner/work/_temp/75bf4a01-fa36-4d9e-99f5-18a566cd3de7/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:33.8764167Z Cache restored successfully
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:33.9155924Z Cache restored from key: mvn-and-wrapper-Linux-mvn-2026-35
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:33.9286190Z ##[end-action id=run-store-tests.integration-test-setup.maven-cache.restore-maven-repository;outcome=success;conclusion=success;duration_ms=5110]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:33.9292753Z ##[start-action display=Node cache;id=run-store-tests.integration-test-setup.maven-cache.node-cache]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:33.9336014Z Prepare all required actions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:33.9336491Z Getting action download info
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0253382Z ##[group]Run ./.github/actions/node-cache
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0253856Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0254375Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0255055Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0255588Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0256162Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0256597Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0257198Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0258051Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0258707Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0264518Z ##[start-action display=Get Node.js and PNPM versions;id=run-store-tests.integration-test-setup.maven-cache.node-cache.tooling-versions]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0290545Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0291624Z ^[[36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0292499Z ^[[36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0336619Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0337197Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0337718Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0338403Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0338943Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0339550Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0340002Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0340817Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0341569Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0342006Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0773289Z ##[end-action id=run-store-tests.integration-test-setup.maven-cache.node-cache.tooling-versions;outcome=success;conclusion=success;duration_ms=50]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0776270Z ##[start-action display=Cache Node.js and PNPM binaries;id=run-store-tests.integration-test-setup.maven-cache.node-cache.cache-binaries]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0840845Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0841203Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0841574Z   path: ~/.m2/repository/com/github/eirslett/node
+Store IT (mariadb)	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+Store IT (mariadb)	UNKNOWN STEP	
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0842079Z   key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0842418Z   enableCrossOsArchive: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0842691Z   fail-on-cache-miss: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0843109Z   lookup-only: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0843328Z   save-always: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0843531Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0843848Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0844237Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0844546Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0844870Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0845127Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0845597Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0846168Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.0846543Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:34.3050122Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.1742674Z Received 182409230 of 182409230 (100.0%), 217.7 MBs/sec
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.1745267Z Cache Size: ~174 MB (182409230 B)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.1858168Z [command]/usr/bin/tar -xf /home/runner/work/_temp/78a5f6f4-2a00-4441-990d-72c38feb6438/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6276811Z Cache restored successfully
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6434951Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6534843Z ##[end-action id=run-store-tests.integration-test-setup.maven-cache.node-cache.cache-binaries;outcome=success;conclusion=success;duration_ms=1575]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6538324Z ##[start-action display=Download Node.js and PNPM;id=run-store-tests.integration-test-setup.maven-cache.node-cache.__run]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6544720Z ##[end-action id=run-store-tests.integration-test-setup.maven-cache.node-cache.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6549502Z ##[end-action id=run-store-tests.integration-test-setup.maven-cache.node-cache;outcome=success;conclusion=success;duration_ms=1725]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6555294Z ##[end-action id=run-store-tests.integration-test-setup.maven-cache;outcome=success;conclusion=success;duration_ms=7064]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6557709Z ##[start-action display=Restore Quarkus snapshot cache;id=run-store-tests.integration-test-setup.restore-quarkus-snapshot]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6563643Z ##[end-action id=run-store-tests.integration-test-setup.restore-quarkus-snapshot;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6565798Z ##[start-action display=PNPM store cache;id=run-store-tests.integration-test-setup.pnpm-store-cache]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6591689Z Prepare all required actions
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.6592143Z Getting action download info
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.7338691Z Download action repository 'google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5' (SHA:9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8251446Z ##[group]Run ./.github/actions/pnpm-store-cache
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8251750Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8252081Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8252500Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8252822Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8253162Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8253423Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8253778Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8254269Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8254647Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8259281Z ##[start-action display=Key for weekly rotation of cache;id=run-store-tests.integration-test-setup.pnpm-store-cache.weekly-cache-key]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8275070Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8275549Z ^[[36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8309494Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8309851Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8310544Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8310985Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8311309Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8311641Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8311901Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8312256Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8312749Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8313128Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8385116Z ##[end-action id=run-store-tests.integration-test-setup.pnpm-store-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=12]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8387834Z ##[start-action display=Cache PNPM store;id=run-store-tests.integration-test-setup.pnpm-store-cache.__actions_cache]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8433894Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8434264Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8434609Z   path: ~/.local/share/pnpm/store
+Store IT (mariadb)	UNKNOWN STEP	~/AppData/Local/pnpm/store
+Store IT (mariadb)	UNKNOWN STEP	~/Library/pnpm/store
+Store IT (mariadb)	UNKNOWN STEP	
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8435064Z   key: Linux-pnpm-store-2026-35
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8435348Z   enableCrossOsArchive: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8435607Z   fail-on-cache-miss: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8435856Z   lookup-only: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8436069Z   save-always: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8436275Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8436591Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8436990Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8437312Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8437655Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8437914Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8438274Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8438925Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:35.8439316Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:36.0103050Z Cache hit for: Linux-pnpm-store-2026-35
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:36.6709325Z Received 112319056 of 112319056 (100.0%), 180.0 MBs/sec
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:36.6711766Z Cache Size: ~107 MB (112319056 B)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:36.6754667Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c9108fb0-637b-4fa9-827d-6bfa16831d81/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.0706923Z Cache restored successfully
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4324732Z Cache restored from key: Linux-pnpm-store-2026-35
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4429000Z ##[end-action id=run-store-tests.integration-test-setup.pnpm-store-cache.__actions_cache;outcome=success;conclusion=success;duration_ms=3603]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4432722Z ##[start-action display=Set up Wireit GitHub Actions caching;id=run-store-tests.integration-test-setup.pnpm-store-cache.__google_wireit]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4462913Z ##[group]Run google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4463295Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4463625Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4464031Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4464369Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4464704Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4464980Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4465347Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4465856Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4466258Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4745382Z [main] Launching background custodian service
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:39.4761613Z [main] Writing logs to /tmp/wireit_custodian_logs_I57T24
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0181067Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0181664Z [custodian] Trying port 52907
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0182317Z [custodian] Listening on port 52907
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0182774Z 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0183389Z [main] Custodian server ready
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0222815Z ##[end-action id=run-store-tests.integration-test-setup.pnpm-store-cache.__google_wireit;outcome=success;conclusion=success;duration_ms=1578]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0230790Z ##[end-action id=run-store-tests.integration-test-setup.pnpm-store-cache;outcome=success;conclusion=success;duration_ms=5366]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0235169Z ##[start-action display=Download Keycloak Maven artifacts;id=run-store-tests.integration-test-setup.download-keycloak]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0304588Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0305307Z with:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0305669Z   name: m2-keycloak.tzts
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0306120Z   merge-multiple: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0306556Z   repository: keycloak/keycloak
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0307005Z   run-id: 33334746394
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0307406Z   skip-decompress: false
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0307853Z   digest-mismatch: error
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0308254Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0308818Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0309544Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0310116Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0311458Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0311940Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0312604Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0313516Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0314259Z   WIREIT_CACHE: github
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0314771Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 52907
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.0315502Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.1676740Z Downloading single artifact
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.2516381Z Preparing to download the following artifacts:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.2518026Z - m2-keycloak.tzts (ID: 9738725060, Size: 442155173, Expected Digest: sha256:892792e79374450e9e19582d313c8dce9eb2d44d0d04515f5a65c5d22cd18943)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.3962367Z Redirecting to blob download url: https://productionresultssa7.blob.core.windows.net/actions-results/32f9d049-0044-45f0-bca1-b7fe7e16d4f2/workflow-job-run-1941c0fb-959d-5caa-b3e8-7cd3420b4801/artifacts/edc4cfb0355d37e325eaae6eb235756b36f79720f66ece617babf28220e9d051.zip
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.3964641Z Starting download of artifact to: /home/runner/work/keycloak/keycloak
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.4592598Z (node:2369) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:41.4594616Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6091451Z SHA256 digest of downloaded artifact is 892792e79374450e9e19582d313c8dce9eb2d44d0d04515f5a65c5d22cd18943
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6092116Z Artifact download completed successfully.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6092482Z Total of 1 artifact(s) downloaded
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6099942Z Download artifact has finished successfully
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6208151Z ##[end-action id=run-store-tests.integration-test-setup.download-keycloak;outcome=success;conclusion=success;duration_ms=5597]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6213950Z ##[start-action display=Extract Keycloak Maven artifacts;id=run-store-tests.integration-test-setup.extract-maven-artifacts]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6242244Z ##[group]Run if [ "$RUNNER_OS" == "Windows" ]; then
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6242916Z ^[[36;1mif [ "$RUNNER_OS" == "Windows" ]; then^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6243734Z ^[[36;1m  # zstd binary might be missing in older versions, install only when necessary^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6244635Z ^[[36;1m  which zstd > /dev/null || choco install zstandard^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6245257Z ^[[36;1mfi^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6245827Z ^[[36;1mtar -C ~/ --use-compress-program="zstd -d" -xf m2-keycloak.tzts^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6282745Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6283139Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6283660Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6284103Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6284446Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6284798Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6285066Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6285455Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6285992Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6286395Z   WIREIT_CACHE: github
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6286659Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 52907
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:46.6286959Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2128383Z ##[end-action id=run-store-tests.integration-test-setup.extract-maven-artifacts;outcome=success;conclusion=success;duration_ms=591]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2133463Z ##[end-action id=run-store-tests.integration-test-setup;outcome=success;conclusion=success;duration_ms=19447]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2135959Z ##[start-action display=Run new base tests;id=run-store-tests.__run]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2154960Z ##[group]Run KC_TEST_DATABASE=mariadb KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite -Dkc.test.server.start.timeout=360
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2156293Z ^[[36;1mKC_TEST_DATABASE=mariadb KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite -Dkc.test.server.start.timeout=360^[[0m
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2193131Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2193501Z env:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2193850Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2194278Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2194615Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2194965Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2195417Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2195792Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2196300Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2196705Z   WIREIT_CACHE: github
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2196964Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 52907
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:47.2197267Z ##[endgroup]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:50.9694745Z [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:50.9859976Z [INFO] Scanning for projects...
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1791752Z [INFO] ------------------------------------------------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1798973Z [INFO] Reactor Build Order:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1803832Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1805073Z [INFO] Keycloak Tests Parent                                              [pom]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1806455Z [INFO] Keycloak Testsuite Utilities                                       [jar]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1807901Z [INFO] Keycloak Testsuite Utilities Shared                                [jar]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1809406Z [INFO] Keycloak Testsuite Custom Providers                                [jar]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1810798Z [INFO] Keycloak Testsuite Custom Scripts                                  [jar]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1812228Z [INFO] New Keycloak Base Testsuite                                        [jar]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1813516Z [INFO] Keycloak Clustering Tests                                          [jar]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1814794Z [INFO] New Keycloak WebAuthn Testsuite                                    [jar]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1816216Z [INFO] Keycloak Conformance Tests                                         [jar]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1868868Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1869776Z [INFO] --------------< org.keycloak.tests:keycloak-tests-parent >--------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1876441Z [INFO] Building Keycloak Tests Parent 999.0.0-SNAPSHOT                    [1/9]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1877961Z [INFO]   from pom.xml
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1893683Z [INFO] --------------------------------[ pom ]---------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1925108Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1951070Z [INFO] --------------< org.keycloak.tests:keycloak-tests-utils >---------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1962500Z [INFO] Building Keycloak Testsuite Utilities 999.0.0-SNAPSHOT             [2/9]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1963526Z [INFO]   from utils/pom.xml
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:51.1964359Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:53.2957120Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:53.2981633Z [INFO] --- resources:3.3.1:resources (default-resources) @ keycloak-tests-utils ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:53.4083499Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/main/resources
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:53.4094387Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:53.4095444Z [INFO] --- compiler:3.13.0:compile (default-compile) @ keycloak-tests-utils ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:53.5695496Z [INFO] Recompiling the module because of changed source code.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:53.5829048Z [INFO] Compiling 16 source files with javac [debug release 17] to target/classes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4566257Z [INFO] /home/runner/work/keycloak/keycloak/tests/utils/src/main/java/org/keycloak/tests/utils/matchers/SamlStatusResponseTypeMatcher.java: /home/runner/work/keycloak/keycloak/tests/utils/src/main/java/org/keycloak/tests/utils/matchers/SamlStatusResponseTypeMatcher.java uses unchecked or unsafe operations.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4568733Z [INFO] /home/runner/work/keycloak/keycloak/tests/utils/src/main/java/org/keycloak/tests/utils/matchers/SamlStatusResponseTypeMatcher.java: Recompile with -Xlint:unchecked for details.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4572915Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4573581Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ keycloak-tests-utils ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4625889Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/test/resources
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4628097Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4629113Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ keycloak-tests-utils ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4671839Z [INFO] No sources to compile
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4700920Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.4720954Z [INFO] --- surefire:3.5.6:test (default-test) @ keycloak-tests-utils ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.5901309Z [INFO] No tests to run.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.6246658Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.6247551Z [INFO] --- jar:3.5.0:jar (default-jar) @ keycloak-tests-utils ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.8664832Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils/target/keycloak-tests-utils-999.0.0-SNAPSHOT.jar
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9252083Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9281322Z [INFO] -----------< org.keycloak.tests:keycloak-tests-utils-shared >-----------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9311052Z [INFO] Building Keycloak Testsuite Utilities Shared 999.0.0-SNAPSHOT      [3/9]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9320972Z [INFO]   from utils-shared/pom.xml
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9341394Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9921283Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9922357Z [INFO] --- resources:3.3.1:resources (default-resources) @ keycloak-tests-utils-shared ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9929970Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/resources
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9931470Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:56.9932304Z [INFO] --- compiler:3.13.0:compile (default-compile) @ keycloak-tests-utils-shared ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:57.0088315Z [INFO] Recompiling the module because of changed source code.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:57.0095448Z [INFO] Compiling 84 source files with javac [debug release 17] to target/classes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0729536Z [INFO] /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/java/org/keycloak/testsuite/util/LDAPTestUtils.java: /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/java/org/keycloak/testsuite/util/LDAPTestUtils.java uses or overrides a deprecated API.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0739233Z [INFO] /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/java/org/keycloak/testsuite/util/LDAPTestUtils.java: Recompile with -Xlint:deprecation for details.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0758513Z [INFO] /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/java/org/keycloak/testsuite/util/oauth/AbstractHttpPostRequest.java: Some input files use unchecked or unsafe operations.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0764305Z [INFO] /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/java/org/keycloak/testsuite/util/oauth/AbstractHttpPostRequest.java: Recompile with -Xlint:unchecked for details.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0766019Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0766904Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ keycloak-tests-utils-shared ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0777364Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/test/resources
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0778633Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0779529Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ keycloak-tests-utils-shared ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0780767Z [INFO] No sources to compile
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0781279Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0781977Z [INFO] --- surefire:3.5.6:test (default-test) @ keycloak-tests-utils-shared ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0830881Z [INFO] No tests to run.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0860852Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0870719Z [INFO] --- jar:3.5.0:jar (default-jar) @ keycloak-tests-utils-shared ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.0957351Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils-shared/target/keycloak-tests-utils-shared-999.0.0-SNAPSHOT.jar
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1250964Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1261443Z [INFO] ---------< org.keycloak.tests:keycloak-tests-custom-providers >---------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1262806Z [INFO] Building Keycloak Testsuite Custom Providers 999.0.0-SNAPSHOT      [4/9]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1264464Z [INFO]   from custom-providers/pom.xml
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1265312Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1735571Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1736778Z [INFO] --- resources:3.3.1:resources (default-resources) @ keycloak-tests-custom-providers ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1801114Z [INFO] Copying 15 resources from src/main/resources to target/classes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1848355Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1849246Z [INFO] --- compiler:3.13.0:compile (default-compile) @ keycloak-tests-custom-providers ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1934174Z [INFO] Recompiling the module because of changed source code.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.1942575Z [INFO] Compiling 25 source files with javac [debug release 17] to target/classes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6268964Z [INFO] /home/runner/work/keycloak/keycloak/tests/custom-providers/src/main/java/org/keycloak/tests/providers/federation/UserMapStorage.java: /home/runner/work/keycloak/keycloak/tests/custom-providers/src/main/java/org/keycloak/tests/providers/federation/UserMapStorage.java uses or overrides a deprecated API.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6276119Z [INFO] /home/runner/work/keycloak/keycloak/tests/custom-providers/src/main/java/org/keycloak/tests/providers/federation/UserMapStorage.java: Recompile with -Xlint:deprecation for details.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6279030Z [INFO] /home/runner/work/keycloak/keycloak/tests/custom-providers/src/main/java/org/keycloak/tests/providers/authorization/policy/GrantPolicyProvider.java: Some input files use unchecked or unsafe operations.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6282323Z [INFO] /home/runner/work/keycloak/keycloak/tests/custom-providers/src/main/java/org/keycloak/tests/providers/authorization/policy/GrantPolicyProvider.java: Recompile with -Xlint:unchecked for details.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6284209Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6285155Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ keycloak-tests-custom-providers ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6289320Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/custom-providers/src/test/resources
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6291094Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6292264Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ keycloak-tests-custom-providers ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6309365Z [INFO] No sources to compile
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6310644Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6311517Z [INFO] --- surefire:3.5.6:test (default-test) @ keycloak-tests-custom-providers ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6335620Z [INFO] No tests to run.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6343109Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6343898Z [INFO] --- jar:3.5.0:jar (default-jar) @ keycloak-tests-custom-providers ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6441737Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-providers/target/keycloak-tests-custom-providers-999.0.0-SNAPSHOT.jar
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6611091Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6641145Z [INFO] ----------< org.keycloak.tests:keycloak-tests-custom-scripts >----------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6651463Z [INFO] Building Keycloak Testsuite Custom Scripts 999.0.0-SNAPSHOT        [5/9]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6681378Z [INFO]   from custom-scripts/pom.xml
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6682283Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6696157Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6704870Z [INFO] --- resources:3.3.1:resources (default-resources) @ keycloak-tests-custom-scripts ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6706114Z [INFO] Copying 2 resources from src/main/resources to target/classes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6706956Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6707817Z [INFO] --- compiler:3.13.0:compile (default-compile) @ keycloak-tests-custom-scripts ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6709974Z [INFO] No sources to compile
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6710887Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6711817Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ keycloak-tests-custom-scripts ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6715971Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/custom-scripts/src/test/resources
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6717190Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6718430Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ keycloak-tests-custom-scripts ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6740479Z [INFO] No sources to compile
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6741218Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6742051Z [INFO] --- surefire:3.5.6:test (default-test) @ keycloak-tests-custom-scripts ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6749153Z [INFO] No tests to run.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6768578Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6769485Z [INFO] --- jar:3.5.0:jar (default-jar) @ keycloak-tests-custom-scripts ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6779512Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-scripts/target/keycloak-tests-custom-scripts-999.0.0-SNAPSHOT.jar
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6802649Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6806676Z [INFO] ---------------< org.keycloak.tests:keycloak-tests-base >---------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6807872Z [INFO] Building New Keycloak Base Testsuite 999.0.0-SNAPSHOT              [6/9]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6818457Z [INFO]   from base/pom.xml
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:58.6819332Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0452228Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0453217Z [INFO] --- resources:3.3.1:resources (default-resources) @ keycloak-tests-base ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0470959Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/base/src/main/resources
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0472129Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0472911Z [INFO] --- compiler:3.13.0:compile (default-compile) @ keycloak-tests-base ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0495469Z [INFO] No sources to compile
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0496144Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0510837Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ keycloak-tests-base ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0538018Z [INFO] Copying 53 resources from src/test/resources to target/test-classes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0624561Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.0625483Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ keycloak-tests-base ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.1065701Z [INFO] Recompiling the module because of changed dependency.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:54:59.1088326Z [INFO] Compiling 544 source files with javac [debug release 17] to target/test-classes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3104039Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/AuthenticationSessionProviderTest.java:[354,52] removeExpired(org.keycloak.models.RealmModel) in org.keycloak.sessions.AuthenticationSessionProvider has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3109310Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[232,37] getTimestamp() in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3114020Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[236,26] setTimestamp(int) in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3118459Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[240,44] getTimestamp() in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3123121Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[257,37] getTimestamp() in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3127538Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[261,26] setTimestamp(int) in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3132390Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[265,44] getTimestamp() in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3137117Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[556,30] setTimestamp(int) in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3141675Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[669,34] setTimestamp(int) in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3146005Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[720,23] setTimestamp(int) in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3150561Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[726,23] setTimestamp(int) in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3154938Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[748,23] setTimestamp(int) in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3159222Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/model/UserSessionProviderTest.java:[773,65] getTimestamp() in org.keycloak.models.AuthenticatedClientSessionModel has been deprecated and marked for removal
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3164598Z ##[warning][WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/oauth/IDJWTAuthorizationGrantTest.java:[58,22] non-varargs call of varargs method with inexact argument type for last parameter;
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3165652Z   cast to java.lang.String for a varargs call
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3166114Z   cast to java.lang.String[] for a non-varargs call and to suppress this warning
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3167041Z [INFO] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/account/AccountRestServiceTest.java: Some input files use or override a deprecated API.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3168290Z [INFO] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/account/AccountRestServiceTest.java: Recompile with -Xlint:deprecation for details.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3169572Z [INFO] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/client/AbstractClientScopeTest.java: Some input files use unchecked or unsafe operations.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3171590Z [INFO] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/client/AbstractClientScopeTest.java: Recompile with -Xlint:unchecked for details.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3172408Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3172750Z [INFO] --- surefire:3.5.6:test (default-test) @ keycloak-tests-base ---
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:55:10.3371683Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6582465Z [INFO] ------------------------------------------------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6583329Z [INFO] Reactor Summary for Keycloak Tests Parent 999.0.0-SNAPSHOT:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6584008Z [INFO] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6586861Z [INFO] Keycloak Tests Parent .............................. SUCCESS [  0.004 s]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6587884Z [INFO] Keycloak Testsuite Utilities ....................... SUCCESS [  5.733 s]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6588889Z [INFO] Keycloak Testsuite Utilities Shared ................ SUCCESS [  1.200 s]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6589945Z [INFO] Keycloak Testsuite Custom Providers ................ SUCCESS [  0.537 s]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6591671Z [INFO] Keycloak Testsuite Custom Scripts .................. SUCCESS [  0.020 s]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6592655Z [INFO] New Keycloak Base Testsuite ........................ FAILURE [01:12 min]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6593510Z [INFO] Keycloak Clustering Tests .......................... SKIPPED
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6594310Z [INFO] New Keycloak WebAuthn Testsuite .................... SKIPPED
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6595133Z [INFO] Keycloak Conformance Tests ......................... SKIPPED
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6595995Z [INFO] ------------------------------------------------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6596697Z [INFO] BUILD FAILURE
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6597266Z [INFO] ------------------------------------------------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6597903Z [INFO] Total time:  01:20 min
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6598326Z [INFO] Finished at: 2026-08-30T20:56:11Z
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6598862Z [INFO] ------------------------------------------------------------------------
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6609092Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project keycloak-tests-base: Failed to collect dependencies at org.apache.maven.surefire:surefire-junit-platform:jar:3.5.6: Failed to read artifact descriptor for org.apache.maven.surefire:surefire-junit-platform:jar:3.5.6: The following artifacts could not be resolved: org.apache.maven.surefire:surefire-junit-platform:pom:3.5.6 (absent): Could not transfer artifact org.apache.maven.surefire:surefire-junit-platform:pom:3.5.6 from/to central (https://repo.maven.apache.org/maven2): status code: 429, reason phrase: Too Many Requests (429) -> [Help 1]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6613545Z [ERROR] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6614222Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6615142Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6615812Z [ERROR] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6616887Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6618134Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6618889Z [ERROR] 
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6619549Z [ERROR] After correcting the problems, you can resume the build with the command
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6620684Z [ERROR]   mvn <args> -rf :keycloak-tests-base
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6853093Z ##[error]Process completed with exit code 1.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6861601Z ##[end-action id=run-store-tests.__run;outcome=failure;conclusion=failure;duration_ms=84472]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6865710Z ##[start-action display=Database container port;id=run-store-tests.__run_2]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6868568Z ##[end-action id=run-store-tests.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6871204Z ##[start-action display=Run cluster JDBC_PING2 UDP smoke test;id=run-store-tests.__run_3]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6873360Z ##[end-action id=run-store-tests.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6875357Z ##[start-action display=Run cluster JDBC_PING2 TCP smoke test;id=run-store-tests.__run_4]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6877265Z ##[end-action id=run-store-tests.__run_4;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6879155Z ##[start-action display=Run stateless tests;id=run-store-tests.__run_5]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6881500Z ##[end-action id=run-store-tests.__run_5;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6884162Z ##[start-action display=Upload flaky tests;id=run-store-tests.__self]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.6886040Z ##[end-action id=run-store-tests.__self;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.7013515Z Post job cleanup.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.7020488Z ##[start-action display=Cache PNPM store;id=__5e60c545-30d0-45a1-b010-bbd4b9e3174a.__actions_cache]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.7022743Z ##[end-action id=__5e60c545-30d0-45a1-b010-bbd4b9e3174a.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.7025057Z ##[start-action display=Cache Node.js and PNPM binaries;id=__5e60c545-30d0-45a1-b010-bbd4b9e3174a.cache-binaries]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.7027147Z ##[end-action id=__5e60c545-30d0-45a1-b010-bbd4b9e3174a.cache-binaries;outcome=skipped;conclusion=skipped;duration_ms=0]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.7029109Z ##[start-action display=Setup Java;id=__5e60c545-30d0-45a1-b010-bbd4b9e3174a.setup-java]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.7089888Z Post job cleanup.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.8354169Z ##[end-action id=__5e60c545-30d0-45a1-b010-bbd4b9e3174a.setup-java;outcome=success;conclusion=success;duration_ms=132]
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.8436409Z Post job cleanup.
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9251536Z [command]/usr/bin/git version
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9288416Z git version 2.55.0
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9325026Z Temporarily overriding HOME='/home/runner/work/_temp/6ddfed8e-5b40-492e-aef0-7753141ec82f' before making global git config changes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9326476Z Adding repository directory to the temporary git global config as a safe directory
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9331177Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9362935Z Removing SSH command configuration
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9369207Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9403169Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9637441Z Removing HTTP extra header
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9644067Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9682963Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9935442Z Removing includeIf entries pointing to credentials config files
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9942640Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9970095Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9971544Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9972605Z includeif.gitdir:/github/workspace/.git.path
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9973524Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:11.9980942Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0002495Z /home/runner/work/_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0012472Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-539f8bcb\-c58e\-4ac2\-a02f\-46ad02f42e12\.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0044946Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0073496Z /home/runner/work/_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0081969Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-539f8bcb\-c58e\-4ac2\-a02f\-46ad02f42e12\.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0112738Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0133099Z /github/runner_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0140100Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-539f8bcb\-c58e\-4ac2\-a02f\-46ad02f42e12\.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0168938Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0188811Z /github/runner_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0197671Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-539f8bcb\-c58e\-4ac2\-a02f\-46ad02f42e12\.config
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0227759Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0454240Z Removing credentials config '/home/runner/work/_temp/git-credentials-539f8bcb-c58e-4ac2-a02f-46ad02f42e12.config'
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0589149Z Cleaning up orphan processes
+Store IT (mariadb)	UNKNOWN STEP	2026-08-30T20:56:12.0980605Z Terminate orphan process: pid (2357) (node)
+Status Check - Keycloak CI	UNKNOWN STEP	﻿2026-08-30T21:48:03.2758493Z Current runner version: '2.336.0'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2784177Z ##[group]Runner Image Provisioner
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2785430Z Hosted Compute Agent
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2786137Z Version: 20260819.586
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2786861Z Commit: 3cc4a88dfa507ef76119ad1bb3eccc6378bb2b76
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2787648Z Build Date: 2026-08-18T23:20:18Z
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2788352Z Worker ID: {54a446e2-70bf-431a-95e4-6dd0c5dcca8b}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2789146Z Azure Region: centralus
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2789767Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2791235Z ##[group]Operating System
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2791990Z Ubuntu
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2792542Z 24.04.4
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2793110Z LTS
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2793755Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2794314Z ##[group]Runner Image
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2795151Z Image: ubuntu-24.04
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2795748Z Version: 20260823.283.1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2797092Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260823.283/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2798708Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260823.283
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2799789Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2800897Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2803164Z Contents: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2803836Z Metadata: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2804489Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2807015Z Secret source: None
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.2808395Z Prepare workflow directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.3223312Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.3273054Z Getting action download info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.5767538Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.7548053Z Complete job name: Status Check - Keycloak CI
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8299202Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8300238Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8300696Z   repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8305224Z   token: ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8305682Z   ssh-strict: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8306146Z   ssh-user: git
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8306707Z   persist-credentials: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8307214Z   clean: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8307675Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8308208Z   fetch-depth: 1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8308655Z   fetch-tags: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8309112Z   show-progress: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8309569Z   lfs: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8310000Z   submodules: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8310474Z   set-safe-directory: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8310991Z   allow-unsafe-pr-checkout: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8311770Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8312373Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8313158Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8313768Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8314432Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8315130Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.8315654Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9321913Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9323773Z ##[group]Getting Git version info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9324502Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9325723Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9362248Z git version 2.55.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9381842Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9392191Z Temporarily overriding HOME='/home/runner/work/_temp/c41ef11a-382f-4e96-aab8-b423878fd634' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9393622Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9397904Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9439130Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9442604Z ##[group]Determining repository object format
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9443796Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9445420Z ##[group]Initializing the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9448550Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9518799Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9520516Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9522075Z hint: to use in all of your new repositories, which will suppress this warning,
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9523348Z hint: call:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9523857Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9524767Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9525760Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9526424Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9527473Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9528289Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9528757Z hint: 	git branch -m <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9529301Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9529998Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9531217Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9533349Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9573458Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9574598Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9576316Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9607496Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9608566Z ##[group]Setting up auth
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9609354Z Removing SSH command configuration
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9613353Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9646135Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9947029Z Removing HTTP extra header
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9952682Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:03.9988372Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0219445Z Removing includeIf entries pointing to credentials config files
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0225777Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0260297Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0494448Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0531015Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git.path /home/runner/work/_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0561119Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0594448Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0625958Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0654988Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0655748Z ##[group]Fetching the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:04.0661965Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c7923f355396bc15a02b3ed3b0f91bd4d690cce2:refs/remotes/pull/52128/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:08.4117947Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:08.4119932Z  * [new ref]           c7923f355396bc15a02b3ed3b0f91bd4d690cce2 -> pull/52128/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:08.4124129Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:08.4126113Z ##[group]Determining the checkout info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:08.4128270Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:08.4129479Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:08.4177567Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:08.4211809Z ##[group]Checking out the ref
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:08.4213163Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/52128/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4285353Z Note: switching to 'refs/remotes/pull/52128/merge'.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4286414Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4286782Z You are in 'detached HEAD' state. You can look around, make experimental
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4287650Z changes and commit them, and you can discard any commits you make in this
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4288468Z state without impacting any branches by switching back to a branch.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4288931Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4289296Z If you want to create a new branch to retain commits you create, you may
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4290095Z do so (now or later) by using -c with the switch command. Example:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4290531Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4290804Z   git switch -c <new-branch-name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4291111Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4291314Z Or undo this operation with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4291589Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4291762Z   git switch -
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4292008Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4292392Z Turn off this advice by setting config variable advice.detachedHead to false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4292878Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4293773Z HEAD is now at c7923f35 Merge c45692849e9d26eb5d06b80422c0d3c9cc08f1c8 into ae1a37058febedf3fe89e6ff3bc3b0f20176a43f
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4319339Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4366165Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4391975Z c7923f355396bc15a02b3ed3b0f91bd4d690cce2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4670909Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4749820Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4750192Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4757167Z   jobs: {
+Status Check - Keycloak CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-aurora": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-azure": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-jackson3": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-sssd": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-additional-dbs": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-admin-v2": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-quarkus": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-store": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-webauthn": "true"
+Status Check - Keycloak CI	UNKNOWN STEP	    }
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jdk-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-model-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "clustering-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "forms-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "sssd-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests-cs": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "external-infinispan-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "test-framework": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-new-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "mixed-cluster-compatibility-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "authzen-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "admin-v2-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jackson3-admin-client-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "testsuite-deprecation-check": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "stateless-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "stateless-cluster-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  }
+Status Check - Keycloak CI	UNKNOWN STEP	}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4764245Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4764627Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4765261Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4765654Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4766035Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4766345Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4766643Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4821790Z ##[start-action display=Check jobs;id=__self.check-jobs]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4967046Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4968066Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4968352Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4968805Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4969125Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4969424Z ^[[36;1m      "ci-aurora": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4969745Z ^[[36;1m      "ci-azure": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4970056Z ^[[36;1m      "ci-jackson3": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4970373Z ^[[36;1m      "ci": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4970665Z ^[[36;1m      "ci-sssd": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4970997Z ^[[36;1m      "ci-additional-dbs": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4971378Z ^[[36;1m      "ci-admin-v2": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4972013Z ^[[36;1m      "ci-quarkus": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4972326Z ^[[36;1m      "ci-store": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4972625Z ^[[36;1m      "ci-webauthn": "true"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4972920Z ^[[36;1m    }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4973159Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4973397Z ^[[36;1m  "build": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4973662Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4973962Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4974234Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4974479Z ^[[36;1m  "unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4974756Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4975182Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4975448Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4975711Z ^[[36;1m  "base-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4976037Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4976323Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4976616Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4976893Z ^[[36;1m  "adapter-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4977219Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4977504Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4977763Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4978078Z ^[[36;1m  "adapter-integration-tests-strict-cookies": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4978451Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4978739Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4979012Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4979262Z ^[[36;1m  "quarkus-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4979564Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4979909Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4980170Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4980426Z ^[[36;1m  "quarkus-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4980748Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4981033Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4981298Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4981716Z ^[[36;1m  "jdk-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4982031Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4982314Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4982577Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4982835Z ^[[36;1m  "store-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4983147Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4983428Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4983691Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4983946Z ^[[36;1m  "volatile-sessions-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4984267Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4984547Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4984804Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4985219Z ^[[36;1m  "store-model-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4985510Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4985797Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4986059Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4986327Z ^[[36;1m  "clustering-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4986661Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4986952Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4987214Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4987467Z ^[[36;1m  "fips-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4987770Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4988070Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4988343Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4988614Z ^[[36;1m  "fips-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4988931Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4989220Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4989486Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4989751Z ^[[36;1m  "forms-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4990080Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4990366Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4990633Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4990901Z ^[[36;1m  "webauthn-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4991231Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4991522Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4991784Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4992195Z ^[[36;1m  "sssd-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4992490Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4992777Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4993041Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4993297Z ^[[36;1m  "migration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4993582Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4993865Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4994126Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4994374Z ^[[36;1m  "migration-tests-cs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4994671Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4995140Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4995399Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4995700Z ^[[36;1m  "external-infinispan-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4996029Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4996321Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4996577Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4996831Z ^[[36;1m  "test-framework": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4997124Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4997403Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4997664Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4997926Z ^[[36;1m  "base-new-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4998243Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4998522Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4998779Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4999066Z ^[[36;1m  "mixed-cluster-compatibility-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4999416Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4999700Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.4999960Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5000228Z ^[[36;1m  "authzen-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5000555Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5000848Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5001115Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5001367Z ^[[36;1m  "admin-v2-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5001799Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5002105Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5002371Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5002639Z ^[[36;1m  "jackson3-admin-client-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5002965Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5003250Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5003513Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5003785Z ^[[36;1m  "testsuite-deprecation-check": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5004110Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5004408Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5004684Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5005063Z ^[[36;1m  "stateless-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5005367Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5005656Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5005920Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5006213Z ^[[36;1m  "stateless-cluster-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5006566Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5006864Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5007135Z ^[[36;1m  }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5007370Z ^[[36;1m}'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5007626Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5007870Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5008268Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5008667Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5008989Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5009439Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5009786Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5010063Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5010370Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5010614Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5010853Z ^[[36;1mdone^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5056440Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5056885Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5057325Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5057973Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5058362Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5058749Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5059051Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5059341Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5148534Z Job status:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5178367Z  - conditional: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5178701Z  - build: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5178995Z  - unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5179305Z  - base-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5179647Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5180037Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5180440Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5180762Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5181096Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5181423Z  - store-integration-tests: failure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5181773Z  - volatile-sessions-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5182094Z  - store-model-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5182418Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5182753Z  - fips-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5183055Z  - fips-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5183376Z  - forms-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5183709Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5184030Z  - sssd-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5184319Z  - migration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5184607Z  - migration-tests-cs: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5185230Z  - external-infinispan-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5185569Z  - test-framework: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5185874Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5186226Z  - mixed-cluster-compatibility-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5186585Z  - authzen-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5186899Z  - admin-v2-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5187427Z  - jackson3-admin-client-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5187787Z  - testsuite-deprecation-check: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5188280Z  - stateless-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5217447Z  - stateless-cluster-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5217762Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5217894Z Status check not okay!
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5230398Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5246698Z ##[end-action id=__self.check-jobs;outcome=failure;conclusion=failure;duration_ms=42]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.5449957Z Post job cleanup.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6320535Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6360012Z git version 2.55.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6392918Z Temporarily overriding HOME='/home/runner/work/_temp/7a54c0ec-6041-42e6-a0ea-e6c9eeba9c1a' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6393904Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6398533Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6430514Z Removing SSH command configuration
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6436962Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6472155Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6720926Z Removing HTTP extra header
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6726679Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.6761583Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7013504Z Removing includeIf entries pointing to credentials config files
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7020031Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7048909Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7049904Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7050720Z includeif.gitdir:/github/workspace/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7051392Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7058747Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7083760Z /home/runner/work/_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7094355Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-591c68a2\-d179\-49eb\-8e2c\-4c3f2056ffe3\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7130330Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7162310Z /home/runner/work/_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7170623Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-591c68a2\-d179\-49eb\-8e2c\-4c3f2056ffe3\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7203631Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7226127Z /github/runner_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7233079Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-591c68a2\-d179\-49eb\-8e2c\-4c3f2056ffe3\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7265485Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7288383Z /github/runner_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7296417Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-591c68a2\-d179\-49eb\-8e2c\-4c3f2056ffe3\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7329029Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7577500Z Removing credentials config '/home/runner/work/_temp/git-credentials-591c68a2-d179-49eb-8e2c-4c3f2056ffe3.config'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-08-30T21:48:09.7724363Z Cleaning up orphan processes
