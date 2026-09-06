@@ -1,0 +1,203 @@
+Admin UI E2E (chromium)	Run Playwright tests	﻿2026-09-06T04:17:54.6385175Z ##[group]Run pnpm --fail-if-no-match --filter @keycloak/keycloak-admin-ui test:integration -- --project=chromium
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6385870Z ^[[36;1mpnpm --fail-if-no-match --filter @keycloak/keycloak-admin-ui test:integration -- --project=chromium^[[0m
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6418558Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6418851Z env:
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6419127Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6419458Z   WORKSPACE: @keycloak/keycloak-admin-ui
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6419700Z   RETRY_COUNT: 3
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6419885Z   WIREIT_CACHE: github
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6420108Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 61823
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6420437Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6420825Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.6421377Z ##[endgroup]
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:54.9718244Z $ wireit -- --project=chromium
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:55.0936347Z Analyzing
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:56.0933766Z  25% [1 / 4] [0 running]
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:56.8571594Z (node:5525) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:56.8573200Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:57.0956025Z  75% [3 / 4] [1 running] test:integration
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:59.2293366Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:17:59.2294042Z Running 454 tests using 1 worker
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:21:31.4857107Z ··················································°·····························
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:24:37.7837948Z ······························································°·················
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:26:23.9791244Z ················································F::error file=js/apps/admin-ui/test/identity-providers/oidc.spec.ts,title=[chromium] › test/identity-providers/oidc.spec.ts:93:3 › Edit OIDC Provider › should add OIDC mapper of type Attribute Importer,line=104,col=7::  1) [chromium] › test/identity-providers/oidc.spec.ts:93:3 › Edit OIDC Provider › should add OIDC mapper of type Attribute Importer %0A    Error: expect(locator).toBeVisible() failed%0A%0A    Locator: getByRole('row', { name: /OIDC Attribute Importer/i })%0A    Expected: visible%0A    Timeout: 5000ms%0A    Error: element(s) not found%0A%0A    Call log:%0A      - Expect "toBeVisible" with timeout 5000ms%0A      - waiting for getByRole('row', { name: /OIDC Attribute Importer/i })%0A%0A%0A      102 |         name: new RegExp(mapperName, "i"),%0A      103 |       }),%0A    > 104 |     ).toBeVisible();%0A          |       ^%0A      105 |   });%0A      106 |%0A      107 |   test("should add OIDC mapper of type Claim To Role", async ({ page }) => {%0A        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/identity-providers/oidc.spec.ts:104:7
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:27:35.8312460Z °°·····························
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:30:40.7674371Z ················································································
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:32:23.3929308Z ··················································[switch:user-reg-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('user-reg-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" id="kc-user-reg-switch" class="pf-v5-c-switch__input" data-testid="user-reg-switch" aria-label="User registration"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:32:23.8768614Z [switch:forgot-pw-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('forgot-pw-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" id="kc-forgot-pw-switch" name="resetPasswordAllowed" aria-label="Forgot password" class="pf-v5-c-switch__input" data-testid="forgot-pw-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:32:24.2666437Z [switch:remember-me-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('remember-me-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" aria-label="Remember me" id="kc-remember-me-switch" class="pf-v5-c-switch__input" data-testid="remember-me-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:32:24.7572827Z [switch:login-with-email-switch] attempt 1: uncheck failed (locator.uncheck: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('login-with-email-switch')^[[22m ^[[2m - locator resolved to <input checked value="on" type="checkbox" class="pf-v5-c-switch__input" aria-label="Login with email" id="kc-login-with-email-switch" data-testid="login-with-email-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via uncheck on attempt 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:32:25.2476772Z [switch:duplicate-emails-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('duplicate-emails-switch')^[[22m ^[[2m - locator resolved to <input type="checkbox" class="pf-v5-c-switch__input" aria-label="Duplicate emails" id="kc-duplicate-emails-switch" data-testid="duplicate-emails-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:32:27.2465700Z ·[switch:passkeys-enabled-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for getByTestId('passkeys-enabled-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" aria-label="Enable Passkeys" class="pf-v5-c-switch__input" id="kc-passkeys-enabled-switch" data-testid="passkeys-enabled-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:33:28.4092104Z ························[switch:edit-username-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for locator('#kc-edit-username-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" aria-label="Edit username" id="kc-edit-username-switch" class="pf-v5-c-switch__input" data-testid="edit-username-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:33:31.2166141Z ·[switch:email-as-username-switch] attempt 1: check failed (locator.check: Clicking the checkbox did not change its state Call log: ^[[2m - waiting for locator('#kc-email-as-username-switch')^[[22m ^[[2m - locator resolved to <input value="off" type="checkbox" class="pf-v5-c-switch__input" aria-label="Email as username" id="kc-email-as-username-switch" data-testid="email-as-username-switch"/>^[[22m ^[[2m - attempting click action^[[22m ^[[2m - scrolling into view if needed^[[22m ^[[2m - done scrolling^[[22m ^[[2m - forcing action^[[22m ^[[2m - performing click action^[[22m ^[[2m - click action done^[[22m ^[[2m - waiting for scheduled navigations to finish^[[22m ^[[2m - navigations have finished^[[22m) | state reached via check on attempt 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:33:42.0210811Z ····
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3344815Z ······················································
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3345404Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3346111Z   1) [chromium] › test/identity-providers/oidc.spec.ts:93:3 › Edit OIDC Provider › should add OIDC mapper of type Attribute Importer 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3347651Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3348196Z     Error: ^[[2mexpect(^[[22m^[[31mlocator^[[39m^[[2m).^[[22mtoBeVisible^[[2m(^[[22m^[[2m)^[[22m failed
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3352706Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3353226Z     Locator: getByRole('row', { name: /OIDC Attribute Importer/i })
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3353811Z     Expected: visible
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3354178Z     Timeout: 5000ms
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3354529Z     Error: element(s) not found
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3354794Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3354995Z     Call log:
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3355472Z     ^[[2m  - Expect "toBeVisible" with timeout 5000ms^[[22m
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3356065Z     ^[[2m  - waiting for getByRole('row', { name: /OIDC Attribute Importer/i })^[[22m
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3356426Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3356577Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3356836Z       102 |         name: new RegExp(mapperName, "i"),
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3357220Z       103 |       }),
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3357561Z     > 104 |     ).toBeVisible();
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3357890Z           |       ^
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3358190Z       105 |   });
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3358478Z       106 |
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3358911Z       107 |   test("should add OIDC mapper of type Claim To Role", async ({ page }) => {
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3359591Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/identity-providers/oidc.spec.ts:104:7
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3360036Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3360532Z     Error Context: test-results/identity-providers-oidc-Ed-0e857--of-type-Attribute-Importer-chromium/error-context.md
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3361156Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3361629Z     attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3362350Z     test-results/identity-providers-oidc-Ed-0e857--of-type-Attribute-Importer-chromium/trace.zip
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3362890Z     Usage:
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3363102Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3363628Z         pnpm exec playwright show-trace test-results/identity-providers-oidc-Ed-0e857--of-type-Attribute-Importer-chromium/trace.zip
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3364179Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3364594Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3364945Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3365180Z   1 failed
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3365837Z     [chromium] › test/identity-providers/oidc.spec.ts:93:3 › Edit OIDC Provider › should add OIDC mapper of type Attribute Importer 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3366405Z   2 skipped
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3366690Z   2 did not run
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3367005Z   449 passed (17.6m)
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.3430761Z ##[notice]  1 failed
+Admin UI E2E (chromium)	Run Playwright tests	    [chromium] › test/identity-providers/oidc.spec.ts:93:3 › Edit OIDC Provider › should add OIDC mapper of type Attribute Importer 
+Admin UI E2E (chromium)	Run Playwright tests	  2 skipped
+Admin UI E2E (chromium)	Run Playwright tests	  2 did not run
+Admin UI E2E (chromium)	Run Playwright tests	  449 passed (17.6m)
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.6001708Z 
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.6002897Z ❌ [test:integration] exited with exit code 1.
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.6006202Z ❌ 1 script failed.
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.6234092Z /home/runner/work/keycloak/keycloak/js/apps/admin-ui:
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.6238621Z [ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL] @keycloak/keycloak-admin-ui@999.0.0-SNAPSHOT test:integration: `wireit -- --project=chromium`
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.6239307Z Exit status 1
+Admin UI E2E (chromium)	Run Playwright tests	2026-09-06T04:35:33.6657098Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	﻿2026-09-06T04:40:23.5061840Z Prepare all required actions
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5132078Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5132466Z with:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5134130Z   jobs: {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	      "js-ci": "true"
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    }
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "build-keycloak": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-client": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "ui-shared": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "account-ui": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "account-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-ui": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "admin-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  "keycloak-admin-client": {
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	  }
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5136274Z env:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5136645Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5137073Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5191265Z ##[start-action display=Check jobs;id=__self.check-jobs]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5246813Z ##[group]Run JOBS='{
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5247237Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5247518Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5247825Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5248141Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5248437Z ^[[36;1m      "js-ci": "true"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5248729Z ^[[36;1m    }^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5248973Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5249231Z ^[[36;1m  "build-keycloak": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5249523Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5249833Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5250132Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5250386Z ^[[36;1m  "admin-client": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5250679Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5250971Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5251239Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5251487Z ^[[36;1m  "ui-shared": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5251779Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5252066Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5252333Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5252583Z ^[[36;1m  "account-ui": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5252861Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5253144Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5253412Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5253665Z ^[[36;1m  "account-ui-e2e": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5253966Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5254391Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5254660Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5254907Z ^[[36;1m  "admin-ui": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5255395Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5255693Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5255958Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5256196Z ^[[36;1m  "admin-ui-e2e": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5256475Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5256761Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5257026Z ^[[36;1m  },^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5257278Z ^[[36;1m  "keycloak-admin-client": {^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5257590Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5257881Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5258141Z ^[[36;1m  }^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5258379Z ^[[36;1m}'^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5258631Z ^[[36;1m^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5258875Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5259307Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5259723Z ^[[36;1m^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5260070Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5260545Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5260916Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5261229Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5261550Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5261801Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5262041Z ^[[36;1mdone^[[0m
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5308263Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5308705Z env:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5309062Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5309474Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5392537Z Job status:
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5422309Z  - conditional: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5422810Z  - build-keycloak: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5423252Z  - admin-client: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5423551Z  - ui-shared: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5423837Z  - account-ui: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5424128Z  - account-ui-e2e: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5424661Z  - admin-ui: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5424968Z  - admin-ui-e2e: failure
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5425265Z  - keycloak-admin-client: success
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5458898Z 
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5459292Z Status check not okay!
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5471704Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run ./.github/actions/status-check	2026-09-06T04:40:23.5488384Z ##[end-action id=__self.check-jobs;outcome=failure;conclusion=failure;duration_ms=29]
