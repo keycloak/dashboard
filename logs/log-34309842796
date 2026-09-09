@@ -1,0 +1,50 @@
+AzureDB IT	Create Azure VM and prepare runner	﻿2026-09-09T04:12:29.9501307Z ##[group]Run AZURE_REGION=westeurope
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9501958Z ^[[36;1mAZURE_REGION=westeurope^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9502420Z ^[[36;1mAZ_VM_CLUSTER_NAME=gh-action-4b6b3929-34309842796-1^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9502990Z ^[[36;1mecho "az_vm_cluster=$***AZ_VM_CLUSTER_NAME***" >> $GITHUB_OUTPUT^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9503459Z ^[[36;1m^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9503863Z ^[[36;1mgit archive --format=zip --output /tmp/keycloak.zip $GITHUB_REF^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9504370Z ^[[36;1mtar -C ~/ -czvf /tmp/m2.tar.gz .m2 || true^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9504743Z ^[[36;1m^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9505026Z ^[[36;1mcd .github/scripts/ansible^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9505505Z ^[[36;1m./azure_vm_manager.sh create $***AZURE_REGION*** $***AZ_VM_CLUSTER_NAME***^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9505980Z ^[[36;1m^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9506528Z ^[[36;1m./keycloak_remote_installer.sh $***AZURE_REGION*** $***AZ_VM_CLUSTER_NAME*** /tmp/keycloak.zip /tmp/m2.tar.gz^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9507821Z ^[[36;1m./mvn_remote_runner.sh $***AZURE_REGION*** $***AZ_VM_CLUSTER_NAME*** "clean install -B -DskipTests -Pdistribution -DskipProtoLock=true -Dmaven.build.cache.enabled=true"^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9509268Z ^[[36;1m./mvn_remote_runner.sh $***AZURE_REGION*** $***AZ_VM_CLUSTER_NAME*** "clean install -B -DskipTests -pl testsuite/integration-arquillian/servers/auth-server/quarkus -Pdb-mssql-azure -Dmaven.build.cache.enabled=true"^[[0m
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9548869Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9549325Z env:
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9549719Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9550208Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9550615Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9551038Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9551377Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9552024Z   AZURE_ADMIN_PASSWORD: ***
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9552414Z   AZURE_DB_PASSWORD: ***
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:29.9552715Z ##[endgroup]
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.4962705Z .m2/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.4963201Z .m2/repository/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.4963595Z .m2/repository/com/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.4963995Z .m2/repository/com/github/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.4964466Z .m2/repository/com/github/eirslett/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.4964983Z .m2/repository/com/github/eirslett/pnpm/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.4965541Z .m2/repository/com/github/eirslett/pnpm/11.1.1/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.4966209Z .m2/repository/com/github/eirslett/pnpm/11.1.1/pnpm-11.1.1.tar.gz
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.6163547Z .m2/repository/com/github/eirslett/pnpm/10.14.0/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.6164509Z .m2/repository/com/github/eirslett/pnpm/10.14.0/pnpm-10.14.0.tar.gz
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.7392771Z .m2/repository/com/github/eirslett/node/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.7393530Z .m2/repository/com/github/eirslett/node/22.18.0/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:33.7394366Z .m2/repository/com/github/eirslett/node/22.18.0/node-22.18.0-win-x64.exe
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:38.0514031Z .m2/repository/com/github/eirslett/node/22.18.0/node-22.18.0-linux-x64.tar.gz
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:39.6655461Z .m2/repository/com/github/eirslett/node/24.9.0/
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:39.6656090Z .m2/repository/com/github/eirslett/node/24.9.0/node-24.9.0-win-x64.exe
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:44.1022725Z .m2/repository/com/github/eirslett/node/24.9.0/node-24.9.0-linux-x64.tar.gz
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:45.8692537Z Reading package lists...
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:46.0888167Z Building dependency tree...
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:46.0895213Z Reading state information...
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:46.1035460Z Package azure-cli is not available, but is referred to by another package.
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:46.1036131Z This may mean that the package is missing, has been obsoleted, or
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:46.1036619Z is only available from another source
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:46.1036860Z 
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:46.1042715Z E: Version '2.82.0-1~noble' for 'azure-cli' was not found
+AzureDB IT	Create Azure VM and prepare runner	2026-09-09T04:12:46.1076598Z ##[error]Process completed with exit code 100.
