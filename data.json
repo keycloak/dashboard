@@ -1,5 +1,5 @@
 {
-  "updatedDate" : 1789189690382,
+  "updatedDate" : 1789276049961,
   "areas" : [ "area/account/api", "area/account/ui", "area/adapter/fuse", "area/adapter/java-cli", "area/adapter/javascript", "area/adapter/jee", "area/adapter/saml", "area/adapter/spring", "area/admin/api", "area/admin/api-v2", "area/admin/cli", "area/admin/client-java", "area/admin/client-js", "area/admin/fine-grained-permissions", "area/admin/rbac", "area/admin/ui", "area/authentication", "area/authentication/webauthn", "area/authorization-services", "area/ci", "area/core", "area/dependencies", "area/dist/quarkus", "area/docs", "area/events", "area/extensions", "area/identity-brokering", "area/import-export", "area/infinispan", "area/ldap", "area/login/ui", "area/observability", "area/oid4vc", "area/oidc", "area/operator", "area/organizations", "area/performance", "area/saml", "area/scim", "area/ssf", "area/storage", "area/test-framework", "area/testsuite", "area/token-exchange", "area/token-exchange/federated", "area/token-exchange/standard", "area/token-exchange/subject-impersonation", "area/translations", "area/user-profile", "area/welcome/ui", "area/workflows" ],
   "issues" : [ {
     "createdAt" : 1636377646000,
@@ -9358,12 +9358,12 @@
     "commentsCount" : 9
   }, {
     "createdAt" : 1656334538000,
-    "updatedAt" : 1786959026000,
+    "updatedAt" : 1789215952000,
     "number" : 12759,
     "title" : "Reset Credentials Flow logs in without OTP",
     "userLogin" : "abstractj",
     "labels" : [ "area/authentication", "status/auto-bump", "priority/normal", "team/core-authn", "kind/weakness" ],
-    "commentsCount" : 9
+    "commentsCount" : 10
   }, {
     "createdAt" : 1656336816000,
     "updatedAt" : 1664369650000,
@@ -96470,7 +96470,7 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1787116660000,
-    "updatedAt" : 1788197851000,
+    "updatedAt" : 1789241430000,
     "closedAt" : 1787116679000,
     "number" : 51833,
     "title" : "CVE-2026-18963 Unauthenticated account takeover via reset-credentials flow bypass",
@@ -97989,7 +97989,7 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1788944823000,
-    "updatedAt" : 1788944827000,
+    "updatedAt" : 1789193184000,
     "number" : 52568,
     "title" : "ResourceIndicatorsPostProcessor error does not log appropriate error event",
     "userLogin" : "cgeorgilakis",
@@ -98413,6 +98413,46 @@
     "title" : "Recovered sites can enforce stale security configuration for up to one hour",
     "userLogin" : "ahus1",
     "labels" : [ "priority/important", "area/storage", "team/core-shared", "team/production-readiness", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789206066000,
+    "updatedAt" : 1789208103000,
+    "number" : 52706,
+    "title" : "NO_PROXY entries with leading dots or spaces after commas silently fail",
+    "userLogin" : "Pepo48",
+    "labels" : [ "kind/bug", "area/dist/quarkus", "team/cloud-native", "status/triage" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789213836000,
+    "updatedAt" : 1789213881000,
+    "number" : 52710,
+    "title" : "Test framework silently ignores database reuse when testcontainers reuse is not enabled",
+    "userLogin" : "ahus1",
+    "labels" : [ "kind/bug", "status/triage", "area/test-framework" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789215226000,
+    "updatedAt" : 1789215622000,
+    "number" : 52712,
+    "title" : "WebAuthnPolicyComplianceTest.replayedCredentialRegistration is flaky due to missing sync point",
+    "userLogin" : "ahus1",
+    "labels" : [ "area/authentication", "kind/bug", "status/triage", "flaky-test", "team/core-authn", "backport/26.6", "backport/26.7" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789245052000,
+    "updatedAt" : 1789245704000,
+    "number" : 52714,
+    "title" : "Flaky operator tests: testDeploymentDurability and testDeploymentUpgrade fail with 409 due to leftover StatefulSet",
+    "userLogin" : "ahus1",
+    "labels" : [ "kind/bug", "team/cloud-native", "status/triage", "area/operator" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789247291000,
+    "updatedAt" : 1789247429000,
+    "number" : 52716,
+    "title" : "Flaky CI: junit-jupiter-engine not in Maven cache causes transient test failures",
+    "userLogin" : "ahus1",
+    "labels" : [ "kind/bug", "area/ci", "status/triage", "team/continuous-delivery" ],
     "commentsCount" : 0
   } ],
   "prs" : [ {
@@ -253959,14 +253999,6 @@
     "labels" : [ "team/cloud-native" ],
     "commentsCount" : 5
   }, {
-    "createdAt" : 1787166337000,
-    "updatedAt" : 1788360796000,
-    "number" : 51870,
-    "title" : "Emit RISC account-purged SSF events on user deletion",
-    "userLogin" : "ssilvert",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 4
-  }, {
     "createdAt" : 1787056472000,
     "updatedAt" : 1788333829000,
     "number" : 51795,
@@ -255092,14 +255124,6 @@
     "labels" : [ "team/cloud-native", "team/core-iam" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1788205086000,
-    "updatedAt" : 1788766553000,
-    "number" : 52254,
-    "title" : "fix(ldap): validate LDAP users against User Profile during import",
-    "userLogin" : "jnylin",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 3
-  }, {
     "createdAt" : 1787769850000,
     "updatedAt" : 1788791196000,
     "closedAt" : 1788791196000,
@@ -255441,14 +255465,6 @@
     "userLogin" : "ssilvert",
     "labels" : [ "team/core-iam" ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1783155694000,
-    "updatedAt" : 1788833829000,
-    "number" : 50606,
-    "title" : "Add organization roles",
-    "userLogin" : "ggomarighetti",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 40
   }, {
     "createdAt" : 1768992299000,
     "updatedAt" : 1788876036000,
@@ -255798,14 +255814,6 @@
     "labels" : [ "area/dependencies" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1788984698000,
-    "updatedAt" : 1789056470000,
-    "number" : 52600,
-    "title" : "Fix extend account console content routes",
-    "userLogin" : "daanbreur",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1788975518000,
     "updatedAt" : 1789063541000,
     "closedAt" : 1789063541000,
@@ -256073,14 +256081,6 @@
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1785468676000,
-    "updatedAt" : 1789082604000,
-    "number" : 51322,
-    "title" : "Avoid caching user data while external storage is unavailable",
-    "userLogin" : "hkwi",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1783687688000,
     "updatedAt" : 1789029723000,
     "number" : 50787,
@@ -256096,14 +256096,6 @@
     "userLogin" : "xgp",
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 6
-  }, {
-    "createdAt" : 1781495834000,
-    "updatedAt" : 1789083248000,
-    "number" : 49998,
-    "title" : "Customize token exchange endpoint to issue ID-JAG",
-    "userLogin" : "bucchi",
-    "labels" : [ "flaky-test", "team/core-protocols" ],
-    "commentsCount" : 5
   }, {
     "createdAt" : 1775573539000,
     "updatedAt" : 1789039745000,
@@ -256135,14 +256127,6 @@
     "title" : "Ensure locking of login failures before recording a failure",
     "userLogin" : "ahus1",
     "labels" : [ "team/core-shared", "team/production-readiness" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1789164529000,
-    "updatedAt" : 1789175477000,
-    "number" : 52700,
-    "title" : "fix: allow for non-optimized start to use truncated timestamps",
-    "userLogin" : "shawkins",
-    "labels" : [ ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1789164409000,
@@ -256233,14 +256217,6 @@
     "userLogin" : "ahus1",
     "labels" : [ ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1789134092000,
-    "updatedAt" : 1789155879000,
-    "number" : 52683,
-    "title" : "48912 multi idp broker flow membership",
-    "userLogin" : "vramik",
-    "labels" : [ "flaky-test" ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1789131628000,
     "updatedAt" : 1789133936000,
@@ -256399,14 +256375,6 @@
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1788964714000,
-    "updatedAt" : 1789164936000,
-    "number" : 52591,
-    "title" : "Close directory export output streams",
-    "userLogin" : "utej8553",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 3
-  }, {
     "createdAt" : 1788962307000,
     "updatedAt" : 1789125311000,
     "closedAt" : 1789125311000,
@@ -256432,14 +256400,6 @@
     "userLogin" : "edewit",
     "labels" : [ "status/hold", "flaky-test" ],
     "commentsCount" : 3
-  }, {
-    "createdAt" : 1788869763000,
-    "updatedAt" : 1789124177000,
-    "number" : 52507,
-    "title" : "Download Java Maven cache in Operator CI",
-    "userLogin" : "ahus1",
-    "labels" : [ "team/cloud-native", "team/continuous-delivery" ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1788796860000,
     "updatedAt" : 1789117784000,
@@ -256471,14 +256431,6 @@
     "title" : "SAML SessionNotOnOrAfter honors Remember Me session lifespan",
     "userLogin" : "abstractj",
     "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1788504343000,
-    "updatedAt" : 1789136012000,
-    "number" : 52411,
-    "title" : "Describing the Keycloak release strategy",
-    "userLogin" : "ahus1",
-    "labels" : [ ],
     "commentsCount" : 1
   }, {
     "createdAt" : 1788443465000,
@@ -256570,14 +256522,6 @@
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1786528318000,
-    "updatedAt" : 1789139221000,
-    "number" : 51638,
-    "title" : "Add Vert.x HTTP client as v2 alternative to Apache HTTP client",
-    "userLogin" : "Pepo48",
-    "labels" : [ "team/cloud-native", "flaky-test" ],
-    "commentsCount" : 6
-  }, {
     "createdAt" : 1786457354000,
     "updatedAt" : 1789097129000,
     "closedAt" : 1786984078000,
@@ -256619,6 +256563,166 @@
     "userLogin" : "volck",
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 15
+  }, {
+    "createdAt" : 1789269175000,
+    "updatedAt" : 1789269254000,
+    "number" : 52718,
+    "title" : "Bump the actions-dependencies group across 2 directories with 5 updates",
+    "userLogin" : "dependabot[bot]",
+    "labels" : [ "area/ci", "area/dependencies" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789247423000,
+    "updatedAt" : 1789247426000,
+    "number" : 52717,
+    "title" : "Fetch surefire dependency for the cache",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/continuous-delivery" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789245697000,
+    "updatedAt" : 1789245702000,
+    "number" : 52715,
+    "title" : "Gracefully handle situation where Operator might temporarily create a StatefulSet",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789215549000,
+    "updatedAt" : 1789215552000,
+    "number" : 52713,
+    "title" : "Adding missing sync point to the WebAuthnPolicyComplianceTest.replayedCredentialRegistration",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789214223000,
+    "updatedAt" : 1789214568000,
+    "number" : 52711,
+    "title" : "Cross-check if testcontainer reuse is enabled in the environment",
+    "userLogin" : "ahus1",
+    "labels" : [ ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1789213382000,
+    "updatedAt" : 1789216254000,
+    "number" : 52709,
+    "title" : "Enabling/disabling features via .env.test",
+    "userLogin" : "ahus1",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1789208097000,
+    "updatedAt" : 1789208108000,
+    "number" : 52707,
+    "title" : "Fix NO_PROXY entries with leading dots or whitespace after commas",
+    "userLogin" : "Pepo48",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789193179000,
+    "updatedAt" : 1789193280000,
+    "number" : 52705,
+    "title" : "Log error event for TokenInterceptorException in token endpoint",
+    "userLogin" : "wakqasahmed",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789164529000,
+    "updatedAt" : 1789175477000,
+    "number" : 52700,
+    "title" : "fix: allow for non-optimized start to use truncated timestamps",
+    "userLogin" : "shawkins",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1789134092000,
+    "updatedAt" : 1789239673000,
+    "number" : 52683,
+    "title" : "48912 multi idp broker flow membership",
+    "userLogin" : "vramik",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1788984698000,
+    "updatedAt" : 1789238474000,
+    "number" : 52600,
+    "title" : "Fix extend account console content routes",
+    "userLogin" : "daanbreur",
+    "labels" : [ ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1788964714000,
+    "updatedAt" : 1789199255000,
+    "number" : 52591,
+    "title" : "Close directory export output streams",
+    "userLogin" : "utej8553",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 4
+  }, {
+    "createdAt" : 1788869763000,
+    "updatedAt" : 1789218767000,
+    "number" : 52507,
+    "title" : "Download Java Maven cache in Operator CI",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/cloud-native", "team/continuous-delivery" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1788504343000,
+    "updatedAt" : 1789195073000,
+    "number" : 52411,
+    "title" : "Describing the Keycloak release strategy",
+    "userLogin" : "ahus1",
+    "labels" : [ ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1788205086000,
+    "updatedAt" : 1789244796000,
+    "number" : 52254,
+    "title" : "fix(ldap): validate LDAP users against User Profile during import",
+    "userLogin" : "jnylin",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 3
+  }, {
+    "createdAt" : 1787166337000,
+    "updatedAt" : 1789208886000,
+    "number" : 51870,
+    "title" : "Emit RISC account-purged SSF events on user deletion",
+    "userLogin" : "ssilvert",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 4
+  }, {
+    "createdAt" : 1786528318000,
+    "updatedAt" : 1789208318000,
+    "number" : 51638,
+    "title" : "Add Vert.x HTTP client as v2 alternative to Apache HTTP client",
+    "userLogin" : "Pepo48",
+    "labels" : [ "team/cloud-native", "flaky-test" ],
+    "commentsCount" : 7
+  }, {
+    "createdAt" : 1785468676000,
+    "updatedAt" : 1789218858000,
+    "number" : 51322,
+    "title" : "Avoid caching user data while external storage is unavailable",
+    "userLogin" : "hkwi",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1783155694000,
+    "updatedAt" : 1789261356000,
+    "number" : 50606,
+    "title" : "Add organization roles",
+    "userLogin" : "ggomarighetti",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 41
+  }, {
+    "createdAt" : 1781495834000,
+    "updatedAt" : 1789252572000,
+    "number" : 49998,
+    "title" : "Customize token exchange endpoint to issue ID-JAG",
+    "userLogin" : "bucchi",
+    "labels" : [ "flaky-test", "team/core-protocols" ],
+    "commentsCount" : 6
   } ],
   "pullRequestWaits" : [ {
     "number" : 49154,
@@ -283767,10 +283871,10 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1789071538000,
-    "updatedAt" : 1789157558000,
+    "updatedAt" : 1789243206000,
     "number" : 1171,
-    "labels" : [ "status/triage", "severity/high", "kind/cve", "team/production-readiness" ],
-    "commentsCount" : 2
+    "labels" : [ "severity/high", "kind/cve", "team/production-readiness" ],
+    "commentsCount" : 4
   }, {
     "createdAt" : 1789121075000,
     "updatedAt" : 1789133259000,
@@ -283861,8 +283965,14 @@
     "number" : 1194,
     "labels" : [ "status/triage", "team/core-iam" ],
     "commentsCount" : 1
+  }, {
+    "createdAt" : 1789211351000,
+    "updatedAt" : 1789212747000,
+    "number" : 1196,
+    "labels" : [ "status/triage", "team/core-authn" ],
+    "commentsCount" : 1
   } ],
-  "branches" : [ "archive/map-store", "archive/release/20.0", "archive/release/21.0", "archive/release/21.1", "archive/release/22.0", "archive/release/23.0", "archive/release/24.0", "archive/release/25.0", "archive/release/26.0", "archive/release/26.1", "archive/release/26.2", "archive/release/26.3", "archive/release/26.5", "copilot/add-copilot-instructions", "copilot/enhanced-cluster-wide-operator-milestone-2", "copilot/fix-code-for-review-comments", "copilot/fix-code-review-comments", "copilot/fix-code-review-suggestion", "copilot/fix-quarkus-it-job", "copilot/list-duplicated-issues", "copilot/overview-pull-requests-last-30-days", "copilot/refactor-java-keystore-provider", "copilot/use-quarkus-properties-first", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.0.1", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.1.1", "dependabot/npm_and_yarn/js/npm-dependencies-eaff381422", "dependabot/npm_and_yarn/js/vite-plugin-dts-5.0.3", "dependabot/npm_and_yarn/js/vitest-4.1.0", "feature/admin-api-v2", "main", "quarkus-next", "release/26.4", "release/26.6", "release/26.7" ],
+  "branches" : [ "archive/map-store", "archive/release/20.0", "archive/release/21.0", "archive/release/21.1", "archive/release/22.0", "archive/release/23.0", "archive/release/24.0", "archive/release/25.0", "archive/release/26.0", "archive/release/26.1", "archive/release/26.2", "archive/release/26.3", "archive/release/26.5", "copilot/add-copilot-instructions", "copilot/enhanced-cluster-wide-operator-milestone-2", "copilot/fix-code-for-review-comments", "copilot/fix-code-review-comments", "copilot/fix-code-review-suggestion", "copilot/fix-quarkus-it-job", "copilot/list-duplicated-issues", "copilot/overview-pull-requests-last-30-days", "copilot/refactor-java-keystore-provider", "copilot/use-quarkus-properties-first", "dependabot/github_actions/actions-dependencies-8c4f1275ac", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.0.1", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.1.1", "dependabot/npm_and_yarn/js/npm-dependencies-eaff381422", "dependabot/npm_and_yarn/js/vite-plugin-dts-5.0.3", "dependabot/npm_and_yarn/js/vitest-4.1.0", "feature/admin-api-v2", "main", "quarkus-next", "release/26.4", "release/26.6", "release/26.7" ],
   "cveStats" : [ {
     "ref" : "refs/heads/main",
     "criticalCount" : 0,
@@ -283894,5 +284004,5 @@
     "mediumCount" : 2,
     "lowCount" : 0
   } ],
-  "issuesWithPr" : 122
+  "issuesWithPr" : 128
 }
