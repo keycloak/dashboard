@@ -4,13 +4,10 @@ import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.rep.Teams;
 import org.keycloak.dashboard.util.GHQuery;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FilteredIssues {
     public static final String ISSUES_LINK = "https://github.com/keycloak/keycloak/issues";
@@ -103,9 +100,13 @@ public class FilteredIssues {
         return this;
     }
 
-
     public FilteredIssues label(String label) {
         filters.add(new LabelFilter(label, true));
+        return this;
+    }
+
+    public FilteredIssues label(String... label) {
+        filters.add(new LabelFilter(Arrays.stream(label).collect(Collectors.toSet())));
         return this;
     }
 
@@ -159,7 +160,11 @@ public class FilteredIssues {
     }
 
     public int count() {
-        return (int) issues.stream().filter(toPredicates()).count();
+        return (int) stream().count();
+    }
+
+    public Stream<GitHubIssue> stream() {
+        return issues.stream().filter(toPredicates());
     }
 
     public String ghLink() {

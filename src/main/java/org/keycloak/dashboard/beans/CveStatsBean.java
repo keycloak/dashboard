@@ -1,18 +1,46 @@
 package org.keycloak.dashboard.beans;
 
-import org.keycloak.dashboard.rep.CveStat;
-import org.keycloak.dashboard.util.GHQuery;
+import org.keycloak.dashboard.beans.filters.FilteredIssues;
+import org.keycloak.dashboard.rep.GitHubData;
+import org.keycloak.dashboard.rep.Releases;
+
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class CveStatsBean {
 
-    private final CveStat cveStat;
+    private final FilteredIssues issues;
+    private final String ref;
 
-    public CveStatsBean(CveStat cveStat) {
-        this.cveStat = cveStat;
+    public static List<CveStatsBean> createList(GitHubData data) {
+        Releases releases = data.getReleases();
+
+        FilteredIssues filteredIssues = FilteredIssues.create(data.issues).label("kind/cve").label("area/dependencies");
+
+        List<CveStatsBean> list = new LinkedList<>();
+
+        list.add(new CveStatsBean(filteredIssues.clone().openIssue(), "main"));
+
+        for (String activeRelease : releases.getActiveReleaseStreams().stream().sorted(Comparator.reverseOrder()).toList()) {
+            list.add(new CveStatsBean(filteredIssues.clone().label("backport/" + activeRelease), "Branch: " + activeRelease));
+        }
+
+        String nextRelease = releases.getNextRelease();
+        String nextReleaseStream = nextRelease.substring(0, nextRelease.lastIndexOf('.'));
+
+        list.add(new CveStatsBean(filteredIssues.clone().label("release/" + nextRelease, "backport/" + nextReleaseStream), "Next release: " + releases.getNextRelease()));
+
+        return list;
+    }
+
+    public CveStatsBean(FilteredIssues issues, String ref) {
+        this.issues = issues;
+        this.ref = ref;
     }
 
     public String getRef() {
-        return cveStat.getRef();
+        return ref;
     }
 
     public String getRefLink() {
@@ -20,15 +48,15 @@ public class CveStatsBean {
     }
 
     private String getLink(String severity) {
-        String q = "is:open tool:Trivy ref:" + getRef();
+        FilteredIssues filteredIssues = issues.clone();
         if (severity != null) {
-            q += " severity:" + severity;
+            filteredIssues.label("severity/" + severity);
         }
-        return "https://github.com/keycloak/keycloak/security/code-scanning?query=" + GHQuery.encode(q);
+        return filteredIssues.ghLink();
     }
 
     public int getCriticial() {
-        return cveStat.getCriticalCount();
+        return issues.clone().label("severity/critical").count();
     }
 
     public String getCriticalClass() {
@@ -40,7 +68,7 @@ public class CveStatsBean {
     }
 
     public int getHigh() {
-        return cveStat.getHighCount();
+        return issues.clone().label("severity/high").count();
     }
 
     public String getHighClass() {
@@ -52,7 +80,7 @@ public class CveStatsBean {
     }
 
     public int getMedium() {
-        return cveStat.getMediumCount();
+        return issues.clone().label("severity/medium").count();
     }
 
     public String getMediumClass() {
@@ -64,7 +92,7 @@ public class CveStatsBean {
     }
 
     public int getLow() {
-        return cveStat.getLowCount();
+        return issues.clone().label("severity/low").count();
     }
 
     public String getLowClass() {
