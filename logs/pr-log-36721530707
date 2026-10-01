@@ -1,0 +1,1726 @@
+Base UT	UNKNOWN STEP	﻿2026-09-30T13:33:48.7113663Z Current runner version: '2.337.0'
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7137537Z ##[group]Runner Image Provisioner
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7138378Z Hosted Compute Agent
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7139132Z Version: 20260828.587
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7139778Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7140570Z Build Date: 2026-08-28T16:44:25Z
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7141309Z Worker ID: {6efd4d4b-1ebe-4dd8-bc96-c123eacfa8aa}
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7142037Z Azure Region: chilecentral
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7142761Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7144479Z ##[group]Operating System
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7145205Z Ubuntu
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7145796Z 24.04.5
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7146323Z LTS
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7146969Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7147533Z ##[group]Runner Image
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7148170Z Image: ubuntu-24.04
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7148804Z Version: 20260920.314.1
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7150113Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7151717Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7152731Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7154139Z ##[group]GITHUB_TOKEN Permissions
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7156261Z Contents: read
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7156914Z Metadata: read
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7157488Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7159972Z Secret source: None
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7160950Z Cache mode: write
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7161791Z Prepare workflow directory
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7567038Z Prepare all required actions
+Base UT	UNKNOWN STEP	2026-09-30T13:33:48.7614317Z Getting action download info
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.3083730Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.4810880Z Complete job name: Base UT
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5547410Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5548475Z with:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5548927Z   repository: keycloak/keycloak
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5552760Z   token: ***
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5553205Z   ssh-strict: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5553872Z   ssh-user: git
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5554323Z   persist-credentials: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5554837Z   clean: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5555293Z   sparse-checkout-cone-mode: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5555823Z   fetch-depth: 1
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5556262Z   fetch-tags: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5556717Z   show-progress: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5557167Z   lfs: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5557590Z   submodules: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5558060Z   set-safe-directory: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5558574Z   allow-unsafe-pr-checkout: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5559351Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5559957Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5560723Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5561342Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5561988Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5562519Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.5563018Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6511245Z Syncing repository: keycloak/keycloak
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6513018Z ##[group]Getting Git version info
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6514180Z Working directory is '/home/runner/work/keycloak/keycloak'
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6515259Z [command]/usr/bin/git version
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6587061Z git version 2.55.0
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6608342Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6619034Z Temporarily overriding HOME='/home/runner/work/_temp/798119e9-71a2-423b-8aa7-e532796f9ecc' before making global git config changes
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6621042Z Adding repository directory to the temporary git global config as a safe directory
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6624443Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6667227Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6670513Z ##[group]Determining repository object format
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6672197Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6672974Z ##[group]Initializing the repository
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6676511Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6760227Z hint: Using 'master' as the name for the initial branch. This default branch name
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6761937Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6763785Z hint: to use in all of your new repositories, which will suppress this warning,
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6764936Z hint: call:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6765352Z hint:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6765931Z hint: 	git config --global init.defaultBranch <name>
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6766556Z hint:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6767154Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6768114Z hint: 'development'. The just-created branch can be renamed via this command:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6768963Z hint:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6769490Z hint: 	git branch -m <name>
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6769993Z hint:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6770626Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6771645Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6774755Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6820789Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6821586Z ##[group]Disabling automatic garbage collection
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6826221Z [command]/usr/bin/git config --local gc.auto 0
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6859077Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6860273Z ##[group]Setting up auth
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6861207Z Removing SSH command configuration
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6866813Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.6904168Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7241835Z Removing HTTP extra header
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7247663Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7276730Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7487166Z Removing includeIf entries pointing to credentials config files
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7491730Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7521174Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7741044Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7777545Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git.path /home/runner/work/_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7807612Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7840258Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7871382Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7897457Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7898216Z ##[group]Fetching the repository
+Base UT	UNKNOWN STEP	2026-09-30T13:33:49.7904091Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ed4abb5661b531d3a6b82ba684f2ce930b1303b3:refs/remotes/pull/52866/merge
+Base UT	UNKNOWN STEP	2026-09-30T13:33:52.9485605Z From https://github.com/keycloak/keycloak
+Base UT	UNKNOWN STEP	2026-09-30T13:33:52.9487359Z  * [new ref]           ed4abb5661b531d3a6b82ba684f2ce930b1303b3 -> pull/52866/merge
+Base UT	UNKNOWN STEP	2026-09-30T13:33:52.9491409Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:52.9492307Z ##[group]Determining the checkout info
+Base UT	UNKNOWN STEP	2026-09-30T13:33:52.9493179Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:52.9496444Z [command]/usr/bin/git sparse-checkout disable
+Base UT	UNKNOWN STEP	2026-09-30T13:33:52.9545863Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Base UT	UNKNOWN STEP	2026-09-30T13:33:52.9576389Z ##[group]Checking out the ref
+Base UT	UNKNOWN STEP	2026-09-30T13:33:52.9580083Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/52866/merge
+Base UT	UNKNOWN STEP	2026-09-30T13:33:53.9831949Z Updating files:  95% (12845/13464)
+Base UT	UNKNOWN STEP	2026-09-30T13:33:53.9958039Z Updating files:  96% (12926/13464)
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0021521Z Updating files:  97% (13061/13464)
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0115801Z Updating files:  98% (13195/13464)
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0201655Z Updating files:  99% (13330/13464)
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0202371Z Updating files: 100% (13464/13464)
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0202976Z Updating files: 100% (13464/13464), done.
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0381487Z Note: switching to 'refs/remotes/pull/52866/merge'.
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0382986Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0384136Z You are in 'detached HEAD' state. You can look around, make experimental
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0385167Z changes and commit them, and you can discard any commits you make in this
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0386141Z state without impacting any branches by switching back to a branch.
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0386685Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0387062Z If you want to create a new branch to retain commits you create, you may
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0388246Z do so (now or later) by using -c with the switch command. Example:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0388762Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0388983Z   git switch -c <new-branch-name>
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0389315Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0389575Z Or undo this operation with:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0389938Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0390145Z   git switch -
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0390383Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0390830Z Turn off this advice by setting config variable advice.detachedHead to false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0391404Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0392074Z HEAD is now at ed4abb56 Merge 6ad5ccda3fa88e590953dcd415bf410c342d8677 into e0756392d1e19be1db4dc11872b15da4990f2345
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0420331Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0471281Z [command]/usr/bin/git log -1 --format=%H
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0498630Z ed4abb5661b531d3a6b82ba684f2ce930b1303b3
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0783236Z Prepare all required actions
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0784208Z Getting action download info
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0844542Z ##[group]Run ./.github/actions/unit-test-setup
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0844860Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0845160Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0845542Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0845842Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0846187Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0846440Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0846670Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0903883Z ##[start-action display=Setup Java;id=unit-test-setup.__self]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0937896Z Prepare all required actions
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.0938339Z Getting action download info
+Base UT	UNKNOWN STEP	2026-09-30T13:33:54.3289278Z Download action repository 'actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6' (SHA:de7274f081f381c8f8158605e0321c36c376e2e6)
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5051807Z ##[group]Run ./.github/actions/java-setup
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5052105Z with:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5052308Z   distribution: temurin
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5052527Z   java-version: 25
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5052722Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5053006Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5053589Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5053896Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5054400Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5054651Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5054882Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5058611Z ##[start-action display=Setup Java;id=unit-test-setup.__self.setup-java]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5221753Z ##[group]Run actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5222122Z with:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5222312Z   distribution: temurin
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5222527Z   java-version: 25
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5222726Z   java-package: jdk
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5222939Z   check-latest: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5223148Z   force-download: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5223562Z   set-default: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5223818Z   server-id: github
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5224052Z   mvn-repositories-include-central: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5224363Z   mvn-repositories-prioritize-central: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5224656Z   overwrite-settings: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5224893Z   cache-read-only: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5225128Z   job-status: success
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5227493Z   token: ***
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5227709Z   show-download-progress: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5227995Z   problem-matcher: true
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5228233Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5228517Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5228887Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5229190Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5229511Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5229761Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5229993Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.5929840Z ##[group]Installed distributions
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6017636Z Resolved Java 25.0.4+1 from tool-cache
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6018245Z Setting Java 25.0.4+1 as the default
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6026886Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6027191Z Java configuration:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6027625Z   Distribution: temurin
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6028052Z   Version: 25.0.4+1
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6028704Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6029235Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6029759Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6068638Z Creating settings.xml with server-id: github
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6069622Z Creating toolchains.xml for JDK version 25 from temurin
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6070488Z Writing to /home/runner/.m2/settings.xml
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6080692Z Writing to /home/runner/.m2/toolchains.xml
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6088823Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6176940Z ##[end-action id=unit-test-setup.__self.setup-java;outcome=success;conclusion=success;duration_ms=111]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6190452Z ##[end-action id=unit-test-setup.__self;outcome=success;conclusion=success;duration_ms=1528]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6192880Z ##[start-action display=Maven cache;id=unit-test-setup.maven-cache]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6243832Z Prepare all required actions
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.6244288Z Getting action download info
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.8496302Z Download action repository 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9784447Z ##[group]Run ./.github/actions/maven-cache
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9784760Z with:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9784982Z   create-cache-if-it-doesnt-exist: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9785251Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9785545Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9785953Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9786268Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9786591Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9786838Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9787180Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9787659Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9788197Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9793095Z ##[start-action display=Key for weekly rotation of cache;id=unit-test-setup.maven-cache.weekly-cache-key]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9854261Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Base UT	UNKNOWN STEP	2026-09-30T13:33:55.9854776Z ^[[36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0122372Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0122807Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0123188Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0123862Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0124208Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0124570Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0124855Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0125255Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0125824Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0126288Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0261288Z ##[end-action id=unit-test-setup.maven-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=46]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0264259Z ##[start-action display=Maven cache;id=unit-test-setup.maven-cache.cache-maven-repository]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0272315Z ##[end-action id=unit-test-setup.maven-cache.cache-maven-repository;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0275061Z ##[start-action display=Maven cache;id=unit-test-setup.maven-cache.restore-maven-repository]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0352333Z ##[group]Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0352712Z with:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0353032Z   path: ~/.m2/repository/*/*
+Base UT	UNKNOWN STEP	~/.m2/wrapper/dists
+Base UT	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+Base UT	UNKNOWN STEP	
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0353785Z   key: mvn-and-wrapper-Linux-mvn-2026-39
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0354085Z   enableCrossOsArchive: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0354362Z   fail-on-cache-miss: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0354611Z   lookup-only: false
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0354816Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0355122Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0355517Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0355834Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0356158Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0356402Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0356952Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0357437Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.0357804Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:33:56.5633211Z Cache hit for: mvn-and-wrapper-Linux-mvn-2026-39
+Base UT	UNKNOWN STEP	2026-09-30T13:33:58.0435526Z Received 0 of 753552096 (0.0%), 0.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:33:59.0439617Z Received 12582912 of 753552096 (1.7%), 6.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:00.0484946Z Received 104857600 of 753552096 (13.9%), 33.3 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:01.0468050Z Received 209715200 of 753552096 (27.8%), 50.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:02.0462785Z Received 264241152 of 753552096 (35.1%), 50.4 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:03.0467701Z Received 306184192 of 753552096 (40.6%), 48.7 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:04.0486755Z Received 402653184 of 753552096 (53.4%), 54.8 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:05.0494573Z Received 536870912 of 753552096 (71.2%), 64.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:06.0609440Z Received 679477248 of 753552096 (90.2%), 71.9 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:06.4996314Z Received 753552096 of 753552096 (100.0%), 76.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:06.4998192Z Cache Size: ~719 MB (753552096 B)
+Base UT	UNKNOWN STEP	2026-09-30T13:34:06.5066298Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2f20711b-7a2f-4487-97a9-9e8f422f68fb/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.5368341Z Cache restored successfully
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.6145222Z Cache restored from key: mvn-and-wrapper-Linux-mvn-2026-39
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.6328547Z ##[end-action id=unit-test-setup.maven-cache.restore-maven-repository;outcome=success;conclusion=success;duration_ms=12605]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.6332269Z ##[start-action display=Node cache;id=unit-test-setup.maven-cache.node-cache]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.6364488Z Prepare all required actions
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.6365170Z Getting action download info
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8868418Z ##[group]Run ./.github/actions/node-cache
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8868705Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8869023Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8869412Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8869723Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8870054Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8870304Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8870657Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8871141Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8871537Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8876031Z ##[start-action display=Get Node.js and PNPM versions;id=unit-test-setup.maven-cache.node-cache.tooling-versions]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8892671Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8893646Z ^[[36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT^[[0m
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8894405Z ^[[36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT^[[0m
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8957101Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8957454Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8957770Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8958169Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8958497Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8958834Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8959093Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8959450Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8959941Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.8960326Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9110987Z ##[end-action id=unit-test-setup.maven-cache.node-cache.tooling-versions;outcome=success;conclusion=success;duration_ms=23]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9113818Z ##[start-action display=Cache Node.js and PNPM binaries;id=unit-test-setup.maven-cache.node-cache.cache-binaries]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9151490Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9151846Z with:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9152222Z   path: ~/.m2/repository/com/github/eirslett/node
+Base UT	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+Base UT	UNKNOWN STEP	
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9152748Z   key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9153091Z   enableCrossOsArchive: false
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9154032Z   fail-on-cache-miss: false
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9154295Z   lookup-only: false
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9154516Z   save-always: false
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9154719Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9155024Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9155416Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9155729Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9156061Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9156310Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9156656Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9157145Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:08.9157531Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:09.4279235Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Base UT	UNKNOWN STEP	2026-09-30T13:34:10.9080917Z Received 0 of 182409230 (0.0%), 0.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:11.9143746Z Received 0 of 182409230 (0.0%), 0.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:12.9122276Z Received 67108864 of 182409230 (36.8%), 21.3 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:13.9122745Z Received 138412032 of 182409230 (75.9%), 33.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:14.7989234Z Received 182409230 of 182409230 (100.0%), 35.6 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:14.7991759Z Cache Size: ~174 MB (182409230 B)
+Base UT	UNKNOWN STEP	2026-09-30T13:34:14.8059459Z [command]/usr/bin/tar -xf /home/runner/work/_temp/182934f3-f0bf-4097-a894-ab11ef6d8fd1/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2590323Z Cache restored successfully
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2748330Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2840274Z ##[end-action id=unit-test-setup.maven-cache.node-cache.cache-binaries;outcome=success;conclusion=success;duration_ms=6372]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2843043Z ##[start-action display=Download Node.js and PNPM;id=unit-test-setup.maven-cache.node-cache.__run]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2850068Z ##[end-action id=unit-test-setup.maven-cache.node-cache.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2880750Z ##[end-action id=unit-test-setup.maven-cache.node-cache;outcome=success;conclusion=success;duration_ms=6652]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2885817Z ##[end-action id=unit-test-setup.maven-cache;outcome=success;conclusion=success;duration_ms=19669]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2888341Z ##[start-action display=Restore Quarkus snapshot cache;id=unit-test-setup.restore-quarkus-snapshot]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2894634Z ##[end-action id=unit-test-setup.restore-quarkus-snapshot;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2896940Z ##[start-action display=Frontend Plugin Cache;id=unit-test-setup.pnpm-store-cache]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2920231Z Prepare all required actions
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.2920681Z Getting action download info
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.5577888Z Download action repository 'google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5' (SHA:9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5)
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9092377Z ##[group]Run ./.github/actions/pnpm-store-cache
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9092697Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9093018Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9093763Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9094094Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9094442Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9094699Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9095220Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9095722Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9096105Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9100609Z ##[start-action display=Key for weekly rotation of cache;id=unit-test-setup.pnpm-store-cache.weekly-cache-key]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9117098Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9117594Z ^[[36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9176887Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9177233Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9177550Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9177965Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9178286Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9178619Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9178898Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9179261Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9179764Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9180151Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9273004Z ##[end-action id=unit-test-setup.pnpm-store-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=17]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9275661Z ##[start-action display=Cache PNPM store;id=unit-test-setup.pnpm-store-cache.__actions_cache]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9310288Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9310685Z with:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9311027Z   path: ~/.local/share/pnpm/store
+Base UT	UNKNOWN STEP	~/AppData/Local/pnpm/store
+Base UT	UNKNOWN STEP	~/Library/pnpm/store
+Base UT	UNKNOWN STEP	
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9311456Z   key: Linux-pnpm-store-2026-39
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9311747Z   enableCrossOsArchive: false
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9312004Z   fail-on-cache-miss: false
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9312249Z   lookup-only: false
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9312470Z   save-always: false
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9312674Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9312985Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9313634Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9313950Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9314283Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9314555Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9314926Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9315419Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:15.9315799Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:16.4410193Z Cache hit for: Linux-pnpm-store-2026-39
+Base UT	UNKNOWN STEP	2026-09-30T13:34:17.9717163Z Received 0 of 112659335 (0.0%), 0.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:18.9760870Z Received 4194304 of 112659335 (3.7%), 2.0 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:19.9724807Z Received 71303168 of 112659335 (63.3%), 22.7 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:20.3472170Z Received 112659335 of 112659335 (100.0%), 31.8 MBs/sec
+Base UT	UNKNOWN STEP	2026-09-30T13:34:20.3474299Z Cache Size: ~107 MB (112659335 B)
+Base UT	UNKNOWN STEP	2026-09-30T13:34:20.3519983Z [command]/usr/bin/tar -xf /home/runner/work/_temp/9cc43f8c-e164-4835-805e-d88ef6e6d082/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9555088Z Cache restored successfully
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9710653Z Cache restored from key: Linux-pnpm-store-2026-39
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9819027Z ##[end-action id=unit-test-setup.pnpm-store-cache.__actions_cache;outcome=success;conclusion=success;duration_ms=7054]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9821778Z ##[start-action display=Set up Wireit GitHub Actions caching;id=unit-test-setup.pnpm-store-cache.__google_wireit]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9891494Z ##[group]Run google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9891861Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9892184Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9892750Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9893086Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9893769Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9894055Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9894423Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9894935Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:22.9895336Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.0178254Z [main] Launching background custodian service
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.0185481Z [main] Writing logs to /tmp/wireit_custodian_logs_Yj2EWL
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2229243Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2229846Z [custodian] Trying port 52952
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2230736Z [custodian] Listening on port 52952
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2231091Z 
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2231300Z [main] Custodian server ready
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2268366Z ##[end-action id=unit-test-setup.pnpm-store-cache.__google_wireit;outcome=success;conclusion=success;duration_ms=244]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2273133Z ##[end-action id=unit-test-setup.pnpm-store-cache;outcome=success;conclusion=success;duration_ms=7937]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2302919Z ##[group]Run ./mvnw test -am -pl "$(.github/scripts/find-modules-with-unit-tests.sh)"
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2303906Z ^[[36;1m./mvnw test -am -pl "$(.github/scripts/find-modules-with-unit-tests.sh)"^[[0m
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2365636Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2366179Z env:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2366511Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2366918Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2367251Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2367590Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2367848Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2368221Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2368724Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2369132Z   WIREIT_CACHE: github
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2369428Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 52952
+Base UT	UNKNOWN STEP	2026-09-30T13:34:23.2369728Z ##[endgroup]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:25.3535320Z [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Base UT	UNKNOWN STEP	2026-09-30T13:34:25.3682014Z [INFO] Scanning for projects...
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5446879Z [ERROR] [ERROR] Some problems were encountered while processing the POMs:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5456173Z [ERROR] Non-resolvable import POM: The following artifacts could not be resolved: org.infinispan:infinispan-bom:pom:16.0.15 (absent): Could not transfer artifact org.infinispan:infinispan-bom:pom:16.0.15 from/to central (https://repo.maven.apache.org/maven2): status code: 429, reason phrase: Too Many Requests (429) @ line 342, column 25
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5466076Z  @ 
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5466830Z [ERROR] The build could not read 1 project -> [Help 1]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5467412Z [ERROR]   
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5468512Z [ERROR]   The project org.keycloak:keycloak-parent:999.0.0-SNAPSHOT (/home/runner/work/keycloak/keycloak/pom.xml) has 1 error
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5472242Z [ERROR]     Non-resolvable import POM: The following artifacts could not be resolved: org.infinispan:infinispan-bom:pom:16.0.15 (absent): Could not transfer artifact org.infinispan:infinispan-bom:pom:16.0.15 from/to central (https://repo.maven.apache.org/maven2): status code: 429, reason phrase: Too Many Requests (429) @ line 342, column 25 -> [Help 2]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5474874Z [ERROR] 
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5475506Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5476457Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5477110Z [ERROR] 
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5477914Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5479169Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5480367Z [ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/UnresolvableModelException
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5606716Z ##[error]Process completed with exit code 1.
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5692539Z Post job cleanup.
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5699045Z ##[start-action display=Cache PNPM store;id=__a913f6a9-d21b-4b44-96fe-99323dad6141.__actions_cache]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5701172Z ##[end-action id=__a913f6a9-d21b-4b44-96fe-99323dad6141.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5703152Z ##[start-action display=Cache Node.js and PNPM binaries;id=__a913f6a9-d21b-4b44-96fe-99323dad6141.cache-binaries]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5705636Z ##[end-action id=__a913f6a9-d21b-4b44-96fe-99323dad6141.cache-binaries;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5707575Z ##[start-action display=Setup Java;id=__a913f6a9-d21b-4b44-96fe-99323dad6141.setup-java]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.5782048Z Post job cleanup.
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.6639412Z ##[end-action id=__a913f6a9-d21b-4b44-96fe-99323dad6141.setup-java;outcome=success;conclusion=success;duration_ms=93]
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.6707960Z Post job cleanup.
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.7641793Z [command]/usr/bin/git version
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.7695190Z git version 2.55.0
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.7744210Z Temporarily overriding HOME='/home/runner/work/_temp/8860058a-806f-4977-9a90-555170512294' before making global git config changes
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.7746088Z Adding repository directory to the temporary git global config as a safe directory
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.7751263Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.7787215Z Removing SSH command configuration
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.7794463Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.7831245Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8067092Z Removing HTTP extra header
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8072343Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8106973Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8341425Z Removing includeIf entries pointing to credentials config files
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8348233Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8379876Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8380711Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8381207Z includeif.gitdir:/github/workspace/.git.path
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8381619Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8396154Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8411747Z /home/runner/work/_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8422596Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-982d6283\-9e93\-4d2a\-83a3\-5012c89f0857\.config
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8458744Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8488594Z /home/runner/work/_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8498086Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-982d6283\-9e93\-4d2a\-83a3\-5012c89f0857\.config
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8531056Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8552443Z /github/runner_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8561691Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-982d6283\-9e93\-4d2a\-83a3\-5012c89f0857\.config
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8591804Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8612599Z /github/runner_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8622847Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-982d6283\-9e93\-4d2a\-83a3\-5012c89f0857\.config
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8656500Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.8889022Z Removing credentials config '/home/runner/work/_temp/git-credentials-982d6283-9e93-4d2a-83a3-5012c89f0857.config'
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.9039632Z Cleaning up orphan processes
+Base UT	UNKNOWN STEP	2026-09-30T13:34:56.9429703Z Terminate orphan process: pid (2360) (node)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	﻿2026-09-30T13:33:47.3801608Z Current runner version: '2.337.0'
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3829298Z ##[group]Runner Image Provisioner
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3832384Z Hosted Compute Agent
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3833513Z Version: 20260901.588
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3834540Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3835767Z Build Date: 2026-09-01T19:56:44Z
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3836931Z Worker ID: {74f31ba7-e420-4a5a-a01c-88f0f4f35a56}
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3838158Z Azure Region: eastus
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3839249Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3841380Z ##[group]Operating System
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3842929Z Microsoft Windows Server 2025
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3845239Z 10.0.26100
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3846894Z Datacenter
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3848183Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3849246Z ##[group]Runner Image
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3851798Z Image: windows-2025-vs2026
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3852932Z Version: 20260925.250.1
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3854782Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3856496Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260925.250
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3857461Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3858563Z ##[group]GITHUB_TOKEN Permissions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3860354Z Contents: read
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3860971Z Metadata: read
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3861501Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3863568Z Secret source: None
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3864455Z Cache mode: write
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.3865113Z Prepare workflow directory
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.4262696Z Prepare all required actions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.4311897Z Getting action download info
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.6017405Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.8531777Z Complete job name: Quarkus IT (windows-latest, win)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9980517Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9981726Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9982147Z   repository: keycloak/keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9985982Z   token: ***
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9986397Z   ssh-strict: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9986804Z   ssh-user: git
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9987222Z   persist-credentials: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9987677Z   clean: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9988088Z   sparse-checkout-cone-mode: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9988574Z   fetch-depth: 1
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9988972Z   fetch-tags: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9989381Z   show-progress: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9989797Z   lfs: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9990171Z   submodules: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9990672Z   set-safe-directory: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9991352Z   allow-unsafe-pr-checkout: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9992099Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9992646Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9993375Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9993946Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9994561Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9995047Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9995759Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:47.9996197Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.1432485Z Syncing repository: keycloak/keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.1434548Z ##[group]Getting Git version info
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.1435188Z Working directory is 'D:\a\keycloak\keycloak'
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.2469056Z [command]"C:\Program Files\Git\bin\git.exe" version
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.5795458Z git version 2.55.0.windows.5
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.5839408Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.5855111Z Temporarily overriding HOME='D:\a\_temp\9000d1e7-6b1d-43d7-94e3-96702f1b1adf' before making global git config changes
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.5856431Z Adding repository directory to the temporary git global config as a safe directory
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.5864768Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\keycloak\keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.6482242Z Deleting the contents of 'D:\a\keycloak\keycloak'
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.6487253Z ##[group]Determining repository object format
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.6489245Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.6498718Z ##[group]Initializing the repository
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.6499919Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\keycloak\keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.7344813Z Initialized empty Git repository in D:/a/keycloak/keycloak/.git/
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.7450743Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/keycloak/keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.8201129Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.8202801Z ##[group]Disabling automatic garbage collection
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.8203938Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.8494946Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.8496007Z ##[group]Setting up auth
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.8496831Z Removing SSH command configuration
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.8508460Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:48.8825237Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:50.2728985Z Removing HTTP extra header
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:50.2738143Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:50.3034622Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:50.8592310Z Removing includeIf entries pointing to credentials config files
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:50.8604137Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:50.8882840Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:51.4148787Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:51.4462330Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/keycloak/keycloak/.git.path D:\a\_temp\git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:51.4756682Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/keycloak/keycloak/.git/worktrees/*.path D:\a\_temp\git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:51.5087112Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:51.5372600Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:51.5648858Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:51.5649341Z ##[group]Fetching the repository
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:51.5663493Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ed4abb5661b531d3a6b82ba684f2ce930b1303b3:refs/remotes/pull/52866/merge
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:53.9980329Z From https://github.com/keycloak/keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:54.0018008Z  * [new ref]           ed4abb5661b531d3a6b82ba684f2ce930b1303b3 -> pull/52866/merge
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:54.0020190Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:54.0020798Z ##[group]Determining the checkout info
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:54.0021571Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:54.0030916Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:54.0487163Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:54.0771745Z ##[group]Checking out the ref
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:54.0779392Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/52866/merge
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.1588407Z Updating files:  19% (2667/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.1999708Z Updating files:  20% (2693/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.2383951Z Updating files:  21% (2828/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.2869838Z Updating files:  22% (2963/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.3364376Z Updating files:  23% (3097/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.3704711Z Updating files:  24% (3232/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.4065409Z Updating files:  25% (3366/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.4446405Z Updating files:  26% (3501/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.4809772Z Updating files:  27% (3636/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.5139183Z Updating files:  28% (3770/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.5442526Z Updating files:  29% (3905/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.5785964Z Updating files:  30% (4040/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.6212622Z Updating files:  31% (4174/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.6593326Z Updating files:  32% (4309/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.6962044Z Updating files:  33% (4444/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.7362122Z Updating files:  34% (4578/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.7740388Z Updating files:  35% (4713/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.8116577Z Updating files:  36% (4848/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.8482309Z Updating files:  37% (4982/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.8854683Z Updating files:  38% (5117/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.9297398Z Updating files:  39% (5251/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:55.9738469Z Updating files:  40% (5386/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.0226978Z Updating files:  41% (5521/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.2193746Z Updating files:  42% (5655/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.2659174Z Updating files:  42% (5692/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.3115886Z Updating files:  43% (5790/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.3539333Z Updating files:  44% (5925/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.3947702Z Updating files:  45% (6059/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.4268720Z Updating files:  46% (6194/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.4646626Z Updating files:  47% (6329/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.5008792Z Updating files:  48% (6463/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.5419218Z Updating files:  49% (6598/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.5857097Z Updating files:  50% (6732/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.6208030Z Updating files:  51% (6867/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.6540671Z Updating files:  52% (7002/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.6871517Z Updating files:  53% (7136/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.7229700Z Updating files:  54% (7271/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.7600393Z Updating files:  55% (7406/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.7966172Z Updating files:  56% (7540/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.8343259Z Updating files:  57% (7675/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.8723588Z Updating files:  58% (7810/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.9072809Z Updating files:  59% (7944/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.9415005Z Updating files:  60% (8079/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:56.9799844Z Updating files:  61% (8214/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.0132717Z Updating files:  62% (8348/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.0513995Z Updating files:  63% (8483/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.0877914Z Updating files:  64% (8617/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.1248858Z Updating files:  65% (8752/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.1616039Z Updating files:  66% (8887/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.1691513Z Updating files:  67% (9021/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.1976510Z Updating files:  67% (9047/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.2339694Z Updating files:  68% (9156/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.2643563Z Updating files:  69% (9291/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.3083345Z Updating files:  70% (9425/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.3490502Z Updating files:  71% (9560/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.3895959Z Updating files:  72% (9695/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.6259254Z Updating files:  73% (9829/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.6729575Z Updating files:  74% (9964/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.7132911Z Updating files:  75% (10098/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.7531857Z Updating files:  76% (10233/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.7902240Z Updating files:  77% (10368/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.8300365Z Updating files:  78% (10502/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.8710400Z Updating files:  79% (10637/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.9147580Z Updating files:  80% (10772/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:57.9587267Z Updating files:  81% (10906/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.0209190Z Updating files:  82% (11041/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.0558368Z Updating files:  83% (11176/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.1004151Z Updating files:  84% (11310/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.1356378Z Updating files:  85% (11445/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.1695151Z Updating files:  86% (11580/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.1733654Z Updating files:  86% (11702/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.2106165Z Updating files:  87% (11714/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.2438336Z Updating files:  88% (11849/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.2823607Z Updating files:  89% (11983/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.3183108Z Updating files:  90% (12118/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.3591660Z Updating files:  91% (12253/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.4008706Z Updating files:  92% (12387/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.4431869Z Updating files:  93% (12522/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.4806100Z Updating files:  94% (12657/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.5250529Z Updating files:  95% (12791/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.5654912Z Updating files:  96% (12926/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.5958448Z Updating files:  97% (13061/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6313306Z Updating files:  98% (13195/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6662339Z Updating files:  99% (13330/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6666188Z Updating files: 100% (13464/13464)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6666637Z Updating files: 100% (13464/13464), done.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6984009Z Note: switching to 'refs/remotes/pull/52866/merge'.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6984441Z 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6985118Z You are in 'detached HEAD' state. You can look around, make experimental
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6985806Z changes and commit them, and you can discard any commits you make in this
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6986345Z state without impacting any branches by switching back to a branch.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6986671Z 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6986879Z If you want to create a new branch to retain commits you create, you may
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6987381Z do so (now or later) by using -c with the switch command. Example:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6987676Z 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6987837Z   git switch -c <new-branch-name>
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6988031Z 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6988137Z Or undo this operation with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6988311Z 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6988392Z   git switch -
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6988517Z 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6988752Z Turn off this advice by setting config variable advice.detachedHead to false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6989114Z 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.6989765Z HEAD is now at ed4abb56 Merge 6ad5ccda3fa88e590953dcd415bf410c342d8677 into e0756392d1e19be1db4dc11872b15da4990f2345
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.7121005Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.7466455Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.7741283Z ed4abb5661b531d3a6b82ba684f2ce930b1303b3
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.8746988Z Prepare all required actions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.8749008Z Getting action download info
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:58.9985647Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2952945Z ##[group]Run ./.github/actions/integration-test-setup
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2953243Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2953412Z   jdk-dist: temurin
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2953589Z   jdk-version: 25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2953761Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2954027Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2954372Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2954652Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2954952Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2955373Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2955590Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.2955818Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3015176Z ##[start-action display=Update /etc/hosts;id=integration-test-setup.update-hosts]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3169134Z Prepare all required actions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3213119Z ##[group]Run ./.github/actions/update-hosts
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3213409Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3213699Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3214086Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3214390Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3214737Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3214978Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3215212Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3215413Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3218898Z ##[start-action display=Update /etc/hosts;id=integration-test-setup.update-hosts.update-hosts-linux]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3240633Z ##[end-action id=integration-test-setup.update-hosts.update-hosts-linux;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3245165Z ##[start-action display=Update C:\Windows\System32\drivers\etc\hosts;id=integration-test-setup.update-hosts.update-hosts-windows]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3401740Z ##[group]Run "`n`n" | Add-Content C:\Windows\System32\drivers\etc\hosts
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3402271Z ^[[36;1m"`n`n" | Add-Content C:\Windows\System32\drivers\etc\hosts^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3402858Z ^[[36;1mGet-Content .github/actions/update-hosts/hosts | Add-Content C:\Windows\System32\drivers\etc\hosts^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3879745Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3880334Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3880712Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3881216Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3881688Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3882172Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3882494Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3882814Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:33:59.3883088Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:01.8212018Z ##[end-action id=integration-test-setup.update-hosts.update-hosts-windows;outcome=success;conclusion=success;duration_ms=2496]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:01.8224536Z ##[end-action id=integration-test-setup.update-hosts;outcome=success;conclusion=success;duration_ms=2520]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:01.8227857Z ##[start-action display=Setup Java;id=integration-test-setup.setup-java]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:01.8363065Z Prepare all required actions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:01.8363441Z Getting action download info
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:01.9407500Z Download action repository 'actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6' (SHA:de7274f081f381c8f8158605e0321c36c376e2e6)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3821697Z ##[group]Run ./.github/actions/java-setup
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3821963Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3822138Z   distribution: temurin
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3822330Z   java-version: 25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3822498Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3824488Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3824908Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3825201Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3825508Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3825734Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3825968Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3826161Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.3829420Z ##[start-action display=Setup Java;id=integration-test-setup.setup-java.setup-java]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4079067Z ##[group]Run actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4079416Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4079586Z   distribution: temurin
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4080349Z   java-version: 25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4080543Z   java-package: jdk
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4081701Z   check-latest: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4081907Z   force-download: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4082106Z   set-default: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4082291Z   server-id: github
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4082498Z   mvn-repositories-include-central: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4082799Z   mvn-repositories-prioritize-central: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4083079Z   overwrite-settings: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4083290Z   cache-read-only: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4083489Z   job-status: success
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4085877Z   token: ***
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4086084Z   show-download-progress: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4086319Z   problem-matcher: true
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4086509Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4086769Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4087119Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4087402Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4087715Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4087950Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4088171Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.4088361Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5065852Z ##[group]Installed distributions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5327755Z Resolved Java 25.0.4+101.0 from tool-cache
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5328163Z Setting Java 25.0.4+101.0 as the default
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5347126Z 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5347373Z Java configuration:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5347708Z   Distribution: temurin
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5348075Z   Version: 25.0.4+101.0
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5348646Z   Path: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5349516Z 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5350871Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5377243Z Creating settings.xml with server-id: github
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5386274Z Creating toolchains.xml for JDK version 25 from temurin
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5400817Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5408334Z Writing to C:\Users\runneradmin\.m2\settings.xml
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5422242Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5561173Z ##[end-action id=integration-test-setup.setup-java.setup-java;outcome=success;conclusion=success;duration_ms=173]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5570620Z ##[end-action id=integration-test-setup.setup-java;outcome=success;conclusion=success;duration_ms=734]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5573704Z ##[start-action display=Maven cache;id=integration-test-setup.maven-cache]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5739853Z Prepare all required actions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.5740270Z Getting action download info
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.6791354Z Download action repository 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8333299Z ##[group]Run ./.github/actions/maven-cache
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8333559Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8333747Z   create-cache-if-it-doesnt-exist: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8334000Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8334278Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8335289Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8335616Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8335923Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8336145Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8336359Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8336682Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8337195Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8337573Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8342641Z ##[start-action display=Key for weekly rotation of cache;id=integration-test-setup.maven-cache.weekly-cache-key]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8477983Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8478824Z ^[[36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8981783Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8982279Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8982634Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8983109Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8983481Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8983879Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8984172Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8984460Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8984897Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8985609Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:02.8986128Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1178364Z ##[end-action id=integration-test-setup.maven-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=283]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1200284Z ##[start-action display=Maven cache;id=integration-test-setup.maven-cache.cache-maven-repository]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1412037Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1412359Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1412656Z   path: ~/.m2/repository/*/*
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	~/.m2/wrapper/dists
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1413148Z   key: mvn-and-wrapper-Windows-mvn-2026-39
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1413431Z   enableCrossOsArchive: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1413658Z   fail-on-cache-miss: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1413866Z   lookup-only: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1414049Z   save-always: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1414227Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1414509Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1415399Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1415688Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1416007Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1416235Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1416450Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1416776Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1417294Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.1417679Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:03.5194425Z Cache hit for: mvn-and-wrapper-Windows-mvn-2026-39
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:04.6338820Z Received 167772160 of 275471014 (60.9%), 152.7 MBs/sec
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:05.2664602Z Received 275471014 of 275471014 (100.0%), 156.3 MBs/sec
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:05.2669041Z Cache Size: ~263 MB (275471014 B)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:05.2782414Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/0ed80036-3816-43fe-9414-f46c7ca88a94/cache.tzst -P -C D:/a/keycloak/keycloak --force-local --use-compress-program "zstd -d"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:15.9149079Z Cache restored successfully
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:15.9398395Z Cache restored from key: mvn-and-wrapper-Windows-mvn-2026-39
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:15.9520040Z ##[end-action id=integration-test-setup.maven-cache.cache-maven-repository;outcome=success;conclusion=success;duration_ms=12831]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:15.9523767Z ##[start-action display=Maven cache;id=integration-test-setup.maven-cache.restore-maven-repository]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:15.9535542Z ##[end-action id=integration-test-setup.maven-cache.restore-maven-repository;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:15.9537671Z ##[start-action display=Node cache;id=integration-test-setup.maven-cache.node-cache]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:15.9680439Z Prepare all required actions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:15.9680852Z Getting action download info
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1226925Z ##[group]Run ./.github/actions/node-cache
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1227191Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1227482Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1227869Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1228347Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1228652Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1228901Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1229134Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1229483Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1230013Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1230412Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1234443Z ##[start-action display=Get Node.js and PNPM versions;id=integration-test-setup.maven-cache.node-cache.tooling-versions]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1365643Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1366426Z ^[[36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1367154Z ^[[36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1384005Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1384400Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1384691Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1385085Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1385376Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1385681Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1385912Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1386143Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1386484Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1387011Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.1387400Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.3855460Z ##[end-action id=integration-test-setup.maven-cache.node-cache.tooling-versions;outcome=success;conclusion=success;duration_ms=261]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.3858708Z ##[start-action display=Cache Node.js and PNPM binaries;id=integration-test-setup.maven-cache.node-cache.cache-binaries]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4008888Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4009219Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4009586Z   path: ~/.m2/repository/com/github/eirslett/node
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4010105Z   key: Windows-frontend-plugin-artifacts-24.9.0-11.1.1
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4010427Z   enableCrossOsArchive: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4010663Z   fail-on-cache-miss: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4010875Z   lookup-only: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4011077Z   save-always: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4011255Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4011539Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4011932Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4012224Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4012674Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4012912Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4013131Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4013466Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4013984Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.4014794Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:16.7102899Z Cache hit for: Windows-frontend-plugin-artifacts-24.9.0-11.1.1
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.3603334Z Received 92850928 of 92850928 (100.0%), 150.3 MBs/sec
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.3605253Z Cache Size: ~89 MB (92850928 B)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.3632670Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/6cce77d1-3c7f-4608-a427-543c28ba579c/cache.tzst -P -C D:/a/keycloak/keycloak --force-local --use-compress-program "zstd -d"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7011236Z Cache restored successfully
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7181900Z Cache restored from key: Windows-frontend-plugin-artifacts-24.9.0-11.1.1
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7332366Z ##[end-action id=integration-test-setup.maven-cache.node-cache.cache-binaries;outcome=success;conclusion=success;duration_ms=1347]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7335467Z ##[start-action display=Download Node.js and PNPM;id=integration-test-setup.maven-cache.node-cache.__run]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7341022Z ##[end-action id=integration-test-setup.maven-cache.node-cache.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7362318Z ##[end-action id=integration-test-setup.maven-cache.node-cache;outcome=success;conclusion=success;duration_ms=1782]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7369387Z ##[end-action id=integration-test-setup.maven-cache;outcome=success;conclusion=success;duration_ms=15179]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7371824Z ##[start-action display=Restore Quarkus snapshot cache;id=integration-test-setup.restore-quarkus-snapshot]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7377743Z ##[end-action id=integration-test-setup.restore-quarkus-snapshot;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7380991Z ##[start-action display=PNPM store cache;id=integration-test-setup.pnpm-store-cache]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7518902Z Prepare all required actions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.7519404Z Getting action download info
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.8897064Z Download action repository 'google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5' (SHA:9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9947895Z ##[group]Run ./.github/actions/pnpm-store-cache
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9948185Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9948476Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9948859Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9949152Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9949466Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9949701Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9949940Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9950294Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9950842Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9951255Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:17.9955798Z ##[start-action display=Key for weekly rotation of cache;id=integration-test-setup.pnpm-store-cache.weekly-cache-key]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0090967Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0091434Z ^[[36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0107663Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0108074Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0108379Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0108770Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0109085Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0109409Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0110332Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0110608Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0110966Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0111504Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0111909Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0719032Z ##[end-action id=integration-test-setup.pnpm-store-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=76]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0721709Z ##[start-action display=Cache PNPM store;id=integration-test-setup.pnpm-store-cache.__actions_cache]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0863469Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0863805Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0864155Z   path: ~/.local/share/pnpm/store
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	~/AppData/Local/pnpm/store
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	~/Library/pnpm/store
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0865351Z   key: Windows-pnpm-store-2026-39
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0865621Z   enableCrossOsArchive: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0865876Z   fail-on-cache-miss: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0866097Z   lookup-only: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0866301Z   save-always: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0866481Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0866771Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0867154Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0867443Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0868076Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0868442Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0868720Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0869495Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0870035Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.0870441Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4036890Z Cache not found for input keys: Windows-pnpm-store-2026-39
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4140491Z ##[end-action id=integration-test-setup.pnpm-store-cache.__actions_cache;outcome=success;conclusion=success;duration_ms=341]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4144240Z ##[start-action display=Set up Wireit GitHub Actions caching;id=integration-test-setup.pnpm-store-cache.__google_wireit]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4150040Z ##[end-action id=integration-test-setup.pnpm-store-cache.__google_wireit;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4155642Z ##[end-action id=integration-test-setup.pnpm-store-cache;outcome=success;conclusion=success;duration_ms=677]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4157804Z ##[start-action display=Download Keycloak Maven artifacts;id=integration-test-setup.download-keycloak]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4312994Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4313387Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4313563Z   name: m2-keycloak.tzts
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4313806Z   merge-multiple: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4314019Z   repository: keycloak/keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4314251Z   run-id: 36721530707
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4314453Z   skip-decompress: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4314731Z   digest-mismatch: error
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4314930Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4315214Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4315603Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4315906Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4316219Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4316448Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4316669Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4316997Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4317533Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.4317928Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.6113916Z Downloading single artifact
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.6989998Z Preparing to download the following artifacts:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.6991277Z - m2-keycloak.tzts (ID: 11102155473, Size: 442609821, Expected Digest: sha256:13c3d3c91d38054b1552802afe80ac6f0509a8c30c2234b7e9941a79b9910748)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.8619587Z Redirecting to blob download url: https://productionresultssa8.blob.core.windows.net/actions-results/975402d2-f9bc-8a76-b2b1-ccb94ad59721/workflow-job-run-d5fcc3b2-bb5f-5b8e-8eb8-ae2e946aab30/artifacts/edc4cfb0355d37e325eaae6eb235756b36f79720f66ece617babf28220e9d051.zip
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.8622173Z Starting download of artifact to: D:\a\keycloak\keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.9488209Z (node:6620) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:18.9489515Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.6985553Z SHA256 digest of downloaded artifact is 13c3d3c91d38054b1552802afe80ac6f0509a8c30c2234b7e9941a79b9910748
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.6986231Z Artifact download completed successfully.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.6986549Z Total of 1 artifact(s) downloaded
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.6997994Z Download artifact has finished successfully
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7145441Z ##[end-action id=integration-test-setup.download-keycloak;outcome=success;conclusion=success;duration_ms=8298]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7148276Z ##[start-action display=Extract Keycloak Maven artifacts;id=integration-test-setup.extract-maven-artifacts]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7276359Z ##[group]Run if [ "$RUNNER_OS" == "Windows" ]; then
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7276714Z ^[[36;1mif [ "$RUNNER_OS" == "Windows" ]; then^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7277136Z ^[[36;1m  # zstd binary might be missing in older versions, install only when necessary^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7277609Z ^[[36;1m  which zstd > /dev/null || choco install zstandard^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7277924Z ^[[36;1mfi^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7278228Z ^[[36;1mtar -C ~/ --use-compress-program="zstd -d" -xf m2-keycloak.tzts^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7294506Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7294971Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7295278Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7295681Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7295990Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7296319Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7296565Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7296802Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7297162Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7297712Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:26.7298111Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.5262752Z ##[end-action id=integration-test-setup.extract-maven-artifacts;outcome=success;conclusion=success;duration_ms=1811]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.5443786Z Prepare all required actions
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.5444435Z Getting action download info
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6571244Z ##[group]Run ./.github/actions/prunsrv-setup
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6571527Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6571687Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6571977Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6572355Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6572658Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6572968Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6573208Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6573436Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6573778Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6574309Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6574730Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6578935Z ##[start-action display=Resolve latest version;id=prunsrv-setup.resolve-version]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6706414Z ##[group]Run $inputVersion = ""
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6706704Z ^[[36;1m$inputVersion = ""^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6707003Z ^[[36;1mif ([string]::IsNullOrWhiteSpace($inputVersion)) {^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6707528Z ^[[36;1m  Write-Host "No version specified, detecting latest version from Apache downloads..."^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6708143Z ^[[36;1m  $indexUrl = "https://downloads.apache.org/commons/daemon/binaries/windows/"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6708665Z ^[[36;1m  $response = Invoke-WebRequest -Uri $indexUrl -UseBasicParsing^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6709115Z ^[[36;1m  # Parse the HTML to find the zip file and extract version^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6709645Z ^[[36;1m  $match = [regex]::Match($response.Content, 'commons-daemon-(\d+\.\d+\.\d+)-bin-windows\.zip')^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6710110Z ^[[36;1m  if ($match.Success) {^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6710538Z ^[[36;1m    $version = $match.Groups[1].Value^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6710886Z ^[[36;1m    Write-Host "Detected latest version: $version"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6711196Z ^[[36;1m  } else {^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6711544Z ^[[36;1m    Write-Error "Could not detect latest version from Apache downloads page"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6711945Z ^[[36;1m    exit 1^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6712135Z ^[[36;1m  }^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6712308Z ^[[36;1m} else {^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6712516Z ^[[36;1m  $version = $inputVersion^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6712821Z ^[[36;1m  Write-Host "Using specified version: $version"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6713110Z ^[[36;1m}^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6713337Z ^[[36;1mecho "version=$version" >> $env:GITHUB_OUTPUT^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6926841Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6927291Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6927778Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6928299Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6928702Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6929114Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6929423Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6929724Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6930170Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6930878Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:28.6931419Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.1203955Z No version specified, detecting latest version from Apache downloads...
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.8934118Z Detected latest version: 1.6.1
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9799817Z ##[end-action id=prunsrv-setup.resolve-version;outcome=success;conclusion=success;duration_ms=1321]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9803951Z ##[start-action display=Cache Apache Commons Daemon;id=prunsrv-setup.cache]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9992391Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9992755Z with:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9995174Z   path: D:\a\_temp/commons-daemon
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9995558Z   key: commons-daemon-1.6.1-windows-amd64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9995867Z   enableCrossOsArchive: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9996117Z   fail-on-cache-miss: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9996350Z   lookup-only: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9996551Z   save-always: false
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9996742Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9997041Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9997429Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9997728Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9998062Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9998307Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9998537Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9998889Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9999441Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:29.9999856Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.3382225Z Cache hit for: commons-daemon-1.6.1-windows-amd64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4120089Z Received 228219 of 228219 (100.0%), 9.1 MBs/sec
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4121957Z Cache Size: ~0 MB (228219 B)
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4144677Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/20a306c3-cf8f-415e-8d99-c0cae70ea4c3/cache.tzst -P -C D:/a/keycloak/keycloak --force-local --use-compress-program "zstd -d"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4507729Z Cache restored successfully
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4621343Z Cache restored from key: commons-daemon-1.6.1-windows-amd64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4727552Z ##[end-action id=prunsrv-setup.cache;outcome=success;conclusion=success;duration_ms=492]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4730402Z ##[start-action display=Download Apache Commons Daemon;id=prunsrv-setup.__run]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4735784Z ##[end-action id=prunsrv-setup.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4737857Z ##[start-action display=Setup environment;id=prunsrv-setup.setup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4868211Z ##[group]Run $prunsrvPath = "D:\a\_temp/commons-daemon/amd64/prunsrv.exe"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4868897Z ^[[36;1m$prunsrvPath = "D:\a\_temp/commons-daemon/amd64/prunsrv.exe"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4869458Z ^[[36;1m^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4869686Z ^[[36;1mif (-not (Test-Path $prunsrvPath)) {^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4870062Z ^[[36;1m  Write-Error "prunsrv.exe not found at $prunsrvPath"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4870392Z ^[[36;1m  exit 1^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4870577Z ^[[36;1m}^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4870753Z ^[[36;1m^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4871064Z ^[[36;1mWrite-Host "Apache Commons Daemon prunsrv.exe found at: $prunsrvPath"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4871638Z ^[[36;1mecho "COMMONS_DAEMON_HOME=D:\a\_temp/commons-daemon/amd64" >> $env:GITHUB_ENV^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4872137Z ^[[36;1mecho "prunsrv-path=$prunsrvPath" >> $env:GITHUB_OUTPUT^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4940440Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4940815Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4941133Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4941529Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4941838Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4942173Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4942428Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4942665Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4943022Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4943568Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:30.4944056Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.4128199Z Apache Commons Daemon prunsrv.exe found at: D:\a\_temp/commons-daemon/amd64/prunsrv.exe
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5040137Z ##[end-action id=prunsrv-setup.setup;outcome=success;conclusion=success;duration_ms=1030]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5195428Z ##[group]Run declare -A PARAMS
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5196081Z ^[[36;1mdeclare -A PARAMS^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5196399Z ^[[36;1mPARAMS["win"]="-Dkc.quarkus.tests.groups=win"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5196904Z ^[[36;1mPARAMS["zip-slow"]="-Dkc.quarkus.tests.groups=slow -Dkc.quarkus.tests.aot=true"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5197513Z ^[[36;1mPARAMS["zip-fast"]='-Dkc.quarkus.tests.groups=!slow -Dkc.quarkus.tests.aot=true'^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5197978Z ^[[36;1mPARAMS["storage"]="-Ptest-database"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5198337Z ^[[36;1mPARAMS["smoke"]="-Dkc.quarkus.tests.groups=smoke"^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5198657Z ^[[36;1m^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5199017Z ^[[36;1m./mvnw test -pl quarkus/tests/integration ${PARAMS["win"]} 2>&1 | misc/log/trimmer.sh^[[0m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5215614Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5216039Z env:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5216391Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5216788Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5217104Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5217434Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5217683Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5217927Z   MAVEN_OPTS: -Xmx1536m
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5218295Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5218863Z   JAVA_HOME_25_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5219334Z   COMMONS_DAEMON_HOME: D:\a\_temp/commons-daemon/amd64
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:31.5219636Z ##[endgroup]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:37.9289331Z -- [INFO] Loading cache configuration from D:\a\keycloak\keycloak\.mvn\maven-build-cache-config.xml
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:37.9475834Z -- [INFO] Scanning for projects...
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3725280Z -- [ERROR] [ERROR] Some problems were encountered while processing the POMs:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3730780Z -- [ERROR] Non-resolvable import POM: The following artifacts could not be resolved: org.infinispan:infinispan-bom:pom:16.0.15 (absent): Could not find artifact org.infinispan:infinispan-bom:pom:16.0.15 in central (https://repo.maven.apache.org/maven2) @ line 342, column 25
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3736985Z --  @ 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3737786Z -- [ERROR] The build could not read 1 project -> [Help 1]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3757380Z -- [ERROR]   
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3758520Z -- [ERROR]   The project org.keycloak:keycloak-parent:999.0.0-SNAPSHOT (D:\a\keycloak\keycloak\pom.xml) has 1 error
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3761429Z -- [ERROR]     Non-resolvable import POM: The following artifacts could not be resolved: org.infinispan:infinispan-bom:pom:16.0.15 (absent): Could not find artifact org.infinispan:infinispan-bom:pom:16.0.15 in central (https://repo.maven.apache.org/maven2) @ line 342, column 25 -> [Help 2]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3766837Z -- [ERROR] 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3778356Z -- [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3779238Z -- [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3780229Z -- [ERROR] 
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3780921Z -- [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3786708Z -- [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3791612Z -- [ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/UnresolvableModelException
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.3993311Z ##[error]Process completed with exit code 1.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4231681Z Post job cleanup.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4235441Z ##[start-action display=Cache Apache Commons Daemon;id=__b19b6dd0-a7c0-421d-b2e5-06c30d8b278d.cache]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4237930Z ##[end-action id=__b19b6dd0-a7c0-421d-b2e5-06c30d8b278d.cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4412106Z Post job cleanup.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4418502Z ##[start-action display=Cache PNPM store;id=__33a23848-5138-428b-ad7c-0536dedf417a.__actions_cache]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4420953Z ##[end-action id=__33a23848-5138-428b-ad7c-0536dedf417a.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4422935Z ##[start-action display=Cache Node.js and PNPM binaries;id=__33a23848-5138-428b-ad7c-0536dedf417a.cache-binaries]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4425380Z ##[end-action id=__33a23848-5138-428b-ad7c-0536dedf417a.cache-binaries;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4427308Z ##[start-action display=Maven cache;id=__33a23848-5138-428b-ad7c-0536dedf417a.cache-maven-repository]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4429299Z ##[end-action id=__33a23848-5138-428b-ad7c-0536dedf417a.cache-maven-repository;outcome=skipped;conclusion=skipped;duration_ms=0]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4431147Z ##[start-action display=Setup Java;id=__33a23848-5138-428b-ad7c-0536dedf417a.setup-java]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.4624059Z Post job cleanup.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.5734102Z ##[end-action id=__33a23848-5138-428b-ad7c-0536dedf417a.setup-java;outcome=success;conclusion=success;duration_ms=130]
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.5928623Z Post job cleanup.
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.8001720Z [command]"C:\Program Files\Git\bin\git.exe" version
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.8268612Z git version 2.55.0.windows.5
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.8334383Z Temporarily overriding HOME='D:\a\_temp\b2606ec5-1182-4bf9-abc8-67e01f7b79ea' before making global git config changes
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.8335712Z Adding repository directory to the temporary git global config as a safe directory
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.8344918Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\keycloak\keycloak
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.8669181Z Removing SSH command configuration
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.8683463Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:40.8986933Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:41.4347037Z Removing HTTP extra header
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:41.4357936Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:41.4669149Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:41.9862012Z Removing includeIf entries pointing to credentials config files
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:41.9874968Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.0136033Z includeif.gitdir:D:/a/keycloak/keycloak/.git.path
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.0136657Z includeif.gitdir:D:/a/keycloak/keycloak/.git/worktrees/*.path
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.0137079Z includeif.gitdir:/github/workspace/.git.path
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.0137473Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.0175893Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/keycloak/keycloak/.git.path
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.0492019Z D:\a\_temp\git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.0534190Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/keycloak/keycloak/.git.path D\:\\a\\_temp\\git\-credentials\-fff88b4c\-cfae\-4ac3\-8b6c\-f73be4457916\.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.0835240Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/keycloak/keycloak/.git/worktrees/*.path
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.1087050Z D:\a\_temp\git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.1125025Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/keycloak/keycloak/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-fff88b4c\-cfae\-4ac3\-8b6c\-f73be4457916\.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.1408255Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.1663654Z /github/runner_temp/git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.1706827Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-fff88b4c\-cfae\-4ac3\-8b6c\-f73be4457916\.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.2004798Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.2253525Z /github/runner_temp/git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.2328276Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-fff88b4c\-cfae\-4ac3\-8b6c\-f73be4457916\.config
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.2627907Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.8019253Z Removing credentials config 'D:\a\_temp\git-credentials-fff88b4c-cfae-4ac3-8b6c-f73be4457916.config'
+Quarkus IT (windows-latest, win)	UNKNOWN STEP	2026-09-30T13:34:42.8209823Z Cleaning up orphan processes
+Status Check - Keycloak CI	UNKNOWN STEP	﻿2026-09-30T14:17:29.7159019Z Current runner version: '2.337.0'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7180497Z ##[group]Runner Image Provisioner
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7181268Z Hosted Compute Agent
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7181783Z Version: 20260828.587
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7182286Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7182978Z Build Date: 2026-08-28T16:44:25Z
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7183542Z Worker ID: {e212ed5f-0424-4572-b726-dd0d10c6b91e}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7184159Z Azure Region: westus
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7184712Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7186089Z ##[group]Operating System
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7186687Z Ubuntu
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7187122Z 24.04.5
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7187565Z LTS
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7188037Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7188485Z ##[group]Runner Image
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7189004Z Image: ubuntu-24.04
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7189504Z Version: 20260920.314.1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7190841Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7192103Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7192926Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7193839Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7195735Z Contents: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7196265Z Metadata: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7196926Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7198651Z Secret source: None
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7199362Z Cache mode: write
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7200554Z Prepare workflow directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7533078Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:29.7585991Z Getting action download info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:30.1385879Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:30.9568241Z Complete job name: Status Check - Keycloak CI
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0191315Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0192191Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0192577Z   repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0195796Z   token: ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0196186Z   ssh-strict: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0196567Z   ssh-user: git
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0196957Z   persist-credentials: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0197388Z   clean: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0197774Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0198233Z   fetch-depth: 1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0198618Z   fetch-tags: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0199007Z   show-progress: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0199390Z   lfs: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0199892Z   submodules: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0200307Z   set-safe-directory: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0200744Z   allow-unsafe-pr-checkout: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0201351Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0201861Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0202537Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0203069Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0203623Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0204080Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.0204513Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1015314Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1016938Z ##[group]Getting Git version info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1017609Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1018598Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1050224Z git version 2.55.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1065215Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1074596Z Temporarily overriding HOME='/home/runner/work/_temp/c6f0fe93-8f3b-4d32-b7d1-3a4715b3d799' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1076592Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1079950Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1185953Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1188079Z ##[group]Determining repository object format
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1189384Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1190205Z ##[group]Initializing the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1193158Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1510137Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1512046Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1513684Z hint: to use in all of your new repositories, which will suppress this warning,
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1514751Z hint: call:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1515583Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1516326Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1516872Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1517384Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1518218Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1519024Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1519393Z hint: 	git branch -m <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1520124Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1520989Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1521894Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1523421Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1628315Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1628999Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1631398Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1825339Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1826313Z ##[group]Setting up auth
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1826859Z Removing SSH command configuration
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1830461Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.1856827Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2114639Z Removing HTTP extra header
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2118491Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2144990Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2325889Z Removing includeIf entries pointing to credentials config files
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2330452Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2358041Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2543153Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2624767Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git.path /home/runner/work/_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2670973Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.2988593Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.3392265Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.4708967Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.4710260Z ##[group]Fetching the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:31.4712192Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ed4abb5661b531d3a6b82ba684f2ce930b1303b3:refs/remotes/pull/52866/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:36.8981398Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:36.8982789Z  * [new ref]           ed4abb5661b531d3a6b82ba684f2ce930b1303b3 -> pull/52866/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:36.8984817Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:36.8985362Z ##[group]Determining the checkout info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:36.8986423Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:36.8990889Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:36.9030214Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:36.9053465Z ##[group]Checking out the ref
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:36.9056162Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/52866/merge
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8429398Z Note: switching to 'refs/remotes/pull/52866/merge'.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8430494Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8430807Z You are in 'detached HEAD' state. You can look around, make experimental
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8431481Z changes and commit them, and you can discard any commits you make in this
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8432124Z state without impacting any branches by switching back to a branch.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8432539Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8432825Z If you want to create a new branch to retain commits you create, you may
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8433439Z do so (now or later) by using -c with the switch command. Example:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8433763Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8433938Z   git switch -c <new-branch-name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8434183Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8434341Z Or undo this operation with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8434574Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8434707Z   git switch -
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8434930Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8435227Z Turn off this advice by setting config variable advice.detachedHead to false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8435683Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8436573Z HEAD is now at ed4abb56 Merge 6ad5ccda3fa88e590953dcd415bf410c342d8677 into e0756392d1e19be1db4dc11872b15da4990f2345
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8457421Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8494592Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8516174Z ed4abb5661b531d3a6b82ba684f2ce930b1303b3
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8735416Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8797932Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8798184Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8803696Z   jobs: {
+Status Check - Keycloak CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-quarkus": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-aurora": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-admin-v2": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-jackson3": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-store": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-sssd": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-webauthn": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-azure": "false",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-additional-dbs": "false"
+Status Check - Keycloak CI	UNKNOWN STEP	    }
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jdk-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-model-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "clustering-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "forms-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "sssd-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests-cs": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "external-infinispan-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "test-framework": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-new-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "mixed-cluster-compatibility-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "authzen-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "admin-v2-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jackson3-admin-client-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "testsuite-deprecation-check": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "stateless-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "stateless-cluster-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  }
+Status Check - Keycloak CI	UNKNOWN STEP	}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8809163Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8809410Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8809900Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8810190Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8810470Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8810683Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8810882Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8857736Z ##[start-action display=Check jobs;id=__self.check-jobs]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8972214Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8972886Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8973190Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8973514Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8973865Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8974156Z ^[[36;1m      "ci": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8974422Z ^[[36;1m      "ci-quarkus": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8974647Z ^[[36;1m      "ci-aurora": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8974869Z ^[[36;1m      "ci-admin-v2": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8975077Z ^[[36;1m      "ci-jackson3": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8975309Z ^[[36;1m      "ci-store": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8975519Z ^[[36;1m      "ci-sssd": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8975932Z ^[[36;1m      "ci-webauthn": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8976150Z ^[[36;1m      "ci-azure": "false",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8976371Z ^[[36;1m      "ci-additional-dbs": "false"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8976603Z ^[[36;1m    }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8976760Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8976919Z ^[[36;1m  "build": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8977104Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8977316Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8977513Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8977683Z ^[[36;1m  "unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8977879Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8978088Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8978264Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8978440Z ^[[36;1m  "base-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8978664Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8978870Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8979058Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8979253Z ^[[36;1m  "adapter-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8979485Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8979924Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8980103Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8980341Z ^[[36;1m  "adapter-integration-tests-strict-cookies": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8980615Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8980815Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8980997Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8981171Z ^[[36;1m  "quarkus-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8981379Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8981604Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8981815Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8981985Z ^[[36;1m  "quarkus-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8982207Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8982403Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8982698Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8982865Z ^[[36;1m  "jdk-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8983080Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8983275Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8983449Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8983622Z ^[[36;1m  "store-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8983840Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8984029Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8984208Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8984383Z ^[[36;1m  "volatile-sessions-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8984606Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8984808Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8984983Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8985149Z ^[[36;1m  "store-model-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8985351Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8985541Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8985717Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8985909Z ^[[36;1m  "clustering-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8986137Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8986341Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8986537Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8986711Z ^[[36;1m  "fips-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8986918Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8987121Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8987302Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8987481Z ^[[36;1m  "fips-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8987694Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8987889Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8988063Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8988237Z ^[[36;1m  "forms-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8988464Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8988660Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8988847Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8989034Z ^[[36;1m  "webauthn-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8989267Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8989461Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8989796Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8990098Z ^[[36;1m  "sssd-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8990307Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8990506Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8990690Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8990854Z ^[[36;1m  "migration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8991050Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8991244Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8991424Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8991597Z ^[[36;1m  "migration-tests-cs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8991804Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8991995Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8992173Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8992356Z ^[[36;1m  "external-infinispan-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8992591Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8992789Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8992970Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8993136Z ^[[36;1m  "test-framework": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8993337Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8993533Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8993709Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8993888Z ^[[36;1m  "base-new-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8994107Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8994301Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8994479Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8994687Z ^[[36;1m  "mixed-cluster-compatibility-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8994937Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8995139Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8995322Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8995503Z ^[[36;1m  "authzen-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8995723Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8995918Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8996155Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8996518Z ^[[36;1m  "admin-v2-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8996719Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8996929Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8997107Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8997291Z ^[[36;1m  "jackson3-admin-client-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8997522Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8997720Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8997896Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8998070Z ^[[36;1m  "testsuite-deprecation-check": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8998290Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8998485Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8998661Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8998833Z ^[[36;1m  "stateless-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8999033Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8999225Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8999400Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8999739Z ^[[36;1m  "stateless-cluster-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.8999995Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9000188Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9000370Z ^[[36;1m  }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9000527Z ^[[36;1m}'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9000683Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9000853Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9001133Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9001408Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9001634Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9001953Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9002200Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9002392Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9002606Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9002772Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:37.9002933Z ^[[36;1mdone^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0299812Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0300182Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0300465Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0300965Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0301233Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0301504Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0301712Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0301909Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0393163Z Job status:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0416206Z  - conditional: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0416530Z  - build: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0416798Z  - unit-tests: failure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0417112Z  - base-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0417485Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0417920Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0418358Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0418705Z  - quarkus-integration-tests: failure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0419067Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0419464Z  - store-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0419940Z  - volatile-sessions-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0420282Z  - store-model-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0420622Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0421020Z  - fips-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0421351Z  - fips-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0421590Z  - forms-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0421825Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0422174Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0422472Z  - migration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0422776Z  - migration-tests-cs: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0423111Z  - external-infinispan-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0423459Z  - test-framework: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0423776Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0424188Z  - mixed-cluster-compatibility-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0424472Z  - authzen-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0424884Z  - admin-v2-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0425096Z  - jackson3-admin-client-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0425347Z  - testsuite-deprecation-check: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0425575Z  - stateless-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0425822Z  - stateless-cluster-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0446929Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0447061Z Status check not okay!
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0458386Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0470794Z ##[end-action id=__self.check-jobs;outcome=failure;conclusion=failure;duration_ms=161]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.0579220Z Post job cleanup.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1248175Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1283264Z git version 2.55.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1308471Z Temporarily overriding HOME='/home/runner/work/_temp/f804f57a-fd1c-437a-b924-20d11cc424e3' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1312566Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1313271Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1336795Z Removing SSH command configuration
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1341786Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1368976Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1565513Z Removing HTTP extra header
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1569360Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1595036Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1785187Z Removing includeIf entries pointing to credentials config files
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1789326Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1811626Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1812129Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1812504Z includeif.gitdir:/github/workspace/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1812811Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1822627Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1835773Z /home/runner/work/_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1843584Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-9fdb0114\-4500\-420b\-a588\-3167be61a635\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1871906Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1889701Z /home/runner/work/_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1901969Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-9fdb0114\-4500\-420b\-a588\-3167be61a635\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1929066Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1946420Z /github/runner_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1951933Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-9fdb0114\-4500\-420b\-a588\-3167be61a635\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1977069Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.1994268Z /github/runner_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.2000063Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-9fdb0114\-4500\-420b\-a588\-3167be61a635\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.2026943Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.2216454Z Removing credentials config '/home/runner/work/_temp/git-credentials-9fdb0114-4500-420b-a588-3167be61a635.config'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-09-30T14:17:38.2341664Z Cleaning up orphan processes
