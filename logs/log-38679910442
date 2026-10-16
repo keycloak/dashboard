@@ -1,0 +1,1330 @@
+Base IT (6)	UNKNOWN STEP	﻿2026-10-15T04:13:44.6274686Z Current runner version: '2.337.0'
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6302211Z ##[group]Runner Image Provisioner
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6303131Z Hosted Compute Agent
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6303895Z Version: 20261012.601
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6304551Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6305401Z Build Date: 2026-10-12T17:48:21Z
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6306118Z Worker ID: {20c825fc-9ffb-4980-a577-6bb4ec8a2130}
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6306845Z Region: eastus
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6307507Z Cloud: Azure
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6308058Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6309574Z ##[group]Operating System
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6310258Z Ubuntu
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6310801Z 24.04.5
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6311676Z LTS
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6312229Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6312790Z ##[group]Runner Image
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6313519Z Image: ubuntu-24.04
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6314105Z Version: 20261012.334.1
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6315466Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6317465Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6318494Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6319586Z ##[group]GITHUB_TOKEN Permissions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6322060Z Contents: read
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6322692Z Metadata: read
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6323363Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6325999Z Secret source: Actions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6327131Z Cache mode: write
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6328075Z Prepare workflow directory
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6762373Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.6812379Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:44.8916284Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1000859Z Complete job name: Base IT (6)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1896621Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1897721Z with:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1898225Z   repository: keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1902274Z   token: ***
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1902743Z   ssh-strict: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1903205Z   ssh-user: git
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1903675Z   persist-credentials: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1904184Z   clean: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1904656Z   sparse-checkout-cone-mode: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1905212Z   fetch-depth: 1
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1905671Z   fetch-tags: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1906141Z   show-progress: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1906604Z   lfs: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1907034Z   submodules: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1907505Z   set-safe-directory: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1908034Z   allow-unsafe-pr-checkout: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1908839Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1909434Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1910199Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1910828Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1911686Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1912230Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.1912736Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.2882049Z Syncing repository: keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.2883877Z ##[group]Getting Git version info
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.2884636Z Working directory is '/home/runner/work/keycloak/keycloak'
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.2885712Z [command]/usr/bin/git version
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.2954193Z git version 2.55.0
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.2974769Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.2985210Z Temporarily overriding HOME='/home/runner/work/_temp/70f0fbf2-bfb7-48ea-a9b8-c74830f8da2e' before making global git config changes
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.2987120Z Adding repository directory to the temporary git global config as a safe directory
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.2991382Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3041286Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3044602Z ##[group]Determining repository object format
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3046375Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3047195Z ##[group]Initializing the repository
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3052335Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3157699Z hint: Using 'master' as the name for the initial branch. This default branch name
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3159293Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3160813Z hint: to use in all of your new repositories, which will suppress this warning,
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3162565Z hint: call:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3163746Z hint:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3165171Z hint: 	git config --global init.defaultBranch <name>
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3166785Z hint:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3168339Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3170596Z hint: 'development'. The just-created branch can be renamed via this command:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3172679Z hint:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3174066Z hint: 	git branch -m <name>
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3175408Z hint:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3176926Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3179069Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3183591Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3225669Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3226491Z ##[group]Disabling automatic garbage collection
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3228829Z [command]/usr/bin/git config --local gc.auto 0
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3261701Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3262906Z ##[group]Setting up auth
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3263789Z Removing SSH command configuration
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3267766Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3301319Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3654629Z Removing HTTP extra header
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3659470Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3692313Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3906234Z Removing includeIf entries pointing to credentials config files
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3911618Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.3949420Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.4169035Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.4206098Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git.path /home/runner/work/_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.4236942Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.4269519Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.4300855Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.4327908Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.4328681Z ##[group]Fetching the repository
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:45.4336799Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8a081db466da3ff8de74efab2f3d9844277c18ba:refs/remotes/origin/main
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6197948Z From https://github.com/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6200775Z  * [new ref]           8a081db466da3ff8de74efab2f3d9844277c18ba -> origin/main
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6206438Z [command]/usr/bin/git branch --list --remote origin/main
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6229954Z   origin/main
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6238450Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6259818Z 8a081db466da3ff8de74efab2f3d9844277c18ba
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6265853Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6267790Z ##[group]Determining the checkout info
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6269826Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6270827Z [command]/usr/bin/git sparse-checkout disable
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6317281Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6347533Z ##[group]Checking out the ref
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:46.6349937Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.6608968Z Updating files:  99% (13408/13539)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.6610599Z Updating files: 100% (13539/13539)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.6611525Z Updating files: 100% (13539/13539), done.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.6804506Z Switched to a new branch 'main'
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.6812205Z branch 'main' set up to track 'origin/main'.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.6839480Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.6887474Z [command]/usr/bin/git log -1 --format=%H
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.6913167Z 8a081db466da3ff8de74efab2f3d9844277c18ba
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.7238437Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.7239181Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.7775507Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9674427Z ##[group]Run ./.github/actions/integration-test-setup
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9674862Z with:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9675158Z   jdk-dist: temurin
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9675449Z   jdk-version: 25
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9675714Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9676090Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9676573Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9676952Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9677342Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9677659Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9677961Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9742196Z ##[start-action display=Update /etc/hosts;id=integration-test-setup.update-hosts]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9851075Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9895020Z ##[group]Run ./.github/actions/update-hosts
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9895396Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9895766Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9896205Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9896592Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9897225Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9897600Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9897903Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9903689Z ##[start-action display=Update /etc/hosts;id=integration-test-setup.update-hosts.update-hosts-linux]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9953960Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:47.9954776Z ^[[36;1mprintf "\n\n$(cat .github/actions/update-hosts/hosts)" | sudo tee -a /etc/hosts^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0225056Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0225607Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0226047Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0226608Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0227080Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0227571Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0227947Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0228541Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0408006Z 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0408034Z 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0409105Z 127.0.0.1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0423410Z ::1 localtest.me admin.localtest.me localhost-myapp.localtest.me localhost-sso.localtest.me realmFrontend.localtest.me proxy.kc.localtest.me
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0439446Z ##[end-action id=integration-test-setup.update-hosts.update-hosts-linux;outcome=success;conclusion=success;duration_ms=53]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0446616Z ##[start-action display=Update C:\Windows\System32\drivers\etc\hosts;id=integration-test-setup.update-hosts.update-hosts-windows]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0454240Z ##[end-action id=integration-test-setup.update-hosts.update-hosts-windows;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0467066Z ##[end-action id=integration-test-setup.update-hosts;outcome=success;conclusion=success;duration_ms=72]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0469795Z ##[start-action display=Setup Java;id=integration-test-setup.setup-java]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0494070Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.0494627Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.1017130Z Download action repository 'actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6' (SHA:de7274f081f381c8f8158605e0321c36c376e2e6)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4099006Z ##[group]Run ./.github/actions/java-setup
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4099369Z with:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4099628Z   distribution: temurin
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4100131Z   java-version: 25
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4100396Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4100752Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4101403Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4101773Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4102177Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4102497Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4102820Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4106751Z ##[start-action display=Setup Java;id=integration-test-setup.setup-java.setup-java]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4237534Z ##[group]Run actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4237993Z with:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4238265Z   distribution: temurin
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4238560Z   java-version: 25
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4238824Z   java-package: jdk
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4239093Z   check-latest: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4239372Z   force-download: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4239645Z   set-default: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4239925Z   server-id: github
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4240226Z   mvn-repositories-include-central: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4240607Z   mvn-repositories-prioritize-central: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4241138Z   overwrite-settings: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4241453Z   cache-read-only: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4241742Z   job-status: success
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4244195Z   token: ***
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4244479Z   show-download-progress: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4244819Z   problem-matcher: true
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4245095Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4245460Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4245906Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4246276Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4246663Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4246983Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4247276Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.4964208Z ##[group]Installed distributions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5184324Z Resolved Java 25.0.4+1 from tool-cache
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5184996Z Setting Java 25.0.4+1 as the default
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5193423Z 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5193697Z Java configuration:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5194264Z   Distribution: temurin
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5194817Z   Version: 25.0.4+1
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5195508Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5196127Z 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5202256Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5227646Z Creating settings.xml with server-id: github
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5228430Z Creating toolchains.xml for JDK version 25 from temurin
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5229131Z Writing to /home/runner/.m2/settings.xml
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5240749Z Writing to /home/runner/.m2/toolchains.xml
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5248568Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5330598Z ##[end-action id=integration-test-setup.setup-java.setup-java;outcome=success;conclusion=success;duration_ms=122]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5337869Z ##[end-action id=integration-test-setup.setup-java;outcome=success;conclusion=success;duration_ms=486]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5340829Z ##[start-action display=Maven cache;id=integration-test-setup.maven-cache]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5390202Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5390755Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.5950135Z Download action repository 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7774389Z ##[group]Run ./.github/actions/maven-cache
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7774716Z with:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7774954Z   create-cache-if-it-doesnt-exist: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7775234Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7775543Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7775940Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7776439Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7776796Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7777059Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7777426Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7777944Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7778329Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7783993Z ##[start-action display=Key for weekly rotation of cache;id=integration-test-setup.maven-cache.weekly-cache-key]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7803873Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7804335Z ^[[36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7869893Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7870273Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7870605Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7871176Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7871532Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7871884Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7872149Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7872514Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7873019Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7873415Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7985544Z ##[end-action id=integration-test-setup.maven-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=20]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7988457Z ##[start-action display=Maven cache;id=integration-test-setup.maven-cache.cache-maven-repository]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7995648Z ##[end-action id=integration-test-setup.maven-cache.cache-maven-repository;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.7998059Z ##[start-action display=Maven cache;id=integration-test-setup.maven-cache.restore-maven-repository]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8069258Z ##[group]Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8069667Z with:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8070013Z   path: ~/.m2/repository/*/*
+Base IT (6)	UNKNOWN STEP	~/.m2/wrapper/dists
+Base IT (6)	UNKNOWN STEP	!~/.m2/repository/org/keycloak
+Base IT (6)	UNKNOWN STEP	
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8070453Z   key: mvn-and-wrapper-Linux-mvn-2026-41
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8070763Z   enableCrossOsArchive: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8071342Z   fail-on-cache-miss: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8071804Z   lookup-only: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8072034Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8072369Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8072784Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8073116Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8073462Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8073733Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8074112Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8074619Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.8075014Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:48.9854105Z Cache hit for: mvn-and-wrapper-Linux-mvn-2026-41
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:50.0518890Z Received 264241152 of 767896253 (34.4%), 252.0 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:51.0877161Z Received 536870912 of 767896253 (69.9%), 252.0 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:51.9252887Z Received 767896253 of 767896253 (100.0%), 255.3 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:51.9253928Z Cache Size: ~732 MB (767896253 B)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:51.9325971Z [command]/usr/bin/tar -xf /home/runner/work/_temp/0e96fb4b-4504-4916-82a2-75765c415737/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.2461300Z Cache restored successfully
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.2952444Z Cache restored from key: mvn-and-wrapper-Linux-mvn-2026-41
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.3153498Z ##[end-action id=integration-test-setup.maven-cache.restore-maven-repository;outcome=success;conclusion=success;duration_ms=5515]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.3159762Z ##[start-action display=Node cache;id=integration-test-setup.maven-cache.node-cache]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.3236518Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.3237253Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4177427Z ##[group]Run ./.github/actions/node-cache
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4177922Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4178450Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4179136Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4179695Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4180254Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4180691Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4181499Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4182350Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4183008Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4190550Z ##[start-action display=Get Node.js and PNPM versions;id=integration-test-setup.maven-cache.node-cache.tooling-versions]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4228483Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4229832Z ^[[36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4231303Z ^[[36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4319104Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4319718Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4320244Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4321124Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4321705Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4322322Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4322758Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4323367Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4324226Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4324886Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4758684Z ##[end-action id=integration-test-setup.maven-cache.node-cache.tooling-versions;outcome=success;conclusion=success;duration_ms=56]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4762150Z ##[start-action display=Cache Node.js and PNPM binaries;id=integration-test-setup.maven-cache.node-cache.cache-binaries]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4855665Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4856625Z with:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4884782Z   path: ~/.m2/repository/com/github/eirslett/node
+Base IT (6)	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+Base IT (6)	UNKNOWN STEP	
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4885349Z   key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4885756Z   enableCrossOsArchive: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4886029Z   fail-on-cache-miss: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4886296Z   lookup-only: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4886522Z   save-always: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4886735Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4887054Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4887464Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4887795Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4888134Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4888405Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4888767Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4889258Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.4889645Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:54.6742647Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.4915975Z Received 182409230 of 182409230 (100.0%), 232.9 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.4917969Z Cache Size: ~174 MB (182409230 B)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.5017689Z [command]/usr/bin/tar -xf /home/runner/work/_temp/28d15813-1c89-44e3-a01c-a65361fb7560/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9610651Z Cache restored successfully
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9772042Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-11.1.1
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9871691Z ##[end-action id=integration-test-setup.maven-cache.node-cache.cache-binaries;outcome=success;conclusion=success;duration_ms=1510]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9874875Z ##[start-action display=Download Node.js and PNPM;id=integration-test-setup.maven-cache.node-cache.__run]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9880604Z ##[end-action id=integration-test-setup.maven-cache.node-cache.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9886128Z ##[end-action id=integration-test-setup.maven-cache.node-cache;outcome=success;conclusion=success;duration_ms=1672]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9890852Z ##[end-action id=integration-test-setup.maven-cache;outcome=success;conclusion=success;duration_ms=7454]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9894431Z ##[start-action display=Restore Quarkus snapshot cache;id=integration-test-setup.restore-quarkus-snapshot]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9899977Z ##[end-action id=integration-test-setup.restore-quarkus-snapshot;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9902440Z ##[start-action display=PNPM store cache;id=integration-test-setup.pnpm-store-cache]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9927731Z Prepare all required actions
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:55.9928279Z Getting action download info
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.0613267Z Download action repository 'google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5' (SHA:9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1723706Z ##[group]Run ./.github/actions/pnpm-store-cache
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1724032Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1724372Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1724791Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1725128Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1725497Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1725777Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1726155Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1726680Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1727097Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1732041Z ##[start-action display=Key for weekly rotation of cache;id=integration-test-setup.pnpm-store-cache.weekly-cache-key]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1749176Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1749711Z ^[[36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1812707Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1813078Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1813423Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1813856Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1814213Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1814580Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1814852Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1815233Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1815767Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1816165Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1920199Z ##[end-action id=integration-test-setup.pnpm-store-cache.weekly-cache-key;outcome=success;conclusion=success;duration_ms=18]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1923610Z ##[start-action display=Cache PNPM store;id=integration-test-setup.pnpm-store-cache.__actions_cache]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1962215Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1962600Z with:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1962960Z   path: ~/.local/share/pnpm/store
+Base IT (6)	UNKNOWN STEP	~/AppData/Local/pnpm/store
+Base IT (6)	UNKNOWN STEP	~/Library/pnpm/store
+Base IT (6)	UNKNOWN STEP	
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1963422Z   key: Linux-pnpm-store-2026-41
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1963890Z   enableCrossOsArchive: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1964177Z   fail-on-cache-miss: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1964442Z   lookup-only: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1964677Z   save-always: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1964899Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1965237Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1965653Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1966006Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1966353Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1966626Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1966997Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1967503Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.1967906Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.3770416Z Cache hit for: Linux-pnpm-store-2026-41
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.9384230Z Received 112577258 of 112577258 (100.0%), 208.1 MBs/sec
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.9385114Z Cache Size: ~107 MB (112577258 B)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:56.9444058Z [command]/usr/bin/tar -xf /home/runner/work/_temp/043902ff-7521-41f2-9f82-195f1609e646/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.5405749Z Cache restored successfully
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6723087Z Cache restored from key: Linux-pnpm-store-2026-41
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6830606Z ##[end-action id=integration-test-setup.pnpm-store-cache.__actions_cache;outcome=success;conclusion=success;duration_ms=3490]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6834140Z ##[start-action display=Set up Wireit GitHub Actions caching;id=integration-test-setup.pnpm-store-cache.__google_wireit]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6863858Z ##[group]Run google/wireit@9d7c2e5346f8ef1b1ab6014c4e96c74e234f7ed5
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6864241Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6864584Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6865008Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6865390Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6865755Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6866035Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6866424Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6866936Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.6867378Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.7148170Z [main] Launching background custodian service
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:13:59.7155872Z [main] Writing logs to /tmp/wireit_custodian_logs_gfw1QF
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5341186Z 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5341779Z [custodian] Trying port 52057
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5342319Z [custodian] Listening on port 52057
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5342559Z 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5342707Z [main] Custodian server ready
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5380170Z ##[end-action id=integration-test-setup.pnpm-store-cache.__google_wireit;outcome=success;conclusion=success;duration_ms=1854]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5385358Z ##[end-action id=integration-test-setup.pnpm-store-cache;outcome=success;conclusion=success;duration_ms=5548]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5387997Z ##[start-action display=Download Keycloak Maven artifacts;id=integration-test-setup.download-keycloak]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5442364Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5442789Z with:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5443016Z   name: m2-keycloak.tzts
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5443290Z   merge-multiple: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5443554Z   repository: keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5443822Z   run-id: 38679910442
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5444095Z   skip-decompress: false
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5444348Z   digest-mismatch: error
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5444609Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5444947Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5445372Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5445713Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5446247Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5446552Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5446937Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5447456Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5447877Z   WIREIT_CACHE: github
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5448155Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 52057
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.5448467Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.6782774Z Downloading single artifact
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.7575159Z Preparing to download the following artifacts:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.7576517Z - m2-keycloak.tzts (ID: 11946674308, Size: 429464501, Expected Digest: sha256:7f581495d71901de46a3a858739037413fb49b22f6d335558d91336acf21cad7)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.9059218Z Redirecting to blob download url: https://productionresultssa18.blob.core.windows.net/actions-results/7cac1a2f-b6f6-400b-aeb0-bcd7b245e6f6/workflow-job-run-9c78999e-5474-5897-8924-1fcf5597675e/artifacts/edc4cfb0355d37e325eaae6eb235756b36f79720f66ece617babf28220e9d051.zip
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:01.9062604Z Starting download of artifact to: /home/runner/work/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:02.0068969Z (node:2350) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:02.0070732Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5204088Z SHA256 digest of downloaded artifact is 7f581495d71901de46a3a858739037413fb49b22f6d335558d91336acf21cad7
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5205267Z Artifact download completed successfully.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5205883Z Total of 1 artifact(s) downloaded
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5211654Z Download artifact has finished successfully
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5347460Z ##[end-action id=integration-test-setup.download-keycloak;outcome=success;conclusion=success;duration_ms=5995]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5352015Z ##[start-action display=Extract Keycloak Maven artifacts;id=integration-test-setup.extract-maven-artifacts]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5384177Z ##[group]Run if [ "$RUNNER_OS" == "Windows" ]; then
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5384892Z ^[[36;1mif [ "$RUNNER_OS" == "Windows" ]; then^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5385707Z ^[[36;1m  # zstd binary might be missing in older versions, install only when necessary^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5386599Z ^[[36;1m  which zstd > /dev/null || choco install zstandard^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5387478Z ^[[36;1mfi^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5388068Z ^[[36;1mtar -C ~/ --use-compress-program="zstd -d" -xf m2-keycloak.tzts^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5460099Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5460497Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5460851Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5461568Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5461936Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5462310Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5462617Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5463026Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5463581Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5464009Z   WIREIT_CACHE: github
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5464288Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 52057
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:07.5464596Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1713498Z ##[end-action id=integration-test-setup.extract-maven-artifacts;outcome=success;conclusion=success;duration_ms=635]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1756172Z ##[group]Run TESTS=`testsuite/integration-arquillian/tests/base/testsuites/base-suite.sh 6`
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1756913Z ^[[36;1mTESTS=`testsuite/integration-arquillian/tests/base/testsuites/base-suite.sh 6`^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1757412Z ^[[36;1mecho "Tests: $TESTS"^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1758358Z ^[[36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus -Dauth.server.feature=http-optimized-serializers -Dtest=$TESTS -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh^[[0m
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1820717Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1821341Z env:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1821699Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25 -ntp
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1822137Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1822479Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1822858Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1823185Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1823589Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1824119Z   JAVA_HOME_25_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-1/x64
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1824535Z   WIREIT_CACHE: github
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1824812Z   WIREIT_CACHE_GITHUB_CUSTODIAN_PORT: 52057
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.1825123Z ##[endgroup]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:08.3064340Z Tests: org.keycloak.testsuite.oauth.**,org.keycloak.testsuite.oidc.**,org.keycloak.testsuite.policy.**,org.keycloak.testsuite.saml.**,org.keycloak.testsuite.script.**,org.keycloak.testsuite.theme.**,org.keycloak.testsuite.validation.**
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:12.9199203Z -- [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:12.9304210Z -- [INFO] Scanning for projects...
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:14.4695199Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:14.4699500Z -- [INFO] ------< org.keycloak.testsuite:integration-arquillian-tests-base >------
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:14.4700809Z -- [INFO] Building Base TestSuite 999.0.0-SNAPSHOT
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:14.4701859Z -- [INFO]   from pom.xml
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:14.4702670Z -- [INFO] --------------------------------[ jar ]---------------------------------
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:14.5122947Z -- [WARNING] Parameter 'overWriteIfNewer' is unknown for plugin 'maven-resources-plugin:3.0.1:copy-resources (example-realms)'
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.2605092Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.2606058Z -- [INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.4151864Z -- [INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.4157836Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.4163790Z -- [INFO] --- resources:3.0.1:copy-resources (copy-truststore) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5074699Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5178613Z -- [INFO] Copying 3 resources
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5237274Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5240798Z -- [INFO] --- resources:3.0.1:copy-resources (copy-common-dependencies) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5268756Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5333532Z -- [INFO] Copying 11 resources
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5364811Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5368979Z -- [INFO] --- resources:3.0.1:resources (default-resources) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5413656Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5414536Z -- [INFO] Copying 2 resources
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5419224Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:16.5420375Z -- [INFO] --- xml:1.0.1:transform (arquillian-default-protocol) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:17.6756946Z -- [INFO] Transforming file: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/resources/arquillian.xml
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:17.8177860Z -- [INFO] Transformed 1 file(s).
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:17.8185486Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:17.8186607Z -- [INFO] --- compiler:3.13.0:compile (default-compile) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:17.9562113Z -- [INFO] Recompiling the module because of changed source code.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:17.9708412Z -- [INFO] Compiling 316 source files with javac [debug release 17] to target/classes
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8433864Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/UIUtils.java:[26,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8451528Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/UIUtils.java:[27,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8463139Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/UIUtils.java:[28,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8493283Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/UIUtils.java:[29,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8523132Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/MultiTenant1Saml.java:[26,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8583326Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/MultiTenant2Saml.java:[26,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8613129Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/login/LoginBase.java:[29,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8643378Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/page/AbstractPatternFlyAlert.java:[36,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8674737Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/BitbucketLoginPage.java:[26,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8703163Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/URLUtils.java:[23,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8733341Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/GoogleLoginPage.java:[28,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8763278Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/InstagramLoginPage.java:[27,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8791221Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/TwitterLoginPage.java:[29,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8795210Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/AbstractLoggedInPage.java:[33,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8823399Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/fragments/ContentAlert.java:[28,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8853184Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnPolicyPage.java:[35,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8857076Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnPolicyPage.java:[36,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8861243Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnRegisterPage.java:[35,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8865228Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/SAMLServlet.java:[64,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8869106Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/EmployeeRoleMappingServlet.java:[81,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8873318Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/EmployeeRoleMappingServlet.java:[95,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8877180Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/UIUtils.java:[327,66] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8941722Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LanguageComboboxAwarePage.java:[42,57] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8945729Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LanguageComboboxAwarePage.java:[92,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8949678Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LoginPage.java:[37,32] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8954242Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LoginPage.java:[109,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8958444Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/KeycloakQuarkusServerDeployableContainer.java:[213,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8962735Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[54,16] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8966395Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[148,20] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.8970062Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[182,13] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9024173Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[213,48] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9027889Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[237,50] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9031762Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[261,28] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9035638Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LogoutSessionsPage.java:[33,50] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9039740Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/login/UpdateEmailPage.java:[28,38] org.keycloak.testsuite.pages.LogoutSessionsPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9044641Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakDronePostSetup.java:[85,35] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9048507Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakDronePostSetup.java:[86,38] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9082733Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/ConsentPage.java:[26,34] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9086870Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/DeleteCredentialPage.java:[31,43] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9090771Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/EmailUpdatePage.java:[26,38] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9095127Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/EnterRecoveryAuthnCodePage.java:[13,49] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9099305Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/ErrorPage.java:[29,32] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9103626Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/IdpConfirmLinkPage.java:[28,41] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9107816Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/IdpConfirmOverrideLinkPage.java:[23,49] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9142242Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/IdpLinkActionPage.java:[31,40] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9146144Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/IdpLinkEmailPage.java:[26,39] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9150000Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/InfoPage.java:[30,31] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9154220Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LoginConfigTotpPage.java:[28,42] org.keycloak.testsuite.pages.LogoutSessionsPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9158528Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LoginExpiredPage.java:[28,39] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9162892Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LoginPasswordResetPage.java:[28,45] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9167339Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LoginPasswordUpdatePage.java:[29,46] org.keycloak.testsuite.pages.LogoutSessionsPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9201765Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LoginTotpPage.java:[33,36] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9205737Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LoginUpdateProfilePage.java:[39,45] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9209597Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LoginUpdateProfilePage.java:[129,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9213847Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/LogoutConfirmPage.java:[32,40] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9217974Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/OAuth2DeviceVerificationPage.java:[27,51] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9222310Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/OAuthGrantPage.java:[33,37] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9226365Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/PasswordPage.java:[16,35] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9230232Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/ProceedPage.java:[26,34] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9263381Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/PushTheButtonPage.java:[31,40] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9267517Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/RegisterPage.java:[38,35] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9271653Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/ResetOtpPage.java:[9,35] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9275666Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/SelectAuthenticatorPage.java:[15,46] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9280055Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/SelectOrganizationPage.java:[30,45] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9284482Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/SetupRecoveryAuthnCodesPage.java:[13,50] org.keycloak.testsuite.pages.LogoutSessionsPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9288790Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/TermsAndConditionsPage.java:[27,45] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9293474Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/UpdateAccountInformationPage.java:[10,51] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9297494Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/VerifyEmailPage.java:[29,38] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9301612Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/VerifyProfilePage.java:[32,40] org.keycloak.testsuite.pages.AbstractPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9305427Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/InstagramLoginPage.java:[58,17] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9309281Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/InstagramLoginPage.java:[73,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9313371Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/MicrosoftLoginPage.java:[47,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9317216Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/MicrosoftLoginPage.java:[52,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9321499Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/MicrosoftLoginPage.java:[63,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9325316Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/MicrosoftLoginPage.java:[72,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9329145Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/OpenShiftLoginPage.java:[56,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9333484Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/OpenShiftLoginPage.java:[62,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9337313Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/PayPalLoginPage.java:[53,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9341415Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/PayPalLoginPage.java:[63,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9345231Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/PayPalLoginPage.java:[67,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9349059Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/social/TwitterLoginPage.java:[62,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9353363Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/pages/x509/X509IdentityConfirmationPage.java:[34,51] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9357722Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/AdminClientUtil.java:[152,66] org.jboss.resteasy.client.jaxrs.engines.ClientHttpEngineBuilder43 in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9362002Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/BrowserTabUtil.java:[96,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9365920Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnErrorPage.java:[16,40] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9369913Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnErrorPage.java:[29,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9374356Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnErrorPage.java:[35,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9378389Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnLoginPage.java:[33,40] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9382772Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnLoginPage.java:[45,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9387009Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnRegisterPage.java:[45,43] org.keycloak.testsuite.pages.LogoutSessionsPage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9391317Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/webauthn/pages/WebAuthnRegisterPage.java:[108,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9394798Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ServerTestEnricherUtil.java: Some input files use or override a deprecated API.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9397761Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ServerTestEnricherUtil.java: Recompile with -Xlint:deprecation for details.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9400650Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java: Some input files use unchecked or unsafe operations.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9403755Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java: Recompile with -Xlint:unchecked for details.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9405425Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9406236Z -- [INFO] --- resources:3.0.1:copy-resources (example-realms) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9407179Z -- [INFO] Skipping the execution.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9407681Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:22.9408483Z -- [INFO] --- dependency:3.1.2:unpack (unpack-undertow-server) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:23.2237499Z -- [INFO] Skipping plugin execution
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:23.2243220Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:23.2244289Z -- [INFO] --- dependency:3.1.2:unpack (unpack-quarkus-server) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:23.2272120Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-servers-auth-server-quarkus:999.0.0-SNAPSHOT:zip
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:23.2408549Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-auth-server-quarkus/999.0.0-SNAPSHOT/integration-arquillian-servers-auth-server-quarkus-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.8302123Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.8303355Z -- [INFO] --- dependency:3.1.2:unpack (unpack-app-server) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.8324839Z -- [INFO] Skipping plugin execution
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.8326619Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.8352059Z -- [INFO] --- dependency:3.1.2:unpack (unpack-client-cli-dist) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.8359938Z -- [INFO] Configured Artifact: org.keycloak:keycloak-client-cli-dist:999.0.0-SNAPSHOT:zip
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.8428576Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/keycloak-client-cli-dist/999.0.0-SNAPSHOT/keycloak-client-cli-dist-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.9420886Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.9424262Z -- [INFO] --- dependency:3.1.2:copy-dependencies (copy-testsuite-providers-to-base-testsuite) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.9523227Z -- [INFO] Copying integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/lib/integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.9585237Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.9642283Z -- [INFO] --- resources:3.0.1:testResources (default-testResources) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.9691715Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:24.9702390Z -- [INFO] Copying 16 resources
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:25.0999140Z -- [INFO] Copying 184 resources
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:25.1371533Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:25.1372895Z -- [INFO] --- antrun:1.8:run (clean-second-cache-server-arquillian-bug-workaround) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:25.1932368Z -- [INFO] Skipping Antrun execution
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:25.1961669Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:25.1992103Z -- [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:25.2180198Z -- [INFO] Recompiling the module because of changed dependency.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:25.2231885Z -- [INFO] Compiling 536 source files with javac [debug release 17] to target/test-classes
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3133746Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/AbstractServletsAdapterTest.java:[42,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3173637Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/AbstractSAMLServletAdapterTest.java:[30,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3233389Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLLoginResponseHandlingTest.java:[49,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3243222Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLLoginResponseHandlingTest.java:[50,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3283288Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[226,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3293377Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[227,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3323225Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerTestTools.java:[26,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3333149Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerLoginHintTest.java:[23,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3363602Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractClusterTest.java:[26,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3406723Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractFailoverClusterTest.java:[41,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3413450Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AuthenticationSessionFailoverClusterTest.java:[34,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3433220Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/SessionFailoverClusterTest.java:[7,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3463218Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/BackchannelLogoutTest.java:[56,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3492913Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/webauthn/AbstractWebAuthnVirtualTest.java:[78,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3503415Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/webauthn/AppInitiatedActionWebAuthnTest.java:[64,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3523283Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/webauthn/account/AbstractWebAuthnAccountTest.java:[58,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3563208Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/webauthn/account/WebAuthnSigningInTest.java:[57,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3567391Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/webauthn/registration/AttestationConveyanceRegisterTest.java:[38,42] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3603484Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3632040Z --   reason: class file for org.infinispan.factories.scopes.Scopes not found
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3633521Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3661897Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3693233Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testframework/realm/ManagedRealm.java:[8,19] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3723102Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testframework/realm/ManagedRealm.java:[11,25] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3742739Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AbstractKeycloakTest.java:[300,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3763489Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testframework/remote/timeoffset/TimeOffSet.java:[9,19] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3783219Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testframework/remote/timeoffset/TimeOffSet.java:[11,23] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3813324Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AbstractTestRealmKeycloakTest.java:[48,61] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3823069Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java:[57,13] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3853134Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java:[59,30] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3873256Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AbstractAuthTest.java:[44,48] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3903357Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AbstractAuthenticationTest.java:[37,58] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3933252Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AbstractConcurrencyTest.java:[66,85] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3943080Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[30,19] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3972998Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[33,25] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.3993479Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/AbstractAppInitiatedActionTest.java:[77,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4023620Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/AppInitiatedActionUpdateEmailWithVerificationTest.java:[231,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4033110Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/InfinispanTestTimeServiceRule.java:[33,19] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4063525Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/InfinispanTestTimeServiceRule.java:[35,42] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4083425Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/RequiredActionTotpSetupTest.java:[178,9] org.keycloak.testsuite.pages.LanguageComboboxAwarePage in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4113546Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/RequiredActionUpdateEmailTestWithVerificationTest.java:[145,17] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4143304Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/TermsAndConditionsTest.java:[155,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4153100Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/TermsAndConditionsTest.java:[164,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4183249Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLLoginResponseHandlingTest.java:[256,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4203422Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[850,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4233214Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/AbstractAuthzTest.java:[19,49] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4262930Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/EntitlementAPITest.java:[2940,62] non-varargs call of varargs method with inexact argument type for last parameter;
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4271595Z --   cast to java.lang.String for a varargs call
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4301730Z --   cast to java.lang.String[] for a non-varargs call and to suppress this warning
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4323387Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/UmaDiscoveryDocumentTest.java:[43,47] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4353472Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/AbstractPolicyManagementTest.java:[56,60] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4363033Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerTestTools.java:[76,64] org.keycloak.testsuite.pages.PageUtils in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4423565Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractBaseBrokerTest.java:[84,54] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4427674Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractBaseBrokerTest.java:[266,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4453272Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[194,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4483203Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[203,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4487096Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[269,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4490864Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[584,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4494869Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AccountLinkTest.java:[67,38] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4498583Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[670,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4502534Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[686,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4506189Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[701,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4553754Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[779,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4557231Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[826,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4560655Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[878,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4564901Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[931,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4568817Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTransientSessionsTest.java:[404,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4603161Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTransientSessionsTest.java:[420,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4607175Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTransientSessionsTest.java:[435,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4611518Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTransientSessionsTest.java:[507,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4615644Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTransientSessionsTest.java:[555,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4619711Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTransientSessionsTest.java:[559,13] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4623971Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcSamlIdPInitiatedSsoTest.java:[83,48] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4628038Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcSamlIdPInitiatedSsoTest.java:[301,130] org.keycloak.testsuite.pages.PageUtils in org.keycloak.testsuite.pages has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4672298Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcSamlParseIdPDescriptorTest.java:[44,51] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4676493Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcSamlUsernameTemplateMapperTest.java:[74,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4680479Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcSamlUsernameTemplateMapperTest.java:[115,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4684428Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[105,38] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4688617Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[282,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4692646Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[283,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4696063Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[307,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4699649Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[518,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4733675Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[519,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4737193Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[531,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4740627Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[532,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4744430Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/AbstractClientRegistrationTest.java:[43,62] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4748308Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[203,58] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4752059Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/CIBATest.java:[1702,36] non-varargs call of varargs method with inexact argument type for last parameter;
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4754322Z --   cast to java.lang.String for a varargs call
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4755168Z --   cast to java.lang.String[] for a non-varargs call and to suppress this warning
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4757586Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractClusterTest.java:[34,51] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4791808Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/domainextension/CustomExtensionTest.java:[39,42] org.keycloak.testsuite.AbstractKeycloakTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4796567Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[287,9] org.jboss.resteasy.client.jaxrs.engines.ApacheHttpClient43Engine in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4801534Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[287,47] org.jboss.resteasy.client.jaxrs.engines.ApacheHttpClient43Engine in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4805817Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/ldap/LDAPReadOnlyTest.java:[248,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4809722Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/ldap/LDAPSyncTest.java:[126,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4813702Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/ldap/LDAPSyncTest.java:[162,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4817481Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/ldap/LDAPSyncTest.java:[200,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4851886Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/AbstractUserStorageDirtyDeletionTest.java:[37,68] org.keycloak.testsuite.AbstractConcurrencyTest in org.keycloak.testsuite has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4856001Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/AccountConsoleTest.java:[29,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4859720Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/AccountConsoleTest.java:[41,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4863722Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/AccountConsoleTest.java:[49,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4867754Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/AccountConsoleTest.java:[56,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4871712Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/AccountConsoleTest.java:[62,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4875402Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/BrowserFlowTest.java:[174,9] org.keycloak.testsuite.util.WaitUtils in org.keycloak.testsuite.util has been deprecated and marked for removal
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4879134Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/AppInitiatedActionDeleteCredentialTest.java: Some input files use or override a deprecated API.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4912652Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/AppInitiatedActionDeleteCredentialTest.java: Recompile with -Xlint:deprecation for details.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4916758Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/BruteForceTest.java: Some input files additionally use or override a deprecated API that is marked for removal.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4919741Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java: Some input files use unchecked or unsafe operations.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4922649Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java: Recompile with -Xlint:unchecked for details.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4924216Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4925127Z -- [INFO] --- shrinkwrap-resolver:3.2.1:propagate-execution-context (default) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4926160Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.4926875Z -- [INFO] --- docker:0.48.1:start (start-db-container) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.9232501Z -- [INFO] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:35.9258549Z -- [INFO] --- surefire:3.5.6:test (default-test) @ integration-arquillian-tests-base ---
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:36.1703902Z -- [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:36.1856690Z -- [WARNING] System property [auth.server.feature] overwritten by user properties from Maven session
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7771699Z -- [WARNING] The POM for org.junit.platform:junit-platform-launcher:jar:1.10.3 is missing, no dependency information available
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7950458Z -- [INFO] ------------------------------------------------------------------------
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7951359Z -- [INFO] BUILD FAILURE
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7951761Z -- [INFO] ------------------------------------------------------------------------
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7954928Z -- [INFO] Total time:  24.927 s
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7957090Z -- [INFO] Finished at: 2026-10-15T04:14:37Z
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7957797Z -- [INFO] ------------------------------------------------------------------------
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7975574Z -- [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project integration-arquillian-tests-base: The following artifacts could not be resolved: org.junit.platform:junit-platform-launcher:jar:1.10.3 (absent): Could not find artifact org.junit.platform:junit-platform-launcher:jar:1.10.3 in central (https://repo.maven.apache.org/maven2) -> [Help 1]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7978515Z -- [ERROR] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7979538Z -- [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7980543Z -- [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7981541Z -- [ERROR] 
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7982358Z -- [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.7983636Z -- [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.8290044Z ##[error]Process completed with exit code 1.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.8403003Z Post job cleanup.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.8409277Z ##[start-action display=Cache PNPM store;id=__08a101c7-1167-4186-91cb-cee05eea07bf.__actions_cache]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.8411736Z ##[end-action id=__08a101c7-1167-4186-91cb-cee05eea07bf.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.8413917Z ##[start-action display=Cache Node.js and PNPM binaries;id=__08a101c7-1167-4186-91cb-cee05eea07bf.cache-binaries]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.8416223Z ##[end-action id=__08a101c7-1167-4186-91cb-cee05eea07bf.cache-binaries;outcome=skipped;conclusion=skipped;duration_ms=0]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.8418254Z ##[start-action display=Setup Java;id=__08a101c7-1167-4186-91cb-cee05eea07bf.setup-java]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.8494525Z Post job cleanup.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.9272124Z ##[end-action id=__08a101c7-1167-4186-91cb-cee05eea07bf.setup-java;outcome=success;conclusion=success;duration_ms=85]
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:37.9342772Z Post job cleanup.
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0187043Z [command]/usr/bin/git version
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0225114Z git version 2.55.0
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0267520Z Temporarily overriding HOME='/home/runner/work/_temp/24255c4b-2570-454b-a7ff-d0c1614351da' before making global git config changes
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0268990Z Adding repository directory to the temporary git global config as a safe directory
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0272896Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0306026Z Removing SSH command configuration
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0314649Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0363735Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0620816Z Removing HTTP extra header
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0629055Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0668950Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0906345Z Removing includeIf entries pointing to credentials config files
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0913154Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0941340Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0942358Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0943254Z includeif.gitdir:/github/workspace/.git.path
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0944029Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0952540Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0975502Z /home/runner/work/_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.0985958Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-3b059583\-fc28\-4ad3\-bcde\-373b7cadbc28\.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1020065Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1042567Z /home/runner/work/_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1052068Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-3b059583\-fc28\-4ad3\-bcde\-373b7cadbc28\.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1092718Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1114166Z /github/runner_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1123053Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-3b059583\-fc28\-4ad3\-bcde\-373b7cadbc28\.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1157566Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1178344Z /github/runner_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1186600Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-3b059583\-fc28\-4ad3\-bcde\-373b7cadbc28\.config
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1220709Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1454236Z Removing credentials config '/home/runner/work/_temp/git-credentials-3b059583-fc28-4ad3-bcde-373b7cadbc28.config'
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1623040Z Cleaning up orphan processes
+Base IT (6)	UNKNOWN STEP	2026-10-15T04:14:38.1990489Z Terminate orphan process: pid (2338) (node)
+Status Check - Keycloak CI	UNKNOWN STEP	﻿2026-10-15T04:58:26.6557288Z Current runner version: '2.337.0'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6582486Z ##[group]Runner Image Provisioner
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6583395Z Hosted Compute Agent
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6584065Z Version: 20261002.596
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6584687Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6585424Z Build Date: 2026-10-02T22:28:27Z
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6586200Z Worker ID: {fdd00ea8-ef11-4235-aa1e-d6cd1e7c3044}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6586921Z Region: northcentralus
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6587845Z Cloud: Azure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6588733Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6590618Z ##[group]Operating System
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6591381Z Ubuntu
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6591937Z 24.04.5
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6592476Z LTS
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6593002Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6593592Z ##[group]Runner Image
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6594223Z Image: ubuntu-24.04
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6594819Z Version: 20261004.327.1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6596145Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6597693Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6599099Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6600278Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6602522Z Contents: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6603141Z Metadata: read
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6603685Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6605863Z Secret source: Actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6606850Z Cache mode: write
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.6607865Z Prepare workflow directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.7036107Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.7084843Z Getting action download info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:26.9255313Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1061694Z Complete job name: Status Check - Keycloak CI
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1939801Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1940960Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1941407Z   repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1945209Z   token: ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1945644Z   ssh-strict: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1946086Z   ssh-user: git
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1946528Z   persist-credentials: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1947015Z   clean: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1947453Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1947973Z   fetch-depth: 1
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1948839Z   fetch-tags: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1949403Z   show-progress: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1949865Z   lfs: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1950283Z   submodules: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1950729Z   set-safe-directory: true
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1951243Z   allow-unsafe-pr-checkout: false
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1952208Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1952810Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1953582Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1954207Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1954858Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1955372Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.1955861Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.2969502Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.2971885Z ##[group]Getting Git version info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.2972639Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.2973649Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3050677Z git version 2.55.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3071519Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3082201Z Temporarily overriding HOME='/home/runner/work/_temp/e6c647db-6c61-449d-8855-eeb36764a0d1' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3083597Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3088165Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3136939Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3140648Z ##[group]Determining repository object format
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3142268Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3143040Z ##[group]Initializing the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3146389Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3275083Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3276569Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3277678Z hint: to use in all of your new repositories, which will suppress this warning,
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3278754Z hint: call:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3279326Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3280229Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3281002Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3281579Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3282544Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3283295Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3283713Z hint: 	git branch -m <name>
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3284258Z hint:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3285381Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3286877Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3290648Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3341699Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3342472Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3345127Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3374524Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3375351Z ##[group]Setting up auth
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3375900Z Removing SSH command configuration
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3380744Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3411659Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3772121Z Removing HTTP extra header
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3777221Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.3807551Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4019717Z Removing includeIf entries pointing to credentials config files
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4025208Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4055128Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4280974Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4317112Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git.path /home/runner/work/_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4349587Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4384833Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4417876Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4448628Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4449397Z ##[group]Fetching the repository
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:27.4455474Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8a081db466da3ff8de74efab2f3d9844277c18ba:refs/remotes/origin/main
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7655583Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7657329Z  * [new ref]           8a081db466da3ff8de74efab2f3d9844277c18ba -> origin/main
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7664992Z [command]/usr/bin/git branch --list --remote origin/main
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7692892Z   origin/main
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7703481Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7728205Z 8a081db466da3ff8de74efab2f3d9844277c18ba
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7733899Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7735150Z ##[group]Determining the checkout info
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7736521Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7737778Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7792990Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7824023Z ##[group]Checking out the ref
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:31.7827343Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8040471Z Updating files:  97% (13193/13539)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8136894Z Updating files:  98% (13269/13539)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8224067Z Updating files:  99% (13404/13539)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8224815Z Updating files: 100% (13539/13539)
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8225382Z Updating files: 100% (13539/13539), done.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8420728Z Switched to a new branch 'main'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8449392Z branch 'main' set up to track 'origin/main'.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8454467Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8501241Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8527699Z 8a081db466da3ff8de74efab2f3d9844277c18ba
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8823822Z Prepare all required actions
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8905681Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8906067Z with:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8913793Z   jobs: {
+Status Check - Keycloak CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-store": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-webauthn": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-additional-dbs": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-admin-v2": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-quarkus": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-sssd": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-aurora": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-azure": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci-jackson3": "true",
+Status Check - Keycloak CI	UNKNOWN STEP	      "ci": "true"
+Status Check - Keycloak CI	UNKNOWN STEP	    }
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jdk-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "http-client-v2-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "store-model-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "clustering-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "fips-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "forms-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "sssd-unit-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "migration-tests-cs": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "external-infinispan-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "test-framework": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "base-new-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "mixed-cluster-compatibility-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "skipped",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "authzen-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "admin-v2-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "jackson3-admin-client-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "testsuite-deprecation-check": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "stateless-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  },
+Status Check - Keycloak CI	UNKNOWN STEP	  "stateless-cluster-integration-tests": {
+Status Check - Keycloak CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak CI	UNKNOWN STEP	  }
+Status Check - Keycloak CI	UNKNOWN STEP	}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8922251Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8922624Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8923090Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8923493Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8923878Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8924173Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8924456Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.8982957Z ##[start-action display=Check jobs;id=__self.check-jobs]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9047111Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9047858Z ^[[36;1mJOBS='{^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9048133Z ^[[36;1m  "conditional": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9048628Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9048947Z ^[[36;1m    "outputs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9049242Z ^[[36;1m      "ci-store": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9049558Z ^[[36;1m      "ci-webauthn": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9049899Z ^[[36;1m      "ci-additional-dbs": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9050244Z ^[[36;1m      "ci-admin-v2": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9050552Z ^[[36;1m      "ci-quarkus": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9051125Z ^[[36;1m      "ci-sssd": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9051432Z ^[[36;1m      "ci-aurora": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9051727Z ^[[36;1m      "ci-azure": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9052022Z ^[[36;1m      "ci-jackson3": "true",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9052317Z ^[[36;1m      "ci": "true"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9052594Z ^[[36;1m    }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9052822Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9053058Z ^[[36;1m  "build": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9053361Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9053658Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9053930Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9054173Z ^[[36;1m  "unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9054451Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9054748Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9055019Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9055281Z ^[[36;1m  "base-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9055602Z ^[[36;1m    "result": "failure",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9055899Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9056177Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9056440Z ^[[36;1m  "adapter-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9056769Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9057062Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9057323Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9057687Z ^[[36;1m  "adapter-integration-tests-strict-cookies": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9058063Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9058500Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9058763Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9059006Z ^[[36;1m  "quarkus-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9059303Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9059583Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9059837Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9060094Z ^[[36;1m  "quarkus-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9060415Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9060695Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9060953Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9061209Z ^[[36;1m  "jdk-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9061514Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9061797Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9062050Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9062301Z ^[[36;1m  "store-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9062784Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9063078Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9063336Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9063584Z ^[[36;1m  "volatile-sessions-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9063927Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9064209Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9064468Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9064714Z ^[[36;1m  "http-client-v2-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9065029Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9065314Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9065574Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9065810Z ^[[36;1m  "store-model-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9066112Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9066394Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9066646Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9066910Z ^[[36;1m  "clustering-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9067240Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9067534Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9067793Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9068043Z ^[[36;1m  "fips-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9068464Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9068754Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9069013Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9069260Z ^[[36;1m  "fips-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9069570Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9069852Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9070107Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9070356Z ^[[36;1m  "forms-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9070665Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9071098Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9071361Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9071619Z ^[[36;1m  "webauthn-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9071945Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9072229Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9072495Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9072738Z ^[[36;1m  "sssd-unit-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9073020Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9073300Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9073556Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9073797Z ^[[36;1m  "migration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9074082Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9074368Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9074625Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9074863Z ^[[36;1m  "migration-tests-cs": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9075161Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9075438Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9075695Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9075958Z ^[[36;1m  "external-infinispan-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9076288Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9076572Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9076825Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9077061Z ^[[36;1m  "test-framework": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9077348Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9077627Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9077883Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9078139Z ^[[36;1m  "base-new-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9154527Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9154958Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9155263Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9155600Z ^[[36;1m  "mixed-cluster-compatibility-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9156037Z ^[[36;1m    "result": "skipped",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9156376Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9156689Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9156989Z ^[[36;1m  "authzen-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9157374Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9157671Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9157939Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9158432Z ^[[36;1m  "admin-v2-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9158906Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9159517Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9159784Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9160053Z ^[[36;1m  "jackson3-admin-client-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9160388Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9160674Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9160936Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9161207Z ^[[36;1m  "testsuite-deprecation-check": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9161547Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9161862Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9162122Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9162365Z ^[[36;1m  "stateless-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9162652Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9162946Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9163207Z ^[[36;1m  },^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9163493Z ^[[36;1m  "stateless-cluster-integration-tests": {^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9163844Z ^[[36;1m    "result": "success",^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9164128Z ^[[36;1m    "outputs": {}^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9164398Z ^[[36;1m  }^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9164632Z ^[[36;1m}'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9164896Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9165135Z ^[[36;1mecho "Job status:"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9165526Z ^[[36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9165960Z ^[[36;1m^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9166283Z ^[[36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9166761Z ^[[36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9167128Z ^[[36;1m    echo ""^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9167411Z ^[[36;1m    echo "Status check not okay!"^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9167734Z ^[[36;1m    exit 1^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9168152Z ^[[36;1m  fi^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9168855Z ^[[36;1mdone^[[0m
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9469314Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9469846Z env:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9470237Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9470753Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9471143Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9471554Z   KC_TEST_GITHUB_SLOW_METHOD: 10
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9471875Z   KC_TEST_GITHUB_SLOW_CLASS: 60
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9472185Z ##[endgroup]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9590719Z Job status:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9619230Z  - conditional: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9619790Z  - build: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9620278Z  - unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9620852Z  - base-integration-tests: failure
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9621465Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9622145Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9622832Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9623368Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9623939Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9624477Z  - store-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9625029Z  - volatile-sessions-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9625487Z  - http-client-v2-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9625905Z  - store-model-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9626480Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9627065Z  - fips-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9627661Z  - fips-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9628444Z  - forms-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9629061Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9629626Z  - sssd-unit-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9630126Z  - migration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9630624Z  - migration-tests-cs: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9631076Z  - external-infinispan-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9631429Z  - test-framework: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9631736Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9632131Z  - mixed-cluster-compatibility-tests: skipped
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9632496Z  - authzen-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9632824Z  - admin-v2-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9633345Z  - jackson3-admin-client-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9633695Z  - testsuite-deprecation-check: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9634024Z  - stateless-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9634362Z  - stateless-cluster-integration-tests: success
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9657443Z 
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9657865Z Status check not okay!
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9670772Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9687897Z ##[end-action id=__self.check-jobs;outcome=failure;conclusion=failure;duration_ms=70]
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:32.9836149Z Post job cleanup.
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.0676728Z [command]/usr/bin/git version
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.0717121Z git version 2.55.0
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.0762056Z Temporarily overriding HOME='/home/runner/work/_temp/96def11b-4bf2-4b62-b672-66b7b7a4f7ee' before making global git config changes
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.0763495Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.0767740Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.0802369Z Removing SSH command configuration
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.0809785Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.0846255Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1101569Z Removing HTTP extra header
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1107791Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1147880Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1412852Z Removing includeIf entries pointing to credentials config files
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1420409Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1451394Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1452364Z includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1453162Z includeif.gitdir:/github/workspace/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1453841Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1460825Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1484979Z /home/runner/work/_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1495804Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-4a68682b\-4d2b\-4071\-8acc\-b38979b28a25\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1542980Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1567342Z /home/runner/work/_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1576994Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/keycloak/keycloak/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-4a68682b\-4d2b\-4071\-8acc\-b38979b28a25\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1619573Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1642729Z /github/runner_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1650487Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-4a68682b\-4d2b\-4071\-8acc\-b38979b28a25\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1683319Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1705666Z /github/runner_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1714113Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-4a68682b\-4d2b\-4071\-8acc\-b38979b28a25\.config
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1749507Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.1991800Z Removing credentials config '/home/runner/work/_temp/git-credentials-4a68682b-4d2b-4071-8acc-b38979b28a25.config'
+Status Check - Keycloak CI	UNKNOWN STEP	2026-10-15T04:58:33.2140232Z Cleaning up orphan processes
