@@ -114,6 +114,13 @@ public class LogFailedParser {
     }
 
     public void filterResolved() {
+        for (FailedRun failedRun : retriedGreenRuns) {
+            failedRun.setResolvedBy(resolvedIssues.getResolved(failedRun));
+            for (FailedJob job : failedRun.getFailedJobs()) {
+                job.setResolvedBy(resolvedIssues.getResolved(job));
+            }
+        }
+
         Iterator<FailedRun> runItr = failedRuns.iterator();
         while (runItr.hasNext()) {
             FailedRun failedRun = runItr.next();
@@ -147,7 +154,10 @@ public class LogFailedParser {
         File logFile = new File("logs/" + (pr ? "pr-" : "") + "log-" + runId);
 
         FailedRun failedRun = new FailedRun(runId);
-        failedRuns.add(failedRun);
+        // Retried PR runs only feed the flaky table, the failed job lists cover main
+        if (!pr) {
+            failedRuns.add(failedRun);
+        }
 
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(conclusionFile)));
         List<FailedJob> jobs = new LinkedList<>();
