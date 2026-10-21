@@ -9,7 +9,43 @@ public class FailedJob {
     private FailedRun failedRun;
     private String name;
     private JobConclusion conclusion;
+    static final String NO_ERROR_PREFIX = "No error parsed: ";
+
     private ResolvedIssue resolvedBy;
+    private String failedStep;
+
+    public String getFailedStep() {
+        return failedStep;
+    }
+
+    public void setFailedStep(String failedStep) {
+        this.failedStep = failedStep;
+    }
+
+    // Groups equal failures: first failing test or error line without line numbers, else the job and step
+    public String getErrorKey() {
+        for (String l : errorLog) {
+            String line = l.replaceAll("^.*?\\d{4}-\\d{2}-\\d{2}T[\\d:.]+Z\\s*", "").replace("##[error]", "").trim();
+            if (line.isEmpty() || line.matches("(Failed|Errors|Failures):.*") || line.startsWith("mvn ")
+                    || line.startsWith("The project ") || line.startsWith("Process completed")) {
+                continue;
+            }
+            line = line.replaceAll("(?<=\\w):\\d+(?=\\s|$)", "");
+            return line.length() > 200 ? line.substring(0, 200) + "..." : line;
+        }
+        String fallback = failedGoal != null ? failedGoal.replaceFirst("^Failed to execute goal ", "") : fallbackError;
+        if (fallback != null) {
+            fallback = fallback.replaceAll("^.*?\\d{4}-\\d{2}-\\d{2}T[\\d:.]+Z\\s*", "").replace("##[error]", "").trim();
+            return fallback.length() > 200 ? fallback.substring(0, 200) + "..." : fallback;
+        }
+        return NO_ERROR_PREFIX + name + (failedStep != null ? " / " + failedStep : "");
+    }
+
+    private String fallbackError;
+
+    public void setFallbackError(String fallbackError) {
+        this.fallbackError = fallbackError;
+    }
 
     public FailedJob(FailedRun failedRun, String name, JobConclusion conclusion) {
         this.failedRun = failedRun;

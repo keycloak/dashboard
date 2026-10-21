@@ -94,7 +94,7 @@ public class RetriedPrsLoader {
                 System.out.print(".");
                 for (GHWorkflowJob j : ghWorkflowJobs.toList()) {
                     if (j.getRunAttempt() == 1) {
-                        jobsOutput.println(j.getName() + ": [" + j.getConclusion() + "]");
+                        jobsOutput.println(j.getName() + ": [" + j.getConclusion() + "]" + failedStep(j));
                     }
                 }
 
@@ -138,6 +138,18 @@ public class RetriedPrsLoader {
         }
 
         System.out.println();
+    }
+
+    // Appended as ": <step>" after the conclusion, so the older "name: [conclusion]" format stays valid
+    private static String failedStep(GHWorkflowJob job) {
+        if (job.getConclusion() != org.kohsuke.github.GHWorkflowRun.Conclusion.FAILURE || job.getSteps() == null) {
+            return "";
+        }
+        return job.getSteps().stream()
+                .filter(s -> s.getConclusion() == org.kohsuke.github.GHWorkflowRun.Conclusion.FAILURE)
+                .findFirst()
+                .map(s -> ": " + s.getName())
+                .orElse("");
     }
 
 }
