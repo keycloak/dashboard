@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -37,6 +38,9 @@ public class LogFailedParser {
     private List<FailedRun> failedRuns = new LinkedList<>();
 
     private List<FailedRun> resolvedRuns = new LinkedList<>();
+
+    // Runs that failed on an earlier attempt, but were green after a re-run
+    private List<FailedRun> retriedGreenRuns = new LinkedList<>();
     private GitHubData data;
     private ResolvedIssues resolvedIssues;
 
@@ -47,6 +51,18 @@ public class LogFailedParser {
 
     public List<FailedRun> getFailedRuns() {
         return failedRuns;
+    }
+
+    public List<FlakyError> getFlakyErrors() {
+        Map<String, FlakyError> flakyErrors = new TreeMap<>();
+        for (FailedRun run : retriedGreenRuns) {
+            for (FailedJob job : run.getFailedJobs()) {
+                if (job.getConclusion() == JobConclusion.FAILURE && job.getResolvedBy() == null) {
+                    flakyErrors.computeIfAbsent(job.getErrorKey(), FlakyError::new).add(job);
+                }
+            }
+        }
+        return flakyErrors.values().stream().sorted(Comparator.comparingInt(FlakyError::getCount).reversed()).collect(Collectors.toList());
     }
 
     public List<FailedRun> getResolvedRuns() {
@@ -98,6 +114,13 @@ public class LogFailedParser {
     }
 
     public void filterResolved() {
+        for (FailedRun failedRun : retriedGreenRuns) {
+            failedRun.setResolvedBy(resolvedIssues.getResolved(failedRun));
+            for (FailedJob job : failedRun.getFailedJobs()) {
+                job.setResolvedBy(resolvedIssues.getResolved(job));
+            }
+        }
+
         Iterator<FailedRun> runItr = failedRuns.iterator();
         while (runItr.hasNext()) {
             FailedRun failedRun = runItr.next();
@@ -131,7 +154,10 @@ public class LogFailedParser {
         File logFile = new File("logs/" + (pr ? "pr-" : "") + "log-" + runId);
 
         FailedRun failedRun = new FailedRun(runId);
-        failedRuns.add(failedRun);
+        // Retried PR runs only feed the flaky table, the failed job lists cover main
+        if (!pr) {
+            failedRuns.add(failedRun);
+        }
 
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(conclusionFile)));
         List<FailedJob> jobs = new LinkedList<>();
@@ -156,12 +182,20 @@ public class LogFailedParser {
             return;
         }
 
+        if (pr) {
+            retriedGreenRuns.add(failedRun);
+        }
+
         for (String l = br.readLine(); l != null; l = br.readLine()) {
-            String[] split = l.split(": ");
+            String[] split = l.split(": ", 3);
             String name = split[0];
             JobConclusion conclusion = JobConclusion.fromLog(split[1]);
             if (conclusion != JobConclusion.SUCCESS && conclusion != JobConclusion.SKIPPED && !IGNORED_JOBS.contains(name)) {
-                jobs.add(new FailedJob(failedRun, name, conclusion));
+                FailedJob failedJob = new FailedJob(failedRun, name, conclusion);
+                if (split.length > 2) {
+                    failedJob.setFailedStep(split[2]);
+                }
+                jobs.add(failedJob);
             }
         }
 
@@ -208,6 +242,7 @@ public class LogFailedParser {
     private FailedJob parseTest(FailedJob job, File logFile) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(logFile)));
         List<String> errorLines = new LinkedList<>();
+        String fallback = null;
         for (String l = br.readLine(); l != null; l = br.readLine()) {
             if (l.startsWith(job.getName()) && l.contains(" [ERROR] ")) {
                 String[] split = l.split("\\[ERROR] ");
@@ -215,8 +250,14 @@ public class LogFailedParser {
                     errorLines.add(split[1]);
                 }
             }
+            if (fallback == null && l.startsWith(job.getName() + "\t")) {
+                fallback = fallbackError(l);
+            }
         }
         parse(job, errorLines);
+        if (job.getErrorLog().isEmpty() && job.getFailedGoal() == null) {
+            job.setFallbackError(fallback);
+        }
         return job;
     }
 
@@ -271,6 +312,22 @@ public class LogFailedParser {
         }
 
         return failedJobs;
+    }
+
+    // Errors outside of Maven output, for example from shell scripts, docker, or kubectl
+    private static final Pattern FALLBACK_ERROR = Pattern.compile("^(?:##\\[error]|(?:#\\d+ )?(?:ERROR|error|Error):? |tar: Error|HTTPError)(.*)$");
+
+    private static String fallbackError(String logLine) {
+        String[] split = logLine.split("\t", 3);
+        if (split.length < 3) {
+            return null;
+        }
+        String message = split[2].replaceAll("^\\uFEFF?\\S+Z\\s*", "").trim();
+        if (message.startsWith("##[error]Process completed with exit code")) {
+            return null;
+        }
+        Matcher m = FALLBACK_ERROR.matcher(message);
+        return m.matches() ? message : null;
     }
 
     private void parse(FailedJob job, List<String> errorLines) {

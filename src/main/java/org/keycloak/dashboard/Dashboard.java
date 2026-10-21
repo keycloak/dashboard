@@ -65,6 +65,7 @@ public class Dashboard {
         attributes.put("resolvedRuns", logFailedParser.getResolvedRuns());
         attributes.put("failedJobs", logFailedParser.getUnlinkedFailedJobs());
         attributes.put("linkedFailedJobs", logFailedParser.getLinkedFailedJobs());
+        attributes.put("flakyErrors", logFailedParser.getFlakyErrors());
         attributes.put("flakyTests", bugs.getFlakyTests());
         attributes.put("flakyTestCountsByTeam", bugs.getFlakyTestCountsByTeam());
         attributes.put("nextRelease", bugs.getNextRelease());

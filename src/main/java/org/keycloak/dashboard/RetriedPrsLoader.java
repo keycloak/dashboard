@@ -15,7 +15,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintStream;
+import java.nio.file.Files;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -93,8 +95,8 @@ public class RetriedPrsLoader {
                 PagedIterable<GHWorkflowJob> ghWorkflowJobs = gh.getRepository("keycloak/keycloak").getWorkflowRun(r.getId()).listAllJobs();
                 System.out.print(".");
                 for (GHWorkflowJob j : ghWorkflowJobs.toList()) {
-                    if (j.getRunAttempt() == 1) {
-                        jobsOutput.println(j.getName() + ": [" + j.getConclusion() + "]");
+                    if (j.getRunAttempt() < r.getRunAttempt()) {
+                        jobsOutput.println(j.getName() + ": [" + j.getConclusion() + "]" + failedStep(j));
                     }
                 }
 
@@ -110,7 +112,16 @@ public class RetriedPrsLoader {
 
                 if ("failure".equals(conclusion)) {
                     try {
-                        ghCli.download(jobsLog, "gh", "run", "view", "-R", "keycloak/keycloak", Long.toString(r.getId()), "--attempt", Integer.toString(r.getRunAttempt() - 1), "--log-failed");
+                        // A job may fail on any earlier attempt, so collect the failed logs of all of them
+                        File attemptLog = new File(logsDir, "pr-log-" + r.getId() + ".attempt");
+                        try (OutputStream all = new FileOutputStream(jobsLog)) {
+                            for (int attempt = 1; attempt < r.getRunAttempt(); attempt++) {
+                                ghCli.download(attemptLog, "gh", "run", "view", "-R", "keycloak/keycloak", Long.toString(r.getId()), "--attempt", Integer.toString(attempt), "--log-failed");
+                                Files.copy(attemptLog.toPath(), all);
+                            }
+                        } finally {
+                            attemptLog.delete();
+                        }
                         System.out.print(".");
                     } catch (IOException e) {
                         warnings.add("Failed to download log for run " + r.getId() + ": " + e.getMessage());
@@ -138,6 +149,18 @@ public class RetriedPrsLoader {
         }
 
         System.out.println();
+    }
+
+    // Appended as ": <step>" after the conclusion, so the older "name: [conclusion]" format stays valid
+    private static String failedStep(GHWorkflowJob job) {
+        if (job.getConclusion() != org.kohsuke.github.GHWorkflowRun.Conclusion.FAILURE || job.getSteps() == null) {
+            return "";
+        }
+        return job.getSteps().stream()
+                .filter(s -> s.getConclusion() == org.kohsuke.github.GHWorkflowRun.Conclusion.FAILURE)
+                .findFirst()
+                .map(s -> ": " + s.getName())
+                .orElse("");
     }
 
 }

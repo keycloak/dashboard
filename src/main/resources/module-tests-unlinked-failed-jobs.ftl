@@ -1,6 +1,6 @@
 <a id="unlinked-failed-jobs"></a>
 <div class="header">
-    Non-reported failed jobs
+    Recent failed jobs
 </div>
 <div class="body">
     <ul class="body-menu">
