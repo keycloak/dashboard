@@ -1,5 +1,5 @@
 {
-  "updatedDate" : 1792732096358,
+  "updatedDate" : 1792818462101,
   "areas" : [ "area/account/api", "area/account/ui", "area/adapter/fuse", "area/adapter/java-cli", "area/adapter/javascript", "area/adapter/jee", "area/adapter/saml", "area/adapter/spring", "area/admin/api", "area/admin/api-v2", "area/admin/cli", "area/admin/client-java", "area/admin/client-js", "area/admin/fine-grained-permissions", "area/admin/rbac", "area/admin/ui", "area/authentication", "area/authentication/webauthn", "area/authorization-services", "area/ci", "area/core", "area/dependencies", "area/dependencies/js", "area/dependencies/quarkus", "area/dist/quarkus", "area/docs", "area/events", "area/extensions", "area/identity-brokering", "area/import-export", "area/infinispan", "area/ldap", "area/login/ui", "area/observability", "area/oid4vc", "area/oidc", "area/operator", "area/organizations", "area/performance", "area/saml", "area/scim", "area/ssf", "area/storage", "area/test-framework", "area/testsuite", "area/token-exchange", "area/token-exchange/federated", "area/token-exchange/standard", "area/token-exchange/subject-impersonation", "area/translations", "area/user-profile", "area/welcome/ui", "area/workflows" ],
   "issues" : [ {
     "createdAt" : 1636377646000,
@@ -88393,12 +88393,12 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1773938249000,
-    "updatedAt" : 1790600077000,
+    "updatedAt" : 1792787422000,
     "closedAt" : 1790600066000,
     "number" : 47295,
     "title" : "LDAP bind credentials sent to new server when connection URL is changed",
     "userLogin" : "abstractj",
-    "labels" : [ "priority/important", "area/ldap", "team/core-iam", "kind/weakness", "release/26.8.0" ],
+    "labels" : [ "priority/important", "area/ldap", "team/core-iam", "backport/26.6", "kind/weakness", "release/26.8.0" ],
     "commentsCount" : 1
   }, {
     "createdAt" : 1773992278000,
@@ -96980,12 +96980,13 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1787661467000,
-    "updatedAt" : 1792705879000,
+    "updatedAt" : 1792781707000,
+    "closedAt" : 1792764505000,
     "number" : 52029,
     "title" : "Admin Console: Cache policy values are truncated for custom User Federation providers",
     "userLogin" : "dasniko",
-    "labels" : [ "kind/bug", "area/admin/ui", "team/core-iam", "priority/normal" ],
-    "commentsCount" : 5
+    "labels" : [ "kind/bug", "area/admin/ui", "team/core-iam", "priority/normal", "backport/26.8", "release/27.0.0" ],
+    "commentsCount" : 7
   }, {
     "createdAt" : 1787663215000,
     "updatedAt" : 1790756804000,
@@ -97101,11 +97102,12 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1787740626000,
-    "updatedAt" : 1792683028000,
+    "updatedAt" : 1792753340000,
+    "closedAt" : 1792753330000,
     "number" : 52068,
     "title" : "Flaky test: org.keycloak.testsuite.webauthn.WebAuthnPropertyTest#timeout",
     "userLogin" : "vaceksimon",
-    "labels" : [ "kind/bug", "area/ci", "flaky-test", "team/core-authn", "backport/26.8" ],
+    "labels" : [ "kind/bug", "area/ci", "flaky-test", "team/core-authn", "backport/26.8", "release/27.0.0" ],
     "commentsCount" : 14
   }, {
     "createdAt" : 1787745271000,
@@ -100554,11 +100556,12 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1790957701000,
-    "updatedAt" : 1792070817000,
+    "updatedAt" : 1792753345000,
+    "closedAt" : 1792753335000,
     "number" : 53482,
     "title" : "JGroups TCP graceful close logs ERROR with mTLS: \"closing inbound before receiving peer's close_notify\"",
     "userLogin" : "ahus1",
-    "labels" : [ "kind/bug", "area/infinispan", "team/production-readiness", "priority/normal", "backport/26.6", "backport/26.8" ],
+    "labels" : [ "kind/bug", "area/infinispan", "team/production-readiness", "priority/normal", "backport/26.6", "backport/26.8", "release/27.0.0" ],
     "commentsCount" : 3
   }, {
     "createdAt" : 1790959411000,
@@ -100709,11 +100712,12 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1791214701000,
-    "updatedAt" : 1792159592000,
+    "updatedAt" : 1792781682000,
+    "closedAt" : 1792781669000,
     "number" : 53555,
     "title" : "Admin API: evaluate-scopes \"granted\"/\"not-granted\" endpoints disclose role metadata from unauthorized role containers",
     "userLogin" : "sguilhen",
-    "labels" : [ "priority/important", "area/admin/fine-grained-permissions", "team/core-iam", "kind/weakness" ],
+    "labels" : [ "priority/important", "area/admin/fine-grained-permissions", "team/core-iam", "kind/weakness", "release/27.0.0" ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1791218111000,
@@ -101030,19 +101034,20 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1791444652000,
-    "updatedAt" : 1792446334000,
+    "updatedAt" : 1792746153000,
     "number" : 53729,
     "title" : "[26.8.0] Startup fails reading generated data/keycloak-truststore.p12: \"Cannot find any provider supporting PBEWithSHA1AndRC2_40\" (writer/reader crypto-provider mismatch, regression vs 26.7.3)",
     "userLogin" : "qdupuy-tsn",
     "labels" : [ "kind/bug", "priority/blocker", "area/dist/quarkus", "team/cloud-native" ],
-    "commentsCount" : 5
+    "commentsCount" : 6
   }, {
     "createdAt" : 1791458888000,
-    "updatedAt" : 1792244493000,
+    "updatedAt" : 1792782734000,
+    "closedAt" : 1792782724000,
     "number" : 53736,
     "title" : "Disabled organizations are still listed on the \"select organization\" login page",
     "userLogin" : "LukasSchwaiger",
-    "labels" : [ "kind/bug", "help wanted", "team/core-iam", "status/auto-expire", "status/auto-bump", "priority/normal", "area/organizations" ],
+    "labels" : [ "kind/bug", "help wanted", "team/core-iam", "status/auto-expire", "status/auto-bump", "priority/normal", "area/organizations", "release/27.0.0" ],
     "commentsCount" : 2
   }, {
     "createdAt" : 1791465608000,
@@ -101571,7 +101576,7 @@
     "commentsCount" : 4
   }, {
     "createdAt" : 1792148258000,
-    "updatedAt" : 1792159993000,
+    "updatedAt" : 1792743530000,
     "number" : 54063,
     "title" : "Forced login completing OTP across SSO maximum fails with persisted session age conflict (26.8.1)",
     "userLogin" : "jacksonej",
@@ -101579,11 +101584,12 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1792156882000,
-    "updatedAt" : 1792165409000,
+    "updatedAt" : 1792782778000,
+    "closedAt" : 1792782766000,
     "number" : 54067,
     "title" : "requiresUserMembership is evaluated against the organization in the kc.org form parameter",
     "userLogin" : "pedroigor",
-    "labels" : [ "kind/bug", "priority/important", "team/core-iam", "area/organizations" ],
+    "labels" : [ "kind/bug", "priority/important", "team/core-iam", "area/organizations", "release/27.0.0" ],
     "commentsCount" : 1
   }, {
     "createdAt" : 1792161347000,
@@ -101678,12 +101684,12 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1792419617000,
-    "updatedAt" : 1792587786000,
+    "updatedAt" : 1792741972000,
     "number" : 54115,
     "title" : "[OID4VCI] DEF compression for credential encryption is incorrectly enabled/disabled in the Admin UI",
     "userLogin" : "IngridPuppet",
     "labels" : [ "kind/bug", "priority/important", "area/oid4vc", "team/core-protocols", "status/labeled-by-bot" ],
-    "commentsCount" : 0
+    "commentsCount" : 1
   }, {
     "createdAt" : 1792422950000,
     "updatedAt" : 1792512640000,
@@ -101694,7 +101700,7 @@
     "commentsCount" : 2
   }, {
     "createdAt" : 1792423939000,
-    "updatedAt" : 1792424012000,
+    "updatedAt" : 1792774261000,
     "number" : 54121,
     "title" : "LDAP: export fails with LazyInitializationException on UserEntity.requiredActions after the first user batch",
     "userLogin" : "sguilhen",
@@ -101710,11 +101716,12 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1792428840000,
-    "updatedAt" : 1792429084000,
+    "updatedAt" : 1792772629000,
+    "closedAt" : 1792772520000,
     "number" : 54126,
     "title" : "Option description truncated at first period in qualified names, paths, and abbreviations",
     "userLogin" : "ahus1",
-    "labels" : [ "kind/bug", "priority/blocker", "area/dist/quarkus", "team/cloud-native", "team/production-readiness", "backport/26.8" ],
+    "labels" : [ "kind/bug", "priority/blocker", "area/dist/quarkus", "team/cloud-native", "team/production-readiness", "backport/26.8", "release/27.0.0" ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1792429542000,
@@ -101810,11 +101817,12 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1792494679000,
-    "updatedAt" : 1792674902000,
+    "updatedAt" : 1792781267000,
+    "closedAt" : 1792781257000,
     "number" : 54162,
     "title" : "Recovery Codes heading rendered as plain text in Server Administration Guide",
     "userLogin" : "ahus1",
-    "labels" : [ "kind/bug", "area/docs", "backport/26.6", "backport/26.8" ],
+    "labels" : [ "kind/bug", "area/docs", "backport/26.6", "backport/26.8", "release/27.0.0" ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1792498619000,
@@ -101860,20 +101868,22 @@
     "commentsCount" : 3
   }, {
     "createdAt" : 1792525413000,
-    "updatedAt" : 1792671645000,
+    "updatedAt" : 1792766299000,
+    "closedAt" : 1792753503000,
     "number" : 54195,
     "title" : "Cached organization returns identity provider models bound to the session that loaded it (\"Session not bound to a realm\")",
     "userLogin" : "AlexH-BCS",
-    "labels" : [ "kind/bug", "status/triage", "team/core-iam", "area/organizations", "status/labeled-by-bot" ],
+    "labels" : [ "kind/bug", "priority/blocker", "team/core-iam", "area/organizations", "status/labeled-by-bot", "backport/26.8", "release/27.0.0" ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1792534328000,
-    "updatedAt" : 1792534475000,
+    "updatedAt" : 1792759432000,
+    "closedAt" : 1792755723000,
     "number" : 54197,
     "title" : "Compromised eMudhra intermediate CAs are still trusted",
     "userLogin" : "tolik518",
-    "labels" : [ "kind/bug", "area/core", "status/triage", "team/core-shared" ],
-    "commentsCount" : 0
+    "labels" : [ "kind/bug", "area/dist/quarkus", "team/cloud-native", "team/core-shared" ],
+    "commentsCount" : 5
   }, {
     "createdAt" : 1792568493000,
     "updatedAt" : 1792577769000,
@@ -101893,12 +101903,12 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1792571757000,
-    "updatedAt" : 1792595207000,
+    "updatedAt" : 1792776522000,
     "closedAt" : 1792595197000,
     "number" : 54209,
     "title" : "Resetting time offset for caches fails when the testing TimeService was not enabled",
     "userLogin" : "ahus1",
-    "labels" : [ "area/testsuite", "kind/bug", "priority/normal", "backport/26.4", "team/continuous-delivery", "backport/26.6", "backport/26.8", "release/27.0.0" ],
+    "labels" : [ "area/testsuite", "kind/bug", "flaky-test", "priority/normal", "backport/26.4", "team/continuous-delivery", "backport/26.6", "backport/26.8", "release/27.0.0" ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1792572748000,
@@ -101997,13 +102007,13 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1792618280000,
-    "updatedAt" : 1792668012000,
+    "updatedAt" : 1792750320000,
     "closedAt" : 1792666518000,
     "number" : 54240,
     "title" : "Concurrent \"insert … on conflict\" upserts fail with a unique constraint violation on SQL Server and Oracle",
     "userLogin" : "Semih702",
     "labels" : [ "kind/bug", "priority/important", "area/storage", "team/production-readiness", "status/labeled-by-bot", "backport/26.8", "release/27.0.0" ],
-    "commentsCount" : 1
+    "commentsCount" : 2
   }, {
     "createdAt" : 1792651786000,
     "updatedAt" : 1792654046000,
@@ -102068,6 +102078,70 @@
     "title" : "Kerberos realm in login username is not validated against provider configuration (defense-in-depth hardening)",
     "userLogin" : "abstractj",
     "labels" : [ "area/authentication", "priority/important", "team/core-authn", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792740027000,
+    "updatedAt" : 1792740108000,
+    "number" : 54277,
+    "title" : "Review Keycloak endpoints to properly validate DPoP and mTLS bound tokens",
+    "userLogin" : "mposolda",
+    "labels" : [ "area/oidc", "priority/important", "team/core-protocols", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792752479000,
+    "updatedAt" : 1792753286000,
+    "number" : 54284,
+    "title" : "Detect and expose clock skew between Keycloak cluster nodes",
+    "userLogin" : "ahus1",
+    "labels" : [ "area/core", "status/triage", "team/core-shared", "team/production-readiness", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792758022000,
+    "updatedAt" : 1792761811000,
+    "number" : 54285,
+    "title" : "Restored Wireit cache can produce a themes-vendor jar without React files",
+    "userLogin" : "ahus1",
+    "labels" : [ "kind/bug", "area/ci", "status/triage", "flaky-job", "team/continuous-delivery", "backport/26.6", "backport/26.8" ],
+    "commentsCount" : 4
+  }, {
+    "createdAt" : 1792759591000,
+    "updatedAt" : 1792794209000,
+    "number" : 54288,
+    "title" : "Brokered login fails with \"already linked\" when the IdP sends a known user's federated ID in a different case",
+    "userLogin" : "StefanD-503",
+    "labels" : [ "kind/bug", "status/triage", "area/identity-brokering", "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792761591000,
+    "updatedAt" : 1792776082000,
+    "number" : 54290,
+    "title" : "Flaky test: Admin UI E2E \"should persist values after page refresh\" (oid4vci-attributes)",
+    "userLogin" : "ahus1",
+    "labels" : [ "kind/bug", "area/admin/ui", "flaky-test", "team/core-shared", "backport/26.6", "backport/26.8" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792765516000,
+    "updatedAt" : 1792765521000,
+    "number" : 54291,
+    "title" : "OID4VP WalletScheme configuration accepts arbitrary URI schemes including javascript:",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/authentication", "priority/important", "area/oid4vc", "team/core-authn", "team/core-protocols", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792779098000,
+    "updatedAt" : 1792779663000,
+    "number" : 54296,
+    "title" : "Resource indicators: token introspection returns `active: false` for an RFC 8707 token when the introspecting client is the resource server registered with that `resource_url`",
+    "userLogin" : "yedlurisrinu",
+    "labels" : [ "area/oidc", "kind/bug", "status/triage", "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792784295000,
+    "updatedAt" : 1792784299000,
+    "number" : 54300,
+    "title" : "Realm display name placeholder not parsed in web page title",
+    "userLogin" : "ianwallen",
+    "labels" : [ "kind/bug", "status/triage", "area/login/ui", "team/core-authn" ],
     "commentsCount" : 0
   } ],
   "prs" : [ {
@@ -253465,14 +253539,6 @@
     "labels" : [ "team/cloud-native" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1784470976000,
-    "updatedAt" : 1787388256000,
-    "number" : 51017,
-    "title" : "Add support for more update attribute user events",
-    "userLogin" : "ksushant881",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 2
-  }, {
     "createdAt" : 1787490529000,
     "updatedAt" : 1787514752000,
     "closedAt" : 1787514719000,
@@ -254957,14 +255023,6 @@
     "userLogin" : "thomasdarimont",
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 2
-  }, {
-    "createdAt" : 1699350058000,
-    "updatedAt" : 1788258503000,
-    "number" : 24594,
-    "title" : "Add RequestedLevelOfAuthenticationSpi",
-    "userLogin" : "dominikschlosser",
-    "labels" : [ "flaky-test", "team/core-authn" ],
-    "commentsCount" : 5
   }, {
     "createdAt" : 1788377145000,
     "updatedAt" : 1788377401000,
@@ -259850,14 +259908,6 @@
     "labels" : [ "flaky-test" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1790180244000,
-    "updatedAt" : 1790609175000,
-    "number" : 53125,
-    "title" : "Keep cache policy config multivalued on the custom provider screen",
-    "userLogin" : "dasniko",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 3
-  }, {
     "createdAt" : 1790178179000,
     "updatedAt" : 1790619093000,
     "closedAt" : 1790619093000,
@@ -259901,14 +259951,6 @@
     "userLogin" : "Pr1ncey24",
     "labels" : [ "flaky-test", "team/core-iam" ],
     "commentsCount" : 3
-  }, {
-    "createdAt" : 1787990904000,
-    "updatedAt" : 1790609078000,
-    "number" : 52198,
-    "title" : "Address cache policy fields by the shape held in the form",
-    "userLogin" : "MahathirMohammadShuvo",
-    "labels" : [ "team/core-shared" ],
-    "commentsCount" : 2
   }, {
     "createdAt" : 1786752323000,
     "updatedAt" : 1790600065000,
@@ -262441,14 +262483,6 @@
     "labels" : [ "team/core-authn" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1791371178000,
-    "updatedAt" : 1791372995000,
-    "number" : 53669,
-    "title" : "Updating AuthorizationTokenResponseModeTest to the new test framework",
-    "userLogin" : "PadzerButch",
-    "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1791370528000,
     "updatedAt" : 1791381784000,
     "closedAt" : 1791381784000,
@@ -263907,14 +263941,6 @@
     "labels" : [ "team/core-authn", "team/core-protocols" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1791471732000,
-    "updatedAt" : 1791808712000,
-    "number" : 53752,
-    "title" : "Require specifying IdPs when requesting external tokens in V1 Brokering",
-    "userLogin" : "vmuzikar",
-    "labels" : [ "team/cloud-native", "team/core-iam" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1791461972000,
     "updatedAt" : 1791794553000,
     "closedAt" : 1791570899000,
@@ -264452,14 +264478,6 @@
     "userLogin" : "amdadulbari",
     "labels" : [ "team/core-authn" ],
     "commentsCount" : 2
-  }, {
-    "createdAt" : 1786664760000,
-    "updatedAt" : 1791881216000,
-    "number" : 51720,
-    "title" : "Add a client policy executor for the JWT authorization grant settings",
-    "userLogin" : "mahdi-al-hakim",
-    "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 3
   }, {
     "createdAt" : 1782117556000,
     "updatedAt" : 1791916403000,
@@ -265297,14 +265315,6 @@
     "labels" : [ ],
     "commentsCount" : 2
   }, {
-    "createdAt" : 1792175538000,
-    "updatedAt" : 1792175738000,
-    "number" : 54074,
-    "title" : "Fix LDAP group resolution for users with limited admin permissions",
-    "userLogin" : "martin-kanis",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1792162215000,
     "updatedAt" : 1792167899000,
     "closedAt" : 1792167847000,
@@ -265516,22 +265526,6 @@
     "labels" : [ ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1792337565000,
-    "updatedAt" : 1792337571000,
-    "number" : 54086,
-    "title" : "Defer refresh token reuse count until commit",
-    "userLogin" : "zephyr45",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1792336630000,
-    "updatedAt" : 1792336636000,
-    "number" : 54085,
-    "title" : "Fix action token expiration after 2038",
-    "userLogin" : "zephyr45",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1792313029000,
     "updatedAt" : 1792313143000,
     "number" : 54083,
@@ -265574,14 +265568,6 @@
     "labels" : [ "team/core-iam" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1792429077000,
-    "updatedAt" : 1792440630000,
-    "number" : 54127,
-    "title" : "Fix truncated option description parsing",
-    "userLogin" : "ahus1",
-    "labels" : [ "team/cloud-native", "team/production-readiness" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1792422998000,
     "updatedAt" : 1792423138000,
     "number" : 54119,
@@ -265596,14 +265582,6 @@
     "title" : "enforce client authentication for CIBA (26.6)",
     "userLogin" : "graziang",
     "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1792414689000,
-    "updatedAt" : 1792414728000,
-    "number" : 54111,
-    "title" : "Deleted required client scope is removed from mixed client-scope policies",
-    "userLogin" : "martin-kanis",
-    "labels" : [ "team/core-iam" ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1792412071000,
@@ -265918,14 +265896,6 @@
     "labels" : [ ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1792498249000,
-    "updatedAt" : 1792507072000,
-    "number" : 54167,
-    "title" : "Treat omitted implicitFlowEnabled and auto-configure as absent in RejectImplicitGrantExecutor",
-    "userLogin" : "choksi2212",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 1
-  }, {
     "createdAt" : 1792497641000,
     "updatedAt" : 1792502114000,
     "closedAt" : 1792502114000,
@@ -265977,14 +265947,6 @@
     "userLogin" : "edewit",
     "labels" : [ "team/core-shared" ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1792473879000,
-    "updatedAt" : 1792507137000,
-    "number" : 54147,
-    "title" : "BACKPORT: Expose the per-mode lastSync timestamps in the admin API (#53993)",
-    "userLogin" : "choksi2212",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1792464431000,
     "updatedAt" : 1792464576000,
@@ -266324,14 +266286,6 @@
     "labels" : [ "team/core-shared" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1792598980000,
-    "updatedAt" : 1792599223000,
-    "number" : 54236,
-    "title" : "[OID4VCI] Authenticate clients during pre-authorized code grant",
-    "userLogin" : "dominikschlosser",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1792592224000,
     "updatedAt" : 1792593569000,
     "number" : 54233,
@@ -266530,22 +266484,6 @@
     "labels" : [ "flaky-test" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1792070809000,
-    "updatedAt" : 1792594852000,
-    "number" : 54025,
-    "title" : "Suppress JGroups error until library upgrade",
-    "userLogin" : "ahus1",
-    "labels" : [ "team/production-readiness" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1792065886000,
-    "updatedAt" : 1792598157000,
-    "number" : 54017,
-    "title" : "fix: use configured crypto provider to read generated truststores",
-    "userLogin" : "slaskawi",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 1
-  }, {
     "createdAt" : 1791880264000,
     "updatedAt" : 1792597844000,
     "number" : 53900,
@@ -266620,30 +266558,6 @@
     "labels" : [ "team/cloud-native", "flaky-test" ],
     "commentsCount" : 2
   }, {
-    "createdAt" : 1778709369000,
-    "updatedAt" : 1792586629000,
-    "number" : 48988,
-    "title" : "Use MAC terminology for client secret JWT algorithms",
-    "userLogin" : "palasht75",
-    "labels" : [ "team/core-protocols" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1792704457000,
-    "updatedAt" : 1792712792000,
-    "number" : 54275,
-    "title" : "Reject SAML broker logins with an empty principal",
-    "userLogin" : "michalvavrik",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1792698698000,
-    "updatedAt" : 1792698843000,
-    "number" : 54274,
-    "title" : "Include organization definitions in the partial export",
-    "userLogin" : "Hakaou",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1792688362000,
     "updatedAt" : 1792699141000,
     "number" : 54272,
@@ -266651,54 +266565,6 @@
     "userLogin" : "vramik",
     "labels" : [ "flaky-test", "team/core-iam" ],
     "commentsCount" : 1
-  }, {
-    "createdAt" : 1792681080000,
-    "updatedAt" : 1792685273000,
-    "number" : 54269,
-    "title" : "Migrate IdTokenEncryptionTest.java to the new test framework",
-    "userLogin" : "PadzerButch",
-    "labels" : [ "team/core-iam", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1792677830000,
-    "updatedAt" : 1792715538000,
-    "number" : 54268,
-    "title" : "Preserve email_verified from ID token when userinfo omits it.  ",
-    "userLogin" : "msdaly200",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1792674970000,
-    "updatedAt" : 1792677320000,
-    "number" : 54266,
-    "title" : "Separate includes with blank lines in server admin topics",
-    "userLogin" : "ahus1",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1792670402000,
-    "updatedAt" : 1792679216000,
-    "number" : 54263,
-    "title" : "Stabilize Admin UI Edit client profile test",
-    "userLogin" : "ahus1",
-    "labels" : [ "team/core-shared" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1792668990000,
-    "updatedAt" : 1792673570000,
-    "number" : 54261,
-    "title" : "Stabilize the test for Chrome",
-    "userLogin" : "ahus1",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1792667575000,
-    "updatedAt" : 1792668128000,
-    "number" : 54260,
-    "title" : "Reset email verified when Verify Email is added to an existing user",
-    "userLogin" : "baygut",
-    "labels" : [ ],
-    "commentsCount" : 0
   }, {
     "createdAt" : 1792667069000,
     "updatedAt" : 1792671480000,
@@ -266733,14 +266599,6 @@
     "labels" : [ "team/continuous-delivery" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1792665104000,
-    "updatedAt" : 1792666354000,
-    "number" : 54252,
-    "title" : "Delegated client administrators can't see the list of client scopes a…",
-    "userLogin" : "martin-kanis",
-    "labels" : [ "team/core-iam", "team/core-shared" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1792662684000,
     "updatedAt" : 1792662766000,
     "number" : 54251,
@@ -266766,14 +266624,6 @@
     "labels" : [ "team/core-shared" ],
     "commentsCount" : 6
   }, {
-    "createdAt" : 1792643923000,
-    "updatedAt" : 1792646453000,
-    "number" : 54243,
-    "title" : "Fix scope injection and bypass in token refresh client policy evaluation",
-    "userLogin" : "abhiyadav79",
-    "labels" : [ "team/core-iam", "team/core-protocols" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1792639364000,
     "updatedAt" : 1792639483000,
     "number" : 54242,
@@ -266798,14 +266648,6 @@
     "userLogin" : "tkyjovsk",
     "labels" : [ "team/core-iam" ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1792594236000,
-    "updatedAt" : 1792657510000,
-    "number" : 54235,
-    "title" : "Add logout-user workflow step",
-    "userLogin" : "erenkan",
-    "labels" : [ "flaky-test" ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1792594198000,
     "updatedAt" : 1792657550000,
@@ -266840,22 +266682,6 @@
     "labels" : [ "team/core-iam" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1792534467000,
-    "updatedAt" : 1792644582000,
-    "number" : 54198,
-    "title" : "Distrust compromised eMudhra intermediate CAs",
-    "userLogin" : "tolik518",
-    "labels" : [ "team/core-shared" ],
-    "commentsCount" : 6
-  }, {
-    "createdAt" : 1792532012000,
-    "updatedAt" : 1792711002000,
-    "number" : 54196,
-    "title" : "Fix multitenancy support for custom persistence units",
-    "userLogin" : "michalvavrik",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1792511203000,
     "updatedAt" : 1792692738000,
     "number" : 54182,
@@ -266887,46 +266713,6 @@
     "userLogin" : "shawkins",
     "labels" : [ "team/cloud-native" ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1792400983000,
-    "updatedAt" : 1792697060000,
-    "number" : 54097,
-    "title" : "Enforce SAML OneTimeUse Condition to Prevent Assertion Replay",
-    "userLogin" : "ruchikajha95",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1792244486000,
-    "updatedAt" : 1792675426000,
-    "number" : 54078,
-    "title" : "Exclude disabled organizations from the organization selection page",
-    "userLogin" : "Shaurya-GitH",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1792228462000,
-    "updatedAt" : 1792692182000,
-    "number" : 54075,
-    "title" : "Add SAML broker regression tests for incomplete subject confirmation",
-    "userLogin" : "atiqur-rahman-pro",
-    "labels" : [ "team/core-iam", "team/core-protocols" ],
-    "commentsCount" : 3
-  }, {
-    "createdAt" : 1792165402000,
-    "updatedAt" : 1792678638000,
-    "number" : 54071,
-    "title" : "Make sure client-requested org have precedence over an org selected via kc.org param",
-    "userLogin" : "pedroigor",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1792144034000,
-    "updatedAt" : 1792690114000,
-    "number" : 54061,
-    "title" : "Return HTTP 400 when role/group attribute value exceeds 255 characters",
-    "userLogin" : "abhiyadav79",
-    "labels" : [ "team/core-iam", "team/core-shared" ],
-    "commentsCount" : 6
   }, {
     "createdAt" : 1792140212000,
     "updatedAt" : 1792674634000,
@@ -266969,54 +266755,6 @@
     "userLogin" : "jimmychakkalakal",
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1791821163000,
-    "updatedAt" : 1792675310000,
-    "number" : 53868,
-    "title" : "Updating SAML and OIDC getters to default to true when absent in the configuration",
-    "userLogin" : "PadzerButch",
-    "labels" : [ "flaky-test", "team/core-iam", "team/core-protocols" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1791800671000,
-    "updatedAt" : 1792658899000,
-    "number" : 53852,
-    "title" : "Close all streams in the Keycloak production code",
-    "userLogin" : "ahus1",
-    "labels" : [ "flaky-test", "team/production-readiness" ],
-    "commentsCount" : 7
-  }, {
-    "createdAt" : 1791734960000,
-    "updatedAt" : 1792666757000,
-    "number" : 53840,
-    "title" : "Translations update from Hosted Weblate",
-    "userLogin" : "weblate",
-    "labels" : [ "flaky-test" ],
-    "commentsCount" : 2
-  }, {
-    "createdAt" : 1791414885000,
-    "updatedAt" : 1792665584000,
-    "number" : 53722,
-    "title" : "Fix session ID reuse when deleting sessions with client credentials",
-    "userLogin" : "atiqur-rahman-pro",
-    "labels" : [ "flaky-test", "team/core-authn" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1791414527000,
-    "updatedAt" : 1792703480000,
-    "number" : 53721,
-    "title" : "Filter client scope evaluation results by role visibility",
-    "userLogin" : "mjatin2007",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 6
-  }, {
-    "createdAt" : 1791387978000,
-    "updatedAt" : 1792679132000,
-    "number" : 53703,
-    "title" : "Document how to select OpenTelemetry trace propagators",
-    "userLogin" : "buketcoban",
-    "labels" : [ "team/cloud-native" ],
-    "commentsCount" : 4
   }, {
     "createdAt" : 1791289642000,
     "updatedAt" : 1792675519000,
@@ -267085,14 +266823,6 @@
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 9
   }, {
-    "createdAt" : 1785953478000,
-    "updatedAt" : 1792705649000,
-    "number" : 51466,
-    "title" : "Add workflow event providers for user lockout events by brute force protection",
-    "userLogin" : "robson90",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 7
-  }, {
     "createdAt" : 1785236177000,
     "updatedAt" : 1792669600000,
     "number" : 51235,
@@ -267110,13 +266840,510 @@
     "labels" : [ "status/hold", "team/cloud-native", "flaky-test" ],
     "commentsCount" : 2
   }, {
+    "createdAt" : 1792806600000,
+    "updatedAt" : 1792806747000,
+    "number" : 54309,
+    "title" : "Update MariaDB Java client to 3.5.11",
+    "userLogin" : "choksi2212",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792796940000,
+    "updatedAt" : 1792799394000,
+    "number" : 54308,
+    "title" : "Distrust compromised eMudhra/emSign CAs in the container image",
+    "userLogin" : "sideeffffect",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792796350000,
+    "updatedAt" : 1792796449000,
+    "number" : 54306,
+    "title" : "Update CONTRIBUTING.md",
+    "userLogin" : "juanmcorreah2001-bot",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792794202000,
+    "updatedAt" : 1792806720000,
+    "number" : 54305,
+    "title" : "Include the federated user ID as sent by the provider in broker login events",
+    "userLogin" : "choksi2212",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792787415000,
+    "updatedAt" : 1792787733000,
+    "number" : 54302,
+    "title" : "Prevent LDAP bind credentials from being sent to a changed server (#5…",
+    "userLogin" : "sguilhen",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792781862000,
+    "updatedAt" : 1792782198000,
+    "number" : 54299,
+    "title" : "feat: add toggle for login screen username/pass form",
+    "userLogin" : "mhaley-tignis",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792781644000,
+    "updatedAt" : 1792781649000,
+    "number" : 54298,
+    "title" : "Address cache policy fields by the shape held in the form (#52198)",
+    "userLogin" : "sguilhen",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792779586000,
+    "updatedAt" : 1792790306000,
+    "number" : 54297,
+    "title" : "Keep an admin ignore when an SSF receiver removes the subject",
+    "userLogin" : "michalvavrik",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792776075000,
+    "updatedAt" : 1792776134000,
+    "number" : 54295,
+    "title" : "Fixing flakiness by avoiding a full page refresh",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/core-shared" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792771564000,
+    "updatedAt" : 1792773809000,
+    "number" : 54294,
+    "title" : "Invalidate LDAP managed user proxies when the persistence context is …",
+    "userLogin" : "sguilhen",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792766291000,
+    "updatedAt" : 1792783349000,
+    "number" : 54292,
+    "title" : "Cached organization returns identity provider models bound to the session that loaded it (\"Session not bound to a realm\")",
+    "userLogin" : "martin-kanis",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792760949000,
+    "updatedAt" : 1792776485000,
+    "number" : 54289,
+    "title" : "Fixing out-of-date wireit caches",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/continuous-delivery" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792746567000,
+    "updatedAt" : 1792753502000,
+    "closedAt" : 1792753502000,
+    "number" : 54283,
+    "title" : "Cached organization returns identity provider models bound to the ses…",
+    "userLogin" : "martin-kanis",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792745998000,
+    "updatedAt" : 1792746978000,
+    "number" : 54282,
+    "title" : "[OpenID4VP] Infer DCQL from IdP-mappers",
+    "userLogin" : "dominikschlosser",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792743522000,
+    "updatedAt" : 1792743771000,
+    "number" : 54279,
+    "title" : "Allow re-login with the same session ID after the session lifespan has expired",
+    "userLogin" : "sergioperezcheco",
+    "labels" : [ "team/core-shared" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792740972000,
+    "updatedAt" : 1792741113000,
+    "number" : 54278,
+    "title" : "Decode the JWS signature segment strictly in JWSInput",
+    "userLogin" : "naruto-lgtm",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792740021000,
+    "updatedAt" : 1792741616000,
+    "number" : 54276,
+    "title" : "[OID4VCI] Store DEF compression as algorithm value in Admin UI",
+    "userLogin" : "Vitalisn4",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792704457000,
+    "updatedAt" : 1792757852000,
+    "number" : 54275,
+    "title" : "Reject SAML broker logins with an empty principal",
+    "userLogin" : "michalvavrik",
+    "labels" : [ ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792698698000,
+    "updatedAt" : 1792789219000,
+    "number" : 54274,
+    "title" : "Include organization definitions in the partial export",
+    "userLogin" : "Hakaou",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792681080000,
+    "updatedAt" : 1792763612000,
+    "closedAt" : 1792763612000,
+    "number" : 54269,
+    "title" : "Migrate IdTokenEncryptionTest.java to the new test framework",
+    "userLogin" : "PadzerButch",
+    "labels" : [ "team/core-iam", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792677830000,
+    "updatedAt" : 1792715538000,
+    "number" : 54268,
+    "title" : "Preserve email_verified from ID token when userinfo omits it.  ",
+    "userLogin" : "msdaly200",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792674970000,
+    "updatedAt" : 1792781255000,
+    "closedAt" : 1792781255000,
+    "number" : 54266,
+    "title" : "Separate includes with blank lines in server admin topics",
+    "userLogin" : "ahus1",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792670402000,
+    "updatedAt" : 1792744985000,
+    "number" : 54263,
+    "title" : "Stabilize Admin UI Edit client profile test",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/core-shared" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792668990000,
+    "updatedAt" : 1792753329000,
+    "closedAt" : 1792753329000,
+    "number" : 54261,
+    "title" : "Stabilize the test for Chrome",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792667575000,
+    "updatedAt" : 1792741029000,
+    "number" : 54260,
+    "title" : "Reset email verified when Verify Email is added to an existing user",
+    "userLogin" : "baygut",
+    "labels" : [ ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792665104000,
+    "updatedAt" : 1792750874000,
+    "number" : 54252,
+    "title" : "Delegated client administrators can't see the list of client scopes a…",
+    "userLogin" : "martin-kanis",
+    "labels" : [ "team/core-iam", "team/core-shared" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792643923000,
+    "updatedAt" : 1792745506000,
+    "number" : 54243,
+    "title" : "Fix scope injection and bypass in token refresh client policy evaluation",
+    "userLogin" : "abhiyadav79",
+    "labels" : [ "team/core-iam", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792598980000,
+    "updatedAt" : 1792763912000,
+    "number" : 54236,
+    "title" : "[OID4VCI] Authenticate clients during pre-authorized code grant",
+    "userLogin" : "dominikschlosser",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792594236000,
+    "updatedAt" : 1792799533000,
+    "closedAt" : 1792785337000,
+    "number" : 54235,
+    "title" : "Add logout-user workflow step",
+    "userLogin" : "erenkan",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792534467000,
+    "updatedAt" : 1792742177000,
+    "closedAt" : 1792742177000,
+    "number" : 54198,
+    "title" : "Distrust compromised eMudhra intermediate CAs",
+    "userLogin" : "tolik518",
+    "labels" : [ "team/core-shared" ],
+    "commentsCount" : 8
+  }, {
+    "createdAt" : 1792532012000,
+    "updatedAt" : 1792753468000,
+    "number" : 54196,
+    "title" : "Fix multitenancy support for custom persistence units",
+    "userLogin" : "michalvavrik",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792498249000,
+    "updatedAt" : 1792815956000,
+    "number" : 54167,
+    "title" : "Treat omitted implicitFlowEnabled and auto-configure as absent in RejectImplicitGrantExecutor",
+    "userLogin" : "choksi2212",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1792473879000,
+    "updatedAt" : 1792816499000,
+    "number" : 54147,
+    "title" : "BACKPORT: Expose the per-mode lastSync timestamps in the admin API (#53993)",
+    "userLogin" : "choksi2212",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1792429077000,
+    "updatedAt" : 1792772519000,
+    "closedAt" : 1792772519000,
+    "number" : 54127,
+    "title" : "Fix truncated option description parsing",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/cloud-native", "team/production-readiness" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792414689000,
+    "updatedAt" : 1792782802000,
+    "number" : 54111,
+    "title" : "Deleted required client scope is removed from mixed client-scope policies",
+    "userLogin" : "martin-kanis",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792400983000,
+    "updatedAt" : 1792782635000,
+    "number" : 54097,
+    "title" : "Enforce SAML OneTimeUse Condition to Prevent Assertion Replay",
+    "userLogin" : "ruchikajha95",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1792337565000,
+    "updatedAt" : 1792776418000,
+    "closedAt" : 1792776418000,
+    "number" : 54086,
+    "title" : "Defer refresh token reuse count until commit",
+    "userLogin" : "zephyr45",
+    "labels" : [ ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792336630000,
+    "updatedAt" : 1792776420000,
+    "closedAt" : 1792776420000,
+    "number" : 54085,
+    "title" : "Fix action token expiration after 2038",
+    "userLogin" : "zephyr45",
+    "labels" : [ ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792244486000,
+    "updatedAt" : 1792782723000,
+    "closedAt" : 1792782723000,
+    "number" : 54078,
+    "title" : "Exclude disabled organizations from the organization selection page",
+    "userLogin" : "Shaurya-GitH",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792228462000,
+    "updatedAt" : 1792776691000,
+    "number" : 54075,
+    "title" : "Add SAML broker regression tests for incomplete subject confirmation",
+    "userLogin" : "atiqur-rahman-pro",
+    "labels" : [ "team/core-iam", "team/core-protocols" ],
+    "commentsCount" : 6
+  }, {
+    "createdAt" : 1792175538000,
+    "updatedAt" : 1792785469000,
+    "number" : 54074,
+    "title" : "Fix LDAP group resolution for users with limited admin permissions",
+    "userLogin" : "martin-kanis",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792165402000,
+    "updatedAt" : 1792782765000,
+    "closedAt" : 1792782764000,
+    "number" : 54071,
+    "title" : "Make sure client-requested org have precedence over an org selected via kc.org param",
+    "userLogin" : "pedroigor",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792144034000,
+    "updatedAt" : 1792743536000,
+    "number" : 54061,
+    "title" : "Return HTTP 400 when role/group attribute value exceeds 255 characters",
+    "userLogin" : "abhiyadav79",
+    "labels" : [ "team/core-iam", "team/core-shared" ],
+    "commentsCount" : 6
+  }, {
+    "createdAt" : 1792070809000,
+    "updatedAt" : 1792753334000,
+    "closedAt" : 1792753334000,
+    "number" : 54025,
+    "title" : "Suppress JGroups error until library upgrade",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/production-readiness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792065886000,
+    "updatedAt" : 1792771985000,
+    "number" : 54017,
+    "title" : "fix: use configured crypto provider to read generated truststores",
+    "userLogin" : "slaskawi",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1791821163000,
+    "updatedAt" : 1792758024000,
+    "number" : 53868,
+    "title" : "Default SAML and OIDC signature validation to enabled when configuration is absent",
+    "userLogin" : "PadzerButch",
+    "labels" : [ "flaky-test", "team/core-iam", "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1791800671000,
+    "updatedAt" : 1792777321000,
+    "number" : 53852,
+    "title" : "Close all streams in the Keycloak production code",
+    "userLogin" : "ahus1",
+    "labels" : [ "flaky-test", "team/production-readiness" ],
+    "commentsCount" : 7
+  }, {
+    "createdAt" : 1791734960000,
+    "updatedAt" : 1792802712000,
+    "number" : 53840,
+    "title" : "Translations update from Hosted Weblate",
+    "userLogin" : "weblate",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1791471732000,
+    "updatedAt" : 1792758584000,
+    "number" : 53752,
+    "title" : "Require specifying IdPs when requesting external tokens in V1 Brokering",
+    "userLogin" : "vmuzikar",
+    "labels" : [ "team/cloud-native", "team/core-iam" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1791414885000,
+    "updatedAt" : 1792759801000,
+    "number" : 53722,
+    "title" : "Fix session ID reuse when deleting sessions with client credentials",
+    "userLogin" : "atiqur-rahman-pro",
+    "labels" : [ "flaky-test", "team/core-authn" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1791414527000,
+    "updatedAt" : 1792781667000,
+    "closedAt" : 1792781667000,
+    "number" : 53721,
+    "title" : "Filter client scope evaluation results by role visibility",
+    "userLogin" : "mjatin2007",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 7
+  }, {
+    "createdAt" : 1791387978000,
+    "updatedAt" : 1792745111000,
+    "closedAt" : 1792745110000,
+    "number" : 53703,
+    "title" : "Document how to select OpenTelemetry trace propagators",
+    "userLogin" : "buketcoban",
+    "labels" : [ "team/cloud-native" ],
+    "commentsCount" : 4
+  }, {
+    "createdAt" : 1791371178000,
+    "updatedAt" : 1792775231000,
+    "number" : 53669,
+    "title" : "Updating AuthorizationTokenResponseModeTest to the new test framework",
+    "userLogin" : "PadzerButch",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1790180244000,
+    "updatedAt" : 1792763277000,
+    "closedAt" : 1792763276000,
+    "number" : 53125,
+    "title" : "Keep cache policy config multivalued on the custom provider screen",
+    "userLogin" : "dasniko",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 4
+  }, {
+    "createdAt" : 1787990904000,
+    "updatedAt" : 1792764503000,
+    "closedAt" : 1792764503000,
+    "number" : 52198,
+    "title" : "Address cache policy fields by the shape held in the form",
+    "userLogin" : "MahathirMohammadShuvo",
+    "labels" : [ "team/core-shared" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1786664760000,
+    "updatedAt" : 1792769079000,
+    "number" : 51720,
+    "title" : "Add a client policy executor for the JWT authorization grant settings",
+    "userLogin" : "mahdi-al-hakim",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 5
+  }, {
+    "createdAt" : 1785953478000,
+    "updatedAt" : 1792779381000,
+    "closedAt" : 1792779381000,
+    "number" : 51466,
+    "title" : "Add workflow event providers for user lockout events by brute force protection",
+    "userLogin" : "robson90",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 8
+  }, {
+    "createdAt" : 1784470976000,
+    "updatedAt" : 1792811284000,
+    "number" : 51017,
+    "title" : "Add support for more update attribute user events",
+    "userLogin" : "ksushant881",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 2
+  }, {
     "createdAt" : 1781495834000,
-    "updatedAt" : 1792670571000,
+    "updatedAt" : 1792750366000,
     "number" : 49998,
     "title" : "Customize token exchange endpoint to issue ID-JAG",
     "userLogin" : "bucchi",
     "labels" : [ "flaky-test", "team/core-protocols" ],
     "commentsCount" : 23
+  }, {
+    "createdAt" : 1778709369000,
+    "updatedAt" : 1792763408000,
+    "number" : 48988,
+    "title" : "Use MAC terminology for client secret JWT algorithms",
+    "userLogin" : "palasht75",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1699350058000,
+    "updatedAt" : 1792763270000,
+    "number" : 24594,
+    "title" : "Add RequestedLevelOfAuthenticationSpi",
+    "userLogin" : "dominikschlosser",
+    "labels" : [ "flaky-test", "team/core-authn" ],
+    "commentsCount" : 5
   } ],
   "pullRequestWaits" : [ {
     "number" : 49154,
@@ -276996,6 +277223,13 @@
     "author" : "sguilhen",
     "baseRef" : "main"
   }, {
+    "number" : 51466,
+    "minutes" : 47,
+    "mergedAt" : 1792779381000,
+    "completedAt" : 1792753289000,
+    "author" : "robson90",
+    "baseRef" : "main"
+  }, {
     "number" : 43276,
     "minutes" : 73,
     "mergedAt" : 1759906507000,
@@ -280970,6 +281204,13 @@
     "mergedAt" : 1762505312000,
     "completedAt" : 1762435779000,
     "author" : "mabartos",
+    "baseRef" : "main"
+  }, {
+    "number" : 52198,
+    "minutes" : 22,
+    "mergedAt" : 1792764503000,
+    "completedAt" : 1792764491000,
+    "author" : "MahathirMohammadShuvo",
     "baseRef" : "main"
   }, {
     "number" : 44009,
@@ -288924,6 +289165,13 @@
     "author" : "martin-kanis",
     "baseRef" : "release/26.5"
   }, {
+    "number" : 53703,
+    "minutes" : 6,
+    "mergedAt" : 1792745110000,
+    "completedAt" : 1792676809000,
+    "author" : "buketcoban",
+    "baseRef" : "main"
+  }, {
     "number" : 53705,
     "minutes" : 58,
     "mergedAt" : 1791453412000,
@@ -289007,6 +289255,13 @@
     "completedAt" : 1791716902000,
     "author" : "ahus1",
     "baseRef" : "release/26.4"
+  }, {
+    "number" : 53721,
+    "minutes" : 4099,
+    "mergedAt" : 1792781667000,
+    "completedAt" : 1792762813000,
+    "author" : "mjatin2007",
+    "baseRef" : "main"
   }, {
     "number" : 53723,
     "minutes" : 51,
@@ -290688,6 +290943,13 @@
     "author" : "ruchikajha95",
     "baseRef" : "main"
   }, {
+    "number" : 54025,
+    "minutes" : 6046,
+    "mergedAt" : 1792753334000,
+    "completedAt" : 1792433617000,
+    "author" : "ahus1",
+    "baseRef" : "main"
+  }, {
     "number" : 45834,
     "minutes" : 56,
     "mergedAt" : 1769614730000,
@@ -290919,11 +291181,25 @@
     "author" : "pedroigor",
     "baseRef" : "main"
   }, {
+    "number" : 54071,
+    "minutes" : 54,
+    "mergedAt" : 1792782764000,
+    "completedAt" : 1792678626000,
+    "author" : "pedroigor",
+    "baseRef" : "main"
+  }, {
     "number" : 45883,
     "minutes" : 25,
     "mergedAt" : 1770136791000,
     "completedAt" : 1770135829000,
     "author" : "edewit",
+    "baseRef" : "main"
+  }, {
+    "number" : 54078,
+    "minutes" : 865,
+    "mergedAt" : 1792782723000,
+    "completedAt" : 1792586329000,
+    "author" : "Shaurya-GitH",
     "baseRef" : "main"
   }, {
     "number" : 45887,
@@ -291016,6 +291292,13 @@
     "completedAt" : 1770749655000,
     "author" : "rmartinc",
     "baseRef" : "release/26.5"
+  }, {
+    "number" : 54127,
+    "minutes" : 145,
+    "mergedAt" : 1792772519000,
+    "completedAt" : 1792438044000,
+    "author" : "ahus1",
+    "baseRef" : "main"
   }, {
     "number" : 45936,
     "minutes" : 57,
@@ -291437,6 +291720,13 @@
     "author" : "andymunro",
     "baseRef" : "main"
   }, {
+    "number" : 54235,
+    "minutes" : 48,
+    "mergedAt" : 1792785337000,
+    "completedAt" : 1792657498000,
+    "author" : "erenkan",
+    "baseRef" : "main"
+  }, {
     "number" : 46044,
     "minutes" : 57,
     "mergedAt" : 1770288699000,
@@ -291542,6 +291832,13 @@
     "author" : "sguilhen",
     "baseRef" : "main"
   }, {
+    "number" : 54261,
+    "minutes" : 48,
+    "mergedAt" : 1792753328000,
+    "completedAt" : 1792671892000,
+    "author" : "ahus1",
+    "baseRef" : "main"
+  }, {
     "number" : 46070,
     "minutes" : 58,
     "mergedAt" : 1770368119000,
@@ -291556,11 +291853,25 @@
     "author" : "stianst",
     "baseRef" : "main"
   }, {
+    "number" : 54266,
+    "minutes" : 4,
+    "mergedAt" : 1792781255000,
+    "completedAt" : 1792675230000,
+    "author" : "ahus1",
+    "baseRef" : "main"
+  }, {
     "number" : 46076,
     "minutes" : 61,
     "mergedAt" : 1770398616000,
     "completedAt" : 1770389111000,
     "author" : "Pepo48",
+    "baseRef" : "main"
+  }, {
+    "number" : 54269,
+    "minutes" : 50,
+    "mergedAt" : 1792763612000,
+    "completedAt" : 1792748820000,
+    "author" : "PadzerButch",
     "baseRef" : "main"
   }, {
     "number" : 46082,
@@ -291589,6 +291900,13 @@
     "mergedAt" : 1770630405000,
     "completedAt" : 1770398147000,
     "author" : "pruivo",
+    "baseRef" : "main"
+  }, {
+    "number" : 54283,
+    "minutes" : 49,
+    "mergedAt" : 1792753502000,
+    "completedAt" : 1792749569000,
+    "author" : "martin-kanis",
     "baseRef" : "main"
   }, {
     "number" : 46093,
@@ -299111,10 +299429,10 @@
   } ],
   "privateIssues" : [ {
     "createdAt" : 1787293201000,
-    "updatedAt" : 1789843447000,
+    "updatedAt" : 1792782983000,
     "number" : 1054,
     "labels" : [ "team/security", "kind/task" ],
-    "commentsCount" : 9
+    "commentsCount" : 10
   }, {
     "createdAt" : 1787921566000,
     "updatedAt" : 1792420638000,
@@ -299123,7 +299441,7 @@
     "commentsCount" : 21
   }, {
     "createdAt" : 1788235967000,
-    "updatedAt" : 1792500534000,
+    "updatedAt" : 1792743240000,
     "number" : 1094,
     "labels" : [ "severity/medium", "team/core-protocols", "kind/cve" ],
     "commentsCount" : 12
@@ -299133,12 +299451,6 @@
     "number" : 1194,
     "labels" : [ "severity/medium", "team/core-protocols", "kind/cve" ],
     "commentsCount" : 26
-  }, {
-    "createdAt" : 1789421951000,
-    "updatedAt" : 1792592746000,
-    "number" : 1208,
-    "labels" : [ "status/triage", "severity/medium", "team/core-protocols", "kind/cve" ],
-    "commentsCount" : 13
   }, {
     "createdAt" : 1789870003000,
     "updatedAt" : 1791954346000,
@@ -299165,7 +299477,7 @@
     "commentsCount" : 6
   }, {
     "createdAt" : 1790718418000,
-    "updatedAt" : 1791953735000,
+    "updatedAt" : 1792742465000,
     "number" : 1294,
     "labels" : [ "severity/medium", "team/core-protocols", "kind/cve" ],
     "commentsCount" : 10
@@ -299177,49 +299489,49 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1791410818000,
-    "updatedAt" : 1792391785000,
+    "updatedAt" : 1792741987000,
     "number" : 1342,
     "labels" : [ "team/cloud-native", "severity/high", "kind/cve" ],
     "commentsCount" : 8
   }, {
     "createdAt" : 1791840952000,
-    "updatedAt" : 1792586834000,
+    "updatedAt" : 1792762299000,
     "number" : 1373,
-    "labels" : [ "team/core-authn", "kind/task" ],
-    "commentsCount" : 13
+    "labels" : [ "kind/cve", "team/core-authn", "kind/task" ],
+    "commentsCount" : 16
   }, {
     "createdAt" : 1791875152000,
-    "updatedAt" : 1792593229000,
+    "updatedAt" : 1792743234000,
     "number" : 1375,
     "labels" : [ "severity/high", "team/core-protocols", "kind/cve" ],
     "commentsCount" : 24
   }, {
     "createdAt" : 1791931532000,
-    "updatedAt" : 1791995315000,
+    "updatedAt" : 1792784487000,
     "number" : 1379,
     "labels" : [ "severity/medium", "team/core-iam", "kind/cve" ],
-    "commentsCount" : 2
+    "commentsCount" : 3
   }, {
     "createdAt" : 1791939932000,
-    "updatedAt" : 1792069010000,
+    "updatedAt" : 1792784081000,
     "number" : 1381,
     "labels" : [ "severity/medium", "team/core-iam", "kind/cve" ],
-    "commentsCount" : 5
+    "commentsCount" : 6
   }, {
     "createdAt" : 1792026332000,
-    "updatedAt" : 1792166260000,
+    "updatedAt" : 1792785829000,
     "number" : 1395,
-    "labels" : [ "status/triage", "team/core-authn" ],
+    "labels" : [ "status/triage", "team/terraform" ],
     "commentsCount" : 6
   }, {
     "createdAt" : 1792093532000,
-    "updatedAt" : 1792563934000,
+    "updatedAt" : 1792741972000,
     "number" : 1400,
     "labels" : [ "severity/high", "team/core-iam", "kind/cve" ],
     "commentsCount" : 11
   }, {
     "createdAt" : 1792135532000,
-    "updatedAt" : 1792594541000,
+    "updatedAt" : 1792749609000,
     "number" : 1403,
     "labels" : [ "severity/high", "kind/cve", "team/core-authn" ],
     "commentsCount" : 10
@@ -299231,28 +299543,22 @@
     "commentsCount" : 6
   }, {
     "createdAt" : 1792501534000,
-    "updatedAt" : 1792692544000,
+    "updatedAt" : 1792787460000,
     "number" : 1426,
     "labels" : [ "status/triage", "team/core-iam" ],
-    "commentsCount" : 3
+    "commentsCount" : 5
   }, {
     "createdAt" : 1792503335000,
-    "updatedAt" : 1792585785000,
+    "updatedAt" : 1792764909000,
     "number" : 1428,
     "labels" : [ "status/triage", "team/core-iam" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1792503342000,
-    "updatedAt" : 1792580060000,
-    "number" : 1429,
-    "labels" : [ "status/triage", "team/core-iam" ],
-    "commentsCount" : 3
+    "commentsCount" : 2
   }, {
     "createdAt" : 1792503932000,
-    "updatedAt" : 1792580135000,
+    "updatedAt" : 1792787356000,
     "number" : 1430,
     "labels" : [ "status/triage", "team/core-iam" ],
-    "commentsCount" : 2
+    "commentsCount" : 3
   }, {
     "createdAt" : 1792508146000,
     "updatedAt" : 1792696591000,
@@ -299266,36 +299572,6 @@
     "labels" : [ "status/triage", "team/core-authn" ],
     "commentsCount" : 2
   }, {
-    "createdAt" : 1792557932000,
-    "updatedAt" : 1792699273000,
-    "number" : 1441,
-    "labels" : [ "status/triage", "team/core-protocols" ],
-    "commentsCount" : 10
-  }, {
-    "createdAt" : 1792577732000,
-    "updatedAt" : 1792689940000,
-    "number" : 1446,
-    "labels" : [ "status/triage", "team/core-iam" ],
-    "commentsCount" : 2
-  }, {
-    "createdAt" : 1792592133000,
-    "updatedAt" : 1792599922000,
-    "number" : 1450,
-    "labels" : [ "team/cloud-native", "status/triage" ],
-    "commentsCount" : 2
-  }, {
-    "createdAt" : 1792656092000,
-    "updatedAt" : 1792658607000,
-    "number" : 1452,
-    "labels" : [ "status/triage", "team/core-iam" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1792662092000,
-    "updatedAt" : 1792663370000,
-    "number" : 1455,
-    "labels" : [ "status/triage", "team/core-iam" ],
-    "commentsCount" : 1
-  }, {
     "createdAt" : 1792670493000,
     "updatedAt" : 1792674376000,
     "number" : 1457,
@@ -299303,27 +299579,63 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1792677693000,
-    "updatedAt" : 1792682963000,
+    "updatedAt" : 1792737206000,
     "number" : 1458,
-    "labels" : [ "team/security" ],
+    "labels" : [ "team/security", "kind/task" ],
     "commentsCount" : 1
   }, {
     "createdAt" : 1792707092000,
-    "updatedAt" : 1792708505000,
+    "updatedAt" : 1792785556000,
     "number" : 1459,
     "labels" : [ "status/triage", "team/core-authn" ],
-    "commentsCount" : 1
+    "commentsCount" : 2
   }, {
     "createdAt" : 1792722092000,
-    "updatedAt" : 1792723421000,
+    "updatedAt" : 1792786719000,
     "number" : 1460,
+    "labels" : [ "status/triage", "team/core-protocols" ],
+    "commentsCount" : 3
+  }, {
+    "createdAt" : 1792722694000,
+    "updatedAt" : 1792785560000,
+    "number" : 1461,
     "labels" : [ "status/triage", "team/core-protocols" ],
     "commentsCount" : 2
   }, {
-    "createdAt" : 1792722694000,
-    "updatedAt" : 1792723419000,
-    "number" : 1461,
+    "createdAt" : 1792737099000,
+    "updatedAt" : 1792785563000,
+    "number" : 1467,
+    "labels" : [ "status/triage", "team/core-authn" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1792738892000,
+    "updatedAt" : 1792785378000,
+    "number" : 1468,
+    "labels" : [ "status/triage", "kind/bug", "team/core-authn" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1792747292000,
+    "updatedAt" : 1792763687000,
+    "number" : 1469,
+    "labels" : [ "status/triage", "team/core-shared" ],
+    "commentsCount" : 2
+  }, {
+    "createdAt" : 1792747304000,
+    "updatedAt" : 1792764874000,
+    "number" : 1472,
+    "labels" : [ "severity/medium", "team/core-protocols" ],
+    "commentsCount" : 3
+  }, {
+    "createdAt" : 1792814492000,
+    "updatedAt" : 1792816704000,
+    "number" : 1477,
     "labels" : [ "status/triage", "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792817492000,
+    "updatedAt" : 1792818154000,
+    "number" : 1478,
+    "labels" : [ "status/triage", "team/core-iam" ],
     "commentsCount" : 1
   } ],
   "branches" : [ "archive/map-store", "archive/release/20.0", "archive/release/21.0", "archive/release/21.1", "archive/release/22.0", "archive/release/23.0", "archive/release/24.0", "archive/release/25.0", "archive/release/26.0", "archive/release/26.1", "archive/release/26.2", "archive/release/26.3", "archive/release/26.5", "archive/release/26.7", "copilot/53983-review-code", "copilot/add-copilot-instructions", "copilot/analyze-security-invitation-through-broker-login", "copilot/enhanced-cluster-wide-operator-milestone-2", "copilot/fix-code-for-review-comments", "copilot/fix-code-review-suggestion", "copilot/list-duplicated-issues", "copilot/overview-pull-requests-last-30-days", "copilot/research-failsafe-timeout-healthcheck", "dependabot/github_actions/actions-dependencies-2f7d34dd4d", "dependabot/maven/docs/documentation/tests/org.jsoup-jsoup-1.23.2", "dependabot/maven/integration/admin-client-jackson3/tools.jackson.core-jackson-databind-3.1.7", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.0.1", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.1.1", "dependabot/npm_and_yarn/js/npm-dependencies-29bdee08fd", "dependabot/npm_and_yarn/js/vite-7.3.7", "dependabot/npm_and_yarn/js/vite-plugin-dts-5.0.3", "dependabot/npm_and_yarn/js/vitest-4.1.0", "feature/admin-api-v2", "main", "quarkus-next", "release/26.4", "release/26.6", "release/26.8", "tmp/26.8-doc" ],
@@ -299331,5 +299643,5 @@
     "activeReleaseStreams" : [ "26.4", "26.6", "26.8" ],
     "recentReleases" : [ "26.8.1", "26.8.0", "26.7.5", "26.7.4", "26.7.3", "26.7.2", "26.7.1", "26.7.0", "26.6.4", "26.6.3" ]
   },
-  "issuesWithPr" : 154
+  "issuesWithPr" : 151
 }
