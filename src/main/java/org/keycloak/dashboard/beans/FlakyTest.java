@@ -24,7 +24,8 @@ public class FlakyTest {
 
     public String getPackage() {
         String packageName = getTitle();
-        return packageName.substring(0, packageName.lastIndexOf('.'));
+        int lastDot = packageName.lastIndexOf('.');
+        return lastDot == -1 ? "" : packageName.substring(0, lastDot);
     }
 
     public String getTestClass() {
