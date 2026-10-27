@@ -212,7 +212,7 @@ public class GitHubLoader {
         sanitized.setNumber(issue.getNumber());
         sanitized.setClosedAt(issue.getClosedAt());
         sanitized.setCreatedAt(issue.getCreatedAt());
-        sanitized.setLabels(issue.getLabels().stream().filter(l -> l.startsWith("team/") || l.startsWith("kind/") || l.startsWith("severity/") || l.equals("status/triage") || l.equals("status/blocked-external") || l.equals("status/missing-information") || l.equals("status/ready")).toList());
+        sanitized.setLabels(issue.getLabels().stream().filter(l -> l.startsWith("team/") || l.startsWith("kind/") || l.startsWith("severity/") || l.equals("status/triage") || l.equals("status/blocked-external") || l.equals("status/missing-information") || l.equals("status/ready") || l.equals("status/cve-request") || l.equals("status/cve-assigned")).toList());
         sanitized.setCommentsCount(issue.getCommentsCount());
         sanitized.setUpdatedAt(issue.getUpdatedAt());
         return sanitized;

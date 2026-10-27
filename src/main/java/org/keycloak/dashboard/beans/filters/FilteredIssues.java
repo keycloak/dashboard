@@ -40,6 +40,11 @@ public class FilteredIssues {
         return this;
     }
 
+    public FilteredIssues excludePendingCveRequest() {
+        filters.add(new PendingCveRequestFilter());
+        return this;
+    }
+
     public FilteredIssues openWeakness() {
         filters.add(new OpenWeaknessFilter());
         return this;
