@@ -32,7 +32,7 @@ public class PrivateCveTeamStat {
         columns.add(BugStat.team("Triage Overdue").warnErrorKey("PrivateTriageOverdue")
                 .issues(triageBase.clone().ready(false).severityTriageOverdue(importantBizDays, moderateBizDays, lowDays)));
 
-        FilteredIssues cveOpen = allIssues.clone().openCve().triage(false);
+        FilteredIssues cveOpen = allIssues.clone().openCve().triage(false).excludePendingCveRequest();
 
         columns.add(BugStat.team("Open").warnErrorKey("CveOpen")
                 .issues(cveOpen.clone()));
