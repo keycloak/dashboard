@@ -26,10 +26,10 @@ public class CveTeamStat {
                         .createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
 
         columns.add(BugStat.team("Open").warnErrorKey("CveOpen")
-                .issues(issues.clone().triage(false)));
+                .issues(issues.clone().triage(false).excludePendingCveRequest()));
 
         columns.add(BugStat.team("Open Overdue").warnErrorKey("CveOpenOverdue")
-                .issues(issues.clone().triage(false).ready(false)
+                .issues(issues.clone().triage(false).excludePendingCveRequest().ready(false)
                         .createdBefore(DateUtil.minusdays(Config.getInt("bugs.CveOverdue.days")))));
 
         columns.add(BugStat.team("Blocked External").warnErrorKey("CveBlockedExternal")
