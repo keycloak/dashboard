@@ -1,5 +1,5 @@
 {
-  "updatedDate" : 1794114300521,
+  "updatedDate" : 1794200787019,
   "areas" : [ "area/account/api", "area/account/ui", "area/adapter/fuse", "area/adapter/java-cli", "area/adapter/javascript", "area/adapter/jee", "area/adapter/saml", "area/adapter/spring", "area/admin/api", "area/admin/api-v2", "area/admin/cli", "area/admin/client-java", "area/admin/client-js", "area/admin/fine-grained-permissions", "area/admin/rbac", "area/admin/ui", "area/authentication", "area/authentication/webauthn", "area/authorization-services", "area/ci", "area/core", "area/dependencies", "area/dependencies/js", "area/dependencies/quarkus", "area/dist/quarkus", "area/docs", "area/events", "area/extensions", "area/identity-brokering", "area/import-export", "area/infinispan", "area/ldap", "area/login/ui", "area/observability", "area/oid4vc", "area/oidc", "area/operator", "area/organizations", "area/performance", "area/saml", "area/scim", "area/ssf", "area/storage", "area/test-framework", "area/testsuite", "area/token-exchange", "area/token-exchange/federated", "area/token-exchange/standard", "area/token-exchange/subject-impersonation", "area/translations", "area/user-profile", "area/welcome/ui", "area/workflows" ],
   "issues" : [ {
     "createdAt" : 1636377646000,
@@ -89374,12 +89374,13 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1775814179000,
-    "updatedAt" : 1786353443000,
+    "updatedAt" : 1794182763000,
+    "closedAt" : 1794182763000,
     "number" : 47934,
     "title" : "CORS Header missing when accessing /account endpoint with an expired session",
     "userLogin" : "Mario-Eis",
-    "labels" : [ "kind/bug", "area/account/api", "help wanted", "team/core-clients", "team/core-shared", "priority/low", "status/auto-expire", "status/auto-bump", "team/core-authn" ],
-    "commentsCount" : 1
+    "labels" : [ "kind/bug", "area/account/api", "help wanted", "team/core-clients", "team/core-shared", "priority/low", "status/auto-expire", "status/auto-bump", "status/expired-by-bot", "team/core-authn" ],
+    "commentsCount" : 2
   }, {
     "createdAt" : 1775814198000,
     "updatedAt" : 1787579018000,
@@ -96112,7 +96113,7 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1785896037000,
-    "updatedAt" : 1793936686000,
+    "updatedAt" : 1794165703000,
     "number" : 51440,
     "title" : "Inconsistency in credential label validation between Admin API and Account API",
     "userLogin" : "FeroxFoxxo",
@@ -99364,12 +99365,12 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1789649945000,
-    "updatedAt" : 1791200552000,
+    "updatedAt" : 1794149302000,
     "number" : 52899,
     "title" : "ResetCredentialsActionToken still requires int expiration despite migration to Time.currentTimeSeconds()",
     "userLogin" : "meytin1337",
     "labels" : [ "area/authentication", "kind/bug", "help wanted", "status/auto-expire", "status/auto-bump", "priority/normal", "team/core-authn" ],
-    "commentsCount" : 1
+    "commentsCount" : 2
   }, {
     "createdAt" : 1789651012000,
     "updatedAt" : 1791205298000,
@@ -103425,12 +103426,12 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1793990563000,
-    "updatedAt" : 1794076447000,
+    "updatedAt" : 1794116285000,
     "number" : 54821,
     "title" : "VERIFY_EMAIL resend cooldown is not applied on the challenge path: every new authentication session sends a verification e-mail",
     "userLogin" : "themoriarti",
     "labels" : [ "area/authentication", "kind/bug", "status/triage", "team/core-authn", "status/labeled-by-bot" ],
-    "commentsCount" : 1
+    "commentsCount" : 2
   }, {
     "createdAt" : 1794001160000,
     "updatedAt" : 1794001313000,
@@ -103455,6 +103456,30 @@
     "userLogin" : "ahus1",
     "labels" : [ "kind/bug", "area/storage", "status/triage", "team/core-shared" ],
     "commentsCount" : 1
+  }, {
+    "createdAt" : 1794143368000,
+    "updatedAt" : 1794143373000,
+    "number" : 54846,
+    "title" : "CIMD: client metadata document rejected when it contains an unknown field (UnrecognizedPropertyException) — ChatGPT cannot sign in",
+    "userLogin" : "AihamAR",
+    "labels" : [ "area/oidc", "kind/bug", "status/triage", "team/core-protocols" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1794153440000,
+    "updatedAt" : 1794153446000,
+    "number" : 54848,
+    "title" : "AuthZEN: `resource.properties` and `context` share one attribute namespace, and `context` silently overrides resource properties",
+    "userLogin" : "hakdogan",
+    "labels" : [ "area/authorization-services", "kind/bug", "status/triage", "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1794169473000,
+    "updatedAt" : 1794169725000,
+    "number" : 54852,
+    "title" : "Generated admin API v2 OpenAPI document depends on the locale of the build machine",
+    "userLogin" : "QuellcodeWanderer",
+    "labels" : [ "kind/bug", "area/admin/api", "status/triage", "team/core-shared" ],
+    "commentsCount" : 0
   } ],
   "prs" : [ {
     "createdAt" : 1773151102000,
@@ -103973,15 +103998,6 @@
     "labels" : [ ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1636366285000,
-    "updatedAt" : 1670222249000,
-    "closedAt" : 1636366401000,
-    "number" : 8718,
-    "title" : "KEYCLOAK-19785 Add GitHub issue forms to repositories",
-    "userLogin" : "stianst",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1636151589000,
     "updatedAt" : 1636527730000,
     "closedAt" : 1636527730000,
@@ -104028,15 +104044,6 @@
     "labels" : [ ],
     "commentsCount" : 3
   }, {
-    "createdAt" : 1635849108000,
-    "updatedAt" : 1718806104000,
-    "closedAt" : 1636368879000,
-    "number" : 8680,
-    "title" : "KEYCLOAK-14309: Duplicate sub claim at JSON level",
-    "userLogin" : "rmartinc",
-    "labels" : [ ],
-    "commentsCount" : 2
-  }, {
     "createdAt" : 1635772499000,
     "updatedAt" : 1638307642000,
     "closedAt" : 1638307556000,
@@ -104045,15 +104052,6 @@
     "userLogin" : "KashifSaadat",
     "labels" : [ ],
     "commentsCount" : 6
-  }, {
-    "createdAt" : 1635539325000,
-    "updatedAt" : 1636367872000,
-    "closedAt" : 1636367872000,
-    "number" : 8666,
-    "title" : "KEYCLOAK-19700: Attempt to reuse denied device authorization code results in server error",
-    "userLogin" : "alechenninger",
-    "labels" : [ ],
-    "commentsCount" : 2
   }, {
     "createdAt" : 1635523330000,
     "updatedAt" : 1657204427000,
@@ -104165,15 +104163,6 @@
     "userLogin" : "DorianMazur",
     "labels" : [ "area/oidc" ],
     "commentsCount" : 18
-  }, {
-    "createdAt" : 1623393935000,
-    "updatedAt" : 1747804371000,
-    "closedAt" : 1636381613000,
-    "number" : 8154,
-    "title" : "KEYCLOAK-18440 Improve logging for token introspection",
-    "userLogin" : "y-tabata",
-    "labels" : [ ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1622011437000,
     "updatedAt" : 1637237703000,
@@ -249829,14 +249818,6 @@
     "labels" : [ ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1773602781000,
-    "updatedAt" : 1784188876000,
-    "number" : 47172,
-    "title" : "Implement expired password change for LDAP federated user",
-    "userLogin" : "julienhuon",
-    "labels" : [ "flaky-test", "team/core-iam" ],
-    "commentsCount" : 11
-  }, {
     "createdAt" : 1784290334000,
     "updatedAt" : 1784290387000,
     "closedAt" : 1784290386000,
@@ -266239,14 +266220,6 @@
     "labels" : [ "flaky-test" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1792441271000,
-    "updatedAt" : 1792493486000,
-    "number" : 54139,
-    "title" : "Outbox: make the generic outbox usable for multiple consumers",
-    "userLogin" : "thomasdarimont",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 4
-  }, {
     "createdAt" : 1792440581000,
     "updatedAt" : 1792494562000,
     "closedAt" : 1792494562000,
@@ -267068,14 +267041,6 @@
     "userLogin" : "choksi2212",
     "labels" : [ "flaky-test", "team/core-authn" ],
     "commentsCount" : 1
-  }, {
-    "createdAt" : 1792946093000,
-    "updatedAt" : 1793057681000,
-    "number" : 54324,
-    "title" : "Support tls_client_auth when brokering external IDP",
-    "userLogin" : "justin-tay",
-    "labels" : [ "team/core-iam" ],
-    "commentsCount" : 0
   }, {
     "createdAt" : 1792796940000,
     "updatedAt" : 1793014280000,
@@ -269933,14 +269898,6 @@
     "labels" : [ ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1793970787000,
-    "updatedAt" : 1793996359000,
-    "number" : 54758,
-    "title" : "Document the provider factory lifecycle and dependsOn() in the Server Developer Guide",
-    "userLogin" : "QuellcodeWanderer",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1793970067000,
     "updatedAt" : 1793971056000,
     "number" : 54756,
@@ -270201,14 +270158,6 @@
     "userLogin" : "edewit",
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 2
-  }, {
-    "createdAt" : 1793631405000,
-    "updatedAt" : 1793984456000,
-    "number" : 54551,
-    "title" : "Add commit-time max_auth_age check for application-initiated actions",
-    "userLogin" : "msdaly200",
-    "labels" : [ "flaky-test", "team/core-authn" ],
-    "commentsCount" : 1
   }, {
     "createdAt" : 1793624089000,
     "updatedAt" : 1793951812000,
@@ -270549,14 +270498,6 @@
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 14
   }, {
-    "createdAt" : 1794109515000,
-    "updatedAt" : 1794109519000,
-    "number" : 54841,
-    "title" : "Restore the authentication context after backchannel logout",
-    "userLogin" : "Stella050408",
-    "labels" : [ "team/core-authn" ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1794083798000,
     "updatedAt" : 1794087448000,
     "number" : 54840,
@@ -270579,14 +270520,6 @@
     "title" : "Remove reflection utilities deprecated for Keycloak 27",
     "userLogin" : "marsluca",
     "labels" : [ ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1794041619000,
-    "updatedAt" : 1794041632000,
-    "number" : 54837,
-    "title" : "Apply Trust Email when the IdP e-mail differs only in case",
-    "userLogin" : "akasakariko",
-    "labels" : [ "team/core-iam" ],
     "commentsCount" : 0
   }, {
     "createdAt" : 1793999894000,
@@ -270677,22 +270610,6 @@
     "labels" : [ "team/core-authn" ],
     "commentsCount" : 0
   }, {
-    "createdAt" : 1793502816000,
-    "updatedAt" : 1794107289000,
-    "number" : 54514,
-    "title" : "Bump the actions-dependencies group across 5 directories with 9 updates",
-    "userLogin" : "dependabot[bot]",
-    "labels" : [ "area/ci", "area/dependencies" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1793391537000,
-    "updatedAt" : 1794098086000,
-    "number" : 54500,
-    "title" : "Translations update from Hosted Weblate",
-    "userLogin" : "weblate",
-    "labels" : [ ],
-    "commentsCount" : 0
-  }, {
     "createdAt" : 1793291312000,
     "updatedAt" : 1794083553000,
     "number" : 54463,
@@ -270707,14 +270624,6 @@
     "title" : "Detect and expose clock skew between Keycloak cluster nodes within a cluster",
     "userLogin" : "ruchikajha95",
     "labels" : [ "team/core-shared", "team/production-readiness" ],
-    "commentsCount" : 1
-  }, {
-    "createdAt" : 1793047472000,
-    "updatedAt" : 1794111845000,
-    "number" : 54358,
-    "title" : "Reject a null CIMD client metadata document or redirect_uris entry with invalid_request",
-    "userLogin" : "Zhuoxi2000",
-    "labels" : [ "team/core-protocols" ],
     "commentsCount" : 1
   }, {
     "createdAt" : 1791363964000,
@@ -270732,6 +270641,142 @@
     "userLogin" : "stav-berkovitch",
     "labels" : [ "team/core-protocols" ],
     "commentsCount" : 3
+  }, {
+    "createdAt" : 1794197068000,
+    "updatedAt" : 1794198045000,
+    "number" : 54854,
+    "title" : "Add OpenID Connect Core conformance tests",
+    "userLogin" : "tnorimat",
+    "labels" : [ ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1794169718000,
+    "updatedAt" : 1794169801000,
+    "number" : 54853,
+    "title" : "Generate the admin API v2 OpenAPI validation hints in English regardl…",
+    "userLogin" : "QuellcodeWanderer",
+    "labels" : [ "team/core-shared" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1794167067000,
+    "updatedAt" : 1794172812000,
+    "number" : 54851,
+    "title" : "Allow disabling the generation of fallback keys",
+    "userLogin" : "QuellcodeWanderer",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1794165696000,
+    "updatedAt" : 1794165790000,
+    "number" : 54849,
+    "title" : "Allow empty credential label in Admin API",
+    "userLogin" : "shuseng8",
+    "labels" : [ "team/core-shared", "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1794149295000,
+    "updatedAt" : 1794149405000,
+    "number" : 54847,
+    "title" : "Support long expiration values in action token constructors",
+    "userLogin" : "ChethankumarGS",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1794139924000,
+    "updatedAt" : 1794161615000,
+    "number" : 54845,
+    "title" : "Evaluate CockroachDB as a PostgreSQL database in tests",
+    "userLogin" : "ahus1",
+    "labels" : [ "team/production-readiness" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1794136041000,
+    "updatedAt" : 1794138828000,
+    "number" : 54843,
+    "title" : "Remove redundant EntityManager flushes in JPA realm, client and client scope adapters",
+    "userLogin" : "ahus1",
+    "labels" : [ "flaky-test" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1794109515000,
+    "updatedAt" : 1794109519000,
+    "number" : 54841,
+    "title" : "Restore the authentication context after backchannel logout",
+    "userLogin" : "Stella050408",
+    "labels" : [ "team/core-authn" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1794041619000,
+    "updatedAt" : 1794195593000,
+    "number" : 54837,
+    "title" : "Apply Trust Email when the IdP e-mail differs only in case",
+    "userLogin" : "akasakariko",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1793970787000,
+    "updatedAt" : 1794136660000,
+    "number" : 54758,
+    "title" : "Document the provider factory lifecycle and dependsOn() in the Server Developer Guide",
+    "userLogin" : "QuellcodeWanderer",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1793631405000,
+    "updatedAt" : 1794173984000,
+    "number" : 54551,
+    "title" : "Add commit-time max_auth_age check for application-initiated actions",
+    "userLogin" : "msdaly200",
+    "labels" : [ "flaky-test", "team/core-authn" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1793502816000,
+    "updatedAt" : 1794107289000,
+    "number" : 54514,
+    "title" : "Bump the actions-dependencies group across 5 directories with 9 updates",
+    "userLogin" : "dependabot[bot]",
+    "labels" : [ "area/ci", "area/dependencies" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1793391537000,
+    "updatedAt" : 1794184492000,
+    "number" : 54500,
+    "title" : "Translations update from Hosted Weblate",
+    "userLogin" : "weblate",
+    "labels" : [ ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1793047472000,
+    "updatedAt" : 1794111845000,
+    "number" : 54358,
+    "title" : "Reject a null CIMD client metadata document or redirect_uris entry with invalid_request",
+    "userLogin" : "Zhuoxi2000",
+    "labels" : [ "team/core-protocols" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1792946093000,
+    "updatedAt" : 1794195200000,
+    "number" : 54324,
+    "title" : "Support tls_client_auth when brokering external IDP",
+    "userLogin" : "justin-tay",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1792441271000,
+    "updatedAt" : 1794143930000,
+    "number" : 54139,
+    "title" : "Outbox: make the generic outbox usable for multiple consumers",
+    "userLogin" : "thomasdarimont",
+    "labels" : [ "team/core-iam" ],
+    "commentsCount" : 5
+  }, {
+    "createdAt" : 1773602781000,
+    "updatedAt" : 1794138280000,
+    "number" : 47172,
+    "title" : "Implement expired password change for LDAP federated user",
+    "userLogin" : "julienhuon",
+    "labels" : [ "flaky-test", "team/core-iam" ],
+    "commentsCount" : 11
   } ],
   "pullRequestWaits" : [ {
     "number" : 49154,
@@ -304013,7 +304058,7 @@
     "commentsCount" : 1
   }, {
     "createdAt" : 1793979409000,
-    "updatedAt" : 1793995209000,
+    "updatedAt" : 1794178759000,
     "number" : 1598,
     "labels" : [ "status/triage", "team/core-protocols" ],
     "commentsCount" : 2
@@ -304051,18 +304096,6 @@
     "createdAt" : 1793990566000,
     "updatedAt" : 1793997335000,
     "number" : 1604,
-    "labels" : [ "kind/task", "team/security-liaison" ],
-    "commentsCount" : 0
-  }, {
-    "createdAt" : 1793990585000,
-    "updatedAt" : 1794004679000,
-    "number" : 1605,
-    "labels" : [ "kind/task", "team/security-liaison" ],
-    "commentsCount" : 3
-  }, {
-    "createdAt" : 1793990595000,
-    "updatedAt" : 1794007658000,
-    "number" : 1606,
     "labels" : [ "kind/task", "team/security-liaison" ],
     "commentsCount" : 0
   }, {
@@ -304167,11 +304200,17 @@
     "number" : 1624,
     "labels" : [ "status/triage", "team/core-authn" ],
     "commentsCount" : 1
+  }, {
+    "createdAt" : 1794179793000,
+    "updatedAt" : 1794180782000,
+    "number" : 1625,
+    "labels" : [ "status/triage", "team/core-authn" ],
+    "commentsCount" : 1
   } ],
   "branches" : [ "archive/map-store", "archive/release/20.0", "archive/release/21.0", "archive/release/21.1", "archive/release/22.0", "archive/release/23.0", "archive/release/24.0", "archive/release/25.0", "archive/release/26.0", "archive/release/26.1", "archive/release/26.2", "archive/release/26.3", "archive/release/26.5", "archive/release/26.7", "copilot/53983-review-code", "copilot/add-copilot-instructions", "copilot/analyze-security-invitation-through-broker-login", "copilot/enhanced-cluster-wide-operator-milestone-2", "copilot/fix-code-for-review-comments", "copilot/fix-code-review-suggestion", "copilot/list-duplicated-issues", "copilot/overview-pull-requests-last-30-days", "copilot/research-failsafe-timeout-healthcheck", "dependabot/github_actions/actions-dependencies-f64958eecb", "dependabot/maven/docs/documentation/tests/org.jsoup-jsoup-1.23.2", "dependabot/maven/io.undertow-undertow-core-2.4.0.Final", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.0.1", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.1.1", "dependabot/npm_and_yarn/js/npm-dependencies-cb59739b10", "dependabot/npm_and_yarn/js/npm-dependencies-e4e42c8a04", "dependabot/npm_and_yarn/js/vite-7.3.7", "dependabot/npm_and_yarn/js/vite-plugin-dts-5.0.3", "dependabot/npm_and_yarn/js/vitest-4.1.0", "feature/admin-api-v2", "main", "quarkus-next", "release/26.4", "release/26.6", "release/26.8", "tmp/26.8-doc" ],
   "releases" : {
     "activeReleaseStreams" : [ "26.4", "26.6", "26.8" ],
     "recentReleases" : [ "26.8.2", "26.8.1", "26.8.0", "26.7.5", "26.7.4", "26.7.3", "26.7.2", "26.7.1", "26.7.0", "26.6.4" ]
   },
-  "issuesWithPr" : 174
+  "issuesWithPr" : 175
 }
