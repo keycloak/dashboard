@@ -20,9 +20,11 @@ public class PrivateCveTeamStat {
         this.team = team;
         this.allIssues = allIssues;
 
-        int importantBizDays = Config.getInt("private.triage.ImportantOverdue.businessDays");
-        int moderateBizDays = Config.getInt("private.triage.ModerateOverdue.businessDays");
-        int lowDays = Config.getInt("private.triage.LowOverdue.days");
+        int kevBizDays = Config.getInt("private.triage.KevOverdue.businessDays");
+        int criticalBizDays = Config.getInt("private.triage.CriticalOverdue.businessDays");
+        int highBizDays = Config.getInt("private.triage.HighOverdue.businessDays");
+        int mediumBizDays = Config.getInt("private.triage.MediumOverdue.businessDays");
+        int lowBizDays = Config.getInt("private.triage.LowOverdue.businessDays");
 
         FilteredIssues triageBase = allIssues.clone().openIssue().triage(true);
 
@@ -30,7 +32,7 @@ public class PrivateCveTeamStat {
                 .issues(triageBase.clone()));
 
         columns.add(BugStat.team("Triage Overdue").warnErrorKey("PrivateTriageOverdue")
-                .issues(triageBase.clone().ready(false).severityTriageOverdue(importantBizDays, moderateBizDays, lowDays)));
+                .issues(triageBase.clone().ready(false).severityTriageOverdue(kevBizDays, criticalBizDays, highBizDays, mediumBizDays, lowBizDays)));
 
         FilteredIssues cveOpen = allIssues.clone().openCve().triage(false);
 
