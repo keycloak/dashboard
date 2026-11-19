@@ -1,5 +1,5 @@
 {
-  "updatedDate" : 1795110592712,
+  "updatedDate" : 1795113852161,
   "areas" : [ "area/account/api", "area/account/ui", "area/adapter/fuse", "area/adapter/java-cli", "area/adapter/javascript", "area/adapter/jee", "area/adapter/saml", "area/adapter/spring", "area/admin/api", "area/admin/api-v2", "area/admin/cli", "area/admin/client-java", "area/admin/client-js", "area/admin/fine-grained-permissions", "area/admin/rbac", "area/admin/ui", "area/authentication", "area/authentication/webauthn", "area/authorization-services", "area/ci", "area/core", "area/dependencies", "area/dependencies/js", "area/dependencies/quarkus", "area/dist/quarkus", "area/docs", "area/events", "area/extensions", "area/identity-brokering", "area/import-export", "area/infinispan", "area/ldap", "area/login/ui", "area/observability", "area/oid4vc", "area/oidc", "area/operator", "area/organizations", "area/performance", "area/saml", "area/scim", "area/ssf", "area/storage", "area/test-framework", "area/testsuite", "area/token-exchange", "area/token-exchange/federated", "area/token-exchange/standard", "area/token-exchange/subject-impersonation", "area/translations", "area/user-profile", "area/welcome/ui", "area/workflows" ],
   "issues" : [ {
     "createdAt" : 1636377646000,
@@ -104418,6 +104418,94 @@
     "title" : "[VULNERABILITY] SSRF via client_session_host port-stripping bypass and non-admin cluster node registration (Keycloak 26.8.2)",
     "userLogin" : "graziang",
     "labels" : [ "area/oidc", "priority/important", "team/core-protocols", "kind/weakness", "backport/26.8" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795111004000,
+    "updatedAt" : 1795111009000,
+    "number" : 55374,
+    "title" : "Keycloak Policy Enforcer: an extra leading slash turns a denied request into a granted one",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/authorization-services", "priority/important", "area/admin/client-java", "team/core-iam", "team/core-shared", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795111021000,
+    "updatedAt" : 1795111026000,
+    "number" : 55375,
+    "title" : "[CVE-2026-133221] Pending required actions (e.g. CONFIGURE_TOTP) bypassed by a POST to login-actions/consent without session_code",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/authentication", "priority/important", "kind/cve", "team/core-authn", "backport/26.6", "severity/medium", "backport/26.8" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795111415000,
+    "updatedAt" : 1795111420000,
+    "number" : 55376,
+    "title" : "[CVE-2026-133220] Consent completion can issue tokens after user is disabled",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/authentication", "priority/important", "kind/cve", "team/core-authn", "severity/medium" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795111728000,
+    "updatedAt" : 1795111734000,
+    "number" : 55377,
+    "title" : "Cross-realm limited representation disclosure via global isAdmin() fallback",
+    "userLogin" : "abstractj",
+    "labels" : [ "priority/important", "area/admin/api", "team/core-iam", "team/core-shared", "area/admin/rbac", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795111860000,
+    "updatedAt" : 1795111864000,
+    "number" : 55378,
+    "title" : "Keycloak 26.8.2 CIMD backchannel_logout_uri causes POST to loopback address",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/oidc", "priority/important", "team/core-protocols", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795111991000,
+    "updatedAt" : 1795111996000,
+    "number" : 55379,
+    "title" : "Delegated Protection API user can read resource-server metadata through URI matching",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/authorization-services", "priority/important", "team/core-iam", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795112149000,
+    "updatedAt" : 1795112153000,
+    "number" : 55380,
+    "title" : "org.keycloak.sdjwt 26.8.2: a JWS crit header naming an unknown extension is accepted",
+    "userLogin" : "abstractj",
+    "labels" : [ "priority/important", "area/oid4vc", "team/core-authn", "team/core-protocols", "kind/weakness" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795113015000,
+    "updatedAt" : 1795113020000,
+    "number" : 55381,
+    "title" : "[CVE-2026-133226] Account resource sharing grants scopes outside the resource definition",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/authorization-services", "priority/important", "kind/cve", "team/core-iam", "severity/medium" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795113197000,
+    "updatedAt" : 1795113201000,
+    "number" : 55382,
+    "title" : "[CVE-2026-133228] A client's minimum ACR is not applied when the login starts at the credential reset endpoint (Keycloak 26.8.2)",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/authentication", "priority/important", "kind/cve", "backport/main", "team/core-authn", "backport/26.6", "severity/medium", "backport/26.8" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795113336000,
+    "updatedAt" : 1795113340000,
+    "number" : 55383,
+    "title" : "[CVE-2026-133224] Pre-revocation ID tokens can mint fresh UMA RPTs after realm not-before",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/authorization-services", "priority/important", "kind/cve", "backport/main", "team/core-iam", "backport/26.6", "severity/medium", "backport/26.8" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795113539000,
+    "updatedAt" : 1795113545000,
+    "number" : 55384,
+    "title" : "[CVE-2026-133225] UMA issues fresh RPTs for disabled resource-server clients",
+    "userLogin" : "abstractj",
+    "labels" : [ "area/authorization-services", "priority/important", "kind/cve", "backport/main", "team/core-iam", "backport/26.6", "severity/medium", "backport/26.8" ],
     "commentsCount" : 0
   } ],
   "prs" : [ {
@@ -273473,14 +273561,6 @@
     "labels" : [ "team/cloud-native" ],
     "commentsCount" : 1
   }, {
-    "createdAt" : 1794537680000,
-    "updatedAt" : 1795014410000,
-    "number" : 55140,
-    "title" : "[26.8] Fix multiselect chip clear for labeled user profile options",
-    "userLogin" : "blakefrain",
-    "labels" : [ "flaky-test", "team/core-shared" ],
-    "commentsCount" : 2
-  }, {
     "createdAt" : 1794505974000,
     "updatedAt" : 1794989733000,
     "closedAt" : 1794989733000,
@@ -273656,12 +273736,12 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1795100706000,
-    "updatedAt" : 1795109287000,
+    "updatedAt" : 1795111595000,
     "number" : 55361,
     "title" : "fix: correcting comments, and ensuring migrations check state correctly",
     "userLogin" : "shawkins",
     "labels" : [ "flaky-test", "team/core-shared" ],
-    "commentsCount" : 1
+    "commentsCount" : 2
   }, {
     "createdAt" : 1795100151000,
     "updatedAt" : 1795100157000,
@@ -273787,7 +273867,7 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1795031513000,
-    "updatedAt" : 1795110423000,
+    "updatedAt" : 1795110992000,
     "number" : 55328,
     "title" : "fix: adding a check to prevent path collisions",
     "userLogin" : "shawkins",
@@ -273943,6 +274023,14 @@
     "userLogin" : "akasakariko",
     "labels" : [ "team/core-iam" ],
     "commentsCount" : 1
+  }, {
+    "createdAt" : 1794537680000,
+    "updatedAt" : 1795113148000,
+    "number" : 55140,
+    "title" : "[26.8] Fix multiselect chip clear for labeled user profile options",
+    "userLogin" : "blakefrain",
+    "labels" : [ "flaky-test", "team/core-shared" ],
+    "commentsCount" : 2
   }, {
     "createdAt" : 1794506201000,
     "updatedAt" : 1795108483000,
@@ -309040,10 +309128,10 @@
     "commentsCount" : 12
   }, {
     "createdAt" : 1787690566000,
-    "updatedAt" : 1794923025000,
+    "updatedAt" : 1795113800000,
     "number" : 1071,
-    "labels" : [ "team/security" ],
-    "commentsCount" : 29
+    "labels" : [ "status/triage", "team/security" ],
+    "commentsCount" : 31
   }, {
     "createdAt" : 1787921566000,
     "updatedAt" : 1793948423000,
@@ -309094,10 +309182,10 @@
     "commentsCount" : 3
   }, {
     "createdAt" : 1793570927000,
-    "updatedAt" : 1795043629000,
+    "updatedAt" : 1795112590000,
     "number" : 1556,
     "labels" : [ "severity/high", "kind/cve", "team/core-authn" ],
-    "commentsCount" : 15
+    "commentsCount" : 17
   }, {
     "createdAt" : 1793589526000,
     "updatedAt" : 1794989862000,
@@ -309182,12 +309270,6 @@
     "number" : 1614,
     "labels" : [ "kind/task", "team/security-liaison" ],
     "commentsCount" : 0
-  }, {
-    "createdAt" : 1794004262000,
-    "updatedAt" : 1795104189000,
-    "number" : 1617,
-    "labels" : [ "severity/medium", "kind/cve", "team/core-authn" ],
-    "commentsCount" : 9
   }, {
     "createdAt" : 1794004268000,
     "updatedAt" : 1795094430000,
@@ -309322,10 +309404,10 @@
     "commentsCount" : 0
   }, {
     "createdAt" : 1794311794000,
-    "updatedAt" : 1794923493000,
+    "updatedAt" : 1795113795000,
     "number" : 1655,
     "labels" : [ "severity/high", "kind/cve", "team/core-authn" ],
-    "commentsCount" : 8
+    "commentsCount" : 10
   }, {
     "createdAt" : 1794315994000,
     "updatedAt" : 1794505971000,
@@ -309333,17 +309415,11 @@
     "labels" : [ "status/triage", "team/core-protocols" ],
     "commentsCount" : 3
   }, {
-    "createdAt" : 1794319610000,
-    "updatedAt" : 1795095721000,
-    "number" : 1657,
-    "labels" : [ "kind/weakness", "team/core-iam", "team/core-shared" ],
-    "commentsCount" : 2
-  }, {
     "createdAt" : 1794319614000,
-    "updatedAt" : 1795022399000,
+    "updatedAt" : 1795110662000,
     "number" : 1658,
     "labels" : [ "team/cloud-native", "status/triage" ],
-    "commentsCount" : 4
+    "commentsCount" : 5
   }, {
     "createdAt" : 1794319617000,
     "updatedAt" : 1794848753000,
@@ -309369,35 +309445,17 @@
     "labels" : [ "severity/medium", "team/core-protocols", "kind/cve" ],
     "commentsCount" : 3
   }, {
-    "createdAt" : 1794435725000,
-    "updatedAt" : 1795110189000,
-    "number" : 1677,
-    "labels" : [ "severity/medium", "kind/cve", "team/core-authn" ],
-    "commentsCount" : 11
-  }, {
-    "createdAt" : 1794498725000,
-    "updatedAt" : 1794850656000,
-    "number" : 1680,
-    "labels" : [ "kind/weakness", "team/core-iam", "team/core-shared" ],
-    "commentsCount" : 3
-  }, {
     "createdAt" : 1794509525000,
-    "updatedAt" : 1794923036000,
+    "updatedAt" : 1795113796000,
     "number" : 1682,
     "labels" : [ "severity/high", "team/core-protocols", "kind/cve" ],
-    "commentsCount" : 8
+    "commentsCount" : 10
   }, {
     "createdAt" : 1794537724000,
     "updatedAt" : 1795092528000,
     "number" : 1685,
     "labels" : [ "severity/medium", "team/core-iam", "kind/cve" ],
     "commentsCount" : 4
-  }, {
-    "createdAt" : 1794697422000,
-    "updatedAt" : 1795043625000,
-    "number" : 1687,
-    "labels" : [ "severity/medium", "kind/cve", "team/core-authn" ],
-    "commentsCount" : 9
   }, {
     "createdAt" : 1794709422000,
     "updatedAt" : 1794864971000,
@@ -309435,24 +309493,6 @@
     "labels" : [ "severity/low", "team/core-iam", "kind/cve" ],
     "commentsCount" : 7
   }, {
-    "createdAt" : 1794869120000,
-    "updatedAt" : 1795043640000,
-    "number" : 1696,
-    "labels" : [ "severity/medium", "team/core-iam", "kind/cve" ],
-    "commentsCount" : 6
-  }, {
-    "createdAt" : 1794869326000,
-    "updatedAt" : 1795043641000,
-    "number" : 1697,
-    "labels" : [ "severity/medium", "team/core-iam", "kind/cve" ],
-    "commentsCount" : 6
-  }, {
-    "createdAt" : 1794872151000,
-    "updatedAt" : 1795043633000,
-    "number" : 1700,
-    "labels" : [ "severity/low", "team/core-iam", "kind/cve" ],
-    "commentsCount" : 6
-  }, {
     "createdAt" : 1794872295000,
     "updatedAt" : 1794956808000,
     "number" : 1702,
@@ -309483,18 +309523,6 @@
     "labels" : [ "status/triage", "team/core-protocols" ],
     "commentsCount" : 3
   }, {
-    "createdAt" : 1794919422000,
-    "updatedAt" : 1794997240000,
-    "number" : 1707,
-    "labels" : [ "kind/weakness", "team/core-protocols" ],
-    "commentsCount" : 2
-  }, {
-    "createdAt" : 1794924740000,
-    "updatedAt" : 1795034192000,
-    "number" : 1709,
-    "labels" : [ "kind/weakness", "team/core-iam" ],
-    "commentsCount" : 2
-  }, {
     "createdAt" : 1794925080000,
     "updatedAt" : 1795083445000,
     "number" : 1710,
@@ -309524,12 +309552,6 @@
     "number" : 1714,
     "labels" : [ "kind/weakness", "status/triage", "team/core-iam" ],
     "commentsCount" : 1
-  }, {
-    "createdAt" : 1794966822000,
-    "updatedAt" : 1794997666000,
-    "number" : 1715,
-    "labels" : [ "kind/weakness", "team/core-authn" ],
-    "commentsCount" : 2
   }, {
     "createdAt" : 1795012423000,
     "updatedAt" : 1795106791000,
@@ -309655,6 +309677,24 @@
     "updatedAt" : 1795097834000,
     "number" : 1743,
     "labels" : [ "status/triage", "team/core-authn" ],
+    "commentsCount" : 1
+  }, {
+    "createdAt" : 1795102316000,
+    "updatedAt" : 1795110627000,
+    "number" : 1744,
+    "labels" : [ "team/cloud-native", "status/triage", "kind/bug" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795102669000,
+    "updatedAt" : 1795110737000,
+    "number" : 1745,
+    "labels" : [ "team/cloud-native", "status/triage" ],
+    "commentsCount" : 0
+  }, {
+    "createdAt" : 1795102672000,
+    "updatedAt" : 1795110758000,
+    "number" : 1746,
+    "labels" : [ "team/cloud-native", "status/triage", "kind/bug" ],
     "commentsCount" : 1
   } ],
   "branches" : [ "archive/map-store", "archive/release/20.0", "archive/release/21.0", "archive/release/21.1", "archive/release/22.0", "archive/release/23.0", "archive/release/24.0", "archive/release/25.0", "archive/release/26.0", "archive/release/26.1", "archive/release/26.2", "archive/release/26.3", "archive/release/26.5", "archive/release/26.7", "copilot/53983-review-code", "copilot/add-copilot-instructions", "copilot/analyze-security-invitation-through-broker-login", "copilot/enhanced-cluster-wide-operator-milestone-2", "copilot/fix-code-for-review-comments", "copilot/fix-code-review-suggestion", "copilot/list-duplicated-issues", "copilot/overview-pull-requests-last-30-days", "copilot/research-failsafe-timeout-healthcheck", "dependabot/github_actions/actions-dependencies-e81c19c592", "dependabot/maven/docs/documentation/tests/org.jsoup-jsoup-1.23.2", "dependabot/maven/io.undertow-undertow-core-2.4.0.Final", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.0.1", "dependabot/npm_and_yarn/js/eslint-plugin-react-hooks-7.1.1", "dependabot/npm_and_yarn/js/npm-dependencies-32532f8796", "dependabot/npm_and_yarn/js/npm-dependencies-cb59739b10", "dependabot/npm_and_yarn/js/vite-7.3.7", "dependabot/npm_and_yarn/js/vite-plugin-dts-5.0.3", "dependabot/npm_and_yarn/js/vitest-4.1.0", "feature/admin-api-v2", "main", "quarkus-next", "release/26.4", "release/26.6", "release/26.8" ],
