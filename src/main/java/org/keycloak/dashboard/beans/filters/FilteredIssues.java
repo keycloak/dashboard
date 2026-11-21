@@ -50,8 +50,8 @@ public class FilteredIssues {
         return this;
     }
 
-    public FilteredIssues severityTriageOverdue(int importantBusinessDays, int moderateBusinessDays, int lowCalendarDays) {
-        filters.add(new SeverityTriageOverdueFilter(importantBusinessDays, moderateBusinessDays, lowCalendarDays));
+    public FilteredIssues severityTriageOverdue(int kevBusinessDays, int criticalBusinessDays, int highBusinessDays, int mediumBusinessDays, int lowBusinessDays) {
+        filters.add(new SeverityTriageOverdueFilter(kevBusinessDays, criticalBusinessDays, highBusinessDays, mediumBusinessDays, lowBusinessDays));
         return this;
     }
 

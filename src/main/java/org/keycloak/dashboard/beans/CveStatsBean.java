@@ -55,6 +55,18 @@ public class CveStatsBean {
         return filteredIssues.ghLink();
     }
 
+    public int getKev() {
+        return issues.clone().label("severity/kev").count();
+    }
+
+    public String getKevClass() {
+        return getClass(getKev(), 1, 1);
+    }
+
+    public String getKevLink() {
+        return getLink("kev");
+    }
+
     public int getCriticial() {
         return issues.clone().label("severity/critical").count();
     }
